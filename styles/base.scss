@@ -51,6 +51,10 @@ a {
   background-color: $black;
   color: $white;
 
+  &:empty {
+    display: none;
+  }
+
   &:hover {
     background-color: $white;
     color: $black;

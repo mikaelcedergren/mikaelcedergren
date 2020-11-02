@@ -43,6 +43,8 @@ a {
   letter-spacing: 0.08rem;
   background-color: #131B17;
   color: #fff; }
+  a:empty {
+    display: none; }
   a:hover {
     background-color: #fff;
     color: #131B17; }
