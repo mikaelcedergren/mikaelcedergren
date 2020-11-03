@@ -11,6 +11,7 @@
     />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon" href="/unfold/images/apple-touch-icon.png" />
     <link rel="stylesheet" type="text/css" href="/styles/normalize.css" />
     <link rel="stylesheet" type="text/css" href="/styles/unfold.css" />
     <link
@@ -25,13 +26,16 @@
 
   <body>
     <nav>
-      <a id="defaultOpen" class="tab" onclick="openCity(event, 'Goals')"
-        >Goals</a
-      >
-      <a class="tab" onclick="openCity(event, 'Purpose')">Purpose</a>
-      <a class="tab" onclick="openCity(event, 'Rules')">Rules</a>
-      <a class="tab" onclick="openCity(event, 'Mind')">Mind</a>
-      <a class="tab" onclick="openCity(event, 'Remember')">Remember</a>
+      <h1>unfold.</h1>
+      <div class="tabs">
+        <a id="defaultOpen" class="tab" onclick="openCity(event, 'Goals')"
+          >Goals</a
+        >
+        <a class="tab" onclick="openCity(event, 'Purpose')">Purpose</a>
+        <a class="tab" onclick="openCity(event, 'Rules')">Rules</a>
+        <a class="tab" onclick="openCity(event, 'Mind')">Mind</a>
+        <a class="tab" onclick="openCity(event, 'Remember')">Remember</a>
+      </div>
     </nav>
     <section id="Goals">
       <div style="background-image: url('/unfold/images/marriage.jpg')">
@@ -39,19 +43,22 @@
       </div>
       <div style="background-image: url('/unfold/images/knife.jpg')">
         <span>Create my own knife.</span>
+        <i class="material-icons">grade</i>
       </div>
       <div style="background-image: url('/unfold/images/weight.jpg')">
         <span>Drop below 90 kg.</span>
       </div>
       <div style="background-image: url('/unfold/images/balisong.jpg')">
-        <span>Become an expert Balisong flipper</span>
+        <span>Become an expert Balisong flipper.</span>
         <i class="material-icons">grade</i>
       </div>
       <div style="background-image: url('/unfold/images/prototype.jpg')">
         <span>Create my own prototype tool.</span>
+        <i class="material-icons">grade</i>
       </div>
       <div style="background-image: url('/unfold/images/watch.jpg')">
         <span>Get the luxury watch I wanna pass on.</span>
+        <i class="material-icons">grade</i>
       </div>
       <div style="background-image: url('/unfold/images/diving.jpg')">
         <span>Get a diver's certificate.</span>
@@ -62,63 +69,80 @@
       <div style="background-image: url('/unfold/images/house.jpg')">
         <span>Live in my dream house.</span>
       </div>
+      <div style="background-image: url('/unfold/images/plane.jpg')">
+        <span>Fly a plane.</span>
+      </div>
     </section>
 
     <section id="Purpose">
-      <div style="background-image: url('/unfold/images/house.jpg')">
+      <div style="background-image: url('/unfold/images/better.jpg')">
         <span>Make the world a little bit better for having me.</span>
       </div>
-      <div style="background-image: url('/unfold/images/house.jpg')">
+      <div style="background-image: url('/unfold/images/man.jpg')">
         <span>Live with pride, joy and be a true man.</span>
       </div>
-      <div style="background-image: url('/unfold/images/house.jpg')">
-        <span>Enjoy life while I'm here. Otherwise, what's the point?</span>
+      <div style="background-image: url('/unfold/images/enjoy.jpg')">
+        <span>Enjoy life while I'm here; otherwise, what's the point?</span>
       </div>
     </section>
 
     <section id="Rules">
-      <div style="background-image: url('/unfold/images/house.jpg')">
-        <span>Go to bed only when tired.</span>
+      <div style="background-image: url('/unfold/images/yawning.jpg')">
+        <span>Go to bed only when sleepy.</span>
       </div>
-      <div style="background-image: url('/unfold/images/house.jpg')">
+      <div style="background-image: url('/unfold/images/stimulation.jpg')">
         <span>No stimulation one hour before sleep.</span>
       </div>
-      <div style="background-image: url('/unfold/images/house.jpg')">
-        <span>Dress sexy every day</span>
+      <div style="background-image: url('/unfold/images/sexy.jpg')">
+        <span>Dress sexy every day.</span>
       </div>
-      <div style="background-image: url('/unfold/images/house.jpg')">
+      <div style="background-image: url('/unfold/images/emotional.jpg')">
+        <span>Never make a decision when emotional.</span>
+      </div>
+      <div style="background-image: url('/unfold/images/troubling.jpg')">
         <span>
           If something troubles you, say it. You don't have to specify what.
         </span>
       </div>
-      <div style="background-image: url('/unfold/images/house.jpg')">
-        <span>Never make a descision when emotional.</span>
-      </div>
     </section>
 
     <section id="Mind">
-      <h1>State of Mind</h1>
-      <ul>
-        <li>Let life unfold.</li>
-        <li>Nothing is permanent.</li>
-        <li>Let go of what you cannot control.</li>
-        <li>What do you know what's good or bad?</li>
-        <li>Trust your nien.</li>
-        <li>Whatever happens, happens.</li>
-        <li>
-          Everything is not on you. Some things are harder for others, be
-          understanding to it.
-        </li>
-        <li>
-          Nothing will help more to achieve your goals as enjoying your way
-          there.
-        </li>
-        <li>Everything you need - is already there.</li>
-      </ul>
+      <div style="background-image: url('/unfold/images/unfold.jpg')">
+        <span>Let life unfold.</span>
+      </div>
+      <div style="background-image: url('/unfold/images/permanent.jpg')">
+        <span>Nothing is permanent.</span>
+      </div>
+      <div style="background-image: url('/unfold/images/let-go.jpg')">
+        <span>Let go of what you cannot control.</span>
+      </div>
+      <div style="background-image: url('/unfold/images/good-or-bad.jpg')">
+        <span>What do you know what's good or bad?</span>
+      </div>
+      <div style="background-image: url('/unfold/images/gut.png')">
+        <span>Trust your gut.</span>
+      </div>
+      <div style="background-image: url('/unfold/images/whatever.jpg')">
+        <span>Whatever happens, happens.</span>
+      </div>
+      <div style="background-image: url('/unfold/images/understanding.jpg')">
+        <span
+          >Everything isn't on you. Things are harder for others; be
+          understanding.</span
+        >
+      </div>
+      <div style="background-image: url('/unfold/images/happy.jpg')">
+        <span
+          >Nothing will help more to achieve your goals as enjoying your way
+          there.</span
+        >
+      </div>
+      <div style="background-image: url('/unfold/images/need.jpg')">
+        <span>Everything you need is already there.</span>
+      </div>
     </section>
 
-    <section id="Remember">
-      <h1>Remember This</h1>
+    <section id="Remember" class="padding">
       <p>
         Visst, jag känner mig ensam just nu. Men det har jag gjort många gånger
         innan, och varje gång har det löst sig.

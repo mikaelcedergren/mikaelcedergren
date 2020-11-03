@@ -16,6 +16,7 @@ body {
   background-color: $white;
   color: $black;
   line-height: 1.5;
+  max-width: 100%;
 }
 
 ul {
@@ -40,7 +41,11 @@ h5 {
 h1 {
   font-size: 1.5rem;
   letter-spacing: -0.05rem;
-  font-weight: bolder;
+  font-weight: 800;
+}
+
+p {
+  margin-top: 0;
 }
 
 body {
@@ -48,11 +53,16 @@ body {
 }
 
 section {
-  padding-top: 3rem;
+  padding-top: calc(120px - 1rem);
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin: 0 -1rem 1rem -1rem;
+
+  &.padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+  }
 
   & > div {
     position: relative;
@@ -67,19 +77,18 @@ section {
     min-height: 100px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-flow: column nowrap;
     border-radius: 5px;
 
     &::after {
       border-radius: 5px;
-
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
-      background-color: rgba(black, 0.4);
+      background-color: rgba(black, 0.45);
       content: "";
     }
 
@@ -88,18 +97,25 @@ section {
       z-index: 1;
       color: $yellow;
       position: absolute;
-      top: 0.5rem;
-      right: 0.5rem;
+      top: 0;
+      right: 0;
+      height: 1.5rem;
+      width: 1.5rem;
+      line-height: 1.5rem;
+      text-align: center;
+      border-radius: 0 0 0 5px;
+      background-color: $white;
+      font-size: 1.2rem;
     }
 
     span {
       display: block;
       position: relative;
       z-index: 1;
-      font-size: 1.1rem;
+      font-size: 1rem;
       text-shadow: 1px 1px 2px rgba(black, 0.5);
       margin: 0;
-      line-height: 1.5;
+      line-height: 1.3;
     }
 
     p {
@@ -119,19 +135,31 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  height: 4rem;
-  padding: 0 1rem;
+  height: 120px;
+  padding: 1rem 2rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-end;
   background-color: $white;
-  justify-content: space-between;
-  color: $gray-4;
+  flex-flow: column nowrap;
 
-  a {
-    transition: color 0.3s ease;
+  h1 {
+    padding-bottom: 1rem;
+  }
 
-    &.active {
-      color: $black;
+  .tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $gray-4;
+    width: 100%;
+
+    a {
+      transition: color 0.3s ease;
+
+      &.active {
+        color: $black;
+      }
     }
   }
 }
