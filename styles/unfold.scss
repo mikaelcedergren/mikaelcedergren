@@ -13,7 +13,7 @@ html,
 body {
   font-size: 15px;
   font-family: "DM Sans", Helvetica, sans-serif;
-  background-color: $gray-1;
+  background-color: $white;
   color: $black;
   line-height: 1.5;
 }
@@ -32,6 +32,8 @@ h2,
 h3,
 h4,
 h5 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin-top: 0;
 }
 
@@ -44,8 +46,35 @@ body {
   padding: 1rem;
 }
 
+section {
+  padding-top: 3rem;
+  display: none;
+}
+
 * {
   box-sizing: border-box;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4rem;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  justify-content: space-between;
+  color: $gray-4;
+
+  a {
+    transition: color 0.3s ease;
+
+    &.active {
+      color: $black;
+    }
+  }
 }
 
 .goals {
@@ -64,13 +93,16 @@ body {
     padding: 1rem;
     flex: 0 0 calc(50% - 1rem);
     margin: 0.5rem;
-    min-height: 160px;
+    min-height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column nowrap;
+    border-radius: 5px;
 
     &::after {
+      border-radius: 5px;
+
       position: absolute;
       top: 0;
       right: 0;
@@ -81,6 +113,8 @@ body {
     }
 
     i.material-icons {
+      position: relative;
+      z-index: 1;
       color: $yellow;
       position: absolute;
       top: 0.5rem;

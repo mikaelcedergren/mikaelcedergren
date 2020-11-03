@@ -24,25 +24,34 @@
   </head>
 
   <body>
-    <section>
+    <nav>
+      <a id="defaultOpen" class="tab" onclick="openCity(event, 'Goals')"
+        >Goals</a
+      >
+      <a class="tab" onclick="openCity(event, 'Purpose')">Purpose</a>
+      <a class="tab" onclick="openCity(event, 'Rules')">Rules</a>
+      <a class="tab" onclick="openCity(event, 'Mind')">Mind</a>
+      <a class="tab" onclick="openCity(event, 'Remember')">Remember</a>
+    </nav>
+    <section id="Goals">
       <h1>My Goals</h1>
       <div class="goals">
-        <div><h3>Find the woman of your life, and marry her</h3></div>
+        <div><h3>Find the woman I want to marry, and marry her.</h3></div>
         <div style="background-image: url('/unfold/images/knife.jpg')">
-          <h3>Create my own knife</h3>
+          <h3>Create my own knife.</h3>
         </div>
-        <div><h3>Drop below 90 kg</h3></div>
+        <div><h3>Drop below 90 kg.</h3></div>
         <div style="background-image: url('/unfold/images/balisong.jpg')">
           <h3>Become an expert Balisong flipper</h3>
           <i class="material-icons">grade</i>
         </div>
         <div style="background-image: url('/unfold/images/prototype.jpg')">
-          <h3>Create my own prototype tool</h3>
+          <h3>Create my own prototype tool.</h3>
         </div>
       </div>
     </section>
 
-    <section>
+    <section id="Purpose">
       <h1>Purpose</h1>
       <ul>
         <li>Make the world a little bit better for having me.</li>
@@ -51,8 +60,8 @@
       </ul>
     </section>
 
-    <section>
-      <h1>Rules of life</h1>
+    <section id="Rules">
+      <h1>Rules of Life</h1>
       <ul>
         <li>Dress sexy every day.</li>
         <li>Don't buy anything unless it improves on your life.</li>
@@ -63,7 +72,7 @@
       </ul>
     </section>
 
-    <section>
+    <section id="Mind">
       <h1>State of Mind</h1>
       <ul>
         <li>Let life unfold.</li>
@@ -84,7 +93,7 @@
       </ul>
     </section>
 
-    <section>
+    <section id="Remember">
       <h1>Remember This</h1>
       <p>
         Visst, jag känner mig ensam just nu. Men det har jag gjort många gånger
@@ -121,5 +130,29 @@
         henne.
       </p>
     </section>
+    <script>
+      document.getElementById("defaultOpen").click();
+
+      function openCity(evt, cityName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByTagName("section");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tab");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
   </body>
 </html>
