@@ -40,6 +40,7 @@ h5 {
 h1 {
   font-size: 1.5rem;
   letter-spacing: -0.05rem;
+  font-weight: bolder;
 }
 
 body {
@@ -48,36 +49,6 @@ body {
 
 section {
   padding-top: 3rem;
-  display: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4rem;
-  padding: 0 1rem;
-  display: flex;
-  align-items: center;
-  background-color: $white;
-  justify-content: space-between;
-  color: $gray-4;
-
-  a {
-    transition: color 0.3s ease;
-
-    &.active {
-      color: $black;
-    }
-  }
-}
-
-.goals {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -108,7 +79,7 @@ nav {
       right: 0;
       bottom: 0;
       left: 0;
-      background-color: rgba(black, 0.3);
+      background-color: rgba(black, 0.4);
       content: "";
     }
 
@@ -121,11 +92,12 @@ nav {
       right: 0.5rem;
     }
 
-    h3 {
+    span {
+      display: block;
       position: relative;
       z-index: 1;
       font-size: 1.1rem;
-      text-shadow: 1px 1px 2px rgba(black, 0.8);
+      text-shadow: 1px 1px 2px rgba(black, 0.5);
       margin: 0;
       line-height: 1.5;
     }
@@ -133,6 +105,33 @@ nav {
     p {
       margin-bottom: 0;
       color: rgba(white, 0.7);
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4rem;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  justify-content: space-between;
+  color: $gray-4;
+
+  a {
+    transition: color 0.3s ease;
+
+    &.active {
+      color: $black;
     }
   }
 }
