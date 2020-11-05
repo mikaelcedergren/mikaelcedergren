@@ -43,7 +43,7 @@ section {
     padding-bottom: 1rem; }
   section > div {
     position: relative;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #3e4a5e;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -116,7 +116,16 @@ nav {
     justify-content: space-between;
     color: #a3afbf;
     width: 100%; }
-    nav .tabs a {
+    nav .tabs .tab {
       transition: color 0.3s ease; }
-      nav .tabs a.active {
+      nav .tabs .tab i.material-icons {
+        font-size: 0.8rem;
+        height: 1rem;
+        width: 1rem;
+        color: #fff;
+        background-color: #d3d9e0;
+        line-height: 1rem;
+        text-align: center;
+        border-radius: 3px; }
+      nav .tabs .tab.active {
         color: #3e4a5e; }

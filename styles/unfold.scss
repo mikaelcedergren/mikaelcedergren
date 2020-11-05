@@ -66,7 +66,7 @@ section {
 
   & > div {
     position: relative;
-    background-color: rgba(black, 0.2);
+    background-color: $black;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -154,8 +154,19 @@ nav {
     color: $gray-4;
     width: 100%;
 
-    a {
+    .tab {
       transition: color 0.3s ease;
+
+      i.material-icons {
+        font-size: 0.8rem;
+        height: 1rem;
+        width: 1rem;
+        color: $white;
+        background-color: $gray-3;
+        line-height: 1rem;
+        text-align: center;
+        border-radius: 3px;
+      }
 
       &.active {
         color: $black;
