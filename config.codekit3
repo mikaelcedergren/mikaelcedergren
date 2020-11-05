@@ -264,6 +264,19 @@
 		"oS": 0,
 		"sct": 1
 		},
+	"/unfold/images/alcohol.jpg": {
+		"ft": 16384,
+		"iS": 32157,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/unfold/images/alcohol.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"ou": "lpckwebp-none",
+		"q": 100,
+		"rq": 75
+		},
 	"/unfold/images/apple-touch-icon.png": {
 		"ft": 32768,
 		"iS": 1738,
@@ -433,6 +446,19 @@
 		"q": 100,
 		"rq": 75
 		},
+	"/unfold/images/low-carb.jpg": {
+		"ft": 16384,
+		"iS": 176059,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/unfold/images/low-carb.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"ou": "lpckwebp-none",
+		"q": 100,
+		"rq": 75
+		},
 	"/unfold/images/man.jpg": {
 		"ft": 16384,
 		"iS": 60010,
@@ -452,6 +478,32 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/unfold/images/marriage.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"ou": "lpckwebp-none",
+		"q": 100,
+		"rq": 75
+		},
+	"/unfold/images/meditate.jpg": {
+		"ft": 16384,
+		"iS": 56554,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/unfold/images/meditate.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"ou": "lpckwebp-none",
+		"q": 100,
+		"rq": 75
+		},
+	"/unfold/images/morning.jpg": {
+		"ft": 16384,
+		"iS": 59750,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/unfold/images/morning.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -498,6 +550,32 @@
 		"q": 100,
 		"rq": 75
 		},
+	"/unfold/images/porn.jpg": {
+		"ft": 16384,
+		"iS": 102624,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/unfold/images/porn.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"ou": "lpckwebp-none",
+		"q": 100,
+		"rq": 75
+		},
+	"/unfold/images/positive-media.jpg": {
+		"ft": 16384,
+		"iS": 66711,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/unfold/images/positive-media.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"ou": "lpckwebp-none",
+		"q": 100,
+		"rq": 75
+		},
 	"/unfold/images/prototype.jpg": {
 		"ft": 16384,
 		"iS": 56012,
@@ -530,6 +608,32 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/unfold/images/stimulation.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"ou": "lpckwebp-none",
+		"q": 100,
+		"rq": 75
+		},
+	"/unfold/images/sunday.png": {
+		"ft": 32768,
+		"iS": 94456,
+		"oA": 0,
+		"oAP": "/unfold/images/sunday.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"ou": "lpckwebp-none",
+		"q": 100,
+		"rq": 75
+		},
+	"/unfold/images/supplements.jpg": {
+		"ft": 16384,
+		"iS": 21620,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/unfold/images/supplements.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
