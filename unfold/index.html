@@ -60,6 +60,9 @@
       <div style="background-image: url('/unfold/images/alcohol.jpg')">
         <span>No alcohol alone, except every other week.</span>
       </div>
+      <div style="background-image: url('/unfold/images/talk.jpg')">
+        <span>Talk to every woman you find interesting.</span>
+      </div>
       <div style="background-image: url('/unfold/images/sunday.png')">
         <span>Sundays are Mikael-day.</span>
       </div>
@@ -214,27 +217,27 @@
       </div>
     </section>
     <script>
-      document.getElementById("defaultOpen").click();
+      document.getElementById('defaultOpen').click();
 
       function openCity(evt, cityName) {
         // Declare all variables
         var i, tabcontent, tablinks;
 
         // Get all elements with class="tabcontent" and hide them
-        tabcontent = document.getElementsByTagName("section");
+        tabcontent = document.getElementsByTagName('section');
         for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
+          tabcontent[i].style.display = 'none';
         }
 
         // Get all elements with class="tablinks" and remove the class "active"
-        tablinks = document.getElementsByClassName("tab");
+        tablinks = document.getElementsByClassName('tab');
         for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
+          tablinks[i].className = tablinks[i].className.replace(' active', '');
         }
 
         // Show the current tab, and add an "active" class to the button that opened the tab
-        document.getElementById(cityName).style.display = "flex";
-        evt.currentTarget.className += " active";
+        document.getElementById(cityName).style.display = 'flex';
+        evt.currentTarget.className += ' active';
       }
     </script>
   </body>

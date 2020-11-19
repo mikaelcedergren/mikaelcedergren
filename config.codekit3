@@ -641,6 +641,19 @@
 		"q": 100,
 		"rq": 75
 		},
+	"/unfold/images/talk.jpg": {
+		"ft": 16384,
+		"iS": 73089,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/unfold/images/talk.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"ou": "lpckwebp-none",
+		"q": 100,
+		"rq": 75
+		},
 	"/unfold/images/troubling.jpg": {
 		"ft": 16384,
 		"iS": 63051,
