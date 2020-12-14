@@ -61,7 +61,7 @@ a {
   }
 }
 
-.wrapper {
+.showcase {
   max-width: 900px;
   margin: 3rem auto;
   display: flex;
@@ -71,7 +71,7 @@ a {
     margin: 0 auto;
   }
 
-  .header {
+  header {
     position: fixed;
     margin-top: 10%;
     width: 300px;
@@ -112,7 +112,7 @@ a {
     }
   }
 
-  .content {
+  main {
     flex: 1;
     padding-left: 300px;
 
@@ -149,6 +149,45 @@ a {
           text-transform: uppercase;
           letter-spacing: 0.08rem;
         }
+      }
+    }
+  }
+}
+
+.portfolio {
+  header {
+    text-align: center;
+    padding: 2rem;
+    img {
+      max-width: 120px;
+    }
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+
+    section {
+      position: relative;
+      padding-left: 10rem;
+
+      & > div {
+        position: absolute;
+        top: 1rem;
+        left: 0;
+        padding: 1rem 1rem 1rem 0;
+        max-width: 300px;
+        background-color: rgba(white, 1);
+      }
+      img {
+        max-width: 100%;
       }
     }
   }
