@@ -29,10 +29,22 @@ p {
   -moz-osx-font-smoothing: grayscale;
   font-style: italic;
   line-height: 1.5;
+  margin-top: 0;
 }
 
 p {
   margin: 0 0 2rem 0;
+}
+
+pre {
+  margin: 0;
+  padding: 0;
+  color: $gray;
+  text-transform: uppercase;
+  font-family: $fontFamilyBody;
+  font-weight: bolder;
+  letter-spacing: 0.05rem;
+  font-size: 0.7rem;
 }
 
 a {
@@ -158,6 +170,7 @@ a {
   header {
     text-align: center;
     padding: 2rem;
+
     img {
       max-width: 120px;
     }
@@ -177,10 +190,11 @@ a {
     section {
       position: relative;
       padding-left: 10rem;
+      margin: 3rem 0;
 
       & > div {
         position: absolute;
-        top: 1rem;
+        top: 2rem;
         left: 0;
         padding: 1rem 1rem 1rem 0;
         max-width: 300px;
