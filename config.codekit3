@@ -67,6 +67,14 @@
 		"q": 100,
 		"rq": 75
 		},
+	"/images/favicon.ico": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/images/favicon.ico",
+		"oF": 0
+		},
 	"/images/leander.jpg": {
 		"ft": 16384,
 		"iS": 698423,
@@ -166,6 +174,22 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/index.html",
+		"oF": 0
+		},
+	"/portfolio/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/portfolio/index.html",
+		"oF": 0
+		},
+	"/portfolio/index.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/portfolio/index.html",
 		"oF": 0
 		},
 	"/README.html": {
