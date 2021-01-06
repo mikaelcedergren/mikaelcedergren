@@ -158,5 +158,22 @@ a {
       padding: 1rem 1rem 1rem 0;
       max-width: 300px;
       background-color: white; }
+      .portfolio main section > div:first-of-type {
+        z-index: 1; }
     .portfolio main section img {
       max-width: 100%; }
+    .portfolio main section .video {
+      position: relative;
+      padding: 0 0 56.25% 0;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      top: 0; }
+      .portfolio main section .video iframe,
+      .portfolio main section .video object,
+      .portfolio main section .video embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
