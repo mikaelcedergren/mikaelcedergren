@@ -410,6 +410,19 @@
 		"q": 100,
 		"rq": 75
 		},
+	"/portfolio/images/youcruit-geophrey-favorites.png": {
+		"ft": 32768,
+		"iS": 132191,
+		"oA": 0,
+		"oAP": "/portfolio/images/youcruit-geophrey-favorites.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"ou": "lpckwebp-none",
+		"q": 100,
+		"rq": 75
+		},
 	"/portfolio/images/youcruit-geophrey.png": {
 		"ft": 32768,
 		"iS": 198136,
