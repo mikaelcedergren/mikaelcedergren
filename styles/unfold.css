@@ -109,14 +109,8 @@ nav {
   left: 0;
   right: 0;
   height: 120px;
-  padding: 1rem 2rem;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-  background-color: #fff;
-  flex-flow: column nowrap; }
-  nav h1 {
-    padding-bottom: 1rem; }
+  padding: 2rem;
+  background-color: #fff; }
   nav .tabs {
     display: flex;
     align-items: center;

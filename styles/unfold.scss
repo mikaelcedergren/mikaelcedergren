@@ -149,16 +149,8 @@ nav {
   left: 0;
   right: 0;
   height: 120px;
-  padding: 1rem 2rem;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
+  padding: 2rem;
   background-color: $white;
-  flex-flow: column nowrap;
-
-  h1 {
-    padding-bottom: 1rem;
-  }
 
   .tabs {
     display: flex;
@@ -169,6 +161,7 @@ nav {
 
     .tab {
       transition: color 0.3s ease;
+
 
       i.material-icons {
         font-size: 1.5rem;
