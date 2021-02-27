@@ -37,10 +37,14 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start; }
-  section.padding {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 1rem; }
+  section.padding > *:not(h3) {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem; }
+  section > h3 {
+    width: 100%;
+    flex: 1 0 100%;
+    padding: 0 0.5rem; }
   section > div {
     position: relative;
     background-color: #3e4a5e;
@@ -122,12 +126,10 @@ nav {
     nav .tabs .tab {
       transition: color 0.3s ease; }
       nav .tabs .tab i.material-icons {
-        font-size: 0.8rem;
-        height: 1rem;
-        width: 1rem;
-        color: #fff;
-        background-color: #d3d9e0;
-        line-height: 1rem;
+        font-size: 1.5rem;
+        height: 2rem;
+        width: 2rem;
+        line-height: 2rem;
         text-align: center;
         border-radius: 3px; }
       nav .tabs .tab.active {
