@@ -42,7 +42,6 @@ section > div h1 {
   line-height: 1.2;
   margin: 0;
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
-  background: red;
 }
 section > div p {
   margin: 0;
@@ -62,7 +61,7 @@ h1 {
 }
 
 button {
-  font-size: 13px;
+  font-size: 14px;
   height: 40px;
   line-height: 40px;
   border: none;

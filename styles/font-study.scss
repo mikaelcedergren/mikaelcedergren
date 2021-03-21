@@ -2,6 +2,7 @@ $black: #1d2229;
 $size-small: 13px;
 $size-default: 15px;
 $size-large: 18px;
+$size-button: 14px;
 
 // MERRIWEATHER HEADING
 
@@ -52,7 +53,6 @@ section {
       line-height: 1.2;
       margin: 0;
       font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-      background: red;
     }
 
     p {
@@ -77,7 +77,7 @@ h1 {
 }
 
 button {
-  font-size: $size-small;
+  font-size: $size-button;
   height: 40px;
   line-height: 40px;
   border: none;
