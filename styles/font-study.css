@@ -1,7 +1,7 @@
 body,
 html {
   background-color: white;
-  font-size: 15px;
+  font-size: 16px;
   font-family: "DM Sans";
   line-height: 1.5;
   color: #1d2229;
@@ -41,7 +41,7 @@ section > div h4 {
   color: #ddd;
   text-align: right;
   font-weight: normal;
-  font-size: 13px;
+  font-size: 14px;
 }
 @media (max-width: 468px) {
   section > div h4 {
@@ -71,10 +71,10 @@ section > div h1 {
 }
 section > div p {
   margin: 0;
-  font-size: 15px;
+  font-size: 16px;
 }
 section > div p.small {
-  font-size: 13px;
+  font-size: 14px;
 }
 section > div p.large {
   font-size: 18px;
