@@ -3,6 +3,8 @@ $size-small: 13px;
 $size-default: 15px;
 $size-large: 18px;
 
+// MERRIWEATHER HEADING
+
 body,
 html {
   background-color: white;
@@ -49,7 +51,7 @@ section {
     h1 {
       line-height: 1.2;
       margin: 0;
-      font-family: Merriweather;
+      font-family: Helvetica Neue;
     }
 
     p {
