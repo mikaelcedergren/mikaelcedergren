@@ -3,6 +3,7 @@ $size-small: 13px;
 $size-default: 15px;
 $size-large: 18px;
 $size-button: 14px;
+$responsive-width: 468px;
 
 // MERRIWEATHER HEADING
 
@@ -13,6 +14,7 @@ html {
   font-family: 'DM Sans';
   line-height: 1.5;
   color: $black;
+  padding: 0.5rem;
 }
 
 section {
@@ -23,6 +25,9 @@ section {
     font-family: inherit;
     font-size: 13px;
     margin-left: calc(100px + 1rem);
+    @media (max-width: $responsive-width) {
+      margin-left: 0;
+    }
   }
 
   & > div {
@@ -32,6 +37,10 @@ section {
     justify-content: flex-start;
     margin-bottom: 2rem;
 
+    @media (max-width: $responsive-width) {
+      flex-flow: column nowrap;
+    }
+
     h4 {
       margin: 0.25rem 1rem 0 0;
       flex: 1 1 100px;
@@ -40,6 +49,13 @@ section {
       text-align: right;
       font-weight: normal;
       font-size: $size-small;
+
+      @media (max-width: $responsive-width) {
+        flex: 1 1 auto;
+        min-width: 100%;
+        margin: 0;
+        text-align: left;
+      }
     }
 
     h1,
@@ -47,6 +63,10 @@ section {
     div {
       flex: 1 1 auto;
       min-width: 500px;
+
+      @media (max-width: $responsive-width) {
+        min-width: 0;
+      }
     }
 
     h1 {
