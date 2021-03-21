@@ -7,7 +7,7 @@
       "uuidString" : "8A520666-A74C-4C17-964B-B89B37DDF3A5"
     }
   ],
-  "creatorBuild" : "34081",
+  "creatorBuild" : "34018",
   "files" : {
     "\/CNAME" : {
       "cB" : 0,
@@ -39,6 +39,22 @@
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/components\/_page-header.html",
+      "oF" : 0
+    },
+    "\/font-study\/index.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/font-study\/index.html",
+      "oF" : 0
+    },
+    "\/font-study\/index.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/font-study\/index.html",
       "oF" : 0
     },
     "\/images\/brutus.jpg" : {
@@ -518,6 +534,20 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
+    },
+    "\/styles\/font-study.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/styles\/font-study.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
     },
     "\/styles\/normalize.css" : {
       "aP" : 1,

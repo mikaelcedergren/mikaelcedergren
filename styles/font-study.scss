@@ -1,0 +1,87 @@
+$black: #1d2229;
+$size-small: 13px;
+$size-default: 15px;
+$size-large: 18px;
+
+body,
+html {
+  background-color: white;
+  font-size: $size-default;
+  font-family: DM Sans;
+  line-height: 1.5;
+  color: $black;
+}
+
+section {
+  max-width: 600px;
+  margin: 1rem auto;
+
+  pre {
+    font-family: inherit;
+    font-size: 13px;
+    margin-left: calc(100px + 1rem);
+  }
+
+  & > div {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+
+    h4 {
+      margin: 0.25rem 1rem 0 0;
+      flex: 1 1 100px;
+      min-width: 100px;
+      color: #ddd;
+      text-align: right;
+      font-weight: normal;
+      font-size: $size-small;
+    }
+
+    h1,
+    p,
+    div {
+      flex: 1 1 auto;
+      min-width: 500px;
+    }
+
+    h1 {
+      line-height: 1.2;
+      margin: 0;
+      font-family: Merriweather;
+    }
+
+    p {
+      margin: 0;
+      font-size: $size-default;
+
+      &.small {
+        font-size: $size-small;
+      }
+
+      &.large {
+        font-size: $size-large;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+button {
+  font-size: $size-small;
+  height: 40px;
+  line-height: 40px;
+  border: none;
+  background-color: #f23260;
+  padding: 0 1rem;
+  border-radius: 4px;
+  color: white;
+  font-weight: 500;
+  font-family: inherit;
+}
