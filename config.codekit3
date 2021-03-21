@@ -535,6 +535,18 @@
       "pg" : 0,
       "sct" : 1
     },
+    "\/styles\/font-study.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/styles\/font-study-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
     "\/styles\/font-study.scss" : {
       "aP" : 0,
       "bl" : 0,
