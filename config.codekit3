@@ -9,6 +9,22 @@
   ],
   "creatorBuild" : "34018",
   "files" : {
+    "\/blog\/index.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/blog\/index.html",
+      "oF" : 0
+    },
+    "\/blog\/index.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/blog\/index.html",
+      "oF" : 0
+    },
     "\/CNAME" : {
       "cB" : 0,
       "ft" : 8192,

@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i");
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i");
-@import "_variables.scss";
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i');
+@import '_variables.scss';
 
 html,
 body {
@@ -229,4 +229,9 @@ a {
       }
     }
   }
+}
+
+#blog {
+  margin: 0 auto;
+  max-width: 640px;
 }
