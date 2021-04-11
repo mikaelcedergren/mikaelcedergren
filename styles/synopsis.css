@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+html,
+body {
+  font-size: 16px;
+  font-family: "DM Sans";
+  background-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#syn-components {
+  padding: 5rem;
+}
+
+button {
+  transition: box-shadow 0.2s ease-out, background-color 0.2s ease, border-color 0.2s ease;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: center;
+  -webkit-appearance: button;
+  font-family: inherit;
+  position: relative;
+  height: 40px;
+  padding: 0 1.5rem;
+  border-radius: 4px;
+  background-color: #4d5b73;
+  border: 1px solid transparent;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  white-space: nowrap;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  min-height: 0;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+button.small {
+  font-size: 14px;
+  height: 32px;
+  padding: 0 1rem;
+}
+button.small.icon {
+  width: 32px;
+  padding: 0;
+}
+button.small.prepend .prependIcon {
+  margin-right: 0.5rem;
+}
+button.small.append .appendIcon {
+  margin-left: 0.5rem;
+}
+button.icon {
+  width: 40px;
+  padding: 0;
+}
+button.block {
+  width: 100%;
+  display: block;
+}
+button:hover:not(.disableHover).accent, button:active:not(.disableHover).accent {
+  box-shadow: 0 0 0 5px rgba(255, 7, 95, 0.25);
+  background-color: #ff1166;
+}
+button:hover:not(.disableHover).secondary, button:active:not(.disableHover).secondary {
+  box-shadow: 0 0 0 5px rgba(255, 184, 0, 0.25);
+  background-color: #ffbb0a;
+}
+button:hover:not(.disableHover).danger, button:active:not(.disableHover).danger {
+  box-shadow: 0 0 0 5px rgba(255, 14, 41, 0.25);
+  background-color: #ff1832;
+}
+button:hover.outline, button:active.outline {
+  color: #1a8022;
+}
+button:hover.semi, button:active.semi {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+button:hover.prepend .appendIcon:global(.iconArrowRight), button:hover.append .appendIcon:global(.iconArrowRight), button:active.prepend .appendIcon:global(.iconArrowRight), button:active.append .appendIcon:global(.iconArrowRight) {
+  transform: translateX(5px);
+}
+button:hover.prepend .prependIcon:global(.iconArrowLeft), button:hover.append .prependIcon:global(.iconArrowLeft), button:active.prepend .prependIcon:global(.iconArrowLeft), button:active.append .prependIcon:global(.iconArrowLeft) {
+  transform: translateX(-5px);
+}
+button.prepend .prependIcon,
+button.prepend .appendIcon, button.append .prependIcon,
+button.append .appendIcon {
+  transition: transform 0.2s ease-out;
+  font-size: 14px;
+  width: 1rem;
+}
+button.prepend .prependIcon {
+  margin-right: 1rem;
+}
+button.prepend .prependIcon:global(.iconCheck) {
+  animation: inWithCheck 0.3s ease forwards;
+}
+@keyframes inWithCheck {
+  0% {
+    transform: translateY(40px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+button.append .appendIcon {
+  margin-left: 1rem;
+}
+button.loading {
+  background-size: 30px 30px;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.06) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.06) 50%, rgba(0, 0, 0, 0.06) 75%, transparent 75%, transparent);
+  animation: barberpole 1s linear infinite;
+}
+@keyframes barberpole {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 60px 30px;
+  }
+}
+button.rounded {
+  border-radius: 100px;
+}
+button.accent {
+  background-color: #ff075f;
+  border-color: #ff075f;
+}
+button.secondary {
+  background-color: #ffb800;
+  border-color: #ffb800;
+  color: #551c58;
+}
+button.danger {
+  background-color: #ff0e29;
+  border-color: #ff0e29;
+}
+button.outline {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  color: #3b4658;
+}
+button.semi {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
