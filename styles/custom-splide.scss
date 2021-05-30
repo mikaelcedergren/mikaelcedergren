@@ -12,6 +12,8 @@ body,
 .splide__slide,
 .splide__slide > div {
   height: 100vh;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .splide {
