@@ -2,6 +2,11 @@
 @import 'mixins';
 
 html,
+body {
+  overflow-x: hidden;
+}
+
+html,
 body,
 .splide,
 .splide__slide,
