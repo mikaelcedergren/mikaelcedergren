@@ -16,7 +16,7 @@ body {
 }
 
 .splide .splide__slide > div {
-  background: blue;
+  background: black;
   height: 100vh;
   display: flex;
   align-items: center;
