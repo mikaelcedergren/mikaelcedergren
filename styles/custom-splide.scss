@@ -1,35 +1,19 @@
 @import 'variables';
 @import 'mixins';
 
-$device-height: 100vh;
-
-html {
-  min-height: calc(100% + env(safe-area-inset-top));
-  padding: env(safe-area-inset-top) env(safe-area-inset-right)
-    env(safe-area-inset-bottom) env(safe-area-inset-left);
-}
-
 html,
 body {
-  height: $device-height;
   overflow: hidden;
 }
 
 .splide {
-  height: $device-height;
-  //   position: absolute;
-  //   top: 0;
-  //   right: 0;
-  //   left: 0;
-  //   bottom: 0;
-
-  .splide__track,
-  .splide__list {
-    height: $device-height;
-  }
-
   .splide__slide {
     & > div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
       background: black;
       height: 100%;
       display: flex;
