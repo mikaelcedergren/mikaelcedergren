@@ -1,7 +1,14 @@
+html,
+body,
+.splide,
+.splide__slide,
+.splide__slide > div {
+  height: 100vh;
+}
+
 .splide .splide__slide > div {
   background: black;
   display: flex;
-  height: 100vh;
   align-items: center;
   justify-content: center;
   background-size: cover;
