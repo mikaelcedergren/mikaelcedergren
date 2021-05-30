@@ -1,15 +1,9 @@
 html,
-body {
-  overflow: hidden;
-}
-
-html,
 body,
 .splide,
 .splide__slide,
 .splide__slide > div {
   height: 100vh;
-  overflow: scroll;
   -webkit-overflow-scrolling: touch;
 }
 
