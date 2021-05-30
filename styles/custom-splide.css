@@ -1,0 +1,7 @@
+.splide {
+  height: 100vh;
+}
+.splide .splide__track {
+  height: 100vh;
+  background: red;
+}
