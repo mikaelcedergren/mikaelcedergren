@@ -4,12 +4,9 @@ body,
 .splide__slide,
 .splide__slide > div {
   height: 100vh;
-  -webkit-overflow-scrolling: touch;
 }
 
 .splide .splide__slide > div {
-  -webkit-perspective: 1000;
-  -webkit-backface-visibility: hidden;
   background: black;
   display: flex;
   align-items: center;
