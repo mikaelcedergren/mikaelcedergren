@@ -1,8 +1,23 @@
-.splide {
-  height: 100vh;
+@import 'variables';
+@import 'mixins';
 
-  .splide__track {
-    height: 100vh;
-    background: red;
+.splide {
+  .splide__slide {
+    & > div {
+      background: blue;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        font-size: 2rem;
+        font-family: $font-family;
+        font-weight: $font-bold;
+        max-width: 320px;
+        text-align: center;
+        line-height: 1.2;
+      }
+    }
   }
 }
