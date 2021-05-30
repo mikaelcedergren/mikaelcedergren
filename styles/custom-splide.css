@@ -1,15 +1,20 @@
+html {
+  min-height: calc(100% + env(safe-area-inset-top));
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
 html,
 body {
-  height: 1792px;
+  height: 100vh;
   overflow: hidden;
 }
 
 .splide {
-  height: 1792px;
+  height: 100vh;
 }
 .splide .splide__track,
 .splide .splide__list {
-  height: 1792px;
+  height: 100vh;
 }
 .splide .splide__slide > div {
   background: black;
