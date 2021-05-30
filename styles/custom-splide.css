@@ -4,6 +4,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-size: cover;
+  background-position: center center;
 }
 .splide .splide__slide > div span {
   font-size: 2rem;
@@ -12,4 +14,5 @@
   max-width: 320px;
   text-align: center;
   line-height: 1.2;
+  color: #ffffff;
 }
