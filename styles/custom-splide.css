@@ -18,6 +18,7 @@ body,
 }
 
 .splide .splide__slide > div {
+  pointer-events: none;
   background: black;
   display: flex;
   align-items: center;
@@ -25,7 +26,18 @@ body,
   background-size: cover;
   background-position: center center;
 }
+.splide .splide__slide > div::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
 .splide .splide__slide > div span {
+  position: relative;
+  z-index: 1;
   font-size: 2rem;
   font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
@@ -33,6 +45,6 @@ body,
   text-align: center;
   line-height: 1.2;
   color: #ffffff;
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
   margin-bottom: 2rem;
 }
