@@ -7,8 +7,16 @@
       "uuidString" : "8A520666-A74C-4C17-964B-B89B37DDF3A5"
     }
   ],
-  "creatorBuild" : "34081",
+  "creatorBuild" : "34127",
   "files" : {
+    "\/.gitignore" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/.gitignore",
+      "oF" : 0
+    },
     "\/archive\/font-study.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -92,7 +100,7 @@
     },
     "\/archive\/unfold\/images\/apple-touch-icon.png" : {
       "ft" : 32768,
-      "iS" : 1738,
+      "iS" : 1211,
       "oA" : 0,
       "oAP" : "\/archive\/unfold\/images\/apple-touch-icon.png",
       "oF" : 0,
@@ -157,7 +165,7 @@
     },
     "\/archive\/unfold\/images\/emotional.jpg" : {
       "ft" : 16384,
-      "iS" : 205541,
+      "iS" : 66859,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/archive\/unfold\/images\/emotional.jpg",
@@ -183,7 +191,7 @@
     },
     "\/archive\/unfold\/images\/good-or-bad.jpg" : {
       "ft" : 16384,
-      "iS" : 386208,
+      "iS" : 130152,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/archive\/unfold\/images\/good-or-bad.jpg",
@@ -196,7 +204,7 @@
     },
     "\/archive\/unfold\/images\/gut.png" : {
       "ft" : 32768,
-      "iS" : 352675,
+      "iS" : 151713,
       "oA" : 0,
       "oAP" : "\/archive\/unfold\/images\/gut.png",
       "oF" : 0,
@@ -235,7 +243,7 @@
     },
     "\/archive\/unfold\/images\/knife.jpg" : {
       "ft" : 16384,
-      "iS" : 691161,
+      "iS" : 130981,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/archive\/unfold\/images\/knife.jpg",
@@ -482,7 +490,7 @@
     },
     "\/archive\/unfold\/images\/understanding.jpg" : {
       "ft" : 16384,
-      "iS" : 889801,
+      "iS" : 103062,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/archive\/unfold\/images\/understanding.jpg",
@@ -508,7 +516,7 @@
     },
     "\/archive\/unfold\/images\/watch.jpg" : {
       "ft" : 16384,
-      "iS" : 231650,
+      "iS" : 63063,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/archive\/unfold\/images\/watch.jpg",
@@ -534,7 +542,7 @@
     },
     "\/archive\/unfold\/images\/whatever.jpg" : {
       "ft" : 16384,
-      "iS" : 1061466,
+      "iS" : 113892,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/archive\/unfold\/images\/whatever.jpg",
@@ -1749,6 +1757,14 @@
       "rFN" : 0,
       "uCM" : 0
     },
+    "\/robots.txt" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/robots.txt",
+      "oF" : 0
+    },
     "\/styles\/_mixins.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -1796,9 +1812,9 @@
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
-      "oA" : 1,
+      "oA" : 0,
       "oAP" : "\/styles\/global.css",
-      "oF" : 0,
+      "oF" : 1,
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
@@ -3922,6 +3938,9 @@
       "removeVariables" : 0,
       "safelistEntries" : [
 
+      ],
+      "skippedEntries" : [
+        "node_modules\/**"
       ]
     },
     "rollupContext" : "",
@@ -3956,6 +3975,7 @@
     "tsNoImplicitThis" : 0,
     "tsNoImplicitUseStrict" : 0,
     "tsNoLib" : 0,
+    "tsNoPropertyAccessFromIndexSignature" : 0,
     "tsNoResolve" : 0,
     "tsNoStrictGenericChecks" : 0,
     "tsNoUncheckedIndexAccess" : 0,

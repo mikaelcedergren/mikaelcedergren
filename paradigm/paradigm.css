@@ -470,6 +470,17 @@ header {
   z-index: 999;
   font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+header h1 {
+  font-size: 14px;
+  color: #3b4658;
+  line-height: 1.2;
+  font-weight: 400;
+}
+@media (max-width: 468px) {
+  header h1 {
+    display: none;
+  }
+}
 @media (max-width: 450px) {
   header {
     justify-content: space-between;
@@ -581,4 +592,17 @@ main section img + h3 {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.social-media {
+  margin-top: 2rem;
+}
+.social-media .a2a_kit a::after {
+  display: none;
+}
+.social-media .a2a_kit a span {
+  border-radius: 2px;
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
 }

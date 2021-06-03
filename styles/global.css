@@ -5,7 +5,8 @@ body {
   font-size: 16px;
   font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: #ffffff;
-  line-height: 1.5; }
+  line-height: 1.5;
+}
 
 h1,
 h2,
@@ -14,11 +15,13 @@ h4 {
   margin-top: 0;
   margin-bottom: 1rem;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+}
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+}
 
 h1,
 h2,
@@ -27,43 +30,53 @@ h4,
 strong,
 p,
 a {
-  text-rendering: optimizeLegibility; }
+  text-rendering: optimizeLegibility;
+}
 
 a {
   color: #4fc0e8;
   text-decoration: none;
   position: relative;
-  transition: color 0.3s ease; }
-  a:hover::after {
-    animation: link-underline 0.5s ease forwards; }
-  a::after {
-    transition: background-color 0.3s ease;
-    content: '';
-    position: absolute;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-radius: 100px; }
-
+  transition: color 0.3s ease;
+}
+a:hover::after {
+  animation: link-underline 0.5s ease forwards;
+}
+a::after {
+  transition: background-color 0.3s ease;
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 100px;
+}
 @keyframes link-underline {
   0% {
     left: 0;
-    right: 0; }
+    right: 0;
+  }
   50% {
     left: 100%;
-    right: 0; }
+    right: 0;
+  }
   51% {
     left: 0;
-    right: 100%; }
+    right: 100%;
+  }
   100% {
     left: 0;
-    right: 0; } }
-  a:after {
-    background-color: #4fc0e8; }
+    right: 0;
+  }
+}
+a:after {
+  background-color: #4fc0e8;
+}
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 button,
 .button {
@@ -92,276 +105,352 @@ button,
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  overflow: hidden; }
-  button.small,
-  .button.small {
-    font-size: 14px;
-    height: 32px;
-    padding: 0 1rem; }
-    button.small.icon,
-    .button.small.icon {
-      width: 32px;
-      padding: 0; }
-    button.small.prepend .prependIcon,
-    .button.small.prepend .prependIcon {
-      margin-right: 0.5rem; }
-    button.small.append .appendIcon,
-    .button.small.append .appendIcon {
-      margin-left: 0.5rem; }
-  button.icon,
-  .button.icon {
-    width: 40px;
-    padding: 0; }
-  button.block,
-  .button.block {
-    width: 100%;
-    display: block; }
-  button:hover:not(.disableHover), button:active:not(.disableHover),
-  .button:hover:not(.disableHover),
-  .button:active:not(.disableHover) {
-    background-color: #4d5b73; }
-    button:hover:not(.disableHover).accent, button:active:not(.disableHover).accent,
-    .button:hover:not(.disableHover).accent,
-    .button:active:not(.disableHover).accent {
-      box-shadow: 0 0 0 5px rgba(245, 186, 66, 0.25);
-      background-color: #f6be4c; }
-    button:hover:not(.disableHover).secondary, button:active:not(.disableHover).secondary,
-    .button:hover:not(.disableHover).secondary,
-    .button:active:not(.disableHover).secondary {
-      box-shadow: 0 0 0 5px rgba(94, 156, 235, 0.25);
-      background-color: #67a2ec; }
-    button:hover:not(.disableHover).danger, button:active:not(.disableHover).danger,
-    .button:hover:not(.disableHover).danger,
-    .button:active:not(.disableHover).danger {
-      box-shadow: 0 0 0 5px rgba(234, 82, 82, 0.25);
-      background-color: #eb5b5b; }
-  button:hover.outline, button:active.outline,
-  .button:hover.outline,
-  .button:active.outline {
-    color: #4fc0e8; }
-  button:hover.semi, button:active.semi,
-  .button:hover.semi,
-  .button:active.semi {
-    background-color: rgba(255, 255, 255, 0.15); }
-  button:hover.prepend .appendIcon:global(.iconArrowRight), button:hover.append .appendIcon:global(.iconArrowRight), button:active.prepend .appendIcon:global(.iconArrowRight), button:active.append .appendIcon:global(.iconArrowRight),
-  .button:hover.prepend .appendIcon:global(.iconArrowRight),
-  .button:hover.append .appendIcon:global(.iconArrowRight),
-  .button:active.prepend .appendIcon:global(.iconArrowRight),
-  .button:active.append .appendIcon:global(.iconArrowRight) {
-    transform: translateX(5px); }
-  button:hover.prepend .prependIcon:global(.iconArrowLeft), button:hover.append .prependIcon:global(.iconArrowLeft), button:active.prepend .prependIcon:global(.iconArrowLeft), button:active.append .prependIcon:global(.iconArrowLeft),
-  .button:hover.prepend .prependIcon:global(.iconArrowLeft),
-  .button:hover.append .prependIcon:global(.iconArrowLeft),
-  .button:active.prepend .prependIcon:global(.iconArrowLeft),
-  .button:active.append .prependIcon:global(.iconArrowLeft) {
-    transform: translateX(-5px); }
-  button.prepend .prependIcon,
-  button.prepend .appendIcon, button.append .prependIcon,
-  button.append .appendIcon,
-  .button.prepend .prependIcon,
-  .button.prepend .appendIcon,
-  .button.append .prependIcon,
-  .button.append .appendIcon {
-    transition: transform 0.2s ease-out;
-    font-size: 14px;
-    width: 1rem; }
-  button.prepend .prependIcon,
-  .button.prepend .prependIcon {
-    margin-right: 1rem; }
-  button.prepend .prependIcon:global(.iconCheck),
-  .button.prepend .prependIcon:global(.iconCheck) {
-    animation: inWithCheck 0.3s ease forwards; }
-
+  overflow: hidden;
+}
+button.small,
+.button.small {
+  font-size: 14px;
+  height: 32px;
+  padding: 0 1rem;
+}
+button.small.icon,
+.button.small.icon {
+  width: 32px;
+  padding: 0;
+}
+button.small.prepend .prependIcon,
+.button.small.prepend .prependIcon {
+  margin-right: 0.5rem;
+}
+button.small.append .appendIcon,
+.button.small.append .appendIcon {
+  margin-left: 0.5rem;
+}
+button.icon,
+.button.icon {
+  width: 40px;
+  padding: 0;
+}
+button.block,
+.button.block {
+  width: 100%;
+  display: block;
+}
+button:hover:not(.disableHover), button:active:not(.disableHover),
+.button:hover:not(.disableHover),
+.button:active:not(.disableHover) {
+  background-color: #4d5b73;
+}
+button:hover:not(.disableHover).accent, button:active:not(.disableHover).accent,
+.button:hover:not(.disableHover).accent,
+.button:active:not(.disableHover).accent {
+  box-shadow: 0 0 0 5px rgba(245, 186, 66, 0.25);
+  background-color: #f6be4c;
+}
+button:hover:not(.disableHover).secondary, button:active:not(.disableHover).secondary,
+.button:hover:not(.disableHover).secondary,
+.button:active:not(.disableHover).secondary {
+  box-shadow: 0 0 0 5px rgba(94, 156, 235, 0.25);
+  background-color: #67a2ec;
+}
+button:hover:not(.disableHover).danger, button:active:not(.disableHover).danger,
+.button:hover:not(.disableHover).danger,
+.button:active:not(.disableHover).danger {
+  box-shadow: 0 0 0 5px rgba(234, 82, 82, 0.25);
+  background-color: #eb5b5b;
+}
+button:hover.outline, button:active.outline,
+.button:hover.outline,
+.button:active.outline {
+  color: #4fc0e8;
+}
+button:hover.semi, button:active.semi,
+.button:hover.semi,
+.button:active.semi {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+button:hover.prepend .appendIcon:global(.iconArrowRight), button:hover.append .appendIcon:global(.iconArrowRight), button:active.prepend .appendIcon:global(.iconArrowRight), button:active.append .appendIcon:global(.iconArrowRight),
+.button:hover.prepend .appendIcon:global(.iconArrowRight),
+.button:hover.append .appendIcon:global(.iconArrowRight),
+.button:active.prepend .appendIcon:global(.iconArrowRight),
+.button:active.append .appendIcon:global(.iconArrowRight) {
+  transform: translateX(5px);
+}
+button:hover.prepend .prependIcon:global(.iconArrowLeft), button:hover.append .prependIcon:global(.iconArrowLeft), button:active.prepend .prependIcon:global(.iconArrowLeft), button:active.append .prependIcon:global(.iconArrowLeft),
+.button:hover.prepend .prependIcon:global(.iconArrowLeft),
+.button:hover.append .prependIcon:global(.iconArrowLeft),
+.button:active.prepend .prependIcon:global(.iconArrowLeft),
+.button:active.append .prependIcon:global(.iconArrowLeft) {
+  transform: translateX(-5px);
+}
+button.prepend .prependIcon,
+button.prepend .appendIcon, button.append .prependIcon,
+button.append .appendIcon,
+.button.prepend .prependIcon,
+.button.prepend .appendIcon,
+.button.append .prependIcon,
+.button.append .appendIcon {
+  transition: transform 0.2s ease-out;
+  font-size: 14px;
+  width: 1rem;
+}
+button.prepend .prependIcon,
+.button.prepend .prependIcon {
+  margin-right: 1rem;
+}
+button.prepend .prependIcon:global(.iconCheck),
+.button.prepend .prependIcon:global(.iconCheck) {
+  animation: inWithCheck 0.3s ease forwards;
+}
 @keyframes inWithCheck {
   0% {
-    transform: translateY(40px); }
+    transform: translateY(40px);
+  }
   100% {
-    transform: translateY(0); } }
-  button.append .appendIcon,
-  .button.append .appendIcon {
-    margin-left: 1rem; }
-  button.loading,
-  .button.loading {
-    background-size: 30px 30px;
-    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.06) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.06) 50%, rgba(0, 0, 0, 0.06) 75%, transparent 75%, transparent);
-    animation: barberpole 1s linear infinite; }
-
+    transform: translateY(0);
+  }
+}
+button.append .appendIcon,
+.button.append .appendIcon {
+  margin-left: 1rem;
+}
+button.loading,
+.button.loading {
+  background-size: 30px 30px;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.06) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.06) 50%, rgba(0, 0, 0, 0.06) 75%, transparent 75%, transparent);
+  animation: barberpole 1s linear infinite;
+}
 @keyframes barberpole {
   from {
-    background-position: 0 0; }
+    background-position: 0 0;
+  }
   to {
-    background-position: 60px 30px; } }
-  button.rounded,
-  .button.rounded {
-    border-radius: 100px; }
-  button.primary,
-  .button.primary {
-    background-color: #4fc0e8;
-    border-color: #4fc0e8; }
-  button.secondary,
-  .button.secondary {
-    background-color: #5e9ceb;
-    border-color: #5e9ceb; }
-  button.tertiary,
-  .button.tertiary {
-    background-color: #ec6a88;
-    border-color: #ec6a88; }
-  button.contrast,
-  .button.contrast {
-    background-color: #13404a;
-    border-color: #13404a; }
-  button.accent,
-  .button.accent {
-    background-color: #f5ba42;
-    border-color: #f5ba42; }
-  button.secondary,
-  .button.secondary {
-    background-color: #5e9ceb;
-    border-color: #5e9ceb;
-    color: #13404a; }
-  button.danger,
-  .button.danger {
-    background-color: #ea5252;
-    border-color: #ea5252; }
-  button.outline,
-  .button.outline {
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    background-color: #ffffff;
-    color: #3b4658; }
-  button.semi,
-  .button.semi {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #ffffff; }
+    background-position: 60px 30px;
+  }
+}
+button.rounded,
+.button.rounded {
+  border-radius: 100px;
+}
+button.primary,
+.button.primary {
+  background-color: #4fc0e8;
+  border-color: #4fc0e8;
+}
+button.secondary,
+.button.secondary {
+  background-color: #5e9ceb;
+  border-color: #5e9ceb;
+}
+button.tertiary,
+.button.tertiary {
+  background-color: #ec6a88;
+  border-color: #ec6a88;
+}
+button.contrast,
+.button.contrast {
+  background-color: #13404a;
+  border-color: #13404a;
+}
+button.accent,
+.button.accent {
+  background-color: #f5ba42;
+  border-color: #f5ba42;
+}
+button.secondary,
+.button.secondary {
+  background-color: #5e9ceb;
+  border-color: #5e9ceb;
+  color: #13404a;
+}
+button.danger,
+.button.danger {
+  background-color: #ea5252;
+  border-color: #ea5252;
+}
+button.outline,
+.button.outline {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  color: #3b4658;
+}
+button.semi,
+.button.semi {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
 
 .mt-0 {
-  margin-top: 0rem !important; }
+  margin-top: 0rem !important;
+}
 
 .mr-0 {
-  margin-right: 0rem !important; }
+  margin-right: 0rem !important;
+}
 
 .mb-0 {
-  margin-bottom: 0rem !important; }
+  margin-bottom: 0rem !important;
+}
 
 .ml-0 {
-  margin-left: 0rem !important; }
+  margin-left: 0rem !important;
+}
 
 .pt-0 {
-  padding-top: 0rem !important; }
+  padding-top: 0rem !important;
+}
 
 .pr-0 {
-  padding-right: 0rem !important; }
+  padding-right: 0rem !important;
+}
 
 .pb-0 {
-  padding-bottom: 0rem !important; }
+  padding-bottom: 0rem !important;
+}
 
 .pl-0 {
-  padding-left: 0rem !important; }
+  padding-left: 0rem !important;
+}
 
 .mt-1 {
-  margin-top: 1rem !important; }
+  margin-top: 1rem !important;
+}
 
 .mr-1 {
-  margin-right: 1rem !important; }
+  margin-right: 1rem !important;
+}
 
 .mb-1 {
-  margin-bottom: 1rem !important; }
+  margin-bottom: 1rem !important;
+}
 
 .ml-1 {
-  margin-left: 1rem !important; }
+  margin-left: 1rem !important;
+}
 
 .pt-1 {
-  padding-top: 1rem !important; }
+  padding-top: 1rem !important;
+}
 
 .pr-1 {
-  padding-right: 1rem !important; }
+  padding-right: 1rem !important;
+}
 
 .pb-1 {
-  padding-bottom: 1rem !important; }
+  padding-bottom: 1rem !important;
+}
 
 .pl-1 {
-  padding-left: 1rem !important; }
+  padding-left: 1rem !important;
+}
 
 .mt-2 {
-  margin-top: 2rem !important; }
+  margin-top: 2rem !important;
+}
 
 .mr-2 {
-  margin-right: 2rem !important; }
+  margin-right: 2rem !important;
+}
 
 .mb-2 {
-  margin-bottom: 2rem !important; }
+  margin-bottom: 2rem !important;
+}
 
 .ml-2 {
-  margin-left: 2rem !important; }
+  margin-left: 2rem !important;
+}
 
 .pt-2 {
-  padding-top: 2rem !important; }
+  padding-top: 2rem !important;
+}
 
 .pr-2 {
-  padding-right: 2rem !important; }
+  padding-right: 2rem !important;
+}
 
 .pb-2 {
-  padding-bottom: 2rem !important; }
+  padding-bottom: 2rem !important;
+}
 
 .pl-2 {
-  padding-left: 2rem !important; }
+  padding-left: 2rem !important;
+}
 
 .mt-3 {
-  margin-top: 3rem !important; }
+  margin-top: 3rem !important;
+}
 
 .mr-3 {
-  margin-right: 3rem !important; }
+  margin-right: 3rem !important;
+}
 
 .mb-3 {
-  margin-bottom: 3rem !important; }
+  margin-bottom: 3rem !important;
+}
 
 .ml-3 {
-  margin-left: 3rem !important; }
+  margin-left: 3rem !important;
+}
 
 .pt-3 {
-  padding-top: 3rem !important; }
+  padding-top: 3rem !important;
+}
 
 .pr-3 {
-  padding-right: 3rem !important; }
+  padding-right: 3rem !important;
+}
 
 .pb-3 {
-  padding-bottom: 3rem !important; }
+  padding-bottom: 3rem !important;
+}
 
 .pl-3 {
-  padding-left: 3rem !important; }
+  padding-left: 3rem !important;
+}
 
 .mt-4 {
-  margin-top: 4rem !important; }
+  margin-top: 4rem !important;
+}
 
 .mr-4 {
-  margin-right: 4rem !important; }
+  margin-right: 4rem !important;
+}
 
 .mb-4 {
-  margin-bottom: 4rem !important; }
+  margin-bottom: 4rem !important;
+}
 
 .ml-4 {
-  margin-left: 4rem !important; }
+  margin-left: 4rem !important;
+}
 
 .pt-4 {
-  padding-top: 4rem !important; }
+  padding-top: 4rem !important;
+}
 
 .pr-4 {
-  padding-right: 4rem !important; }
+  padding-right: 4rem !important;
+}
 
 .pb-4 {
-  padding-bottom: 4rem !important; }
+  padding-bottom: 4rem !important;
+}
 
 .pl-4 {
-  padding-left: 4rem !important; }
+  padding-left: 4rem !important;
+}
 
 .text-small {
-  font-size: 14px; }
+  font-size: 14px;
+}
 
 #app {
-  font-family: 'Playfair Display';
+  font-family: "Playfair Display";
   max-width: 768px;
   margin: 3rem auto;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+}
 
 header {
   position: fixed;
@@ -379,83 +468,113 @@ header {
   -moz-osx-font-smoothing: grayscale;
   background-color: #ffffff;
   z-index: 999;
-  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
-  @media (max-width: 450px) {
-    header {
-      justify-content: space-between;
-      align-items: center;
-      margin: 0;
-      top: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      flex-flow: row nowrap;
-      padding: 1rem;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); }
-      header > div {
-        display: none; } }
-  header a {
-    color: #3b4658;
-    font-weight: 700; }
-    header a:after {
-      background-color: #3b4658; }
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+header h1 {
+  font-size: 14px;
+  color: #3b4658;
+  line-height: 1.2;
+  font-weight: 400;
+}
+@media (max-width: 468px) {
+  header h1 {
+    display: none;
+  }
+}
+@media (max-width: 450px) {
+  header {
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    flex-flow: row nowrap;
+    padding: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  header > div {
+    display: none;
+  }
+}
+header a {
+  color: #3b4658;
+  font-weight: 700;
+}
+header a:after {
+  background-color: #3b4658;
+}
+header img {
+  display: inline-block;
+  max-width: 140px;
+  margin-bottom: 2rem;
+}
+@media (max-width: 450px) {
   header img {
-    display: inline-block;
-    max-width: 140px;
-    margin-bottom: 2rem; }
-    @media (max-width: 450px) {
-      header img {
-        max-width: 100px;
-        margin: 0; } }
+    max-width: 100px;
+    margin: 0;
+  }
+}
+
 main {
   flex: 1 1 auto;
   padding-left: 250px;
-  line-height: 1.8; }
-  @media (max-width: 450px) {
-    main {
-      padding: 1rem;
-      margin-top: 3rem; } }
-  main section {
-    position: relative;
-    margin-bottom: 5rem; }
-    main section:last-child {
-      margin-bottom: 1rem; }
-    main section .overlay-description {
-      position: relative;
-      max-width: 80%;
-      background-color: #ffffff;
-      line-height: 1.8;
-      margin: 0 0 0 1rem;
-      padding: 1rem 1rem 0 1rem;
-      margin-top: -7rem;
-      min-height: 7rem; }
-    main section pre {
-      margin: 0;
-      font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-      font-weight: 700;
-      font-size: 0.8rem;
-      color: #4fc0e8; }
-    main section img {
-      max-width: 100%;
-      margin-bottom: 0.5rem;
-      display: block; }
-      main section img + h3 {
-        font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-        text-transform: uppercase;
-        font-weight: 700;
-        position: absolute;
-        top: -1px;
-        font-style: normal;
-        right: -1px;
-        display: inline-block;
-        background-color: #ffffff;
-        color: #3b4658;
-        font-size: 14px;
-        padding: 1rem 0 1rem 1rem;
-        line-height: 1;
-        margin: 0;
-        text-transform: uppercase;
-        letter-spacing: 0.25rem; }
+  line-height: 1.8;
+}
+@media (max-width: 450px) {
+  main {
+    padding: 1rem;
+    margin-top: 3rem;
+  }
+}
+main section {
+  position: relative;
+  margin-bottom: 5rem;
+}
+main section:last-child {
+  margin-bottom: 1rem;
+}
+main section .overlay-description {
+  position: relative;
+  max-width: 80%;
+  background-color: #ffffff;
+  line-height: 1.8;
+  margin: 0 0 0 1rem;
+  padding: 1rem 1rem 0 1rem;
+  margin-top: -7rem;
+  min-height: 7rem;
+}
+main section pre {
+  margin: 0;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #4fc0e8;
+}
+main section img {
+  max-width: 100%;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+main section img + h3 {
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: absolute;
+  top: -1px;
+  font-style: normal;
+  right: -1px;
+  display: inline-block;
+  background-color: #ffffff;
+  color: #3b4658;
+  font-size: 14px;
+  padding: 1rem 0 1rem 1rem;
+  line-height: 1;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+}
 
 .video {
   position: relative;
@@ -463,12 +582,27 @@ main {
   height: 0;
   overflow: hidden;
   max-width: 100%;
-  top: 0; }
-  .video iframe,
-  .video object,
-  .video embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
+  top: 0;
+}
+.video iframe,
+.video object,
+.video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.social-media {
+  margin-top: 2rem;
+}
+.social-media .a2a_kit a::after {
+  display: none;
+}
+.social-media .a2a_kit a span {
+  border-radius: 2px;
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+}

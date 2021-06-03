@@ -28,6 +28,17 @@ header {
   z-index: 999;
   font-family: $font-family;
 
+  h1 {
+    font-size: $font-size-small;
+    color: $black;
+    line-height: 1.2;
+    font-weight: $font-regular;
+
+    @media (max-width: 468px) {
+      display: none;
+    }
+  }
+
   @media (max-width: $responsive-width) {
     justify-content: space-between;
     align-items: center;
@@ -146,5 +157,26 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
+  }
+}
+
+.social-media {
+  margin-top: 2rem;
+
+  .a2a_kit {
+    a {
+      &::after {
+        display: none;
+      }
+
+      span {
+        $social-media-icon-size: 20px;
+
+        border-radius: 2px;
+        height: $social-media-icon-size;
+        width: $social-media-icon-size;
+        line-height: $social-media-icon-size;
+      }
+    }
   }
 }

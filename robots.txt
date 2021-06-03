@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /paradigm/
+Disallow: /archive/
+Disallow: /portfolio/
+Disallow: /components/
