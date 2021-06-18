@@ -806,6 +806,14 @@
       "oAP" : "\/fonts\/PlusJakartaSans-MediumItalic.woff2",
       "oF" : 0
     },
+    "\/fonts\/PlusJakartaSans-Regular.otf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/PlusJakartaSans-Regular.otf",
+      "oF" : 0
+    },
     "\/fonts\/PlusJakartaSans-Regular.woff" : {
       "cB" : 0,
       "ft" : 8192,
@@ -820,6 +828,30 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/fonts\/PlusJakartaSans-Regular.woff2",
+      "oF" : 0
+    },
+    "\/fonts\/Wargr-Bold.otf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Wargr-Bold.otf",
+      "oF" : 0
+    },
+    "\/fonts\/Wargr-Bold.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Wargr-Bold.woff",
+      "oF" : 0
+    },
+    "\/fonts\/Wargr-Bold.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Wargr-Bold.woff2",
       "oF" : 0
     },
     "\/images\/brutus.jpg" : {
