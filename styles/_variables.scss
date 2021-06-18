@@ -6,8 +6,11 @@ $contrast: #13404a;
 $success: #60cd79;
 $danger: #ea5252;
 
-$font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-  Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$font-family: 'PlusJakarta', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$font-family-bold: 'PlusJakartaBold', -apple-system, BlinkMacSystemFont,
+  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+  sans-serif;
 $font-family-headings: 'Playfair Display', -apple-system, BlinkMacSystemFont,
   'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
   sans-serif;
@@ -31,13 +34,12 @@ $font-semi: 500;
 $font-bold: 700;
 
 $factor: 4px;
-$font-size: 16px;
 $border-radius: $factor;
 $click-area: 40px;
 $click-area-small: 32px;
 $line: 1px solid rgba(black, 0.2);
 $box-shadow: 0 5px 15px rgba(black, 0.05);
 
-$font-size: 16px;
-$font-size-small: 14px;
+$font-size: 15px;
+$font-size-small: 13px;
 $font-size-button: $font-size;
