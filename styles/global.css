@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
 @font-face {
   font-family: "Wargr";
-  src: url("/fonts/Wargr-Medium.woff") format("woff");
+  src: url("/fonts/Wargr-Regular.woff") format("woff");
 }
 @font-face {
   font-family: "WargrBold";
@@ -528,7 +528,7 @@ header img {
 main {
   flex: 1 1 auto;
   padding-left: 250px;
-  line-height: 1.8;
+  line-height: 1;
 }
 @media (max-width: 450px) {
   main {
@@ -547,11 +547,11 @@ main section .overlay-description {
   position: relative;
   max-width: 80%;
   background-color: #ffffff;
-  line-height: 1.8;
+  line-height: 1.5;
   margin: 0 0 0 1rem;
   padding: 1rem 1rem 0 1rem;
   margin-top: -5rem;
-  min-height: 7rem;
+  min-height: 5rem;
 }
 main section pre {
   margin: 0;

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
 @font-face {
   font-family: 'Wargr';
-  src: url('/fonts/Wargr-Medium.woff') format('woff');
+  src: url('/fonts/Wargr-Regular.woff') format('woff');
 }
 
 @font-face {
@@ -90,7 +90,7 @@ header {
 main {
   flex: 1 1 auto;
   padding-left: $side-bar-width;
-  line-height: 1.8;
+  line-height: 1;
 
   @media (max-width: $responsive-width) {
     padding: 1rem;
@@ -109,7 +109,7 @@ main {
       position: relative;
       max-width: 80%;
       background-color: $white;
-      line-height: 1.8;
+      line-height: 1.5;
       margin: 0 0 0 1rem;
       padding: 1rem 1rem 0 1rem;
       margin-top: -5rem;
