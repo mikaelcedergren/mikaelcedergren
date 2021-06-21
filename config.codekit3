@@ -630,76 +630,52 @@
       "oAP" : "\/components\/_page-header.html",
       "oF" : 0
     },
-    "\/fonts\/Wargr-Bold.otf" : {
+    "\/fonts\/WargrSans-Bold.otf" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/fonts\/Wargr-Bold.otf",
+      "oAP" : "\/fonts\/WargrSans-Bold.otf",
       "oF" : 0
     },
-    "\/fonts\/Wargr-Bold.woff" : {
+    "\/fonts\/WargrSans-Bold.woff" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/fonts\/Wargr-Bold.woff",
+      "oAP" : "\/fonts\/WargrSans-Bold.woff",
       "oF" : 0
     },
-    "\/fonts\/Wargr-Bold.woff2" : {
+    "\/fonts\/WargrSans-Bold.woff2" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/fonts\/Wargr-Bold.woff2",
+      "oAP" : "\/fonts\/WargrSans-Bold.woff2",
       "oF" : 0
     },
-    "\/fonts\/Wargr-Medium.otf" : {
+    "\/fonts\/WargrSans-Regular.otf" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/fonts\/Wargr-Medium.otf",
+      "oAP" : "\/fonts\/WargrSans-Regular.otf",
       "oF" : 0
     },
-    "\/fonts\/Wargr-Medium.woff" : {
+    "\/fonts\/WargrSans-Regular.woff" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/fonts\/Wargr-Medium.woff",
+      "oAP" : "\/fonts\/WargrSans-Regular.woff",
       "oF" : 0
     },
-    "\/fonts\/Wargr-Medium.woff2" : {
+    "\/fonts\/WargrSans-Regular.woff2" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/fonts\/Wargr-Medium.woff2",
-      "oF" : 0
-    },
-    "\/fonts\/Wargr-Regular.otf" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/fonts\/Wargr-Regular.otf",
-      "oF" : 0
-    },
-    "\/fonts\/Wargr-Regular.woff" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/fonts\/Wargr-Regular.woff",
-      "oF" : 0
-    },
-    "\/fonts\/Wargr-Regular.woff2" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/fonts\/Wargr-Regular.woff2",
+      "oAP" : "\/fonts\/WargrSans-Regular.woff2",
       "oF" : 0
     },
     "\/images\/brutus.jpg" : {

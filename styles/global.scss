@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
 @font-face {
-  font-family: 'Wargr';
-  src: url('/fonts/Wargr-Regular.woff') format('woff');
+  font-family: 'WargrSans';
+  src: url('/fonts/WargrSans-Regular.woff2') format('woff2'), 
+       url('/fonts/WargrSans-Regular.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'WargrBold';
-  src: url('/fonts/Wargr-Bold.woff') format('woff');
+  font-family: 'WargrSansBold';
+  src: url('/fonts/WargrSans-Bold.woff2') format('woff2'), 
+       url('/fonts/WargrSans-Bold.woff') format('woff');
 }
 
 @import 'variables';
@@ -14,6 +16,7 @@
 
 #app {
   font-family: 'Playfair Display';
+  line-height: 1.5;
   max-width: $page-max-width;
   margin: 3rem auto;
   display: flex;
@@ -90,7 +93,7 @@ header {
 main {
   flex: 1 1 auto;
   padding-left: $side-bar-width;
-  line-height: 1;
+  line-height: 1.8;
 
   @media (max-width: $responsive-width) {
     padding: 1rem;
@@ -109,7 +112,7 @@ main {
       position: relative;
       max-width: 80%;
       background-color: $white;
-      line-height: 1.5;
+      line-height: 1.75;
       margin: 0 0 0 1rem;
       padding: 1rem 1rem 0 1rem;
       margin-top: -5rem;
