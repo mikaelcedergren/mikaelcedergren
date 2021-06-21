@@ -533,7 +533,7 @@ main {
 }
 @media (max-width: 450px) {
   main {
-    padding: 1rem;
+    padding: 0;
     margin-top: 3rem;
   }
 }
