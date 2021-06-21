@@ -654,6 +654,30 @@
       "oAP" : "\/fonts\/WargrSans-Bold.woff2",
       "oF" : 0
     },
+    "\/fonts\/WargrSans-Italic.otf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/WargrSans-Italic.otf",
+      "oF" : 0
+    },
+    "\/fonts\/WargrSans-Italic.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/WargrSans-Italic.woff",
+      "oF" : 0
+    },
+    "\/fonts\/WargrSans-Italic.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/WargrSans-Italic.woff2",
+      "oF" : 0
+    },
     "\/fonts\/WargrSans-Regular.otf" : {
       "cB" : 0,
       "ft" : 8192,
