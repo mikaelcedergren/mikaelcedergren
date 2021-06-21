@@ -630,6 +630,30 @@
       "oAP" : "\/components\/_page-header.html",
       "oF" : 0
     },
+    "\/fonts\/IconFont-Regular.otf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/IconFont-Regular.otf",
+      "oF" : 0
+    },
+    "\/fonts\/IconFont-Regular.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/IconFont-Regular.woff",
+      "oF" : 0
+    },
+    "\/fonts\/IconFont-Regular.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/IconFont-Regular.woff2",
+      "oF" : 0
+    },
     "\/fonts\/WargrSans-Bold.otf" : {
       "cB" : 0,
       "ft" : 8192,
