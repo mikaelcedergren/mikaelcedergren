@@ -1,6 +1,10 @@
+@import 'variables';
+@import 'mixins';
+
 :root {
   --syn-grid-gap: 1rem;
   --syn-grid-gap-half: 0.5rem;
+  --syn-grid-width: auto;
 }
 
 .syn-grid {
@@ -47,10 +51,27 @@
       min-width: calc(100% - var(--syn-grid-gap));
     }
 
-    &.syn-grid-cell-third {
-      flex: 1 1 33.333333%;
-      min-width: 33.33333333%;
-      max-width: 33.33333333%;
+    &[class*='syn-grid-cell-width-'] {
+      background-color: red;
+      flex: 1 1 var(--syn-grid-width);
+      min-width: var(--syn-grid-width);
+      max-width: var(--syn-grid-width);
+
+      &.syn-grid-cell-width-half {
+        --syn-grid-width: 50%;
+      }
+
+      &.syn-grid-cell-width-third {
+        --syn-grid-width: 33.3333333333%;
+      }
+
+      &.syn-grid-cell-width-quarter {
+        --syn-grid-width: 25%;
+      }
+
+      &.syn-grid-cell-width-fifth {
+        --syn-grid-width: 20%;
+      }
 
       @media (max-width: $breakpoint-small) {
         min-width: min-content;
@@ -85,6 +106,13 @@
 
   .syn-grid-cell {
     outline: 1px dashed rgba(black, 0.1);
-    background-color: $white;
+  }
+}
+
+// COMBO ERROR COMMUNICATION
+
+.syn-grid {
+  &.syn-grid-middle.syn-grid-stretch {
+    @include css-error();
   }
 }

@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
 @font-face {
   font-family: "WargrSans";
   src: url("/fonts/WargrSans-Regular.woff2") format("woff2"), url("/fonts/WargrSans-Regular.woff") format("woff");
@@ -11,6 +10,7 @@
 :root {
   --syn-grid-gap: 1rem;
   --syn-grid-gap-half: 0.5rem;
+  --syn-grid-width: auto;
 }
 
 .syn-grid {
@@ -55,13 +55,26 @@
     min-width: calc(100% - var(--syn-grid-gap));
   }
 }
-.syn-grid .syn-grid-cell.syn-grid-cell-third {
-  flex: 1 1 33.333333%;
-  min-width: 33.33333333%;
-  max-width: 33.33333333%;
+.syn-grid .syn-grid-cell[class*=syn-grid-cell-width-] {
+  background-color: red;
+  flex: 1 1 var(--syn-grid-width);
+  min-width: var(--syn-grid-width);
+  max-width: var(--syn-grid-width);
+}
+.syn-grid .syn-grid-cell[class*=syn-grid-cell-width-].syn-grid-cell-width-half {
+  --syn-grid-width: 50%;
+}
+.syn-grid .syn-grid-cell[class*=syn-grid-cell-width-].syn-grid-cell-width-third {
+  --syn-grid-width: 33.3333333333%;
+}
+.syn-grid .syn-grid-cell[class*=syn-grid-cell-width-].syn-grid-cell-width-quarter {
+  --syn-grid-width: 25%;
+}
+.syn-grid .syn-grid-cell[class*=syn-grid-cell-width-].syn-grid-cell-width-fifth {
+  --syn-grid-width: 20%;
 }
 @media (max-width: 640px) {
-  .syn-grid .syn-grid-cell.syn-grid-cell-third {
+  .syn-grid .syn-grid-cell[class*=syn-grid-cell-width-] {
     min-width: min-content;
     max-width: 100%;
     flex-basis: 100%;
@@ -86,7 +99,28 @@
 }
 .syn-grid .syn-grid-cell {
   outline: 1px dashed rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
+}
+
+.syn-grid.syn-grid-middle.syn-grid-stretch {
+  background-color: red !important;
+  animation: error-shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+@keyframes error-shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 
 #synopsis {
