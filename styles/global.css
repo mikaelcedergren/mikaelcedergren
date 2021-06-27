@@ -8,53 +8,88 @@
   font-family: "WargrSansBold";
   src: url("/fonts/WargrSans-Bold.woff2") format("woff2"), url("/fonts/WargrSans-Bold.woff") format("woff");
 }
+:root {
+  --syn-grid-gap: 1rem;
+  --syn-grid-gap-half: 0.5rem;
+}
+
 .syn-grid {
-  border: 1px dashed rgba(0, 0, 0, 0.1);
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 0 -0.5rem;
-  width: calc(100% + 1rem);
+  margin: 0 calc(var(--syn-grid-gap-half) * -1);
+  width: calc(100% + var(--syn-grid-gap));
 }
 @media (max-width: 640px) {
   .syn-grid {
     flex-flow: column nowrap;
-    margin: 0;
-    width: 100%;
   }
+}
+.syn-grid.syn-grid-gap-large {
+  --syn-grid-gap: 3rem;
+  --syn-grid-gap-half: 1.5rem;
+}
+.syn-grid.syn-grid-gap-small {
+  --syn-grid-gap: 0.5rem;
+  --syn-grid-gap-half: 0.25rem;
+}
+.syn-grid.syn-grid-gap-none {
+  --syn-grid-gap: 0;
+  --syn-grid-gap-half: 0;
 }
 .syn-grid .syn-grid-cell {
   flex: 1 1 auto;
-  border: 1px solid rgba(0, 0, 0, 0.1);
   min-width: min-content;
   color: inherit;
   vertical-align: baseline;
-  margin: 0 0.5rem;
+  margin: 0 var(--syn-grid-gap-half);
   padding: 1rem;
   max-width: 100%;
 }
+.syn-grid .syn-grid-cell:last-child {
+  margin-bottom: 0;
+}
 @media (max-width: 640px) {
   .syn-grid .syn-grid-cell {
-    width: 100%;
-    margin: 0;
+    min-width: calc(100% - var(--syn-grid-gap));
+  }
+}
+.syn-grid .syn-grid-cell.syn-grid-cell-third {
+  flex: 1 1 33.333333%;
+  min-width: 33.33333333%;
+  max-width: 33.33333333%;
+}
+@media (max-width: 640px) {
+  .syn-grid .syn-grid-cell.syn-grid-cell-third {
+    min-width: min-content;
+    max-width: 100%;
+    flex-basis: 100%;
   }
 }
 .syn-grid.syn-grid-middle {
   align-items: center;
 }
 .syn-grid.syn-grid-unresponsive {
-  flex-direction: row;
-  width: calc(100% + 1rem);
-  margin: 0 -0.5rem;
+  flex-flow: row nowrap;
 }
 .syn-grid.syn-grid-unresponsive .syn-grid-cell {
-  width: auto;
-  margin: 0 0.5rem;
+  min-width: min-content;
+}
+.syn-grid.syn-grid-stretch {
+  align-items: stretch;
+}
+
+.syn-grid {
+  outline: 1px dashed rgba(0, 0, 0, 0.1);
+  background-color: #f7f9fc;
+}
+.syn-grid .syn-grid-cell {
+  outline: 1px dashed rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
 }
 
 #synopsis {
-  background-color: #f7f9fc;
   padding: 2rem;
   min-height: 100vh;
 }
@@ -509,7 +544,7 @@ button.semi,
 div.syn-demo-section {
   display: block;
   width: 100%;
-  margin: 3rem 0;
+  margin: 0 0 3rem 0;
 }
 
 #app {

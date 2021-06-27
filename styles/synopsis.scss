@@ -4,7 +4,6 @@
 @import 'grid';
 
 #synopsis {
-  background-color: $gray1;
   padding: 2rem;
   min-height: 100vh;
 
@@ -294,5 +293,5 @@ button,
 div.syn-demo-section {
   display: block;
   width: 100%;
-  margin: 3rem 0;
+  margin: 0 0 3rem 0;
 }

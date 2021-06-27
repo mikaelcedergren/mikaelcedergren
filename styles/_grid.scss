@@ -1,31 +1,62 @@
+:root {
+  --syn-grid-gap: 1rem;
+  --syn-grid-gap-half: 0.5rem;
+}
+
 .syn-grid {
-  border: 1px dashed rgba(black, 0.1);
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 0 -0.5rem;
-  width: calc(100% + 1rem);
+  margin: 0 calc(var(--syn-grid-gap-half) * -1);
+  width: calc(100% + var(--syn-grid-gap));
 
   @media (max-width: $breakpoint-small) {
     flex-flow: column nowrap;
-    margin: 0;
-    width: 100%;
+  }
+
+  &.syn-grid-gap-large {
+    --syn-grid-gap: 3rem;
+    --syn-grid-gap-half: 1.5rem;
+  }
+
+  &.syn-grid-gap-small {
+    --syn-grid-gap: 0.5rem;
+    --syn-grid-gap-half: 0.25rem;
+  }
+
+  &.syn-grid-gap-none {
+    --syn-grid-gap: 0;
+    --syn-grid-gap-half: 0;
   }
 
   .syn-grid-cell {
     flex: 1 1 auto;
-    border: 1px solid rgba(black, 0.1);
     min-width: min-content;
     color: inherit;
     vertical-align: baseline;
-    margin: 0 0.5rem;
+    margin: 0 var(--syn-grid-gap-half);
     padding: 1rem;
     max-width: 100%;
 
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     @media (max-width: $breakpoint-small) {
-      width: 100%;
-      margin: 0;
+      min-width: calc(100% - var(--syn-grid-gap));
+    }
+
+    &.syn-grid-cell-third {
+      flex: 1 1 33.333333%;
+      min-width: 33.33333333%;
+      max-width: 33.33333333%;
+
+      @media (max-width: $breakpoint-small) {
+        min-width: min-content;
+        max-width: 100%;
+        flex-basis: 100%;
+      }
     }
   }
 
@@ -34,13 +65,26 @@
   }
 
   &.syn-grid-unresponsive {
-    flex-direction: row;
-    width: calc(100% + 1rem);
-    margin: 0 -0.5rem;
+    flex-flow: row nowrap;
 
     .syn-grid-cell {
-      width: auto;
-      margin: 0 0.5rem;
+      min-width: min-content;
     }
+  }
+
+  &.syn-grid-stretch {
+    align-items: stretch;
+  }
+}
+
+// DEMO
+
+.syn-grid {
+  outline: 1px dashed rgba(black, 0.1);
+  background-color: $gray1;
+
+  .syn-grid-cell {
+    outline: 1px dashed rgba(black, 0.1);
+    background-color: $white;
   }
 }
