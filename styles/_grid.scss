@@ -1,0 +1,46 @@
+.syn-grid {
+  border: 1px dashed rgba(black, 0.1);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 -0.5rem;
+  width: calc(100% + 1rem);
+
+  @media (max-width: $breakpoint-small) {
+    flex-flow: column nowrap;
+    margin: 0;
+    width: 100%;
+  }
+
+  .syn-grid-cell {
+    flex: 1 1 auto;
+    border: 1px solid rgba(black, 0.1);
+    min-width: min-content;
+    color: inherit;
+    vertical-align: baseline;
+    margin: 0 0.5rem;
+    padding: 1rem;
+    max-width: 100%;
+
+    @media (max-width: $breakpoint-small) {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  &.syn-grid-middle {
+    align-items: center;
+  }
+
+  &.syn-grid-unresponsive {
+    flex-direction: row;
+    width: calc(100% + 1rem);
+    margin: 0 -0.5rem;
+
+    .syn-grid-cell {
+      width: auto;
+      margin: 0 0.5rem;
+    }
+  }
+}

@@ -100,7 +100,7 @@
     },
     "\/archive\/unfold\/images\/apple-touch-icon.png" : {
       "ft" : 32768,
-      "iS" : 1211,
+      "iS" : 1738,
       "oA" : 0,
       "oAP" : "\/archive\/unfold\/images\/apple-touch-icon.png",
       "oF" : 0,
@@ -165,7 +165,7 @@
     },
     "\/archive\/unfold\/images\/emotional.jpg" : {
       "ft" : 16384,
-      "iS" : 66859,
+      "iS" : 205541,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/archive\/unfold\/images\/emotional.jpg",
@@ -191,7 +191,7 @@
     },
     "\/archive\/unfold\/images\/good-or-bad.jpg" : {
       "ft" : 16384,
-      "iS" : 130152,
+      "iS" : 386208,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/archive\/unfold\/images\/good-or-bad.jpg",
@@ -204,7 +204,7 @@
     },
     "\/archive\/unfold\/images\/gut.png" : {
       "ft" : 32768,
-      "iS" : 151713,
+      "iS" : 352675,
       "oA" : 0,
       "oAP" : "\/archive\/unfold\/images\/gut.png",
       "oF" : 0,
@@ -243,7 +243,7 @@
     },
     "\/archive\/unfold\/images\/knife.jpg" : {
       "ft" : 16384,
-      "iS" : 130981,
+      "iS" : 691161,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/archive\/unfold\/images\/knife.jpg",
@@ -490,7 +490,7 @@
     },
     "\/archive\/unfold\/images\/understanding.jpg" : {
       "ft" : 16384,
-      "iS" : 103062,
+      "iS" : 889801,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/archive\/unfold\/images\/understanding.jpg",
@@ -516,7 +516,7 @@
     },
     "\/archive\/unfold\/images\/watch.jpg" : {
       "ft" : 16384,
-      "iS" : 63063,
+      "iS" : 231650,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/archive\/unfold\/images\/watch.jpg",
@@ -542,7 +542,7 @@
     },
     "\/archive\/unfold\/images\/whatever.jpg" : {
       "ft" : 16384,
-      "iS" : 113892,
+      "iS" : 1061466,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/archive\/unfold\/images\/whatever.jpg",
@@ -1860,6 +1860,20 @@
       "oA" : 0,
       "oAP" : "\/robots.txt",
       "oF" : 0
+    },
+    "\/styles\/_grid.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/styles\/_grid.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
     },
     "\/styles\/_mixins.scss" : {
       "aP" : 0,

@@ -8,6 +8,60 @@
   font-family: "WargrSansBold";
   src: url("/fonts/WargrSans-Bold.woff2") format("woff2"), url("/fonts/WargrSans-Bold.woff") format("woff");
 }
+.syn-grid {
+  border: 1px dashed rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 -0.5rem;
+  width: calc(100% + 1rem);
+}
+@media (max-width: 640px) {
+  .syn-grid {
+    flex-flow: column nowrap;
+    margin: 0;
+    width: 100%;
+  }
+}
+.syn-grid .syn-grid-cell {
+  flex: 1 1 auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  min-width: min-content;
+  color: inherit;
+  vertical-align: baseline;
+  margin: 0 0.5rem;
+  padding: 1rem;
+  max-width: 100%;
+}
+@media (max-width: 640px) {
+  .syn-grid .syn-grid-cell {
+    width: 100%;
+    margin: 0;
+  }
+}
+.syn-grid.syn-grid-middle {
+  align-items: center;
+}
+.syn-grid.syn-grid-unresponsive {
+  flex-direction: row;
+  width: calc(100% + 1rem);
+  margin: 0 -0.5rem;
+}
+.syn-grid.syn-grid-unresponsive .syn-grid-cell {
+  width: auto;
+  margin: 0 0.5rem;
+}
+
+#synopsis {
+  background-color: #f7f9fc;
+  padding: 2rem;
+  min-height: 100vh;
+}
+#synopsis * {
+  box-sizing: border-box;
+}
+
 html,
 body {
   font-size: 15px;
@@ -450,6 +504,12 @@ button.semi,
 
 .text-small {
   font-size: 13px;
+}
+
+div.syn-demo-section {
+  display: block;
+  width: 100%;
+  margin: 3rem 0;
 }
 
 #app {
