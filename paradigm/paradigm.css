@@ -1,4 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap");
+:root {
+  --syn-font-family: "WargrSans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --syn-font-family-bold: "WargrSansBold", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  --syn-font-family-headings: "Playfair Display", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+  --syn-font-family-numbers: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --syn-breakpoint-small: 650px;
+  --syn-breakpoint-medium: 1024px;
+  --syn-breakpoint-large: 1200px;
+  --syn-factor: 4px;
+  --syn-click-area: 40px;
+  --syn-color-primary: #ff753a;
+  --syn-color-secondary: #3daeff;
+  --syn-color-tertiary: #f6cc3f;
+  --syn-color-accent: #29d0b2;
+  --syn-color-contrast: #002264;
+  --syn-color-white: #ffffff;
+  --syn-color-gray1: #f7f9fc;
+  --syn-color-gray2: #e6eaf0;
+  --syn-color-gray3: #d3d9e0;
+  --syn-color-gray4: #a3afbf;
+  --syn-color-gray5: #778396;
+  --syn-color-gray6: #4d5b73;
+  --syn-color-black: #3b4658;
+  --syn-font-size: 15px;
+  --syn-font-size-small: 13px;
+  --syn-font-size-tiny: 11px;
+}
+
 @font-face {
   font-family: "WargrSans";
   src: url("/fonts/WargrSans-Regular.woff2") format("woff2"), url("/fonts/WargrSans-Regular.woff") format("woff");
@@ -7,6 +40,39 @@
   font-family: "WargrSansBold";
   src: url("/fonts/WargrSans-Bold.woff2") format("woff2"), url("/fonts/WargrSans-Bold.woff") format("woff");
 }
+:root {
+  --syn-font-family: "WargrSans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --syn-font-family-bold: "WargrSansBold", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  --syn-font-family-headings: "Playfair Display", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+  --syn-font-family-numbers: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --syn-breakpoint-small: 650px;
+  --syn-breakpoint-medium: 1024px;
+  --syn-breakpoint-large: 1200px;
+  --syn-factor: 4px;
+  --syn-click-area: 40px;
+  --syn-color-primary: #ff753a;
+  --syn-color-secondary: #3daeff;
+  --syn-color-tertiary: #f6cc3f;
+  --syn-color-accent: #29d0b2;
+  --syn-color-contrast: #002264;
+  --syn-color-white: #ffffff;
+  --syn-color-gray1: #f7f9fc;
+  --syn-color-gray2: #e6eaf0;
+  --syn-color-gray3: #d3d9e0;
+  --syn-color-gray4: #a3afbf;
+  --syn-color-gray5: #778396;
+  --syn-color-gray6: #4d5b73;
+  --syn-color-black: #3b4658;
+  --syn-font-size: 15px;
+  --syn-font-size-small: 13px;
+  --syn-font-size-tiny: 11px;
+}
+
 :root {
   --syn-grid-gap: 1rem;
   --syn-grid-gap-half: 0.5rem;
@@ -47,16 +113,19 @@
   padding: 1rem;
   max-width: 100%;
 }
+.syn-grid .syn-grid-cell:first-child {
+  margin-top: 0;
+}
 .syn-grid .syn-grid-cell:last-child {
   margin-bottom: 0;
 }
 @media (max-width: 640px) {
   .syn-grid .syn-grid-cell {
+    margin: var(--syn-grid-gap-half) var(--syn-grid-gap-half);
     min-width: calc(100% - var(--syn-grid-gap));
   }
 }
 .syn-grid .syn-grid-cell[class*=syn-grid-cell-width-] {
-  background-color: red;
   flex: 1 1 var(--syn-grid-width);
   min-width: var(--syn-grid-width);
   max-width: var(--syn-grid-width);
@@ -93,11 +162,8 @@
   align-items: stretch;
 }
 
-.syn-grid {
-  outline: 1px dashed rgba(0, 0, 0, 0.1);
-  background-color: #f7f9fc;
-}
 .syn-grid .syn-grid-cell {
+  background-color: #f7f9fc;
   outline: 1px dashed rgba(0, 0, 0, 0.1);
 }
 
@@ -123,11 +189,48 @@
   }
 }
 
+.syn-button {
+  font-family: "WargrSansBold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  transition: box-shadow 0.2s ease-out, background-color 0.2s ease, border-color 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: center;
+  -webkit-appearance: button;
+  position: relative;
+  height: var(--syn-click-area);
+  padding: 0 1.5rem;
+  border-radius: 4px;
+  background-color: var(--syn-color-black);
+  border: 1px solid transparent;
+  color: var(--syn-color-white);
+  cursor: pointer;
+  outline: none;
+  white-space: nowrap;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  min-height: 0;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.syn-button.syn-button-block {
+  display: block;
+  width: 100%;
+}
+.syn-button.syn-button-primary {
+  background-color: var(--syn-color-primary);
+}
+
 #synopsis {
   padding: 2rem;
   min-height: 100vh;
 }
-#synopsis * {
+
+* {
   box-sizing: border-box;
 }
 
@@ -205,210 +308,9 @@ a:after {
   background-color: #4fc0e8;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-button,
-.button {
-  font-family: "WargrSansBold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  transition: box-shadow 0.2s ease-out, background-color 0.2s ease, border-color 0.2s ease;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  vertical-align: middle;
-  justify-content: center;
-  -webkit-appearance: button;
-  position: relative;
-  height: 40px;
-  padding: 0 1.5rem;
-  border-radius: 4px;
-  background-color: #3b4658;
-  border: 1px solid transparent;
-  color: #ffffff;
-  cursor: pointer;
-  outline: none;
-  white-space: nowrap;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1;
-  min-height: 0;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-button.small,
-.button.small {
-  font-size: 13px;
-  height: 32px;
-  padding: 0 1rem;
-}
-button.small.icon,
-.button.small.icon {
-  width: 32px;
-  padding: 0;
-}
-button.small.prepend .prependIcon,
-.button.small.prepend .prependIcon {
-  margin-right: 0.5rem;
-}
-button.small.append .appendIcon,
-.button.small.append .appendIcon {
-  margin-left: 0.5rem;
-}
-button.icon,
-.button.icon {
-  width: 40px;
-  padding: 0;
-}
-button.block,
-.button.block {
+.syn-image {
   width: 100%;
-  display: block;
-}
-button:hover:not(.disableHover), button:active:not(.disableHover),
-.button:hover:not(.disableHover),
-.button:active:not(.disableHover) {
-  background-color: #4d5b73;
-}
-button:hover:not(.disableHover).accent, button:active:not(.disableHover).accent,
-.button:hover:not(.disableHover).accent,
-.button:active:not(.disableHover).accent {
-  box-shadow: 0 0 0 5px rgba(245, 186, 66, 0.25);
-  background-color: #f6be4c;
-}
-button:hover:not(.disableHover).secondary, button:active:not(.disableHover).secondary,
-.button:hover:not(.disableHover).secondary,
-.button:active:not(.disableHover).secondary {
-  box-shadow: 0 0 0 5px rgba(94, 156, 235, 0.25);
-  background-color: #67a2ec;
-}
-button:hover:not(.disableHover).danger, button:active:not(.disableHover).danger,
-.button:hover:not(.disableHover).danger,
-.button:active:not(.disableHover).danger {
-  box-shadow: 0 0 0 5px rgba(234, 82, 82, 0.25);
-  background-color: #eb5b5b;
-}
-button:hover.outline, button:active.outline,
-.button:hover.outline,
-.button:active.outline {
-  color: #4fc0e8;
-}
-button:hover.semi, button:active.semi,
-.button:hover.semi,
-.button:active.semi {
-  background-color: rgba(255, 255, 255, 0.15);
-}
-button:hover.prepend .appendIcon:global(.iconArrowRight), button:hover.append .appendIcon:global(.iconArrowRight), button:active.prepend .appendIcon:global(.iconArrowRight), button:active.append .appendIcon:global(.iconArrowRight),
-.button:hover.prepend .appendIcon:global(.iconArrowRight),
-.button:hover.append .appendIcon:global(.iconArrowRight),
-.button:active.prepend .appendIcon:global(.iconArrowRight),
-.button:active.append .appendIcon:global(.iconArrowRight) {
-  transform: translateX(5px);
-}
-button:hover.prepend .prependIcon:global(.iconArrowLeft), button:hover.append .prependIcon:global(.iconArrowLeft), button:active.prepend .prependIcon:global(.iconArrowLeft), button:active.append .prependIcon:global(.iconArrowLeft),
-.button:hover.prepend .prependIcon:global(.iconArrowLeft),
-.button:hover.append .prependIcon:global(.iconArrowLeft),
-.button:active.prepend .prependIcon:global(.iconArrowLeft),
-.button:active.append .prependIcon:global(.iconArrowLeft) {
-  transform: translateX(-5px);
-}
-button.prepend .prependIcon,
-button.prepend .appendIcon, button.append .prependIcon,
-button.append .appendIcon,
-.button.prepend .prependIcon,
-.button.prepend .appendIcon,
-.button.append .prependIcon,
-.button.append .appendIcon {
-  transition: transform 0.2s ease-out;
-  font-size: 13px;
-  width: 1rem;
-}
-button.prepend .prependIcon,
-.button.prepend .prependIcon {
-  margin-right: 1rem;
-}
-button.prepend .prependIcon:global(.iconCheck),
-.button.prepend .prependIcon:global(.iconCheck) {
-  animation: inWithCheck 0.3s ease forwards;
-}
-@keyframes inWithCheck {
-  0% {
-    transform: translateY(40px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-button.append .appendIcon,
-.button.append .appendIcon {
-  margin-left: 1rem;
-}
-button.loading,
-.button.loading {
-  background-size: 30px 30px;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.06) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.06) 50%, rgba(0, 0, 0, 0.06) 75%, transparent 75%, transparent);
-  animation: barberpole 1s linear infinite;
-}
-@keyframes barberpole {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 60px 30px;
-  }
-}
-button.rounded,
-.button.rounded {
-  border-radius: 100px;
-}
-button.primary,
-.button.primary {
-  background-color: #4fc0e8;
-  border-color: #4fc0e8;
-}
-button.secondary,
-.button.secondary {
-  background-color: #5e9ceb;
-  border-color: #5e9ceb;
-}
-button.tertiary,
-.button.tertiary {
-  background-color: #ec6a88;
-  border-color: #ec6a88;
-}
-button.contrast,
-.button.contrast {
-  background-color: #13404a;
-  border-color: #13404a;
-}
-button.accent,
-.button.accent {
-  background-color: #f5ba42;
-  border-color: #f5ba42;
-}
-button.secondary,
-.button.secondary {
-  background-color: #5e9ceb;
-  border-color: #5e9ceb;
-  color: #13404a;
-}
-button.danger,
-.button.danger {
-  background-color: #ea5252;
-  border-color: #ea5252;
-}
-button.outline,
-.button.outline {
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  background-color: #ffffff;
-  color: #3b4658;
-}
-button.semi,
-.button.semi {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  max-width: 100%;
 }
 
 .mt-0 {

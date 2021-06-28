@@ -1,14 +1,15 @@
 @import 'variables';
 @import 'mixins';
 @import 'grid';
+@import 'buttons';
 
 #synopsis {
   padding: 2rem;
   min-height: 100vh;
+}
 
-  * {
-    box-sizing: border-box;
-  }
+* {
+  box-sizing: border-box;
 }
 
 html,
@@ -54,209 +55,209 @@ a {
   }
 }
 
-* {
-  box-sizing: border-box;
+.syn-image {
+  width: 100%;
+  max-width: 100%;
 }
 
-button,
-.button {
-  font-family: $font-family-bold;
-  transition: box-shadow 0.2s ease-out, background-color 0.2s ease,
-    border-color 0.2s ease;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  vertical-align: middle;
-  justify-content: center;
-  -webkit-appearance: button;
-  position: relative;
-  height: $click-area;
-  padding: 0 1.5rem;
-  border-radius: $border-radius;
-  background-color: $black;
-  border: 1px solid transparent;
-  color: $white;
-  cursor: pointer;
-  outline: none;
-  white-space: nowrap;
-  font-size: 1rem;
-  font-weight: $font-bold;
-  line-height: 1;
-  min-height: 0;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+// .syn-button {
+//   font-family: $font-family-bold;
+//   transition: box-shadow 0.2s ease-out, background-color 0.2s ease,
+//     border-color 0.2s ease;
+//   text-decoration: none;
+//   display: inline-flex;
+//   align-items: center;
+//   vertical-align: middle;
+//   justify-content: center;
+//   -webkit-appearance: button;
+//   position: relative;
+//   height: $click-area;
+//   padding: 0 1.5rem;
+//   border-radius: $border-radius;
+//   background-color: $black;
+//   border: 1px solid transparent;
+//   color: $white;
+//   cursor: pointer;
+//   outline: none;
+//   white-space: nowrap;
+//   font-size: 1rem;
+//   font-weight: $font-bold;
+//   line-height: 1;
+//   min-height: 0;
+//   flex-flow: row nowrap;
+//   justify-content: center;
+//   align-items: center;
+//   overflow: hidden;
 
-  &.small {
-    font-size: $font-size-small;
-    height: $click-area-small;
-    padding: 0 1rem;
+//   &.small {
+//     font-size: $font-size-small;
+//     height: $click-area-small;
+//     padding: 0 1rem;
 
-    &.icon {
-      width: $click-area-small;
-      padding: 0;
-    }
+//     &.icon {
+//       width: $click-area-small;
+//       padding: 0;
+//     }
 
-    &.prepend {
-      .prependIcon {
-        margin-right: 0.5rem;
-      }
-    }
+//     &.prepend {
+//       .prependIcon {
+//         margin-right: 0.5rem;
+//       }
+//     }
 
-    &.append {
-      .appendIcon {
-        margin-left: 0.5rem;
-      }
-    }
-  }
+//     &.append {
+//       .appendIcon {
+//         margin-left: 0.5rem;
+//       }
+//     }
+//   }
 
-  &.icon {
-    width: $click-area;
-    padding: 0;
-  }
+//   &.icon {
+//     width: $click-area;
+//     padding: 0;
+//   }
 
-  &.block {
-    width: 100%;
-    display: block;
-  }
+//   &.block {
+//     width: 100%;
+//     display: block;
+//   }
 
-  &:hover,
-  &:active {
-    &:not(.disableHover) {
-      background-color: $gray6;
+//   &:hover,
+//   &:active {
+//     &:not(.disableHover) {
+//       background-color: $gray6;
 
-      &.accent {
-        box-shadow: 0 0 0 5px rgba($accent, 0.25);
-        background-color: lighten($accent, 2%);
-      }
+//       &.accent {
+//         box-shadow: 0 0 0 5px rgba($accent, 0.25);
+//         background-color: lighten($accent, 2%);
+//       }
 
-      &.secondary {
-        box-shadow: 0 0 0 5px rgba($secondary, 0.25);
-        background-color: lighten($secondary, 2%);
-      }
+//       &.secondary {
+//         box-shadow: 0 0 0 5px rgba($secondary, 0.25);
+//         background-color: lighten($secondary, 2%);
+//       }
 
-      &.danger {
-        box-shadow: 0 0 0 5px rgba($danger, 0.25);
-        background-color: lighten($danger, 2%);
-      }
-    }
+//       &.danger {
+//         box-shadow: 0 0 0 5px rgba($danger, 0.25);
+//         background-color: lighten($danger, 2%);
+//       }
+//     }
 
-    &.outline {
-      color: $primary;
-    }
+//     &.outline {
+//       color: $primary;
+//     }
 
-    &.semi {
-      background-color: rgba(white, 0.15);
-    }
+//     &.semi {
+//       background-color: rgba(white, 0.15);
+//     }
 
-    &.prepend,
-    &.append {
-      .appendIcon:global(.iconArrowRight) {
-        transform: translateX(5px);
-      }
+//     &.prepend,
+//     &.append {
+//       .appendIcon:global(.iconArrowRight) {
+//         transform: translateX(5px);
+//       }
 
-      .prependIcon:global(.iconArrowLeft) {
-        transform: translateX(-5px);
-      }
-    }
-  }
+//       .prependIcon:global(.iconArrowLeft) {
+//         transform: translateX(-5px);
+//       }
+//     }
+//   }
 
-  &.prepend,
-  &.append {
-    .prependIcon,
-    .appendIcon {
-      transition: transform 0.2s ease-out;
-      font-size: $font-size-small;
-      width: 1rem;
-    }
-  }
+//   &.prepend,
+//   &.append {
+//     .prependIcon,
+//     .appendIcon {
+//       transition: transform 0.2s ease-out;
+//       font-size: $font-size-small;
+//       width: 1rem;
+//     }
+//   }
 
-  &.prepend {
-    .prependIcon {
-      margin-right: 1rem;
-    }
-  }
+//   &.prepend {
+//     .prependIcon {
+//       margin-right: 1rem;
+//     }
+//   }
 
-  &.prepend {
-    .prependIcon {
-      &:global(.iconCheck) {
-        animation: inWithCheck 0.3s ease forwards;
+//   &.prepend {
+//     .prependIcon {
+//       &:global(.iconCheck) {
+//         animation: inWithCheck 0.3s ease forwards;
 
-        @keyframes inWithCheck {
-          0% {
-            transform: translateY(#{$click-area});
-          }
+//         @keyframes inWithCheck {
+//           0% {
+//             transform: translateY(#{$click-area});
+//           }
 
-          100% {
-            transform: translateY(0);
-          }
-        }
-      }
-    }
-  }
+//           100% {
+//             transform: translateY(0);
+//           }
+//         }
+//       }
+//     }
+//   }
 
-  &.append {
-    .appendIcon {
-      margin-left: 1rem;
-    }
-  }
+//   &.append {
+//     .appendIcon {
+//       margin-left: 1rem;
+//     }
+//   }
 
-  &.loading {
-    @include barberpole();
-  }
+//   &.loading {
+//     @include barberpole();
+//   }
 
-  &.rounded {
-    border-radius: 100px;
-  }
+//   &.rounded {
+//     border-radius: 100px;
+//   }
 
-  &.primary {
-    background-color: $primary;
-    border-color: $primary;
-  }
+//   &.primary {
+//     background-color: var(--syn-color-primary);
+//     border-color: var(--syn-color-primary);
+//   }
 
-  &.secondary {
-    background-color: $secondary;
-    border-color: $secondary;
-  }
+//   &.secondary {
+//     background-color: $secondary;
+//     border-color: $secondary;
+//   }
 
-  &.tertiary {
-    background-color: $tertiary;
-    border-color: $tertiary;
-  }
+//   &.tertiary {
+//     background-color: $tertiary;
+//     border-color: $tertiary;
+//   }
 
-  &.contrast {
-    background-color: $contrast;
-    border-color: $contrast;
-  }
+//   &.contrast {
+//     background-color: $contrast;
+//     border-color: $contrast;
+//   }
 
-  &.accent {
-    background-color: $accent;
-    border-color: $accent;
-  }
+//   &.accent {
+//     background-color: $accent;
+//     border-color: $accent;
+//   }
 
-  &.secondary {
-    background-color: $secondary;
-    border-color: $secondary;
-    color: $contrast;
-  }
+//   &.secondary {
+//     background-color: $secondary;
+//     border-color: $secondary;
+//     color: $contrast;
+//   }
 
-  &.danger {
-    background-color: $danger;
-    border-color: $danger;
-  }
+//   &.danger {
+//     background-color: $danger;
+//     border-color: $danger;
+//   }
 
-  &.outline {
-    border: $line;
-    background-color: $white;
-    color: $black;
-  }
+//   &.outline {
+//     border: $line;
+//     background-color: $white;
+//     color: $black;
+//   }
 
-  &.semi {
-    background-color: rgba($white, 0.1);
-    color: $white;
-  }
-}
+//   &.semi {
+//     background-color: rgba($white, 0.1);
+//     color: $white;
+//   }
+// }
 
 @for $i from 0 to 5 {
   .mt-#{$i} {

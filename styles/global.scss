@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
 @font-face {
   font-family: 'WargrSans';
-  src: url('/fonts/WargrSans-Regular.woff2') format('woff2'), 
-       url('/fonts/WargrSans-Regular.woff') format('woff');
+  src: url('/fonts/WargrSans-Regular.woff2') format('woff2'),
+    url('/fonts/WargrSans-Regular.woff') format('woff');
 }
 
 @font-face {
   font-family: 'WargrSansBold';
-  src: url('/fonts/WargrSans-Bold.woff2') format('woff2'), 
-       url('/fonts/WargrSans-Bold.woff') format('woff');
+  src: url('/fonts/WargrSans-Bold.woff2') format('woff2'),
+    url('/fonts/WargrSans-Bold.woff') format('woff');
 }
 
-@import 'variables';
+// @import 'variables';
 @import 'synopsis.scss';
 
 #app {
