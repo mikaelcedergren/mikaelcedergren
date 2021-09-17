@@ -11,12 +11,12 @@
   justify-content: center;
   -webkit-appearance: button;
   position: relative;
-  height: var(--syn-click-area);
+  height: $click-area;
   padding: 0 1.5rem;
   border-radius: $border-radius;
-  background-color: var(--syn-color-black);
+  background-color: $black;
   border: 1px solid transparent;
-  color: var(--syn-color-white);
+  color: $white;
   cursor: pointer;
   outline: none;
   white-space: nowrap;
@@ -29,12 +29,16 @@
   align-items: center;
   overflow: hidden;
 
+  &:hover {
+    box-shadow: 0 0 0 5px rgba(var(--syn-color-primary-rgb), 0.5);
+  }
+
   &.syn-button-block {
     display: block;
     width: 100%;
   }
 
   &.syn-button-primary {
-    background-color: var(--syn-color-primary);
+    background-color: $primary;
   }
 }

@@ -23,6 +23,7 @@
   --syn-factor: 4px;
   --syn-click-area: 40px;
   --syn-color-primary: #ff753a;
+  --syn-color-primary-rgb: 255, 117, 58;
   --syn-color-secondary: #3daeff;
   --syn-color-tertiary: #f6cc3f;
   --syn-color-accent: #29d0b2;
@@ -166,12 +167,12 @@
   justify-content: center;
   -webkit-appearance: button;
   position: relative;
-  height: var(--syn-click-area);
+  height: 40px;
   padding: 0 1.5rem;
   border-radius: 4px;
-  background-color: var(--syn-color-black);
+  background-color: #3b4658;
   border: 1px solid transparent;
-  color: var(--syn-color-white);
+  color: #ffffff;
   cursor: pointer;
   outline: none;
   white-space: nowrap;
@@ -184,12 +185,15 @@
   align-items: center;
   overflow: hidden;
 }
+.syn-button:hover {
+  box-shadow: 0 0 0 5px rgba(var(--syn-color-primary-rgb), 0.5);
+}
 .syn-button.syn-button-block {
   display: block;
   width: 100%;
 }
 .syn-button.syn-button-primary {
-  background-color: var(--syn-color-primary);
+  background-color: #4fc0e8;
 }
 
 #synopsis {
@@ -199,6 +203,9 @@
 
 * {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 html,
