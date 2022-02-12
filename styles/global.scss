@@ -71,7 +71,9 @@ header {
 
   a {
     color: $black;
+    font-size: $font-size-small;
     font-family: $font-family-bold;
+    margin-bottom: 0.5rem;
 
     &:after {
       background-color: $black;
