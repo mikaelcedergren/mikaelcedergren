@@ -630,6 +630,14 @@
       "oAP" : "\/components\/_page-header.html",
       "oF" : 0
     },
+    "\/components\/_personal-responsive-menu.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/_personal-responsive-menu.html",
+      "oF" : 0
+    },
     "\/fonts\/IconFont-Regular.otf" : {
       "cB" : 0,
       "ft" : 8192,

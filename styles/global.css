@@ -507,9 +507,7 @@ header h1 {
     flex-flow: row nowrap;
     padding: 1rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  }
-  header > div {
-    display: none;
+    height: 60px;
   }
 }
 header a {
@@ -528,7 +526,7 @@ header img {
 }
 @media (max-width: 450px) {
   header img {
-    max-width: 100px;
+    max-width: 50px;
     margin: 0;
   }
 }
@@ -621,4 +619,52 @@ main section img + h3 {
   height: 20px;
   width: 20px;
   line-height: 20px;
+}
+
+@media (max-width: 640px) {
+  .hidden-responsive {
+    display: none;
+  }
+}
+
+.hamburger-icon {
+  display: inline-block;
+  color: #3b4658;
+  font-style: normal;
+  font-size: 2rem;
+  display: none;
+  height: calc(60px - 2rem);
+  line-height: 1;
+}
+@media (max-width: 640px) {
+  .hamburger-icon {
+    display: block;
+  }
+}
+
+/* (C) TOGGLE SHOW/HIDE MENU */
+.responsive-menu {
+  transition: right 0.5s ease-in-out;
+  position: fixed;
+  background-color: #ffffff;
+  width: 80vw;
+  top: 60px;
+  bottom: 0;
+  right: -80vw;
+  padding: 1rem;
+}
+.responsive-menu a {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0;
+}
+.responsive-menu a::after {
+  display: none;
+}
+
+.hamburger-input {
+  display: none;
+}
+.hamburger-input:checked ~ .responsive-menu {
+  right: 0;
 }

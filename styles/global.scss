@@ -63,10 +63,11 @@ header {
     flex-flow: row nowrap;
     padding: 1rem;
     box-shadow: $box-shadow;
+    height: 60px;
 
-    & > div {
-      display: none;
-    }
+    // & > div {
+    //   display: none;
+    // }
   }
 
   a {
@@ -86,7 +87,7 @@ header {
     margin-bottom: 2rem;
 
     @media (max-width: $responsive-width) {
-      max-width: 100px;
+      max-width: 50px;
       margin: 0;
     }
   }
@@ -193,5 +194,55 @@ main {
         line-height: $social-media-icon-size;
       }
     }
+  }
+}
+
+.hidden-responsive {
+  @media (max-width: $breakpoint-small) {
+    display: none;
+  }
+}
+
+.hamburger-icon {
+  display: inline-block;
+  color: $black;
+  font-style: normal;
+  font-size: 2rem;
+  display: none;
+  height: calc(60px - 2rem);
+  line-height: 1;
+
+  @media (max-width: $breakpoint-small) {
+    display: block;
+  }
+}
+
+/* (C) TOGGLE SHOW/HIDE MENU */
+.responsive-menu {
+  transition: right 0.5s ease-in-out;
+  position: fixed;
+  background-color: $white;
+  width: 80vw;
+  top: 60px;
+  bottom: 0;
+  right: -80vw;
+  padding: 1rem;
+
+  a {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.hamburger-input {
+  display: none;
+
+  &:checked ~ .responsive-menu {
+    right: 0;
   }
 }

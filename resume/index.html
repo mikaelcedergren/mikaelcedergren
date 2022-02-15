@@ -51,14 +51,25 @@
 <div id="app">
   <header>
     <img src="/images/signature.svg" />
-    <h1>Resume of Mikael Cedergren</h1>
-    <a href="/resume/">Resume</a>
-    <a href="/portfolio/">Portfolio</a>
-    <p class="text-small mt-1"
-      >0722-15 87 44<br />
-      wolfie@mikaelcedergren.com</p
-    >
-    <p class="text-small mt-1">Malmö, Sweden</p>
+    <label for="hamburger" class="hamburger-icon">&#9776;</label>
+    <input type="checkbox" id="hamburger" class="hamburger-input" />
+    
+    <div class="responsive-menu">
+      <a href="/resume/">Resume</a>
+      <a href="/portfolio/">Portfolio</a>
+    </div>
+    
+
+    <div class="hidden-responsive">
+      <h1>Resume of Mikael Cedergren</h1>
+      <a href="/resume/">Resume</a><br />
+      <a href="/portfolio/">Portfolio</a>
+      <p class="text-small mt-1"
+        >0722-15 87 44<br />
+        wolfie@mikaelcedergren.com</p
+      >
+      <p class="text-small mt-1">Malmö, Sweden</p>
+    </div>
   </header>
   <main>
     <section>
