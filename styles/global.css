@@ -215,7 +215,7 @@
 #app {
   font-family: "Playfair Display";
   line-height: 1.5;
-  max-width: 768px;
+  max-width: 960px;
   margin: 3rem auto;
   display: flex;
   justify-content: space-between;
@@ -224,7 +224,8 @@
 h1,
 h2,
 h3,
-h4 {
+h4,
+p {
   margin-top: 0;
 }
 
