@@ -1,0 +1,30 @@
+@for $i from 0 to 5 {
+  .mt-#{$i} {
+    margin-top: $i + rem !important;
+  }
+  .mr-#{$i} {
+    margin-right: $i + rem !important;
+  }
+  .mb-#{$i} {
+    margin-bottom: $i + rem !important;
+  }
+  .ml-#{$i} {
+    margin-left: $i + rem !important;
+  }
+  .pt-#{$i} {
+    padding-top: $i + rem !important;
+  }
+  .pr-#{$i} {
+    padding-right: $i + rem !important;
+  }
+  .pb-#{$i} {
+    padding-bottom: $i + rem !important;
+  }
+  .pl-#{$i} {
+    padding-left: $i + rem !important;
+  }
+}
+
+.text-small {
+  font-size: $font-size-small;
+}

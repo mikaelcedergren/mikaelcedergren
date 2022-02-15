@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap");
+@import 'normalize.css';
 @font-face {
   font-family: "WargrSans";
   src: url("/fonts/WargrSans-Regular.woff2") format("woff2"), url("/fonts/WargrSans-Regular.woff") format("woff");
@@ -39,252 +40,6 @@
   --syn-font-size: 15px;
   --syn-font-size-small: 13px;
   --syn-font-size-tiny: 11px;
-}
-
-:root {
-  --syn-grid-gap: 1rem;
-  --syn-grid-gap-half: 0.5rem;
-  --syn-grid-width: auto;
-}
-
-.syn-grid {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: 0 calc(var(--syn-grid-gap-half) * -1);
-  width: calc(100% + var(--syn-grid-gap));
-}
-@media (max-width: 640px) {
-  .syn-grid {
-    flex-flow: column nowrap;
-  }
-}
-.syn-grid.syn-grid-gap-large {
-  --syn-grid-gap: 3rem;
-  --syn-grid-gap-half: 1.5rem;
-}
-.syn-grid.syn-grid-gap-small {
-  --syn-grid-gap: 0.5rem;
-  --syn-grid-gap-half: 0.25rem;
-}
-.syn-grid.syn-grid-gap-none {
-  --syn-grid-gap: 0;
-  --syn-grid-gap-half: 0;
-}
-.syn-grid .syn-grid-cell {
-  flex: 1 1 auto;
-  min-width: min-content;
-  color: inherit;
-  vertical-align: baseline;
-  margin: 0 var(--syn-grid-gap-half);
-  padding: 1rem;
-  max-width: 100%;
-}
-.syn-grid .syn-grid-cell:first-child {
-  margin-top: 0;
-}
-.syn-grid .syn-grid-cell:last-child {
-  margin-bottom: 0;
-}
-@media (max-width: 640px) {
-  .syn-grid .syn-grid-cell {
-    margin: var(--syn-grid-gap-half) var(--syn-grid-gap-half);
-    min-width: calc(100% - var(--syn-grid-gap));
-  }
-}
-.syn-grid .syn-grid-cell[class*=syn-grid-cell-width-] {
-  flex: 1 1 var(--syn-grid-width);
-  min-width: var(--syn-grid-width);
-  max-width: var(--syn-grid-width);
-}
-.syn-grid .syn-grid-cell[class*=syn-grid-cell-width-].syn-grid-cell-width-half {
-  --syn-grid-width: 50%;
-}
-.syn-grid .syn-grid-cell[class*=syn-grid-cell-width-].syn-grid-cell-width-third {
-  --syn-grid-width: 33.3333333333%;
-}
-.syn-grid .syn-grid-cell[class*=syn-grid-cell-width-].syn-grid-cell-width-quarter {
-  --syn-grid-width: 25%;
-}
-.syn-grid .syn-grid-cell[class*=syn-grid-cell-width-].syn-grid-cell-width-fifth {
-  --syn-grid-width: 20%;
-}
-@media (max-width: 640px) {
-  .syn-grid .syn-grid-cell[class*=syn-grid-cell-width-] {
-    min-width: min-content;
-    max-width: 100%;
-    flex-basis: 100%;
-  }
-}
-.syn-grid.syn-grid-middle {
-  align-items: center;
-}
-.syn-grid.syn-grid-unresponsive {
-  flex-flow: row nowrap;
-}
-.syn-grid.syn-grid-unresponsive .syn-grid-cell {
-  min-width: min-content;
-}
-.syn-grid.syn-grid-stretch {
-  align-items: stretch;
-}
-
-.syn-grid .syn-grid-cell {
-  background-color: #f7f9fc;
-  outline: 1px dashed rgba(0, 0, 0, 0.1);
-}
-
-.syn-grid.syn-grid-middle.syn-grid-stretch {
-  background-color: red !important;
-  animation: error-shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
-  perspective: 1000px;
-}
-@keyframes error-shake {
-  10%, 90% {
-    transform: translate3d(-1px, 0, 0);
-  }
-  20%, 80% {
-    transform: translate3d(2px, 0, 0);
-  }
-  30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0);
-  }
-  40%, 60% {
-    transform: translate3d(4px, 0, 0);
-  }
-}
-
-.syn-button {
-  font-family: "WargrSansBold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  transition: box-shadow 0.2s ease-out, background-color 0.2s ease, border-color 0.2s ease;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  vertical-align: middle;
-  justify-content: center;
-  -webkit-appearance: button;
-  position: relative;
-  height: 40px;
-  padding: 0 1.5rem;
-  border-radius: 4px;
-  background-color: #3b4658;
-  border: 1px solid transparent;
-  color: #ffffff;
-  cursor: pointer;
-  outline: none;
-  white-space: nowrap;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1;
-  min-height: 0;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-.syn-button:hover {
-  box-shadow: 0 0 0 5px rgba(var(--syn-color-primary-rgb), 0.5);
-}
-.syn-button.syn-button-block {
-  display: block;
-  width: 100%;
-}
-.syn-button.syn-button-primary {
-  background-color: #773182;
-}
-
-#synopsis {
-  padding: 2rem;
-  min-height: 100vh;
-}
-
-* {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-html,
-body {
-  font-size: 15px;
-  font-family: "WargrSans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-color: #ffffff;
-  line-height: 1.5;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-p {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-strong,
-p,
-a {
-  text-rendering: optimizeLegibility;
-}
-
-a {
-  color: #773182;
-  text-decoration: none;
-  position: relative;
-  transition: color 0.3s ease;
-}
-a:hover::after {
-  animation: link-underline 0.5s ease forwards;
-}
-a::after {
-  transition: background-color 0.3s ease;
-  content: "";
-  position: absolute;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 100px;
-}
-@keyframes link-underline {
-  0% {
-    left: 0;
-    right: 0;
-  }
-  50% {
-    left: 100%;
-    right: 0;
-  }
-  51% {
-    left: 0;
-    right: 100%;
-  }
-  100% {
-    left: 0;
-    right: 0;
-  }
-}
-a:after {
-  background-color: #773182;
-}
-
-.syn-image {
-  width: 100%;
-  max-width: 100%;
 }
 
 .mt-0 {
@@ -451,12 +206,6 @@ a:after {
   font-size: 13px;
 }
 
-div.syn-demo-section {
-  display: block;
-  width: 100%;
-  margin: 0 0 3rem 0;
-}
-
 #app {
   font-family: "Playfair Display";
   line-height: 1.5;
@@ -466,14 +215,20 @@ div.syn-demo-section {
   justify-content: space-between;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+}
+
 header {
-  position: fixed;
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-end;
   margin-top: 10%;
   padding-right: 2rem;
-  width: 250px;
+  min-width: 250px;
   text-align: right;
   color: #a3afbf;
   font-family: inherit;
@@ -533,7 +288,6 @@ header img {
 
 main {
   flex: 1 1 auto;
-  padding-left: 250px;
   line-height: 1.8;
 }
 @media (max-width: 450px) {

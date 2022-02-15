@@ -12,7 +12,9 @@
 }
 
 // @import 'variables';
-@import '../substratum/_substratum.scss';
+@import '_variables.scss';
+@import '_utilities.scss';
+@import 'normalize.css';
 
 #app {
   font-family: 'Playfair Display';
@@ -23,14 +25,20 @@
   justify-content: space-between;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+}
+
 header {
-  position: fixed;
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-end;
   margin-top: 10%;
   padding-right: 2rem;
-  width: $side-bar-width;
+  min-width: $side-bar-width;
   text-align: right;
   color: $gray4;
   font-family: inherit;
@@ -95,7 +103,6 @@ header {
 
 main {
   flex: 1 1 auto;
-  padding-left: $side-bar-width;
   line-height: 1.8;
 
   @media (max-width: $responsive-width) {
