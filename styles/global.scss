@@ -33,10 +33,11 @@ h4 {
 }
 
 header {
+  position: sticky;
+  top: 10%;
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-end;
-  margin-top: 10%;
   padding-right: 2rem;
   min-width: $side-bar-width;
   text-align: right;
@@ -49,33 +50,18 @@ header {
   z-index: 999;
   font-family: $font-family;
 
-  h1 {
-    font-size: $font-size-small;
-    color: $black;
-    line-height: 1.2;
-    font-weight: $font-regular;
-
-    @media (max-width: 468px) {
-      display: none;
-    }
-  }
-
   @media (max-width: $responsive-width) {
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
     flex-flow: row nowrap;
-    padding: 1rem;
+    padding: 0 1rem;
     box-shadow: $box-shadow;
-    height: 60px;
-
-    // & > div {
-    //   display: none;
-    // }
+    max-height: 48px;
   }
 
   a {
@@ -104,11 +90,7 @@ header {
 main {
   flex: 1 1 auto;
   line-height: 1.8;
-
-  @media (max-width: $responsive-width) {
-    padding: 0;
-    margin-top: 3rem;
-  }
+  padding: 0 1rem;
 
   section {
     position: relative;
@@ -204,36 +186,28 @@ main {
   }
 }
 
-.hidden-responsive {
-  @media (max-width: $breakpoint-small) {
-    display: none;
-  }
-}
-
 .hamburger-icon {
   display: inline-block;
   color: $black;
   font-style: normal;
   font-size: 2rem;
   display: none;
-  height: calc(60px - 2rem);
-  line-height: 1;
 
   @media (max-width: $breakpoint-small) {
     display: block;
   }
 }
 
-/* (C) TOGGLE SHOW/HIDE MENU */
 .responsive-menu {
   transition: right 0.5s ease-in-out;
   position: fixed;
   background-color: $white;
-  width: 80vw;
-  top: 60px;
+  width: 200px;
+  top: 48px;
   bottom: 0;
-  right: -80vw;
+  right: calc(-200px - 2rem);
   padding: 1rem;
+  box-shadow: $box-shadow;
 
   a {
     display: block;

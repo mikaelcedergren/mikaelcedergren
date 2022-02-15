@@ -28,3 +28,9 @@
 .text-small {
   font-size: $font-size-small;
 }
+
+.hidden-responsive {
+  @media (max-width: $breakpoint-small) {
+    display: none;
+  }
+}
