@@ -733,6 +733,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/Dahmer.jpg" : {
+      "ft" : 16384,
+      "iS" : 90472,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/Dahmer.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/images\/dante.jpg" : {
       "ft" : 16384,
       "iS" : 555036,
