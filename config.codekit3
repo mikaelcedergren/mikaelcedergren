@@ -1138,6 +1138,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/portfolio\/images\/trialbee-synargus-logo.jpg" : {
+      "ft" : 16384,
+      "iS" : 33207,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/portfolio\/images\/trialbee-synargus-logo.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/portfolio\/images\/youcruit-geophrey-favorites.png" : {
       "ft" : 32768,
       "iS" : 132191,
