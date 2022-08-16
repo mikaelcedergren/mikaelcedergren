@@ -74,6 +74,7 @@ nav a {
   text-decoration: none;
   font-weight: 700;
   margin-bottom: 1rem;
+  padding: 0.5rem 0;
 }
 nav img {
   max-height: 48px;
