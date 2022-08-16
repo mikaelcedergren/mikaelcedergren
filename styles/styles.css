@@ -65,6 +65,14 @@ nav {
   padding: 0 2rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
+nav a {
+  display: block;
+  font-size: 1.25rem;
+  color: #3b4658;
+  text-decoration: none;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
 nav img {
   max-height: 48px;
 }

@@ -46,6 +46,15 @@ nav {
   padding: 0 2rem;
   box-shadow: $box-shadow;
 
+  a {
+    display: block;
+    font-size: 1.25rem;
+    color: $black;
+    text-decoration: none;
+    font-weight: $font-bold;
+    margin-bottom: 1rem;
+  }
+
   img {
     max-height: 48px;
   }
