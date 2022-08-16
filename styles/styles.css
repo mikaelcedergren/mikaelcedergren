@@ -362,9 +362,14 @@ main section {
 main section.padding {
   padding: 1rem;
 }
+main section.padding img {
+  width: calc(100% + 2rem);
+  margin-left: -1rem;
+  margin-right: -1rem;
+  max-width: calc(100% + 2rem);
+}
 main section img {
   max-width: 100%;
-  margin-bottom: 0.5rem;
   display: block;
 }
 main section img + h1 {
@@ -400,9 +405,9 @@ main section article {
   padding: 0 0 56.25% 0;
   height: 0;
   overflow: hidden;
-  max-width: 100%;
+  max-width: calc(100% + 2rem);
+  margin: 0 -1rem;
   top: 0;
-  margin-bottom: 0.5rem;
 }
 .video iframe,
 .video object,
