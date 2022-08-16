@@ -146,6 +146,7 @@ nav #menu-cover {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: -2;
+  pointer-events: none;
 }
 nav #menu {
   transition: all 0.3s ease;

@@ -141,6 +141,7 @@ nav {
     bottom: 0;
     background-color: rgba(black, 0.8);
     z-index: -2;
+    pointer-events: none;
   }
 
   #menu {
