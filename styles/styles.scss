@@ -234,6 +234,14 @@ main {
   }
 }
 
+pre {
+  margin: 0;
+  font-family: $font-family;
+  font-weight: $font-bold;
+  font-size: 0.8rem;
+  color: $primary;
+}
+
 .video {
   position: relative;
   padding: 0 0 56.25% 0;
