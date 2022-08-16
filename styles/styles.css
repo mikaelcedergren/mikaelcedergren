@@ -54,7 +54,7 @@ body {
 nav {
   background-color: #ffffff;
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   height: 96px;
@@ -156,7 +156,7 @@ nav #menu {
   background-color: #ffffff;
   transform: translateX(100%);
   margin: 0;
-  padding: 96px 2rem 2rem 2rem;
+  padding: 2rem 2rem 96px 2rem;
   list-style: none;
 }
 nav #menu li {
@@ -168,7 +168,7 @@ main {
   max-width: 960px;
   margin: 0 auto;
   padding: 0 1rem;
-  padding-top: calc(96px + 1rem);
+  padding-top: 1rem;
 }
 main section {
   position: relative;
