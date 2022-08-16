@@ -142,9 +142,11 @@ nav {
     transform: translateX(100%);
     margin: 0;
     padding: $navigation-height 2rem 2rem 2rem;
+    list-style: none;
 
-    ul {
-      list-style: none;
+    li {
+      margin: 0;
+      padding: 0;
     }
   }
 }

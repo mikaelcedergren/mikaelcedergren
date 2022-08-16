@@ -147,9 +147,11 @@ nav #menu {
   transform: translateX(100%);
   margin: 0;
   padding: 54px 2rem 2rem 2rem;
-}
-nav #menu ul {
   list-style: none;
+}
+nav #menu li {
+  margin: 0;
+  padding: 0;
 }
 
 main {
