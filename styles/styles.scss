@@ -166,8 +166,8 @@ nav {
 main {
   max-width: $page-max-width;
   margin: 0 auto;
-  padding: 0 1rem;
-  padding-top: 1rem;
+  padding: 1rem;
+  margin-bottom: $navigation-height;
 
   section {
     position: relative;

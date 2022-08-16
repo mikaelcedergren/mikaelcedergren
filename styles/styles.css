@@ -168,8 +168,8 @@ nav #menu li {
 main {
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 1rem;
-  padding-top: 1rem;
+  padding: 1rem;
+  margin-bottom: 96px;
 }
 main section {
   position: relative;
