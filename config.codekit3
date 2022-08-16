@@ -813,6 +813,14 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/signature.afdesign" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/signature.afdesign",
+      "oF" : 0
+    },
     "\/images\/signature.svg" : {
       "ft" : 2097152,
       "miP" : 0,
