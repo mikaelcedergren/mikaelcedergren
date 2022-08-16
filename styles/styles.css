@@ -133,7 +133,7 @@ nav #hamburger-button .hamburger-icon span:first-child {
 nav #hamburger-button .hamburger-icon span:last-child {
   background: #3b4658;
   top: auto;
-  bottom: 2px;
+  bottom: 3px;
   transform-origin: center right;
 }
 nav #menu-cover {
