@@ -92,6 +92,9 @@ nav #hamburger-button input:checked ~ .hamburger-icon > span:last-child {
   transform: rotate(45deg);
   opacity: 1;
 }
+nav #hamburger-button input:checked ~ #menu {
+  transform: translateX(0%);
+}
 nav #hamburger-button .hamburger-icon {
   height: 100%;
   width: 100%;
@@ -118,7 +121,16 @@ nav #hamburger-button .hamburger-icon span:last-child {
   transform-origin: center right;
 }
 nav #menu {
-  display: none;
+  transition: all 1s ease;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 90vw;
+  bottom: 0;
+  background-color: blue;
+  transform: translateX(100%);
+  margin-top: 54px;
+  padding: 1rem;
 }
 
 main {

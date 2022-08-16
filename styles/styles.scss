@@ -76,6 +76,10 @@ nav {
             opacity: 1;
           }
         }
+
+        & ~ #menu {
+          transform: translateX(0%);
+        }
       }
     }
 
@@ -108,8 +112,18 @@ nav {
       }
     }
   }
+
   #menu {
-    display: none;
+    transition: all 1s ease;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 90vw;
+    bottom: 0;
+    background-color: blue;
+    transform: translateX(100%);
+    margin-top: $navigation-height;
+    padding: 1rem;
   }
 }
 
