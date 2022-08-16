@@ -600,6 +600,22 @@
       "oAP" : "\/components\/_artwork.html",
       "oF" : 0
     },
+    "\/components\/_footer.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/_footer.html",
+      "oF" : 0
+    },
+    "\/components\/_header.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/_header.html",
+      "oF" : 0
+    },
     "\/components\/_page-footer.kit" : {
       "cB" : 0,
       "ft" : 2048,
@@ -812,14 +828,6 @@
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
-    },
-    "\/images\/signature.afdesign" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/images\/signature.afdesign",
-      "oF" : 0
     },
     "\/images\/signature.svg" : {
       "ft" : 2097152,
