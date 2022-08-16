@@ -170,7 +170,7 @@ nav {
 main {
   max-width: $page-max-width;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0;
   margin-bottom: $navigation-height;
 
   section {
@@ -193,7 +193,7 @@ main {
         background-color: $white;
         color: $black;
         font-size: $font-size-small;
-        padding: 1rem 0 1rem 1rem;
+        padding: 1rem;
         line-height: 1;
         margin: 0;
         text-transform: uppercase;

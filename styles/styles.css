@@ -172,7 +172,7 @@ nav #menu li {
 main {
   max-width: 960px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0;
   margin-bottom: 96px;
 }
 main section {
@@ -195,7 +195,7 @@ main section img + h1 {
   background-color: #ffffff;
   color: #3b4658;
   font-size: 13px;
-  padding: 1rem 0 1rem 1rem;
+  padding: 1rem;
   line-height: 1;
   margin: 0;
   text-transform: uppercase;
