@@ -15,6 +15,7 @@
 @import '_variables.scss';
 
 $navigation-height: 54px;
+$navigation-menu-width: 280px;
 
 html,
 body {
@@ -117,18 +118,17 @@ nav {
   }
 
   #menu {
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: $navigation-height;
     bottom: 0;
-    width: 300px;
-    margin: -100px 0 0 -50px;
-    padding: 50px;
-    padding-top: 125px;
-    background: $gray1;
+    width: $navigation-menu-width;
+    margin: 0 0 0 -#{$navigation-menu-width};
+    padding: 2rem;
+    background: $white;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
-    transform: translate(-100%, 0);
+    transform: translate(100%, 0);
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 
     li {
@@ -141,7 +141,7 @@ nav {
 main {
   max-width: $page-max-width;
   margin: 0 auto;
-  background: blue;
+  // background: blue;
   padding: 0 1rem;
   padding-top: 54px;
 }

@@ -123,18 +123,17 @@ nav #menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 nav #menu {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: 54px;
   bottom: 0;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  background: #f7f9fc;
+  width: 280px;
+  margin: 0 0 0 -280px;
+  padding: 2rem;
+  background: #ffffff;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
+  transform: translate(100%, 0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 nav #menu li {
@@ -145,7 +144,6 @@ nav #menu li {
 main {
   max-width: 960px;
   margin: 0 auto;
-  background: blue;
   padding: 0 1rem;
   padding-top: 54px;
 }
