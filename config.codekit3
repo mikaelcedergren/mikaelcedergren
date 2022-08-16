@@ -894,22 +894,6 @@
       "oAP" : "\/index.html",
       "oF" : 0
     },
-    "\/new.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/new.html",
-      "oF" : 0
-    },
-    "\/new.kit" : {
-      "cB" : 0,
-      "ft" : 2048,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/new.html",
-      "oF" : 0
-    },
     "\/portfolio\/images\/betcreative-logo.png" : {
       "ft" : 32768,
       "iS" : 62734,
