@@ -63,7 +63,7 @@ nav {
   justify-content: space-between;
   flex-flow: row nowrap;
   padding: 0 2rem;
-  box-shadow: 0 5px -15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
 }
 nav a {
   display: block;
