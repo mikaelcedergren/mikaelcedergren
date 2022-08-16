@@ -357,7 +357,6 @@ main {
 }
 main section {
   position: relative;
-  margin-bottom: 4rem;
 }
 main section.padding {
   padding: 1rem;
