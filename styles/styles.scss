@@ -52,6 +52,7 @@ nav {
     width: $hamburger-size;
     height: $hamburger-size;
     position: relative;
+    z-index: 3;
 
     input {
       display: block;
@@ -65,7 +66,7 @@ nav {
 
       &:checked {
         & ~ #menu-cover {
-          transform: translateX(0);
+          opacity: 1;
         }
 
         & ~ .hamburger-icon > span {
@@ -94,7 +95,7 @@ nav {
       span {
         position: absolute;
         transform-origin: center center;
-        transition: all 0.3s 0.5s;
+        transition: all 0.3s;
         background-color: $black;
         height: 6px;
         width: 100%;
@@ -119,8 +120,9 @@ nav {
 
   #menu-cover {
     position: fixed;
-    transition: transform 1s ease;
-    transform: translateX(100%);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    // pointer-events: none;
     top: 0;
     right: 0;
     left: 0;
@@ -129,7 +131,7 @@ nav {
   }
 
   #menu {
-    transition: all 1s ease;
+    transition: all 0.3s ease;
     position: fixed;
     top: 0;
     right: 0;
@@ -138,8 +140,8 @@ nav {
     background-color: blue;
     transform: translateX(100%);
     margin: 0;
-    margin-top: $navigation-height;
     padding: 1rem;
+    z-index: 0;
   }
 }
 
