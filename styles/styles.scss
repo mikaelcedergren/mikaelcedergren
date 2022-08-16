@@ -49,7 +49,6 @@ nav {
   }
 
   #hamburger-button {
-    background: $gray2;
     width: $hamburger-size;
     height: $hamburger-size;
     position: relative;
@@ -88,20 +87,20 @@ nav {
         position: absolute;
         transform-origin: center center;
         transition: all 300ms;
-        background-color: goldenrod;
+        background-color: $black;
         height: 6px;
         width: 100%;
         border-radius: 300px;
         top: calc(50% - 3px);
 
         &:first-child {
-          background: blue;
+          background: $black;
           top: 2px;
           transform-origin: center right;
         }
 
         &:last-child {
-          background: red;
+          background: $black;
           top: auto;
           bottom: 2px;
           transform-origin: center right;

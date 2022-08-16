@@ -67,7 +67,6 @@ nav img {
   max-height: 48px;
 }
 nav #hamburger-button {
-  background: #e6eaf0;
   width: 32px;
   height: 32px;
   position: relative;
@@ -101,19 +100,19 @@ nav #hamburger-button .hamburger-icon span {
   position: absolute;
   transform-origin: center center;
   transition: all 300ms;
-  background-color: goldenrod;
+  background-color: #3b4658;
   height: 6px;
   width: 100%;
   border-radius: 300px;
   top: calc(50% - 3px);
 }
 nav #hamburger-button .hamburger-icon span:first-child {
-  background: blue;
+  background: #3b4658;
   top: 2px;
   transform-origin: center right;
 }
 nav #hamburger-button .hamburger-icon span:last-child {
-  background: red;
+  background: #3b4658;
   top: auto;
   bottom: 2px;
   transform-origin: center right;
