@@ -156,5 +156,5 @@ main {
   margin: 0 auto;
   // background: blue;
   padding: 0 1rem;
-  padding-top: 54px;
+  padding-top: calc($navigation-height + 1rem);
 }
