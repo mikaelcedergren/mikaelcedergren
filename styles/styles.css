@@ -41,6 +41,10 @@
   --syn-font-size-tiny: 11px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   font-family: "Playfair Display";
@@ -62,83 +66,60 @@ nav {
 nav img {
   max-height: 48px;
 }
-nav #menuToggle {
-  display: block;
-  position: relative;
-  z-index: 1;
-  -webkit-user-select: none;
-  user-select: none;
-}
-nav #menuToggle a {
-  text-decoration: none;
-  color: #3b4658;
-  transition: color 0.3s ease;
-}
-nav #menuToggle a:hover {
-  color: #773182;
-}
-nav #menuToggle input {
-  display: block;
-  width: 40px;
+nav #hamburger-button {
+  background: #e6eaf0;
+  width: 32px;
   height: 32px;
+  position: relative;
+}
+nav #hamburger-button input {
+  display: block;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: -7px;
-  left: -5px;
   cursor: pointer;
   opacity: 0;
-  z-index: 2;
+  z-index: 1;
   -webkit-touch-callout: none;
 }
-nav #menuToggle input:checked ~ ul {
-  transform: none;
-}
-nav #menuToggle input:checked ~ span {
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #3b4658;
-}
-nav #menuToggle input:checked ~ span:nth-last-child(3) {
+nav #hamburger-button input:checked ~ .hamburger-icon > span {
   opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
 }
-nav #menuToggle input:checked ~ span:nth-last-child(2) {
-  transform: rotate(-45deg) translate(0, -1px);
+nav #hamburger-button input:checked ~ .hamburger-icon > span:first-child {
+  transform: rotate(-45deg);
+  opacity: 1;
 }
-nav #menuToggle span {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  background: #3b4658;
-  border-radius: 3px;
-  z-index: 1;
-  transform-origin: 4px 0px;
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+nav #hamburger-button input:checked ~ .hamburger-icon > span:last-child {
+  transform: rotate(45deg);
+  opacity: 1;
 }
-nav #menuToggle span:first-child {
-  transform-origin: 0% 0%;
+nav #hamburger-button .hamburger-icon {
+  height: 100%;
+  width: 100%;
 }
-nav #menuToggle span:nth-last-child(2) {
-  transform-origin: 0% 100%;
+nav #hamburger-button .hamburger-icon span {
+  position: absolute;
+  transform-origin: center center;
+  transition: all 300ms;
+  background-color: goldenrod;
+  height: 6px;
+  width: 100%;
+  border-radius: 300px;
+  top: calc(50% - 3px);
+}
+nav #hamburger-button .hamburger-icon span:first-child {
+  background: blue;
+  top: 2px;
+  transform-origin: center right;
+}
+nav #hamburger-button .hamburger-icon span:last-child {
+  background: red;
+  top: auto;
+  bottom: 2px;
+  transform-origin: center right;
 }
 nav #menu {
-  position: fixed;
-  top: 54px;
-  bottom: 0;
-  width: 280px;
-  margin: 0 0 0 -280px;
-  padding: 2rem;
-  background: #ffffff;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  transform-origin: 0% 0%;
-  transform: translate(100%, 0);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-}
-nav #menu li {
-  padding: 10px 0;
-  font-size: 22px;
+  display: none;
 }
 
 main {
