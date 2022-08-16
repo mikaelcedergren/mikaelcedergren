@@ -57,7 +57,7 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  height: 54px;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -147,7 +147,7 @@ nav #menu {
   background-color: #ffffff;
   transform: translateX(100%);
   margin: 0;
-  padding: 54px 2rem 2rem 2rem;
+  padding: 64px 2rem 2rem 2rem;
   list-style: none;
 }
 nav #menu li {
@@ -159,7 +159,7 @@ main {
   max-width: 960px;
   margin: 0 auto;
   padding: 0 1rem;
-  padding-top: calc(54px + 1rem);
+  padding-top: calc(64px + 1rem);
 }
 main section {
   position: relative;
