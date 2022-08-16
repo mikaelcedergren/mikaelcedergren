@@ -133,19 +133,23 @@ nav #menu-cover {
   left: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
+  z-index: -2;
 }
 nav #menu {
   transition: all 0.3s ease;
   position: fixed;
+  z-index: -1;
   top: 0;
   right: 0;
   width: 90vw;
   bottom: 0;
-  background-color: blue;
+  background-color: #ffffff;
   transform: translateX(100%);
   margin: 0;
-  padding: 1rem;
-  z-index: 0;
+  padding: 54px 2rem 2rem 2rem;
+}
+nav #menu ul {
+  list-style: none;
 }
 
 main {
