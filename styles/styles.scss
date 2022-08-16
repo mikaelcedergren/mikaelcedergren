@@ -33,6 +33,7 @@ body {
 }
 
 nav {
+  background-color: $white;
   position: fixed;
   top: 0;
   left: 0;
@@ -154,7 +155,46 @@ nav {
 main {
   max-width: $page-max-width;
   margin: 0 auto;
-  // background: blue;
   padding: 0 1rem;
   padding-top: calc($navigation-height + 1rem);
+
+  section {
+    position: relative;
+    margin-bottom: 2rem;
+
+    img {
+      max-width: 100%;
+      margin-bottom: 0.5rem;
+      display: block;
+
+      & + h1 {
+        font-family: $font-family;
+        text-transform: uppercase;
+        position: absolute;
+        top: -1px;
+        font-style: normal;
+        right: -1px;
+        display: inline-block;
+        background-color: $white;
+        color: $black;
+        font-size: $font-size-small;
+        padding: 1rem 0 1rem 1rem;
+        line-height: 1;
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 0.25rem;
+      }
+    }
+
+    article {
+      position: relative;
+      max-width: 100%;
+      background-color: $white;
+      line-height: 1.75;
+      margin: 0 0 0 1rem;
+      padding: 1rem 1rem 0 1rem;
+      margin-top: -5rem;
+      min-height: 5rem;
+    }
+  }
 }
