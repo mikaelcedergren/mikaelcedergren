@@ -49,6 +49,7 @@ html,
 body {
   font-family: "Playfair Display";
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 nav {
@@ -173,7 +174,7 @@ main {
   max-width: 960px;
   margin: 0 auto;
   padding: 0;
-  margin-bottom: 96px;
+  margin-bottom: calc(96px + 2rem);
 }
 main section {
   position: relative;

@@ -30,6 +30,7 @@ body {
   // margin: 3rem auto;
   // display: flex;
   // justify-content: space-between;
+  overflow-x: hidden;
 }
 
 nav {
@@ -171,7 +172,7 @@ main {
   max-width: $page-max-width;
   margin: 0 auto;
   padding: 0;
-  margin-bottom: $navigation-height;
+  margin-bottom: calc(#{$navigation-height} + 2rem);
 
   section {
     position: relative;
