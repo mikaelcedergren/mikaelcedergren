@@ -163,13 +163,17 @@ nav {
     z-index: -1;
     top: 0;
     right: 0;
-    width: 90vw;
+    width: 380px;
     bottom: 0;
     background-color: $white;
     transform: translateX(100%);
     margin: 0;
     padding: 2rem 2rem $navigation-height 2rem;
     list-style: none;
+
+    @media (max-width: $breakpoint-medium) {
+      width: 90vw;
+    }
 
     li {
       margin: 0;
