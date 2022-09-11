@@ -34,6 +34,7 @@ h3,
 h4 {
   margin-top: 0;
   font-family: $font-family-headings;
+  line-height: 1.4;
 }
 
 strong {
@@ -52,19 +53,33 @@ nav {
   justify-content: space-between;
   flex-flow: row nowrap;
   padding: 0 1rem;
-  box-shadow: 0 -5px 15px rgba(black, 0.1);
 
   a {
-    display: block;
+    position: relative;
+    display: inline-block;
     font-size: 1.25rem;
     color: $black;
     text-decoration: none;
     font-weight: $font-bold;
-    margin-bottom: 1rem;
     padding: 0.5rem 0;
+    width: min-content;
 
-    &.secret {
-      display: none;
+    &::after {
+      transition: width 0.3s ease-out;
+      content: '';
+      position: absolute;
+      height: 2px;
+      bottom: 6px;
+      background-color: $black;
+      width: 0;
+    }
+
+    @media (min-width: $breakpoint-medium) {
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
     }
   }
 
@@ -194,21 +209,18 @@ main {
 
   section {
     position: relative;
+    padding: 1rem;
 
-    &.padding {
-      padding: 1rem;
+    img {
+      max-width: 100%;
+      display: block;
 
-      img {
+      @media (max-width: $breakpoint-medium) {
         width: calc(100% + 2rem);
         margin-left: -1rem;
         margin-right: -1rem;
         max-width: calc(100% + 2rem);
       }
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
 
       & + h1 {
         font-family: $font-family;
@@ -249,7 +261,7 @@ pre {
   text-transform: uppercase;
   font-size: 0.8rem;
   color: $primary;
-  margin-right: 1rem;
+  line-height: 1;
 }
 
 .video {
@@ -257,9 +269,14 @@ pre {
   padding: 0 0 calc(56.25% + 1rem) 0;
   height: 0;
   overflow: hidden;
-  max-width: calc(100% + 2rem);
-  margin: 0 -1rem;
+  max-width: 100%;
+  margin: 0;
   top: 0;
+
+  @media (max-width: $breakpoint-medium) {
+    max-width: calc(100% + 2rem);
+    margin: 0 -1rem;
+  }
 
   iframe,
   object,
