@@ -224,7 +224,7 @@ header {
     margin: 0;
     flex-flow: row nowrap;
     padding: 0 1rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     max-height: 48px;
   }
 }
@@ -355,7 +355,7 @@ main section img + h3 {
   bottom: 0;
   right: calc(-200px - 2rem);
   padding: 1rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 .responsive-menu a {
   display: block;
