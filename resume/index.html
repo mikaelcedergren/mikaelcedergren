@@ -234,8 +234,8 @@
     </div>
     <ul id="menu">
       <a href="/"><li>Home</li></a>
-      <a href="/resume/"><li>Resume</li></a>
-      <a href="/portfolio/"><li>Portfolio</li></a>
+      <a class="secret" href="/resume/"><li>Resume</li></a>
+      <a class="secret" href="/portfolio/"><li>Portfolio</li></a>
       <a href="https://society6.com/mikaelcedergren" target="_blank"><li>Buy Prints</li></a>
       
       <div>All rights reserved</div>
@@ -244,5 +244,18 @@
 
   </div>
 </nav>
+
+<script>
+const queryString = window.location.search;
+console.log(queryString);
+
+const urlParams = new URLSearchParams(queryString);
+if (urlParams.has('mls')) {
+  var x = document.getElementsByClassName("secret");
+  for (let i = 0; i < x.length; i++) {
+    x[i].style.display = "block";  
+  }
+}
+  </script>
 </body>
 </html>

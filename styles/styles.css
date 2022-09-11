@@ -220,6 +220,9 @@ nav a {
   margin-bottom: 1rem;
   padding: 0.5rem 0;
 }
+nav a.secret {
+  display: none;
+}
 nav img {
   max-height: 48px;
 }
