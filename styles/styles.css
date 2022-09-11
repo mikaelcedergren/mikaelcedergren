@@ -248,6 +248,9 @@ nav a::after {
     width: 100%;
   }
 }
+nav .logo {
+  font-size: 0;
+}
 nav img {
   max-height: 38px;
 }
