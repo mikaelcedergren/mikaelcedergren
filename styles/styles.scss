@@ -15,10 +15,6 @@
 @import '_variables.scss';
 @import '_utilities.scss';
 
-$navigation-height: 96px;
-$navigation-menu-width: 280px;
-$hamburger-size: 32px;
-
 * {
   box-sizing: border-box;
 }
@@ -41,6 +37,7 @@ h4 {
   margin-top: 0;
   font-family: $font-family-headings;
 }
+
 nav {
   background-color: $white;
   position: fixed;
@@ -53,7 +50,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   flex-flow: row nowrap;
-  padding: 0 2rem;
+  padding: 0 1rem;
   box-shadow: 0 -5px 15px rgba(black, 0.1);
 
   a {
@@ -119,7 +116,7 @@ nav {
         transform-origin: center center;
         transition: all 0.3s;
         background-color: $black;
-        height: 4px;
+        height: 3px;
         width: 100%;
         border-radius: 300px;
         top: calc(50% - 2px);
