@@ -23,11 +23,9 @@ html,
 body {
   font-family: $font-family;
   line-height: 1.8;
-  // max-width: $page-max-width;
-  // margin: 3rem auto;
-  // display: flex;
-  // justify-content: space-between;
   overflow-x: hidden;
+  padding: 0;
+  margin: 0;
 }
 
 h1,
@@ -41,8 +39,7 @@ h4 {
 nav {
   background-color: $white;
   position: fixed;
-  top: auto;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
   height: $navigation-height;
@@ -150,17 +147,18 @@ nav {
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: rgba(black, 0.8);
+    background-color: rgba(black, 0.5);
     z-index: -2;
     pointer-events: none;
+    backdrop-filter: blur(2px);
   }
 
   #menu {
     transition: all 0.3s ease;
     display: flex;
     flex-flow: column nowrap;
-    align-content: flex-end;
-    justify-content: flex-end;
+    align-content: flex-start;
+    justify-content: flex-start;
     position: fixed;
     z-index: -1;
     top: 0;
@@ -184,7 +182,7 @@ main {
   max-width: $page-max-width;
   margin: 0 auto;
   padding: 0;
-  margin-bottom: calc(#{$navigation-height} + 2rem);
+  margin-top: $navigation-height;
 
   section {
     position: relative;
