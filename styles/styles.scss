@@ -93,6 +93,22 @@ nav {
     position: relative;
     z-index: 3;
 
+    @media (min-width: $breakpoint-medium) {
+      &:hover {
+        .hamburger-icon {
+          span {
+            &:first-child {
+              top: 1px;
+            }
+
+            &:last-child {
+              bottom: 3px;
+            }
+          }
+        }
+      }
+    }
+
     input {
       display: block;
       width: 100%;
@@ -144,15 +160,23 @@ nav {
 
         &:first-child {
           background: $black;
-          top: 1px;
+          top: 3px;
           transform-origin: center right;
+
+          @media (max-width: $breakpoint-small) {
+            top: 1px;
+          }
         }
 
         &:last-child {
           background: $black;
           top: auto;
-          bottom: 3px;
+          bottom: 5px;
           transform-origin: center right;
+
+          @media (max-width: $breakpoint-small) {
+            bottom: 3px;
+          }
         }
       }
     }

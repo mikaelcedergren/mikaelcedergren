@@ -249,6 +249,14 @@ nav #hamburger-button {
   position: relative;
   z-index: 3;
 }
+@media (min-width: 1024px) {
+  nav #hamburger-button:hover .hamburger-icon span:first-child {
+    top: 1px;
+  }
+  nav #hamburger-button:hover .hamburger-icon span:last-child {
+    bottom: 3px;
+  }
+}
 nav #hamburger-button input {
   display: block;
   width: 100%;
@@ -293,14 +301,24 @@ nav #hamburger-button .hamburger-icon span {
 }
 nav #hamburger-button .hamburger-icon span:first-child {
   background: #3b4658;
-  top: 1px;
+  top: 3px;
   transform-origin: center right;
+}
+@media (max-width: 640px) {
+  nav #hamburger-button .hamburger-icon span:first-child {
+    top: 1px;
+  }
 }
 nav #hamburger-button .hamburger-icon span:last-child {
   background: #3b4658;
   top: auto;
-  bottom: 3px;
+  bottom: 5px;
   transform-origin: center right;
+}
+@media (max-width: 640px) {
+  nav #hamburger-button .hamburger-icon span:last-child {
+    bottom: 3px;
+  }
 }
 nav #menu-cover {
   position: fixed;
