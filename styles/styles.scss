@@ -94,6 +94,7 @@ nav {
           &:first-child {
             transform: rotate(-45deg);
             opacity: 1;
+            top: 2px;
           }
           &:last-child {
             transform: rotate(45deg);
@@ -116,14 +117,14 @@ nav {
         transform-origin: center center;
         transition: all 0.3s;
         background-color: $black;
-        height: 3px;
+        height: 2px;
         width: 100%;
         border-radius: 300px;
         top: calc(50% - 2px);
 
         &:first-child {
           background: $black;
-          top: 2px;
+          top: 1px;
           transform-origin: center right;
         }
 

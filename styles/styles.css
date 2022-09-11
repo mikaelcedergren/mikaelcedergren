@@ -248,6 +248,7 @@ nav #hamburger-button input:checked ~ .hamburger-icon > span {
 nav #hamburger-button input:checked ~ .hamburger-icon > span:first-child {
   transform: rotate(-45deg);
   opacity: 1;
+  top: 2px;
 }
 nav #hamburger-button input:checked ~ .hamburger-icon > span:last-child {
   transform: rotate(45deg);
@@ -265,14 +266,14 @@ nav #hamburger-button .hamburger-icon span {
   transform-origin: center center;
   transition: all 0.3s;
   background-color: #3b4658;
-  height: 3px;
+  height: 2px;
   width: 100%;
   border-radius: 300px;
   top: calc(50% - 2px);
 }
 nav #hamburger-button .hamburger-icon span:first-child {
   background: #3b4658;
-  top: 2px;
+  top: 1px;
   transform-origin: center right;
 }
 nav #hamburger-button .hamburger-icon span:last-child {
