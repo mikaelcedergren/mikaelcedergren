@@ -461,3 +461,35 @@ pre {
 #resume strong {
   display: block;
 }
+
+.intro {
+  animation: intro 1.5s 1.5s ease-out forwards;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  background-color: #ffffff;
+  backdrop-filter: blur(6px);
+}
+.intro h1,
+.intro p {
+  margin: 0;
+}
+@keyframes intro {
+  from {
+    opacity: 1;
+    backdrop-filter: blur(6px);
+  }
+  to {
+    opacity: 0;
+    display: none;
+    pointer-events: none;
+    backdrop-filter: blur(0);
+  }
+}
