@@ -35,10 +35,18 @@ h4 {
   margin-top: 0;
   font-family: $font-family-headings;
   line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 strong {
   font-weight: 700;
+}
+
+p,
+strong {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 nav {
@@ -332,8 +340,8 @@ pre {
 }
 
 .intro {
-  animation: intro 1.5s 1.5s ease-out forwards;
-  position: fixed;
+  animation: intro 1s 1.5s ease-out forwards;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -344,7 +352,16 @@ pre {
   justify-content: center;
   flex-flow: column nowrap;
   background-color: $white;
-  backdrop-filter: blur(6px);
+
+  & > div {
+    animation: fade 0.5s 1.5s ease-out forwards;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+  }
 
   h1,
   p {
@@ -353,14 +370,20 @@ pre {
 
   @keyframes intro {
     from {
+      top: 0;
+    }
+    to {
+      top: 100%;
+    }
+  }
+
+  @keyframes fade {
+    from {
       opacity: 1;
-      backdrop-filter: blur(6px);
     }
     to {
       opacity: 0;
-      display: none;
       pointer-events: none;
-      backdrop-filter: blur(0);
     }
   }
 }
