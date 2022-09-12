@@ -213,6 +213,7 @@ strong {
 
 nav {
   background-color: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   position: fixed;
   top: 0;
   left: 0;
