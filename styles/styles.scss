@@ -22,7 +22,7 @@
 html,
 body {
   font-family: $font-family;
-  line-height: 1.8;
+  line-height: 1.6;
   overflow-x: hidden;
   padding: 0;
   margin: 0;
@@ -41,7 +41,6 @@ h4 {
 
 strong {
   font-weight: 700;
-  line-height: 1;
 }
 
 p,
@@ -312,6 +311,7 @@ main {
 }
 
 pre {
+  position: relative;
   display: inline-block;
   margin: 0;
   font-family: $font-family;
@@ -319,7 +319,7 @@ pre {
   letter-spacing: 0.05rem;
   text-transform: uppercase;
   font-size: 0.8rem;
-  color: $gray5;
+  color: $black;
   line-height: 1;
 }
 
@@ -350,21 +350,34 @@ pre {
 
 #resume {
   .date {
-    display: table;
+    position: relative;
     margin: 0;
     font-family: $font-family;
     font-weight: $font-bold;
     text-transform: uppercase;
     font-size: 0.8rem;
-    color: $gray5;
+    color: $gray4;
     line-height: 1;
-    padding: 3px;
-    background-color: $gray2;
     margin-bottom: 0.25rem;
+
+    &:first-of-type::before {
+      display: none;
+    }
+
+    &::before {
+      content: '';
+      background-color: $gray3;
+      height: 1px;
+      width: 16px;
+      position: absolute;
+      top: -1.25rem;
+      left: 0;
+    }
   }
 
   strong {
     display: block;
+    margin-bottom: 0.5rem;
   }
 }
 
