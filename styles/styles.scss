@@ -41,12 +41,17 @@ h4 {
 
 strong {
   font-weight: 700;
+  line-height: 1;
 }
 
 p,
 strong {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  margin: 0 0 2rem 0;
 }
 
 nav {
@@ -93,11 +98,20 @@ nav {
   }
 
   .logo {
+    transition: opacity 0.3s ease;
     font-size: 0;
-  }
 
-  img {
-    max-height: 38px;
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    img {
+      max-height: 38px;
+    }
   }
 
   #hamburger-button {
@@ -298,16 +312,15 @@ main {
 }
 
 pre {
-  display: table;
+  display: inline-block;
   margin: 0;
   font-family: $font-family;
   font-weight: $font-bold;
+  letter-spacing: 0.05rem;
   text-transform: uppercase;
   font-size: 0.8rem;
-  color: $white;
+  color: $gray5;
   line-height: 1;
-  padding: 3px;
-  background-color: $black;
 }
 
 .video {
@@ -337,13 +350,31 @@ pre {
 
 #resume {
   .date {
-    display: block;
-    font-size: $font-size-small;
-    color: $gray4;
+    display: table;
+    margin: 0;
+    font-family: $font-family;
+    font-weight: $font-bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: $gray5;
+    line-height: 1;
+    padding: 3px;
+    background-color: $gray2;
+    margin-bottom: 0.25rem;
   }
 
   strong {
     display: block;
+  }
+}
+
+#portfolio {
+  h1 {
+    margin-bottom: 0;
+  }
+
+  pre {
+    margin-bottom: 1rem;
   }
 }
 
@@ -371,8 +402,7 @@ pre {
     text-align: center;
   }
 
-  h1,
-  p {
+  h1 {
     margin: 0;
   }
 
