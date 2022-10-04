@@ -972,6 +972,32 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/portfolio\/images\/bubbloo-game-concept-components.jpg" : {
+      "ft" : 16384,
+      "iS" : 155079,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/portfolio\/images\/bubbloo-game-concept-components.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/portfolio\/images\/bubbloo-game-concept-logo.jpg" : {
+      "ft" : 16384,
+      "iS" : 113499,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/portfolio\/images\/bubbloo-game-concept-logo.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/portfolio\/images\/continuum-logo.png" : {
       "ft" : 32768,
       "iS" : 61245,
@@ -1011,6 +1037,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/portfolio\/images\/ice-and-steel.jpg" : {
+      "ft" : 16384,
+      "iS" : 104266,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/portfolio\/images\/ice-and-steel.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/portfolio\/images\/lanefinder-app-screens.png" : {
       "ft" : 32768,
       "iS" : 169383,
@@ -1024,15 +1063,28 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/portfolio\/images\/lanefinder-app-store-screenshots.png" : {
-      "ft" : 32768,
-      "iS" : 431000,
+    "\/portfolio\/images\/lanefinder-app-store-screenshots.jpg" : {
+      "ft" : 16384,
+      "iS" : 191836,
+      "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/portfolio\/images\/lanefinder-app-store-screenshots.png",
+      "oAP" : "\/portfolio\/images\/lanefinder-app-store-screenshots.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
-      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/portfolio\/images\/lanefinder-iconography.jpg" : {
+      "ft" : 16384,
+      "iS" : 47160,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/portfolio\/images\/lanefinder-iconography.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -1089,6 +1141,58 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/portfolio\/images\/luna-concept-frames.jpg" : {
+      "ft" : 16384,
+      "iS" : 135482,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/portfolio\/images\/luna-concept-frames.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/portfolio\/images\/luna-concept-logo.jpg" : {
+      "ft" : 16384,
+      "iS" : 46959,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/portfolio\/images\/luna-concept-logo.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/portfolio\/images\/luna-concept-page.jpg" : {
+      "ft" : 16384,
+      "iS" : 151064,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/portfolio\/images\/luna-concept-page.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/portfolio\/images\/peter-lindstrom-photography.jpg" : {
+      "ft" : 16384,
+      "iS" : 224856,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/portfolio\/images\/peter-lindstrom-photography.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/portfolio\/images\/portfolio-logo.png" : {
       "ft" : 32768,
       "iS" : 91799,
@@ -1141,6 +1245,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/portfolio\/images\/shipper-index-logo.jpg" : {
+      "ft" : 16384,
+      "iS" : 110176,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/portfolio\/images\/shipper-index-logo.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/portfolio\/images\/trialbee-synargus-logo.jpg" : {
       "ft" : 16384,
       "iS" : 33207,
@@ -1176,6 +1293,32 @@
       "oIPL" : 0,
       "opt" : 0,
       "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/portfolio\/images\/youcruit-group-public.jpg" : {
+      "ft" : 16384,
+      "iS" : 69276,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/portfolio\/images\/youcruit-group-public.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/portfolio\/images\/youcruit-public.jpg" : {
+      "ft" : 16384,
+      "iS" : 137913,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/portfolio\/images\/youcruit-public.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75

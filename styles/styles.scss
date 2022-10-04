@@ -328,14 +328,9 @@ pre {
   padding: 0 0 calc(56.25% + 1rem) 0;
   height: 0;
   overflow: hidden;
-  max-width: 100%;
-  margin: 0;
+  max-width: calc(100% + 2rem);
+  margin: 0 -1rem;
   top: 0;
-
-  @media (max-width: $breakpoint-medium) {
-    max-width: calc(100% + 2rem);
-    margin: 0 -1rem;
-  }
 
   iframe,
   object,
