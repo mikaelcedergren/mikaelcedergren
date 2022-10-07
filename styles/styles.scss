@@ -219,7 +219,8 @@ nav {
     background-color: rgba(black, 0.5);
     z-index: -2;
     pointer-events: none;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
   }
 
   #menu {

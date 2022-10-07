@@ -354,7 +354,8 @@ nav #menu-cover {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: -2;
   pointer-events: none;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }
 nav #menu {
   transition: all 0.3s ease;
