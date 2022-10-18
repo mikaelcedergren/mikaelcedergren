@@ -244,6 +244,14 @@ nav {
   padding: 0 1rem;
   text-rendering: optimizeLegibility;
 }
+nav a.hidden-link {
+  font-size: inherit;
+  width: 100%;
+  padding: 0;
+}
+nav a.hidden-link::after {
+  display: none;
+}
 nav a {
   position: relative;
   display: inline-block;

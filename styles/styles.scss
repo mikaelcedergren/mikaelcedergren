@@ -82,6 +82,16 @@ nav {
   padding: 0 1rem;
   text-rendering: optimizeLegibility;
 
+  a.hidden-link {
+    font-size: inherit;
+    width: 100%;
+    padding: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
   a {
     position: relative;
     display: inline-block;
