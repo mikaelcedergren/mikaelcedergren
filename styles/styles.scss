@@ -260,7 +260,7 @@ main {
 
   section {
     position: relative;
-    padding: 1rem;
+    padding: 0 1rem;
 
     .simpleParallax {
       @media (max-width: $breakpoint-medium) {

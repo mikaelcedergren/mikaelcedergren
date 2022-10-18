@@ -393,7 +393,7 @@ main {
 }
 main section {
   position: relative;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 @media (max-width: 1024px) {
   main section .simpleParallax {
