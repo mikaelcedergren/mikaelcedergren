@@ -201,6 +201,10 @@ h4 {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+  letter-spacing: -0.05rem;
+}
+
 strong {
   font-weight: 700;
 }

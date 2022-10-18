@@ -39,6 +39,10 @@ h4 {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+  letter-spacing: -0.05rem;
+}
+
 strong {
   font-weight: 700;
 }
@@ -110,7 +114,7 @@ nav {
 
     img {
       max-height: 38px;
-      transform: translate3d(0px, 0, 0px) scale(1) !important;
+      transform: translate3d(0px, 0, 0px) scale(1) !important; // Disable parallax
     }
   }
 
