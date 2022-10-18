@@ -221,6 +221,14 @@ p {
   margin: 0 0 2rem 0;
 }
 
+hr {
+  width: 100%;
+  border: none;
+  height: 1px;
+  color: rgba(0, 0, 0, 0.08);
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
 nav {
   background-color: #ffffff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
