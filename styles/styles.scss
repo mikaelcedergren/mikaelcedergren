@@ -262,10 +262,7 @@ main {
     position: relative;
     padding: 1rem;
 
-    img {
-      max-width: 100%;
-      display: block;
-
+    .simpleParallax {
       @media (max-width: $breakpoint-medium) {
         width: calc(100% + 2rem);
         margin-left: -1rem;
@@ -290,6 +287,11 @@ main {
         text-transform: uppercase;
         letter-spacing: 0.25rem;
       }
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
     }
 
     article {
