@@ -481,6 +481,9 @@ pre {
   font-size: 0.8rem;
   color: #3b4658;
   line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .video {
@@ -515,6 +518,9 @@ pre {
   color: #a3afbf;
   line-height: 1;
   margin-bottom: 0.25rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 #resume .date:first-of-type::before {
   display: none;

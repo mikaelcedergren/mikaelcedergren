@@ -354,6 +354,9 @@ pre {
   font-size: 0.8rem;
   color: $black;
   line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .video {
@@ -391,6 +394,9 @@ pre {
     color: $gray4;
     line-height: 1;
     margin-bottom: 0.25rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 
     &:first-of-type::before {
       display: none;
