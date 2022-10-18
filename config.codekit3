@@ -25,14 +25,6 @@
       "oAP" : "\/CNAME",
       "oF" : 0
     },
-    "\/components\/_artwork.kit" : {
-      "cB" : 0,
-      "ft" : 2048,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/components\/_artwork.html",
-      "oF" : 0
-    },
     "\/components\/_footer-secret.kit" : {
       "cB" : 0,
       "ft" : 2048,
@@ -55,38 +47,6 @@
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/components\/_header.html",
-      "oF" : 0
-    },
-    "\/components\/_personal-responsive-menu.kit" : {
-      "cB" : 0,
-      "ft" : 2048,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/components\/_personal-responsive-menu.html",
-      "oF" : 0
-    },
-    "\/fonts\/IconFont-Regular.otf" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/fonts\/IconFont-Regular.otf",
-      "oF" : 0
-    },
-    "\/fonts\/IconFont-Regular.woff" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/fonts\/IconFont-Regular.woff",
-      "oF" : 0
-    },
-    "\/fonts\/IconFont-Regular.woff2" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/fonts\/IconFont-Regular.woff2",
       "oF" : 0
     },
     "\/fonts\/WargrSans-Bold.otf" : {
@@ -1429,33 +1389,6 @@
       "oA" : 1,
       "oAP" : "\/styles\/_variables.css",
       "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/styles\/global.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/styles\/global-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/styles\/global.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/styles\/global.css",
-      "oF" : 1,
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
