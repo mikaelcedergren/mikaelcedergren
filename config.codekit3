@@ -1031,7 +1031,7 @@
       "oAP" : "\/portfolio\/images\/lanefinder-app-store-screenshots.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -1266,6 +1266,19 @@
       "oIPL" : 0,
       "opt" : 0,
       "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/portfolio\/images\/youcruit-group-logo.jpg" : {
+      "ft" : 16384,
+      "iS" : 50540,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/portfolio\/images\/youcruit-group-logo.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
