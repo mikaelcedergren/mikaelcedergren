@@ -315,7 +315,7 @@ nav #hamburger-button input:checked ~ .hamburger-icon > span:last-child {
 }
 nav #hamburger-button input:checked ~ #menu {
   transform: translateX(0%);
-  box-shadow: 3px 0 20px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 0 20px 10px rgba(0, 0, 0, 0.1);
 }
 nav #hamburger-button .hamburger-icon {
   height: 100%;
