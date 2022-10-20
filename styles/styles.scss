@@ -392,8 +392,8 @@ pre {
     }
 
     img {
-      height: 64px;
-      width: 64px;
+      max-height: 64px;
+      max-width: 64px;
       border-radius: 100%;
     }
   }
