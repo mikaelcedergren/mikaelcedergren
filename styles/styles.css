@@ -171,6 +171,10 @@
   font-size: 13px;
 }
 
+.text-bold {
+  font-weight: 700;
+}
+
 @media (max-width: 640px) {
   .hidden-responsive {
     display: none;
@@ -504,6 +508,22 @@ pre {
   height: 100%;
 }
 
+#resume .resume-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+#resume .resume-header p {
+  margin-bottom: 0;
+}
+#resume .resume-header img {
+  height: 64px;
+  width: 64px;
+  border-radius: 100%;
+}
 #resume h1 {
   padding-top: 1rem;
 }

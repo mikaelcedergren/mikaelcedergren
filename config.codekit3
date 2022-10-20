@@ -7,7 +7,7 @@
       "uuidString" : "8A520666-A74C-4C17-964B-B89B37DDF3A5"
     }
   ],
-  "creatorBuild" : "34408",
+  "creatorBuild" : "34365",
   "files" : {
     "\/.gitignore" : {
       "cB" : 0,
@@ -136,7 +136,7 @@
     },
     "\/images\/dahmer.jpg" : {
       "ft" : 16384,
-      "iS" : 90472,
+      "iS" : 113661,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/images\/dahmer.jpg",
@@ -193,12 +193,12 @@
     },
     "\/images\/logo.png" : {
       "ft" : 32768,
-      "iS" : 6049,
+      "iS" : 1338,
       "oA" : 0,
       "oAP" : "\/images\/logo.png",
       "oF" : 0,
-      "oIPL" : 1,
-      "opt" : 1,
+      "oIPL" : 0,
+      "opt" : 0,
       "oT" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
@@ -352,7 +352,7 @@
       "oAP" : "\/images\/photography\/kid6.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 1,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -378,7 +378,7 @@
       "oAP" : "\/images\/photography\/landscape1.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 1,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -391,7 +391,7 @@
       "oAP" : "\/images\/photography\/landscape2.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 1,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -521,7 +521,7 @@
       "oAP" : "\/images\/photography\/music2.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 1,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -534,7 +534,7 @@
       "oAP" : "\/images\/photography\/music3.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 1,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -547,7 +547,7 @@
       "oAP" : "\/images\/photography\/music4.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 1,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -612,7 +612,7 @@
       "oAP" : "\/images\/photography\/portrait4.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 1,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -1025,13 +1025,13 @@
     },
     "\/portfolio\/images\/lanefinder-app-store-screenshots.jpg" : {
       "ft" : 16384,
-      "iS" : 191836,
+      "iS" : 167201,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/portfolio\/images\/lanefinder-app-store-screenshots.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 1,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -1285,13 +1285,13 @@
     },
     "\/portfolio\/images\/youcruit-group-public.jpg" : {
       "ft" : 16384,
-      "iS" : 69276,
+      "iS" : 68423,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/portfolio\/images\/youcruit-group-public.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 1,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -1351,6 +1351,19 @@
       "pME" : 1,
       "rFN" : 0,
       "uCM" : 0
+    },
+    "\/resume\/images\/profile-pic.png" : {
+      "ft" : 32768,
+      "iS" : 301637,
+      "oA" : 0,
+      "oAP" : "\/resume\/images\/profile-pic.png",
+      "oF" : 0,
+      "oIPL" : 1,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
     },
     "\/resume\/index.html" : {
       "cB" : 0,
@@ -1413,7 +1426,7 @@
       "co" : 0,
       "ft" : 16,
       "ma" : 0,
-      "oA" : 1,
+      "oA" : 0,
       "oAP" : "\/styles\/normalize-min.css",
       "oF" : 0,
       "pg" : 0
@@ -1456,7 +1469,7 @@
     "creationDate" : 555155234,
     "displayValue" : "website",
     "displayValueWasSetByUser" : 0,
-    "iconImageName" : "meme-obama",
+    "iconImageName" : "logo-wordpress",
     "iconImageWasSetByUser" : 0
   },
   "projectSettings" : {
@@ -2326,8 +2339,7 @@
         "optionString" : "'event', 'fdescribe'"
       },
       "no-restricted-imports" : {
-        "active" : 0,
-        "optionString" : ""
+        "active" : 0
       },
       "no-restricted-properties" : {
         "active" : 0,
@@ -2955,7 +2967,6 @@
       "createDeclarationFile" : 0,
       "jsxMode" : 0,
       "minifierStyle" : 0,
-      "moduleDetectionType" : 0,
       "moduleResolutionType" : 0,
       "moduleType" : 2,
       "removeComments" : 0,

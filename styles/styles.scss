@@ -379,6 +379,25 @@ pre {
 }
 
 #resume {
+  .resume-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: row nowrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    img {
+      height: 64px;
+      width: 64px;
+      border-radius: 100%;
+    }
+  }
+
   h1 {
     padding-top: 1rem;
   }

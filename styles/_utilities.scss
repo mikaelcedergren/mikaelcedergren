@@ -29,6 +29,10 @@
   font-size: $font-size-small;
 }
 
+.text-bold {
+  font-weight: $font-bold;
+}
+
 .hidden-responsive {
   @media (max-width: $breakpoint-small) {
     display: none;
