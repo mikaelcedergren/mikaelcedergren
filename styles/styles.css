@@ -524,6 +524,8 @@ pre {
   max-width: 64px;
   border-radius: 100%;
   overflow: hidden;
+  min-width: 64px;
+  min-height: 64px;
 }
 #resume h1 {
   padding-top: 1rem;
