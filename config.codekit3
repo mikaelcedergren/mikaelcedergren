@@ -7,7 +7,7 @@
       "uuidString" : "8A520666-A74C-4C17-964B-B89B37DDF3A5"
     }
   ],
-  "creatorBuild" : "34365",
+  "creatorBuild" : "34408",
   "files" : {
     "\/.gitignore" : {
       "cB" : 0,
@@ -136,7 +136,7 @@
     },
     "\/images\/dahmer.jpg" : {
       "ft" : 16384,
-      "iS" : 113661,
+      "iS" : 90472,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/images\/dahmer.jpg",
@@ -193,7 +193,7 @@
     },
     "\/images\/logo.png" : {
       "ft" : 32768,
-      "iS" : 1338,
+      "iS" : 6049,
       "oA" : 0,
       "oAP" : "\/images\/logo.png",
       "oF" : 0,
@@ -1025,7 +1025,7 @@
     },
     "\/portfolio\/images\/lanefinder-app-store-screenshots.jpg" : {
       "ft" : 16384,
-      "iS" : 167201,
+      "iS" : 191836,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/portfolio\/images\/lanefinder-app-store-screenshots.jpg",
@@ -1285,7 +1285,7 @@
     },
     "\/portfolio\/images\/youcruit-group-public.jpg" : {
       "ft" : 16384,
-      "iS" : 68423,
+      "iS" : 69276,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/portfolio\/images\/youcruit-group-public.jpg",
@@ -2339,7 +2339,8 @@
         "optionString" : "'event', 'fdescribe'"
       },
       "no-restricted-imports" : {
-        "active" : 0
+        "active" : 0,
+        "optionString" : ""
       },
       "no-restricted-properties" : {
         "active" : 0,
@@ -2967,6 +2968,7 @@
       "createDeclarationFile" : 0,
       "jsxMode" : 0,
       "minifierStyle" : 0,
+      "moduleDetectionType" : 0,
       "moduleResolutionType" : 0,
       "moduleType" : 2,
       "removeComments" : 0,
