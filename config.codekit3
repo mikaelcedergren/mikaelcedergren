@@ -134,6 +134,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/chasing-desire.jpg" : {
+      "ft" : 16384,
+      "iS" : 404949,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/chasing-desire.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/images\/dahmer.jpg" : {
       "ft" : 16384,
       "iS" : 90472,
@@ -191,6 +204,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/leaving.jpg" : {
+      "ft" : 16384,
+      "iS" : 253895,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/leaving.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/images\/logo.png" : {
       "ft" : 32768,
       "iS" : 6049,
@@ -213,6 +239,32 @@
       "opt" : 0,
       "plM" : 3758088159,
       "prP" : 0
+    },
+    "\/images\/mad-house.jpg" : {
+      "ft" : 16384,
+      "iS" : 241065,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/mad-house.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/make-up.jpg" : {
+      "ft" : 16384,
+      "iS" : 162790,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/make-up.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
     },
     "\/images\/observer.jpg" : {
       "ft" : 16384,
@@ -760,6 +812,32 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/pinch.jpg" : {
+      "ft" : 16384,
+      "iS" : 416988,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/pinch.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/portrait-of-symmetry.jpg" : {
+      "ft" : 16384,
+      "iS" : 276257,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/portrait-of-symmetry.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/images\/signature.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -769,6 +847,32 @@
       "opt" : 0,
       "plM" : 3758088159,
       "prP" : 0
+    },
+    "\/images\/step-father.jpg" : {
+      "ft" : 16384,
+      "iS" : 229779,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/step-father.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/surfacing.jpg" : {
+      "ft" : 16384,
+      "iS" : 359820,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/surfacing.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
     },
     "\/images\/the-raven.jpg" : {
       "ft" : 16384,
