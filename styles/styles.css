@@ -319,6 +319,11 @@ nav #hamburger-button input:checked ~ .hamburger-icon > span:first-child {
   opacity: 1;
   top: 0;
 }
+@media (max-width: 640px) {
+  nav #hamburger-button input:checked ~ .hamburger-icon > span:first-child {
+    top: 2px;
+  }
+}
 nav #hamburger-button input:checked ~ .hamburger-icon > span:last-child {
   transform: rotate(45deg);
   opacity: 1;
@@ -540,7 +545,6 @@ pre {
 }
 
 #portfolio h1 {
-  padding-top: 5rem;
   margin-bottom: 0;
   font-weight: 700;
 }
@@ -554,6 +558,9 @@ pre {
 }
 #portfolio pre {
   margin-bottom: 1rem;
+}
+#portfolio section {
+  margin-bottom: 2rem;
 }
 
 .intro {

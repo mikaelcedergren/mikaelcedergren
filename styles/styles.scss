@@ -170,6 +170,10 @@ nav {
             transform: rotate(-45deg);
             opacity: 1;
             top: 0;
+
+            @media (max-width: $breakpoint-small) {
+              top: 2px;
+            }
           }
           &:last-child {
             transform: rotate(45deg);
@@ -429,7 +433,6 @@ pre {
 
 #portfolio {
   h1 {
-    padding-top: 5rem;
     margin-bottom: 0;
     font-weight: $font-bold;
   }
@@ -445,6 +448,10 @@ pre {
 
   pre {
     margin-bottom: 1rem;
+  }
+
+  section {
+    margin-bottom: 2rem;
   }
 }
 
