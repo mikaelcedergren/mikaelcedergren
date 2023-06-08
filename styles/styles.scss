@@ -406,19 +406,19 @@ pre {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 
-    &:first-of-type::before {
-      display: none;
-    }
+    // &:first-of-type::before {
+    //   display: none;
+    // }
 
-    &::before {
-      content: '';
-      background-color: $gray2;
-      height: 1px;
-      width: 16px;
-      position: absolute;
-      top: -1.15rem;
-      left: 0;
-    }
+    // &::before {
+    //   content: '';
+    //   background-color: $gray2;
+    //   height: 1px;
+    //   width: 16px;
+    //   position: absolute;
+    //   top: -1.15rem;
+    //   left: 0;
+    // }
   }
 
   strong {
