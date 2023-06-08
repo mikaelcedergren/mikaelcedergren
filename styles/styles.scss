@@ -378,6 +378,14 @@ pre {
     gap: 1rem;
     margin-bottom: 2rem;
 
+    @media (max-width: $breakpoint-small) {
+      flex-flow: column nowrap;
+
+      p {
+        text-align: center;
+      }
+    }
+
     p {
       margin-bottom: 0;
     }

@@ -511,6 +511,14 @@ pre {
   gap: 1rem;
   margin-bottom: 2rem;
 }
+@media (max-width: 640px) {
+  #resume .resume-header {
+    flex-flow: column nowrap;
+  }
+  #resume .resume-header p {
+    text-align: center;
+  }
+}
 #resume .resume-header p {
   margin-bottom: 0;
 }
