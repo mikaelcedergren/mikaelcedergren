@@ -1,15 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
-@font-face {
-  font-family: 'WargrSans';
-  src: url('/fonts/WargrSans-Regular.woff2') format('woff2'),
-    url('/fonts/WargrSans-Regular.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'WargrSansBold';
-  src: url('/fonts/WargrSans-Bold.woff2') format('woff2'),
-    url('/fonts/WargrSans-Bold.woff') format('woff');
-}
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&family=Raleway:wght@700&display=swap');
 
 // @import 'variables';
 @import '_variables.scss';
@@ -26,6 +15,7 @@ body {
   overflow-x: hidden;
   padding: 0;
   margin: 0;
+  font-size: $font-size;
 }
 
 h1,
@@ -38,10 +28,6 @@ h4 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-}
-
-h1 {
-  letter-spacing: -0.02rem;
 }
 
 strong {
@@ -183,11 +169,12 @@ nav {
           &:first-child {
             transform: rotate(-45deg);
             opacity: 1;
-            top: 2px;
+            top: 0;
           }
           &:last-child {
             transform: rotate(45deg);
             opacity: 1;
+            left: 0;
           }
         }
 
@@ -285,7 +272,7 @@ main {
   max-width: $page-max-width;
   margin: 0 auto;
   padding: 0;
-  margin-top: $navigation-height;
+  margin-top: calc($navigation-height + 1rem);
 
   section {
     position: relative;
@@ -425,11 +412,11 @@ pre {
 
     &::before {
       content: '';
-      background-color: $gray3;
+      background-color: $gray2;
       height: 1px;
       width: 16px;
       position: absolute;
-      top: -1.25rem;
+      top: -1.15rem;
       left: 0;
     }
   }
@@ -442,8 +429,9 @@ pre {
 
 #portfolio {
   h1 {
-    padding-top: 1rem;
+    padding-top: 5rem;
     margin-bottom: 0;
+    font-weight: $font-bold;
   }
 
   img {
