@@ -132,21 +132,21 @@ nav {
     position: relative;
     z-index: 3;
 
-    @media (min-width: $breakpoint-medium) {
-      &:hover {
-        .hamburger-icon {
-          span {
-            &:first-child {
-              top: 1px;
-            }
+    // @media (min-width: $breakpoint-medium) {
+    //   &:hover {
+    //     .hamburger-icon {
+    //       span {
+    //         // &:first-child {
+    //         //   top: 1px;
+    //         // }
 
-            &:last-child {
-              bottom: 3px;
-            }
-          }
-        }
-      }
-    }
+    //         // &:last-child {
+    //         //   bottom: 3px;
+    //         // }
+    //       }
+    //     }
+    //   }
+    // }
 
     input {
       display: block;
@@ -171,9 +171,9 @@ nav {
             opacity: 1;
             top: 0;
 
-            @media (max-width: $breakpoint-small) {
-              top: 2px;
-            }
+            // @media (max-width: $breakpoint-small) {
+            //   top: 2px;
+            // }
           }
           &:last-child {
             transform: rotate(45deg);
@@ -208,9 +208,9 @@ nav {
           top: 3px;
           transform-origin: center right;
 
-          @media (max-width: $breakpoint-small) {
-            top: 1px;
-          }
+          // @media (max-width: $breakpoint-small) {
+          //   top: 1px;
+          // }
         }
 
         &:last-child {
@@ -219,9 +219,9 @@ nav {
           bottom: 5px;
           transform-origin: center right;
 
-          @media (max-width: $breakpoint-small) {
-            bottom: 3px;
-          }
+          // @media (max-width: $breakpoint-small) {
+          //   bottom: 3px;
+          // }
         }
       }
     }
