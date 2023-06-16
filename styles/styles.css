@@ -381,7 +381,7 @@ nav #menu {
   list-style: none;
 }
 nav #menu .signature {
-  max-width: 50%;
+  max-width: 120px;
   margin-top: 2rem;
 }
 @media (max-width: 1024px) {
