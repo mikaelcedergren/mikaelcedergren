@@ -343,9 +343,10 @@ main {
     }
 
     img {
-      max-width: 100%;
+      max-width: calc(100% + 2rem);
       display: block;
       overflow: hidden;
+      margin: 0 -1rem;
     }
 
     article {
@@ -369,6 +370,8 @@ main {
 
 pre {
   position: relative;
+  white-space: normal;
+  line-height: 1.5;
   display: inline-block;
   margin: 0;
   font-family: $font-family;
@@ -377,7 +380,6 @@ pre {
   text-transform: uppercase;
   font-size: 0.8rem;
   color: $black;
-  line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -391,10 +393,6 @@ pre {
   max-width: calc(100% + 2rem);
   margin: 0 -1rem;
   top: 0;
-  
-  @media (max-width: $breakpoint-small) {
-    padding: 0 0 calc(56.25% + 2rem) 0;
-  }
 
   iframe,
   object,
@@ -481,80 +479,4 @@ pre {
     display: block;
     margin-bottom: 0.5rem;
   }
-}
-
-// #portfolio {
-//   h1 {
-//     margin-bottom: 0;
-//     font-weight: $font-bold;
-//   }
-
-//   img {
-//     @media (max-width: $breakpoint-medium) {
-//       width: calc(100% + 2rem);
-//       margin-left: -1rem;
-//       margin-right: -1rem;
-//       max-width: calc(100% + 2rem);
-//     }
-//   }
-
-//   pre {
-//     margin-bottom: 1rem;
-//   }
-
-//   section {
-//     margin-bottom: 2rem;
-//   }
-// }
-
-// .intro {
-//   animation: intro 1s 1.5s ease-out forwards;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   z-index: 999;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   flex-flow: column nowrap;
-//   background-color: $white;
-
-//   & > div {
-//     animation: fade 0.5s 1.5s ease-out forwards;
-
-//     position: fixed;
-//     top: 50%;
-//     left: 50%;
-//     transform: translateX(-50%) translateY(-50%);
-//     text-align: center;
-//   }
-
-//   h1 {
-//     margin: 0;
-//   }
-
-//   @keyframes intro {
-//     from {
-//       top: 0;
-//     }
-//     to {
-//       top: 100%;
-//     }
-//   }
-
-//   @keyframes fade {
-//     from {
-//       opacity: 1;
-//     }
-//     to {
-//       opacity: 0;
-//       pointer-events: none;
-//     }
-//   }
-// }
-
-.remove-parallax {
-  transform: translate3d(0, 0, 0) !important;
 }
