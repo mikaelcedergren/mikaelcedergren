@@ -263,6 +263,11 @@ nav {
     padding: 2rem 2rem $navigation-height 2rem;
     list-style: none;
 
+    .signature {
+      max-width: 50%;
+      margin-top: 2rem;
+    }
+
     @media (max-width: $breakpoint-medium) {
       width: 90vw;
     }
@@ -442,10 +447,6 @@ pre {
     padding-top: 1rem;
   }
 
-  .remove-parallax {
-    transform: translate3d(0, 0, 0) !important;
-  }
-
   .date {
     position: relative;
     margin: 0;
@@ -552,3 +553,7 @@ pre {
 //     }
 //   }
 // }
+
+.remove-parallax {
+  transform: translate3d(0, 0, 0) !important;
+}

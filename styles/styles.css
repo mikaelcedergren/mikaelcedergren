@@ -380,6 +380,10 @@ nav #menu {
   padding: 2rem 2rem 64px 2rem;
   list-style: none;
 }
+nav #menu .signature {
+  max-width: 50%;
+  margin-top: 2rem;
+}
 @media (max-width: 1024px) {
   nav #menu {
     width: 90vw;
@@ -547,9 +551,6 @@ pre {
 #resume h1 {
   padding-top: 1rem;
 }
-#resume .remove-parallax {
-  transform: translate3d(0, 0, 0) !important;
-}
 #resume .date {
   position: relative;
   margin: 0;
@@ -567,4 +568,8 @@ pre {
 #resume strong {
   display: block;
   margin-bottom: 0.5rem;
+}
+
+.remove-parallax {
+  transform: translate3d(0, 0, 0) !important;
 }
