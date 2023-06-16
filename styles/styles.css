@@ -383,7 +383,7 @@ nav #menu {
 nav #menu .signature {
   width: 120px;
   max-width: 120px;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 @media (max-width: 1024px) {
   nav #menu {
