@@ -489,7 +489,7 @@ pre {
 
 .video {
   position: relative;
-  padding: 0 0 calc(56.25% + 1rem) 0;
+  padding: 0 0 56.25% 0;
   height: 0;
   overflow: hidden;
   max-width: 100%;

@@ -17,12 +17,12 @@
       "oAP" : "\/.gitignore",
       "oF" : 0
     },
-    "\/backup\/images\/brutus.jpg" : {
+    "\/artworks\/images\/brutus.jpg" : {
       "ft" : 16384,
       "iS" : 342981,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/backup\/images\/brutus.jpg",
+      "oAP" : "\/artworks\/images\/brutus.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -30,12 +30,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/backup\/images\/chasing-desire.jpg" : {
+    "\/artworks\/images\/chasing-desire.jpg" : {
       "ft" : 16384,
       "iS" : 404949,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/backup\/images\/chasing-desire.jpg",
+      "oAP" : "\/artworks\/images\/chasing-desire.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -43,12 +43,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/backup\/images\/dahmer.jpg" : {
+    "\/artworks\/images\/dahmer.jpg" : {
       "ft" : 16384,
       "iS" : 90472,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/backup\/images\/dahmer.jpg",
+      "oAP" : "\/artworks\/images\/dahmer.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -56,12 +56,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/backup\/images\/dante.jpg" : {
+    "\/artworks\/images\/dante.jpg" : {
       "ft" : 16384,
       "iS" : 555036,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/backup\/images\/dante.jpg",
+      "oAP" : "\/artworks\/images\/dante.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -69,12 +69,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/backup\/images\/leander.jpg" : {
+    "\/artworks\/images\/leander.jpg" : {
       "ft" : 16384,
       "iS" : 698423,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/backup\/images\/leander.jpg",
+      "oAP" : "\/artworks\/images\/leander.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -82,12 +82,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/backup\/images\/leaving.jpg" : {
+    "\/artworks\/images\/leaving.jpg" : {
       "ft" : 16384,
       "iS" : 253895,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/backup\/images\/leaving.jpg",
+      "oAP" : "\/artworks\/images\/leaving.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -95,12 +95,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/backup\/images\/mad-house.jpg" : {
+    "\/artworks\/images\/mad-house.jpg" : {
       "ft" : 16384,
       "iS" : 241065,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/backup\/images\/mad-house.jpg",
+      "oAP" : "\/artworks\/images\/mad-house.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -108,12 +108,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/backup\/images\/make-up.jpg" : {
+    "\/artworks\/images\/make-up.jpg" : {
       "ft" : 16384,
       "iS" : 162790,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/backup\/images\/make-up.jpg",
+      "oAP" : "\/artworks\/images\/make-up.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -121,12 +121,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/backup\/images\/observer.jpg" : {
+    "\/artworks\/images\/observer.jpg" : {
       "ft" : 16384,
       "iS" : 483031,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/backup\/images\/observer.jpg",
+      "oAP" : "\/artworks\/images\/observer.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -134,12 +134,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/backup\/images\/pinch.jpg" : {
+    "\/artworks\/images\/pinch.jpg" : {
       "ft" : 16384,
       "iS" : 416988,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/backup\/images\/pinch.jpg",
+      "oAP" : "\/artworks\/images\/pinch.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -147,12 +147,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/backup\/images\/portrait-of-symmetry.jpg" : {
+    "\/artworks\/images\/portrait-of-symmetry.jpg" : {
       "ft" : 16384,
       "iS" : 276257,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/backup\/images\/portrait-of-symmetry.jpg",
+      "oAP" : "\/artworks\/images\/portrait-of-symmetry.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -160,12 +160,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/backup\/images\/step-father.jpg" : {
+    "\/artworks\/images\/step-father.jpg" : {
       "ft" : 16384,
       "iS" : 229779,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/backup\/images\/step-father.jpg",
+      "oAP" : "\/artworks\/images\/step-father.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -173,12 +173,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/backup\/images\/surfacing.jpg" : {
+    "\/artworks\/images\/surfacing.jpg" : {
       "ft" : 16384,
       "iS" : 359820,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/backup\/images\/surfacing.jpg",
+      "oAP" : "\/artworks\/images\/surfacing.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -186,12 +186,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/backup\/images\/the-raven.jpg" : {
+    "\/artworks\/images\/the-raven.jpg" : {
       "ft" : 16384,
       "iS" : 209084,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/backup\/images\/the-raven.jpg",
+      "oAP" : "\/artworks\/images\/the-raven.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -199,12 +199,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/backup\/images\/the-shark.jpg" : {
+    "\/artworks\/images\/the-shark.jpg" : {
       "ft" : 16384,
       "iS" : 171435,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/backup\/images\/the-shark.jpg",
+      "oAP" : "\/artworks\/images\/the-shark.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -212,12 +212,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/backup\/images\/thinker.jpg" : {
+    "\/artworks\/images\/thinker.jpg" : {
       "ft" : 16384,
       "iS" : 386155,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/backup\/images\/thinker.jpg",
+      "oAP" : "\/artworks\/images\/thinker.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -225,20 +225,20 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/backup\/index.html" : {
+    "\/artworks\/index.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/backup\/index.html",
+      "oAP" : "\/artworks\/index.html",
       "oF" : 0
     },
-    "\/backup\/index.kit" : {
+    "\/artworks\/index.kit" : {
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/backup\/index.html",
+      "oAP" : "\/artworks\/index.html",
       "oF" : 0
     },
     "\/CNAME" : {
