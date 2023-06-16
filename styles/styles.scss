@@ -338,6 +338,7 @@ main {
     img {
       max-width: 100%;
       display: block;
+      overflow: hidden;
     }
 
     article {
@@ -380,8 +381,7 @@ pre {
   padding: 0 0 calc(56.25% + 1rem) 0;
   height: 0;
   overflow: hidden;
-  max-width: calc(100% + 2rem);
-  margin: 0 -1rem;
+  max-width: 100%;
   top: 0;
 
   iframe,
