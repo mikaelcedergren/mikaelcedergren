@@ -67,18 +67,23 @@
       <span></span>
     </div>
     <ul id="menu">
+      <a href="/"><li>Portfolio</li></a>
       <a href="/resume/"><li>Resume</li></a>
-      <a href="/portfolio/"><li>Portfolio</li></a>
+      <a href="https://society6.com/mikaelcedergren" target="_blank"><li>Shop</li></a>
       <br />
-      <div><a href="tel:+46 722-158744" class="hidden-link">+46 722-15 87 44</a></div>
-      <div><a href="mailto:wolfie@mikaelcedergren.com" class="hidden-link">wolfie@mikaelcedergren.com</a></div>
-      <div class="mb-2">Malmö</div>
       <div>&copy; Mikael Cedergren 2019 - 2023</div>
       <div>All rights reserved</div>
     </ul>
-
   </div>
 </nav>
-<script src="https://player.vimeo.com/api/player.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+<script>
+  var images = document.querySelectorAll('img');
+  new simpleParallax(images, { 
+    scale: 1.1,
+    delay: 0.4
+  });
+</script>
 </body>
 </html>

@@ -34,12 +34,12 @@
 <div id="resume">
   <section class="pt-1">
     <div class="resume-header">
-      <img src="images/profile-pic.png" class="profile-pic" />
+      <img src="images/profile-pic.png" class="profile-pic remove-parallax" />
       <div><p class="text-bold"
         >Art Director, Motion Graphic Artist & Illustrator with 25+ years of
         experience.</p
       >
-      <p class="text-small">0722-15 87 44, wolfie@mikaelcedergren.com</p></div>
+      <p class="text-small">wolfie@mikaelcedergren.com</p></div>
     </div>
     <!-- <div class="video">
       <iframe
@@ -204,14 +204,13 @@
     <strong>Gisela Soprani</strong>
     <div>Manager of SVT Design</div>
     <p
-      >Framtidsvägen 16, 352 57 Växjö, Sweden 0708-77 33 79,
-      gisela.soprani@svt.se</p
+      >gisela.soprani@svt.se</p
     >
 
     <strong>Olle Soprani</strong>
     <div>Graphic Artist of SVT Design</div>
     <p
-      >Framtidsvägen 16, 352 57 Växjö, SWEDEN 0708-84 84 99,
+      >0708-84 84 99,
       olle.soprani@svt.se</p
     >
 
@@ -241,18 +240,23 @@
       <span></span>
     </div>
     <ul id="menu">
+      <a href="/"><li>Portfolio</li></a>
       <a href="/resume/"><li>Resume</li></a>
-      <a href="/portfolio/"><li>Portfolio</li></a>
+      <a href="https://society6.com/mikaelcedergren" target="_blank"><li>Shop</li></a>
       <br />
-      <div><a href="tel:+46 722-158744" class="hidden-link">+46 722-15 87 44</a></div>
-      <div><a href="mailto:wolfie@mikaelcedergren.com" class="hidden-link">wolfie@mikaelcedergren.com</a></div>
-      <div class="mb-2">Malmö</div>
       <div>&copy; Mikael Cedergren 2019 - 2023</div>
       <div>All rights reserved</div>
     </ul>
-
   </div>
 </nav>
-<script src="https://player.vimeo.com/api/player.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+<script>
+  var images = document.querySelectorAll('img');
+  new simpleParallax(images, { 
+    scale: 1.1,
+    delay: 0.4
+  });
+</script>
 </body>
 </html>
