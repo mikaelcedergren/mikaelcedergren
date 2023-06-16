@@ -400,7 +400,7 @@ header {
 }
 header h1 {
   font-size: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   line-height: 1.2;
 }
 @media (max-width: 640px) {
@@ -493,8 +493,14 @@ pre {
   padding: 0 0 56.25% 0;
   height: 0;
   overflow: hidden;
-  max-width: 100%;
+  max-width: calc(100% + 2rem);
+  margin: 0 -1rem;
   top: 0;
+}
+@media (max-width: 640px) {
+  .video {
+    padding: 0 0 calc(56.25% + 2rem) 0;
+  }
 }
 .video iframe,
 .video object,
