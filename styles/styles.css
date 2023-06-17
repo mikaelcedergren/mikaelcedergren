@@ -287,7 +287,6 @@ nav a.hidden-link::after {
 nav .logo {
   transition: opacity 0.3s ease;
   font-size: 0;
-  transform: translate3d(0, 0, 0) scale(1) !important;
 }
 nav .logo::after {
   display: none;
@@ -297,6 +296,7 @@ nav .logo:hover {
 }
 nav .logo img {
   max-height: 38px;
+  transform: translate3d(0, 0, 0) scale(1) !important;
 }
 nav #hamburger-button {
   width: 24px;

@@ -125,7 +125,7 @@ nav {
   .logo {
     transition: opacity 0.3s ease;
     font-size: 0;
-    transform: translate3d(0, 0, 0) scale(1) !important;
+    
 
     &::after {
       display: none;
@@ -137,6 +137,7 @@ nav {
 
     img {
       max-height: 38px;
+      transform: translate3d(0, 0, 0) scale(1) !important;
     }
   }
 
