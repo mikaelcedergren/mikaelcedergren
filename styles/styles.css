@@ -211,6 +211,12 @@ h5 {
   font-weight: 400;
   letter-spacing: 0.2rem;
 }
+@media (max-width: 640px) {
+  h5 {
+    right: 0;
+    padding: 0.5rem 0.75rem;
+  }
+}
 
 strong {
   font-weight: 700;
@@ -440,6 +446,11 @@ main section {
   position: relative;
   padding: 0 1rem;
   margin-bottom: 4rem;
+}
+@media (max-width: 640px) {
+  main section {
+    padding: 0;
+  }
 }
 main section img {
   max-width: 100%;

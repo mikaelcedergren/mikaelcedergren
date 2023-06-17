@@ -41,6 +41,11 @@ h5 {
   padding: 0.5rem 0 0.5rem 0.75rem;
   font-weight: $font-regular;
   letter-spacing: 0.2rem;
+
+  @media (max-width: $breakpoint-small) {
+    right: 0;
+    padding: 0.5rem 0.75rem;
+  }
 }
 
 strong {
@@ -327,6 +332,10 @@ main {
     position: relative;
     padding: 0 1rem;
     margin-bottom: 4rem;
+
+    @media (max-width: $breakpoint-small) {
+      padding: 0;
+    }
 
     // .simpleParallax {
     //   @media (max-width: $breakpoint-medium) {
