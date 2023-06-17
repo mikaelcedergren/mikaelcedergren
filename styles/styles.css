@@ -524,7 +524,7 @@ pre {
 }
 @media (max-width: 640px) {
   .video {
-    padding-bottom: 60%;
+    padding-bottom: 60.25%;
   }
 }
 .video iframe,
