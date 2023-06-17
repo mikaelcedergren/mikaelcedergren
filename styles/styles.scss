@@ -38,13 +38,13 @@ h5 {
   right: 1rem;
   background-color: $white;
   text-transform: uppercase;
-  padding: 0.5rem 0 0.5rem 0.75rem;
+  padding: 0.5rem 0 0.5rem 0.5rem;
   font-weight: $font-regular;
   letter-spacing: 0.2rem;
 
   @media (max-width: $breakpoint-small) {
     right: 0;
-    padding: 0.5rem 0.75rem;
+    padding: 0.5rem 0.5rem;
   }
 }
 
@@ -326,7 +326,7 @@ main {
   max-width: $page-max-width;
   margin: 0 auto;
   padding: 0;
-  margin-top: calc($navigation-height + 1rem);
+  margin-top: $navigation-height;
 
   section {
     position: relative;
@@ -334,7 +334,7 @@ main {
     margin-bottom: 4rem;
 
     @media (max-width: $breakpoint-small) {
-      padding: 0;
+      margin-bottom: 0;
     }
 
     // .simpleParallax {
