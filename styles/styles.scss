@@ -125,6 +125,7 @@ nav {
   .logo {
     transition: opacity 0.3s ease;
     font-size: 0;
+    transform: translate3d(0, 0, 0) scale(1) !important;
 
     &::after {
       display: none;
@@ -324,7 +325,7 @@ main {
   section {
     position: relative;
     padding: 0 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 
     // .simpleParallax {
     //   @media (max-width: $breakpoint-medium) {

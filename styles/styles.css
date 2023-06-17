@@ -287,6 +287,7 @@ nav a.hidden-link::after {
 nav .logo {
   transition: opacity 0.3s ease;
   font-size: 0;
+  transform: translate3d(0, 0, 0) scale(1) !important;
 }
 nav .logo::after {
   display: none;
@@ -438,7 +439,7 @@ main {
 main section {
   position: relative;
   padding: 0 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 main section img {
   max-width: 100%;
