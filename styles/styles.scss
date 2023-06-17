@@ -17,6 +17,7 @@ body {
   padding: 0;
   margin: 0;
   font-size: $font-size;
+  color: $black;
 }
 
 h1,
@@ -45,7 +46,7 @@ h5 {
 
   @media (max-width: $breakpoint-small) {
     right: 0;
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem;
   }
 }
 
@@ -131,6 +132,7 @@ nav {
   .logo {
     transition: opacity 0.3s ease;
     font-size: 0;
+    min-width: 18px;
     
 
     &::after {
@@ -190,10 +192,6 @@ nav {
             transform: rotate(-45deg);
             opacity: 1;
             top: 0;
-
-            // @media (max-width: $breakpoint-small) {
-            //   top: 2px;
-            // }
           }
           &:last-child {
             transform: rotate(45deg);
@@ -227,10 +225,6 @@ nav {
           background: $black;
           top: 3px;
           transform-origin: center right;
-
-          // @media (max-width: $breakpoint-small) {
-          //   top: 1px;
-          // }
         }
 
         &:last-child {
@@ -238,10 +232,6 @@ nav {
           top: auto;
           bottom: 5px;
           transform-origin: center right;
-
-          // @media (max-width: $breakpoint-small) {
-          //   bottom: 3px;
-          // }
         }
       }
     }

@@ -186,6 +186,7 @@ body {
   padding: 0;
   margin: 0;
   font-size: 16px;
+  color: #37444a;
 }
 
 h1,
@@ -215,7 +216,7 @@ h5 {
 @media (max-width: 640px) {
   h5 {
     right: 0;
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem;
   }
 }
 
@@ -262,7 +263,7 @@ nav a {
   position: relative;
   display: inline-block;
   font-size: 1.25rem;
-  color: #3b4658;
+  color: #37444a;
   text-decoration: none;
   font-weight: 700;
   padding: 0.5rem 0;
@@ -274,7 +275,7 @@ nav a::after {
   position: absolute;
   height: 2px;
   bottom: 6px;
-  background-color: #3b4658;
+  background-color: #37444a;
   width: 0;
 }
 nav a.hidden-link {
@@ -294,6 +295,7 @@ nav a.hidden-link::after {
 nav .logo {
   transition: opacity 0.3s ease;
   font-size: 0;
+  min-width: 18px;
 }
 nav .logo::after {
   display: none;
@@ -348,19 +350,19 @@ nav #hamburger-button .hamburger-icon span {
   position: absolute;
   transform-origin: center center;
   transition: all 0.3s;
-  background-color: #3b4658;
+  background-color: #37444a;
   height: 2px;
   width: 100%;
   border-radius: 300px;
   top: calc(50% - 2px);
 }
 nav #hamburger-button .hamburger-icon span:first-child {
-  background: #3b4658;
+  background: #37444a;
   top: 3px;
   transform-origin: center right;
 }
 nav #hamburger-button .hamburger-icon span:last-child {
-  background: #3b4658;
+  background: #37444a;
   top: auto;
   bottom: 5px;
   transform-origin: center right;
@@ -497,7 +499,7 @@ pre {
   letter-spacing: 0.05rem;
   text-transform: uppercase;
   font-size: 0.8rem;
-  color: #3b4658;
+  color: #37444a;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
