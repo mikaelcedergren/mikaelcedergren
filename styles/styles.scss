@@ -142,7 +142,6 @@ nav {
 
     img {
       max-height: 38px;
-      transform: translate3d(0, 0, 0) scale(1) !important;
     }
   }
 
@@ -337,33 +336,6 @@ main {
       margin-bottom: 0;
     }
 
-    // .simpleParallax {
-    //   @media (max-width: $breakpoint-medium) {
-    //     width: calc(100% + 2rem);
-    //     margin-left: -1rem;
-    //     margin-right: -1rem;
-    //     max-width: calc(100% + 2rem);
-    //   }
-
-    //   & + h1 {
-    //     font-family: $font-family;
-    //     text-transform: uppercase;
-    //     position: absolute;
-    //     top: -1px;
-    //     font-style: normal;
-    //     right: -1px;
-    //     display: inline-block;
-    //     background-color: $white;
-    //     color: $black;
-    //     font-size: $font-size-small;
-    //     padding: 1rem;
-    //     line-height: 1;
-    //     margin: 0;
-    //     text-transform: uppercase;
-    //     letter-spacing: 0.25rem;
-    //   }
-    // }
-
     img {
       max-width: 100%;
       font-size: 0;
@@ -470,7 +442,6 @@ pre {
     overflow: hidden;
     min-width: 64px;
     min-height: 64px;
-    transform: translate3d(0, 0, 0) scale(1) !important;
   }
 }
 
@@ -491,20 +462,6 @@ h1 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-
-  // &:first-of-type::before {
-  //   display: none;
-  // }
-
-  // &::before {
-  //   content: '';
-  //   background-color: $gray2;
-  //   height: 1px;
-  //   width: 16px;
-  //   position: absolute;
-  //   top: -1.15rem;
-  //   left: 0;
-  // }
 }
 
 strong {
