@@ -333,6 +333,10 @@ main {
     padding: 0 1rem;
     margin-bottom: 4rem;
 
+    & > h2 {
+      margin-top: 5rem;
+    }
+
     @media (max-width: $breakpoint-small) {
       margin-bottom: 0;
     }

@@ -447,6 +447,9 @@ main section {
   padding: 0 1rem;
   margin-bottom: 4rem;
 }
+main section > h2 {
+  margin-top: 5rem;
+}
 @media (max-width: 640px) {
   main section {
     margin-bottom: 0;
