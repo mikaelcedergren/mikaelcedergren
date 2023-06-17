@@ -201,6 +201,17 @@ h4 {
   text-rendering: optimizeLegibility;
 }
 
+h5 {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  background-color: #ffffff;
+  text-transform: uppercase;
+  padding: 0.5rem 0 0.5rem 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+}
+
 strong {
   font-weight: 700;
 }
@@ -214,6 +225,7 @@ strong {
 
 p {
   margin: 0 0 2rem 0;
+  line-height: 1.8;
 }
 
 hr {
@@ -454,10 +466,17 @@ main section .simpleParallax + h1 {
   letter-spacing: 0.25rem;
 }
 main section img {
-  max-width: calc(100% + 2rem);
+  max-width: 100%;
+  font-size: 0;
   display: block;
   overflow: hidden;
-  margin: 0 -1rem;
+  margin: 0;
+}
+@media (max-width: 640px) {
+  main section img {
+    max-width: calc(100% + 2rem);
+    margin: 0 -1rem;
+  }
 }
 main section article {
   position: relative;
@@ -502,6 +521,11 @@ pre {
   max-width: calc(100% + 2rem);
   margin: 0 -1rem;
   top: 0;
+}
+@media (max-width: 640px) {
+  .video {
+    padding-bottom: 60%;
+  }
 }
 .video iframe,
 .video object,
