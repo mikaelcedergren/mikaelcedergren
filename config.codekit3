@@ -7,7 +7,7 @@
       "uuidString" : "8A520666-A74C-4C17-964B-B89B37DDF3A5"
     }
   ],
-  "creatorBuild" : "34484",
+  "creatorBuild" : "34518",
   "files" : {
     "\/.gitignore" : {
       "cB" : 0,
@@ -3253,9 +3253,6 @@
       "no-return-assign" : {
         "active" : 0,
         "optionString" : "'except-parens'"
-      },
-      "no-return-await" : {
-        "active" : 0
       },
       "no-script-url" : {
         "active" : 0
