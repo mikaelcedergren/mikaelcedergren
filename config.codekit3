@@ -2172,6 +2172,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/resume\/profile-pic.png" : {
+      "ft" : 32768,
+      "iS" : 301637,
+      "oA" : 0,
+      "oAP" : "\/images\/resume\/profile-pic.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/images\/signature.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -2240,19 +2253,6 @@
       "pME" : 1,
       "rFN" : 0,
       "uCM" : 0
-    },
-    "\/resume\/images\/profile-pic.png" : {
-      "ft" : 32768,
-      "iS" : 301637,
-      "oA" : 0,
-      "oAP" : "\/resume\/images\/profile-pic.png",
-      "oF" : 0,
-      "oIPL" : 1,
-      "opt" : 1,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
     },
     "\/resume\/index.html" : {
       "cB" : 0,
