@@ -594,3 +594,22 @@ strong {
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
 }
+
+blockquote {
+  font-style: italic;
+  margin: 0 0 3rem 0;
+  padding: 0;
+}
+blockquote p {
+  margin-bottom: 1rem;
+}
+blockquote span {
+  font-style: normal;
+  display: block;
+  font-weight: 700;
+}
+blockquote span div {
+  font-weight: 400;
+  font-size: 13px;
+  color: #a3afbf;
+}
