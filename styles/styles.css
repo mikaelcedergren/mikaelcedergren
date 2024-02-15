@@ -252,6 +252,26 @@ hr {
   background-color: rgba(0, 0, 0, 0.08);
 }
 
+a {
+  position: relative;
+  text-decoration: none;
+  color: #37444a;
+  font-weight: 700;
+}
+a::after {
+  transition: width 0.3s ease-out;
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 2px;
+  bottom: -0.25rem;
+  background-color: #37444a;
+  width: 0;
+}
+a:hover::after {
+  width: 100%;
+}
+
 nav {
   background-color: #ffffff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -266,6 +286,7 @@ nav {
   flex-flow: row nowrap;
   padding: 0 1rem;
   text-rendering: optimizeLegibility;
+  text-decoration: none;
 }
 nav a {
   position: relative;

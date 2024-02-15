@@ -74,6 +74,30 @@ hr {
   background-color: rgba(black, 0.08);
 }
 
+a {
+  position: relative;
+  text-decoration: none;
+  color: $black;
+  font-weight: $font-bold;
+
+  &::after {
+    transition: width 0.3s ease-out;
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 2px;
+    bottom: -0.25rem;
+    background-color: $black;
+    width: 0;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
 nav {
   background-color: $white;
   border-bottom: $line;
@@ -88,6 +112,7 @@ nav {
   flex-flow: row nowrap;
   padding: 0 1rem;
   text-rendering: optimizeLegibility;
+  text-decoration: none;
 
   a {
     position: relative;
@@ -153,22 +178,6 @@ nav {
     height: $hamburger-size;
     position: relative;
     z-index: 3;
-
-    // @media (min-width: $breakpoint-medium) {
-    //   &:hover {
-    //     .hamburger-icon {
-    //       span {
-    //         // &:first-child {
-    //         //   top: 1px;
-    //         // }
-
-    //         // &:last-child {
-    //         //   bottom: 3px;
-    //         // }
-    //       }
-    //     }
-    //   }
-    // }
 
     input {
       display: block;
