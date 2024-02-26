@@ -278,10 +278,11 @@ ul.horizontal {
   padding: 0;
 }
 ul.horizontal li {
-  margin: 0 0.5rem 0 0;
-  padding-right: 0.5rem;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 2px 8px;
+  border-radius: 4px;
   display: inline-block;
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 nav {
@@ -540,7 +541,7 @@ pre {
   letter-spacing: 0.05rem;
   text-transform: uppercase;
   font-size: 0.8rem;
-  color: #000000;
+  color: #00a1e4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -605,6 +606,7 @@ pre {
 
 h1 {
   padding-top: 1rem;
+  margin: 0 0 1rem 0;
 }
 
 .date {
@@ -616,7 +618,7 @@ h1 {
   font-size: 0.8rem;
   color: #778396;
   line-height: 1;
-  margin-bottom: 0.25rem;
+  margin-bottom: 1rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;

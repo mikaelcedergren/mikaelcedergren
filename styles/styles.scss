@@ -105,14 +105,14 @@ ul {
     padding: 0;
 
     li {
-      margin: 0 0.5rem 0 0;
-      padding-right: 0.5rem;
+      margin: 0 0.5rem 0.5rem 0;
+      padding: 2px 8px;
+      border-radius: $border-radius;
       display: inline-block;
-      border-right: 1px solid rgba(black, 0.2);
+      // background-color: $gray1;
+      border: $line;
     }
-
   }
-
 }
 
 nav {
@@ -175,7 +175,6 @@ nav {
     transition: opacity 0.3s ease;
     font-size: 0;
     min-width: 18px;
-    
 
     &::after {
       display: none;
@@ -400,7 +399,7 @@ pre {
   letter-spacing: 0.05rem;
   text-transform: uppercase;
   font-size: 0.8rem;
-  color: $black;
+  color: $primary;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -412,7 +411,7 @@ pre {
   height: 0;
   max-width: 100%;
   top: 0;
-  
+
   @media (max-width: $breakpoint-small) {
     margin: 0 -1rem;
     max-width: calc(100% + 2rem);
@@ -468,6 +467,7 @@ pre {
 
 h1 {
   padding-top: 1rem;
+  margin: 0 0 1rem 0;
 }
 
 .date {
@@ -479,7 +479,7 @@ h1 {
   font-size: 0.8rem;
   color: $gray5;
   line-height: 1;
-  margin-bottom: 0.25rem;
+  margin-bottom: 1rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
