@@ -160,7 +160,7 @@
 }
 
 .text-small {
-  font-size: 15px;
+  font-size: 0.8rem;
 }
 
 .text-bold {
@@ -645,6 +645,6 @@ blockquote span {
 }
 blockquote span div {
   font-weight: 400;
-  font-size: 15px;
+  font-size: 0.8rem;
   color: #a3afbf;
 }
