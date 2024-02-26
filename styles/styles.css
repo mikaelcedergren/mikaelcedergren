@@ -160,7 +160,7 @@
 }
 
 .text-small {
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .text-bold {
@@ -193,7 +193,7 @@ body {
   overflow-x: hidden;
   padding: 0;
   margin: 0;
-  font-size: 16px;
+  font-size: 18px;
   color: #000000;
 }
 
@@ -420,7 +420,7 @@ nav #menu-cover {
   background-color: rgba(255, 255, 255, 0.5);
   z-index: -2;
   pointer-events: none;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(3px);
 }
 nav #menu {
@@ -645,6 +645,6 @@ blockquote span {
 }
 blockquote span div {
   font-weight: 400;
-  font-size: 13px;
+  font-size: 15px;
   color: #a3afbf;
 }
