@@ -98,6 +98,23 @@ a {
   }
 }
 
+ul {
+  &.horizontal {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0 0.5rem 0 0;
+      padding-right: 0.5rem;
+      display: inline-block;
+      border-right: 1px solid rgba(black, 0.2);
+    }
+
+  }
+
+}
+
 nav {
   background-color: $white;
   border-bottom: $line;
@@ -460,7 +477,7 @@ h1 {
   font-weight: $font-bold;
   text-transform: uppercase;
   font-size: 0.8rem;
-  color: $gray4;
+  color: $gray5;
   line-height: 1;
   margin-bottom: 0.25rem;
   -webkit-font-smoothing: antialiased;

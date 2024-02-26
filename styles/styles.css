@@ -272,6 +272,18 @@ a:hover::after {
   width: 100%;
 }
 
+ul.horizontal {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul.horizontal li {
+  margin: 0 0.5rem 0 0;
+  padding-right: 0.5rem;
+  display: inline-block;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
 nav {
   background-color: #ffffff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -602,7 +614,7 @@ h1 {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.8rem;
-  color: #a3afbf;
+  color: #778396;
   line-height: 1;
   margin-bottom: 0.25rem;
   -webkit-font-smoothing: antialiased;
