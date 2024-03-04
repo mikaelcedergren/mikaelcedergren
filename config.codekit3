@@ -378,6 +378,19 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/images\/og-image.jpg" : {
+      "ft" : 16384,
+      "iS" : 21055,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/og-image.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/images\/photography\/interior-1.jpg" : {
       "ft" : 16384,
       "iS" : 212429,
