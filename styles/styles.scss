@@ -22,8 +22,7 @@ body {
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
   margin-top: 0;
   font-family: $font-family-headings;
   font-weight: $font-bold;
@@ -32,6 +31,13 @@ h4 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-weight: $font-regular;
+  letter-spacing: 0.2rem;
+  color: $gray5;
 }
 
 h5 {
@@ -361,12 +367,17 @@ main {
       font-size: 0;
       display: block;
       overflow: hidden;
-      margin: 0;
+      margin: 0 0 0.5rem 0;
 
       @media (max-width: $breakpoint-small) {
         max-width: calc(100% + 2rem);
         margin: 0 -1rem;
       }
+    }
+
+    .spacer {
+      padding: 1rem 0;
+      background: red;
     }
 
     article {
