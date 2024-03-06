@@ -17,6 +17,22 @@
       "oAP" : "\/.gitignore",
       "oF" : 0
     },
+    "\/about\/index.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/about\/index.html",
+      "oF" : 0
+    },
+    "\/about\/index.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/about\/index.html",
+      "oF" : 0
+    },
     "\/artworks\/index.html" : {
       "cB" : 0,
       "ft" : 8192,
@@ -55,6 +71,22 @@
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/components\/_header.html",
+      "oF" : 0
+    },
+    "\/contact\/index.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/contact\/index.html",
+      "oF" : 0
+    },
+    "\/contact\/index.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/contact\/index.html",
       "oF" : 0
     },
     "\/fonts\/WargrSans-Bold.otf" : {
@@ -1912,6 +1944,52 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/portfolio\/lanefinder-call-identification.gif" : {
+      "ft" : 4194304,
+      "iS" : 145470,
+      "oA" : 0,
+      "oAP" : "\/images\/portfolio\/lanefinder-call-identification.gif",
+      "oF" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "rq" : 75
+    },
+    "\/images\/portfolio\/lanefinder-case-1.png" : {
+      "ft" : 32768,
+      "iS" : 3435445,
+      "oA" : 0,
+      "oAP" : "\/images\/portfolio\/lanefinder-case-1.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/portfolio\/lanefinder-case-2.png" : {
+      "ft" : 32768,
+      "iS" : 3921277,
+      "oA" : 0,
+      "oAP" : "\/images\/portfolio\/lanefinder-case-2.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/portfolio\/lanefinder-empty-tumbleweed.gif" : {
+      "ft" : 4194304,
+      "iS" : 337191,
+      "oA" : 0,
+      "oAP" : "\/images\/portfolio\/lanefinder-empty-tumbleweed.gif",
+      "oF" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "rq" : 75
+    },
     "\/images\/portfolio\/lanefinder-iconography.jpg" : {
       "ft" : 16384,
       "iS" : 47160,
@@ -1923,6 +2001,16 @@
       "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/portfolio\/lanefinder-intro-animation.gif" : {
+      "ft" : 4194304,
+      "iS" : 8047913,
+      "oA" : 1,
+      "oAP" : "\/images\/portfolio\/lanefinder-intro-animation.gif",
+      "oF" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
       "rq" : 75
     },
     "\/images\/portfolio\/lanefinder-logo.png" : {
@@ -1947,6 +2035,19 @@
       "oIPL" : 0,
       "opt" : 0,
       "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/portfolio\/lanefinder-social-media-posts.jpg" : {
+      "ft" : 16384,
+      "iS" : 91150,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/portfolio\/lanefinder-social-media-posts.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -2022,6 +2123,29 @@
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/images\/portfolio\/luna-concept-page.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/portfolio\/personal-brand-logo-animation.gif" : {
+      "ft" : 4194304,
+      "iS" : 460377,
+      "oA" : 0,
+      "oAP" : "\/images\/portfolio\/personal-brand-logo-animation.gif",
+      "oF" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "rq" : 75
+    },
+    "\/images\/portfolio\/personal-brand-stationary.jpg" : {
+      "ft" : 16384,
+      "iS" : 106255,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/portfolio\/personal-brand-stationary.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,

@@ -214,7 +214,8 @@ h4 {
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 0.2rem;
-  color: #778396;
+  color: #a3afbf;
+  font-size: 0.75rem;
 }
 
 h5 {
@@ -257,6 +258,32 @@ hr {
   color: rgba(0, 0, 0, 0.08);
   background-color: rgba(0, 0, 0, 0.08);
 }
+hr.spacer {
+  position: relative;
+  padding: 2rem 0;
+  width: 100%;
+  border: none;
+  height: 1px;
+  color: transparent;
+  background-color: transparent;
+}
+hr.spacer::before, hr.spacer::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 4px);
+  background-color: #e6eaf0;
+  height: 8px;
+  width: 8px;
+  border-radius: 100%;
+  transform: translateY(-50%);
+}
+hr.spacer::before {
+  left: calc(50% - 0.5rem);
+}
+hr.spacer::after {
+  left: calc(50% + 0.5rem);
+}
 
 a {
   position: relative;
@@ -288,6 +315,7 @@ ul.horizontal li {
   padding: 2px 8px;
   border-radius: 4px;
   display: inline-block;
+  font-size: 0.75rem;
   border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
@@ -490,7 +518,7 @@ main {
   max-width: 900px;
   margin: 0 auto;
   padding: 0;
-  margin-top: 64px;
+  margin-top: calc(64px + 1rem);
 }
 main section {
   position: relative;
@@ -506,6 +534,7 @@ main section > h2 {
   }
 }
 main section img {
+  min-width: 100%;
   max-width: 100%;
   font-size: 0;
   display: block;
@@ -518,18 +547,21 @@ main section img {
     margin: 0 -1rem;
   }
 }
-main section .spacer {
-  padding: 1rem 0;
-  background: red;
+main section .two-columns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+  gap: 0.5rem;
 }
 main section article {
   position: relative;
   max-width: 100%;
   background-color: #ffffff;
   line-height: 1.75;
-  margin: 0 0 4rem 8rem;
-  padding: 2rem;
-  margin-top: -6rem;
+  margin: 0 0 4rem 6rem;
+  padding: 1rem;
+  margin-top: -4rem;
   min-height: 5rem;
 }
 @media (max-width: 1024px) {

@@ -37,7 +37,8 @@ h4 {
   text-transform: uppercase;
   font-weight: $font-regular;
   letter-spacing: 0.2rem;
-  color: $gray5;
+  color: $gray4;
+  font-size: 0.75rem;
 }
 
 h5 {
@@ -78,6 +79,36 @@ hr {
   height: 1px;
   color: rgba(black, 0.08);
   background-color: rgba(black, 0.08);
+
+  &.spacer {
+    position: relative;
+    padding: 2rem 0;
+    width: 100%;
+    border: none;
+    height: 1px;
+    color: transparent;
+    background-color: transparent;
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: calc(50% - 4px);
+      background-color: $gray2;
+      height: 8px;
+      width: 8px;
+      border-radius: 100%;
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      left: calc(50% - 0.5rem);
+    }
+
+    &::after {
+      left: calc(50% + 0.5rem);
+    }
+  }
 }
 
 a {
@@ -115,7 +146,7 @@ ul {
       padding: 2px 8px;
       border-radius: $border-radius;
       display: inline-block;
-      // background-color: $gray1;
+      font-size: 0.75rem;
       border: $line;
     }
   }
@@ -347,7 +378,7 @@ main {
   max-width: $page-max-width;
   margin: 0 auto;
   padding: 0;
-  margin-top: $navigation-height;
+  margin-top: calc(#{$navigation-height} + 1rem);
 
   section {
     position: relative;
@@ -363,6 +394,7 @@ main {
     }
 
     img {
+      min-width: 100%;
       max-width: 100%;
       font-size: 0;
       display: block;
@@ -375,9 +407,13 @@ main {
       }
     }
 
-    .spacer {
-      padding: 1rem 0;
-      background: red;
+    .two-columns {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-flow: row nowrap;
+      gap: 0.5rem;
+      
     }
 
     article {
@@ -385,9 +421,9 @@ main {
       max-width: 100%;
       background-color: $white;
       line-height: 1.75;
-      margin: 0 0 4rem 8rem;
-      padding: 2rem;
-      margin-top: -6rem;
+      margin: 0 0 4rem 6rem;
+      padding: 1rem;
+      margin-top: -4rem;
       min-height: 5rem;
 
       @media (max-width: $breakpoint-medium) {
