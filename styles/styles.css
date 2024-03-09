@@ -351,7 +351,7 @@ nav a {
   color: #000000;
   text-decoration: none;
   font-weight: 700;
-  padding: 0.5rem 0;
+  padding: 0.25rem 0;
   width: min-content;
 }
 nav a::after {
