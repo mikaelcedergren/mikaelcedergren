@@ -567,4 +567,8 @@ blockquote {
   max-width: 160px;
   margin-top: 1rem;
   min-width: 0;
+
+  @media (max-width: $breakpoint-small) {
+    margin: 0;
+  }
 }

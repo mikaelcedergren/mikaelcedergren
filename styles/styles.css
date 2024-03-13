@@ -700,3 +700,8 @@ blockquote span div {
   margin-top: 1rem;
   min-width: 0;
 }
+@media (max-width: 640px) {
+  .signature {
+    margin: 0;
+  }
+}
