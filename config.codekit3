@@ -1954,28 +1954,28 @@
       "ou" : "lpckwebp-none",
       "rq" : 75
     },
-    "\/images\/portfolio\/lanefinder-case-1.png" : {
-      "ft" : 32768,
-      "iS" : 3435445,
+    "\/images\/portfolio\/lanefinder-case-1.jpg" : {
+      "ft" : 16384,
+      "iS" : 121987,
+      "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/images\/portfolio\/lanefinder-case-1.png",
+      "oAP" : "\/images\/portfolio\/lanefinder-case-1.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
-      "oT" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
     },
-    "\/images\/portfolio\/lanefinder-case-2.png" : {
-      "ft" : 32768,
-      "iS" : 3921277,
+    "\/images\/portfolio\/lanefinder-case-2.jpg" : {
+      "ft" : 16384,
+      "iS" : 236141,
+      "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/images\/portfolio\/lanefinder-case-2.png",
+      "oAP" : "\/images\/portfolio\/lanefinder-case-2.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
-      "oT" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -2161,7 +2161,7 @@
       "oAP" : "\/images\/portfolio\/personal-brand-stationary.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75

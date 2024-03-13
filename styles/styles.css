@@ -485,11 +485,6 @@ nav #menu {
   padding: 2rem 2rem 64px 2rem;
   list-style: none;
 }
-nav #menu .signature {
-  width: 120px;
-  max-width: 120px;
-  margin-top: 1rem;
-}
 @media (max-width: 1024px) {
   nav #menu {
     width: 90vw;
@@ -521,6 +516,7 @@ header h1 {
 header p {
   font-size: 1.5rem;
   line-height: 1.5;
+  margin-bottom: 3rem;
 }
 
 main {
@@ -627,6 +623,7 @@ pre {
   justify-content: flex-start;
   flex-flow: row nowrap;
   gap: 1rem;
+  margin-bottom: 2rem;
 }
 @media (max-width: 640px) {
   .resume-header {
@@ -654,7 +651,6 @@ pre {
 }
 
 h1 {
-  padding-top: 1rem;
   margin: 0 0 1rem 0;
 }
 
@@ -696,4 +692,11 @@ blockquote span div {
   font-weight: 400;
   font-size: 0.8rem;
   color: #a3afbf;
+}
+
+.signature {
+  width: 160px;
+  max-width: 160px;
+  margin-top: 1rem;
+  min-width: 0;
 }

@@ -343,12 +343,6 @@ nav {
     padding: 2rem 2rem $navigation-height 2rem;
     list-style: none;
 
-    .signature {
-      width: 120px;
-      max-width: 120px;
-      margin-top: 1rem;
-    }
-
     @media (max-width: $breakpoint-medium) {
       width: 90vw;
     }
@@ -381,6 +375,7 @@ header {
   p {
     font-size: 1.5rem;
     line-height: 1.5;
+    margin-bottom: 3rem;
   }
 }
 
@@ -490,6 +485,7 @@ pre {
   justify-content: flex-start;
   flex-flow: row nowrap;
   gap: 1rem;
+  margin-bottom: 2rem;
 
   @media (max-width: $breakpoint-small) {
     flex-flow: column nowrap;
@@ -520,7 +516,6 @@ pre {
 }
 
 h1 {
-  padding-top: 1rem;
   margin: 0 0 1rem 0;
 }
 
@@ -565,4 +560,11 @@ blockquote {
       color: $gray4;
     }
   }
+}
+
+.signature {
+  width: 160px;
+  max-width: 160px;
+  margin-top: 1rem;
+  min-width: 0;
 }
