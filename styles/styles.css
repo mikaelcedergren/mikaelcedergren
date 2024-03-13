@@ -535,7 +535,7 @@ main section > h2 {
 }
 @media (max-width: 640px) {
   main section {
-    margin-bottom: 0;
+    margin-bottom: 2rem;
   }
 }
 main section img {
