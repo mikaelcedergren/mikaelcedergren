@@ -1762,6 +1762,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/portfolio\/betcreative-office.jpg" : {
+      "ft" : 16384,
+      "iS" : 153049,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/portfolio\/betcreative-office.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/images\/portfolio\/betcreative-symbol.png" : {
       "ft" : 32768,
       "iS" : 73449,
