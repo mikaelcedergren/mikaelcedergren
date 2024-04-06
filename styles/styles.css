@@ -617,39 +617,6 @@ pre {
   height: 100%;
 }
 
-.resume-header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-flow: row nowrap;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-@media (max-width: 640px) {
-  .resume-header {
-    flex-flow: column nowrap;
-  }
-  .resume-header p {
-    text-align: center;
-  }
-}
-@media (max-width: 640px) and (max-width: 640px) {
-  .resume-header img {
-    margin: 0 auto;
-  }
-}
-.resume-header p {
-  margin-bottom: 0;
-}
-.resume-header img {
-  max-height: 96px;
-  max-width: 96px;
-  border-radius: 100%;
-  overflow: hidden;
-  min-width: 96px;
-  min-height: 96px;
-}
-
 h1 {
   margin: 0 0 1rem 0;
 }
