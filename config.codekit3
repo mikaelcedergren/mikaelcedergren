@@ -1879,6 +1879,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/portfolio\/cog-post-1.jpg" : {
+      "ft" : 16384,
+      "iS" : 363449,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/portfolio\/cog-post-1.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/images\/portfolio\/continuum-logo.png" : {
       "ft" : 32768,
       "iS" : 61245,
@@ -1927,6 +1940,19 @@
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/portfolio\/csg-post-2.jpg" : {
+      "ft" : 16384,
+      "iS" : 188820,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/portfolio\/csg-post-2.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
