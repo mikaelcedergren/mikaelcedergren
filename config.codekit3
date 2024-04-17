@@ -1879,19 +1879,6 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/images\/portfolio\/cog-post-1.jpg" : {
-      "ft" : 16384,
-      "iS" : 363449,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/images\/portfolio\/cog-post-1.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
     "\/images\/portfolio\/continuum-logo.png" : {
       "ft" : 32768,
       "iS" : 61245,
@@ -1931,15 +1918,15 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/images\/portfolio\/cpg-social-media-posts.jpg" : {
+    "\/images\/portfolio\/csg-post-1.jpg" : {
       "ft" : 16384,
-      "iS" : 147390,
+      "iS" : 363449,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/images\/portfolio\/cpg-social-media-posts.jpg",
+      "oAP" : "\/images\/portfolio\/csg-post-1.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 1,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -1952,7 +1939,20 @@
       "oAP" : "\/images\/portfolio\/csg-post-2.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/portfolio\/csg-social-media-posts.jpg" : {
+      "ft" : 16384,
+      "iS" : 147390,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/portfolio\/csg-social-media-posts.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
