@@ -1944,6 +1944,32 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/portfolio\/csg-post-3.jpg" : {
+      "ft" : 16384,
+      "iS" : 375085,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/portfolio\/csg-post-3.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/portfolio\/csg-post-4.jpg" : {
+      "ft" : 16384,
+      "iS" : 261684,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/portfolio\/csg-post-4.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/images\/portfolio\/csg-social-media-posts.jpg" : {
       "ft" : 16384,
       "iS" : 147390,
