@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 // @import 'variables';
 @import '_variables.scss';
@@ -58,13 +58,20 @@ h5 {
 }
 
 strong {
-  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  font-weight: $font-bold;
 }
 
 p,
 strong,
 ul,
-li {
+li,
+div,
+pre,
+span {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -441,14 +448,13 @@ main {
 pre {
   position: relative;
   white-space: normal;
-  line-height: 1.5;
+  line-height: 1;
   display: inline-block;
   margin: 0;
   font-family: $font-family;
   font-weight: $font-bold;
-  letter-spacing: 0.05rem;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: $black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -470,8 +476,8 @@ pre {
   }
 
   p {
-    font-weight: $font-regular;
-    font-size: 1.4rem;
+    font-weight: $font-light;
+    font-size: 1.8rem;
     margin-bottom: 0.5rem;
     line-height: 1.4;
   }
@@ -499,7 +505,7 @@ pre {
     span {
       &:first-child {
         display: inline-block;
-        min-width: 120px;
+        min-width: 90px;
         color: $gray5;
       }
     }
@@ -539,24 +545,16 @@ h1 {
 }
 
 .date {
-  position: relative;
+  // position: relative;
   margin: 0;
   font-family: $font-family;
-  font-weight: $font-bold;
+  font-weight: $font-semi;
   text-transform: uppercase;
-  font-size: 0.8rem;
-  color: $gray5;
+  font-size: 0.75rem;
+  color: $gray6;
   line-height: 1;
   margin-bottom: 1rem;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-strong {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  padding-top: 0.5rem;
 }
 
 blockquote {
