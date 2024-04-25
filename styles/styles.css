@@ -593,6 +593,52 @@ pre {
   text-rendering: optimizeLegibility;
 }
 
+.resume-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  padding-top: 2rem;
+}
+@media (max-width: 640px) {
+  .resume-header {
+    text-align: center;
+    flex-flow: column nowrap;
+  }
+}
+.resume-header p {
+  font-weight: 400;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+.resume-header img {
+  max-height: 128px;
+  max-width: 128px;
+  border-radius: 100%;
+  overflow: hidden;
+  min-width: 128px;
+  min-height: 128px;
+}
+
+.contact-details {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-flow: column nowrap;
+  gap: 0.25rem;
+}
+.contact-details div {
+  width: 100%;
+}
+.contact-details div span:first-child {
+  display: inline-block;
+  min-width: 120px;
+  color: #778396;
+}
+
 .video {
   position: relative;
   padding: 0 0 56.25% 0;

@@ -455,6 +455,61 @@ pre {
   text-rendering: optimizeLegibility;
 }
 
+.resume-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  padding-top: 2rem;
+
+  @media (max-width: $breakpoint-small) {
+    text-align: center;
+    flex-flow: column nowrap;
+  }
+
+  p {
+    font-weight: $font-regular;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+
+  img {
+    max-height: 128px;
+    max-width: 128px;
+    border-radius: 100%;
+    overflow: hidden;
+    min-width: 128px;
+    min-height: 128px;
+  }
+}
+
+.contact-details {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-flow: column nowrap;
+  gap: 0.25rem;
+
+  div {
+    width: 100%;
+
+    span {
+      &:first-child {
+        display: inline-block;
+        min-width: 120px;
+        color: $gray5;
+      }
+    }
+
+
+  }
+  
+}
+
+
 .video {
   position: relative;
   padding: 0 0 56.25% 0;
