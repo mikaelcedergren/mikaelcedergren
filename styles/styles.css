@@ -214,7 +214,7 @@ h4 {
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 0.2rem;
-  color: #a3afbf;
+  color: #778396;
   font-size: 0.75rem;
 }
 
@@ -620,6 +620,11 @@ pre {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
   line-height: 1.4;
+}
+@media (max-width: 640px) {
+  .resume-header p {
+    font-size: 1.2rem;
+  }
 }
 .resume-header img {
   max-height: 128px;

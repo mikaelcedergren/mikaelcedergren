@@ -37,7 +37,7 @@ h4 {
   text-transform: uppercase;
   font-weight: $font-regular;
   letter-spacing: 0.2rem;
-  color: $gray4;
+  color: $gray5;
   font-size: 0.75rem;
 }
 
@@ -481,6 +481,10 @@ pre {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
     line-height: 1.4;
+
+    @media (max-width: $breakpoint-small) {
+      font-size: 1.2rem;
+    }
   }
 
   img {
