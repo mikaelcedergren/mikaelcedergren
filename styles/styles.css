@@ -319,7 +319,7 @@ ul {
   margin: 0 0 2rem 0;
 }
 ul li {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 ul.horizontal {
   list-style: none;
@@ -514,6 +514,7 @@ header h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
   line-height: 1.2;
+  margin-bottom: 2rem;
 }
 @media (max-width: 640px) {
   header h1 {
@@ -641,7 +642,7 @@ pre {
 }
 .contact-details div span:first-child {
   display: inline-block;
-  min-width: 90px;
+  min-width: 80px;
   color: #778396;
 }
 

@@ -150,7 +150,7 @@ ul {
   margin: 0 0 2rem 0;
 
   li {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
   }
 
   &.horizontal {
@@ -373,6 +373,7 @@ header {
     font-size: 3rem;
     margin-bottom: 1rem;
     line-height: 1.2;
+    margin-bottom: 2rem;
 
     @media (max-width: $breakpoint-small) {
       font-size: 2.2rem;
@@ -505,7 +506,7 @@ pre {
     span {
       &:first-child {
         display: inline-block;
-        min-width: 90px;
+        min-width: 80px;
         color: $gray5;
       }
     }
