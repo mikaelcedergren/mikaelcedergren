@@ -238,7 +238,6 @@ h5 {
 strong {
   display: block;
   margin-bottom: 0.5rem;
-  font-size: 1.25rem;
   line-height: 1.2;
   font-weight: 700;
 }
@@ -315,7 +314,7 @@ a:hover::after {
 }
 
 ul {
-  padding: 0 0 0 1rem;
+  padding: 0 0 0 1.3rem;
   margin: 0 0 2rem 0;
 }
 ul li {
@@ -707,7 +706,7 @@ blockquote span {
 blockquote span div {
   font-weight: 400;
   font-size: 0.8rem;
-  color: #a3afbf;
+  color: #778396;
 }
 
 .signature {

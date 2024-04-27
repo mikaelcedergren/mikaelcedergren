@@ -60,7 +60,6 @@ h5 {
 strong {
   display: block;
   margin-bottom: 0.5rem;
-  font-size: 1.25rem;
   line-height: 1.2;
   font-weight: $font-bold;
 }
@@ -146,7 +145,7 @@ a {
 }
 
 ul {
-  padding: 0 0 0 1rem;
+  padding: 0 0 0 1.3rem;
   margin: 0 0 2rem 0;
 
   li {
@@ -579,7 +578,7 @@ blockquote {
     div {
       font-weight: $font-regular;
       font-size: 0.8rem;
-      color: $gray4;
+      color: $gray5;
     }
   }
 }
