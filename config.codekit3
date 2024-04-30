@@ -2257,6 +2257,16 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/portfolio\/pod-intro.gif" : {
+      "ft" : 4194304,
+      "iS" : 8753160,
+      "oA" : 0,
+      "oAP" : "\/images\/portfolio\/pod-intro.gif",
+      "oF" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "rq" : 75
+    },
     "\/images\/portfolio\/portfolio-logo.png" : {
       "ft" : 32768,
       "iS" : 91799,
