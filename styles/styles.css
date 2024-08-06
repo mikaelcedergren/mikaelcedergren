@@ -201,9 +201,8 @@ h1,
 h2,
 h3 {
   margin-top: 0;
-  font-family: "Playfair Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 700;
-  font-style: italic;
+  font-family: "Plus Jakarta Sans", "Playfair Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 200;
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -215,7 +214,7 @@ h4 {
   font-weight: 400;
   letter-spacing: 0.2rem;
   color: #778396;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
 }
 
 h5 {
@@ -350,6 +349,15 @@ nav {
   padding: 0 1rem;
   text-rendering: optimizeLegibility;
   text-decoration: none;
+}
+nav .logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+  gap: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
 }
 nav a {
   position: relative;
@@ -507,14 +515,18 @@ header {
   align-items: flex-start;
   justify-content: center;
   flex-flow: column nowrap;
-  padding: 0 1rem;
+  padding: 2rem 1rem;
   line-height: 1.5;
 }
 header h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 4rem;
   line-height: 1.2;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+}
+header h1 span {
+  background: -webkit-linear-gradient(#ff0066, #00a1e4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 @media (max-width: 640px) {
   header h1 {
@@ -528,18 +540,35 @@ header p {
 }
 
 main {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0;
   margin-top: calc(64px + 1rem);
 }
 main section {
   position: relative;
-  padding: 0 1rem;
+  padding: 4rem 0 0 1rem;
   margin-bottom: 4rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 main section > h2 {
   margin-top: 5rem;
+}
+main section .section-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-flow: row nowrap;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+main section .section-header p {
+  font-size: 1.5rem;
+  margin-top: -0.5rem;
+}
+main section .section-header img {
+  max-width: 120px;
+  min-width: 0;
 }
 @media (max-width: 640px) {
   main section {
@@ -575,6 +604,11 @@ main section article {
   margin: 0 0 4rem 6rem;
   padding: 1rem;
   margin-top: -4rem;
+}
+main section article h4 {
+  position: relative;
+  padding: 0;
+  margin: 0;
 }
 @media (max-width: 1024px) {
   main section article {
@@ -649,6 +683,17 @@ pre {
   display: inline-block;
   min-width: 80px;
   color: #778396;
+}
+
+.tag {
+  font-size: 0.8rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 0.5rem 1rem;
+  border-radius: 300px;
+  margin-right: 0.25rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  color: #4d5b73;
 }
 
 .video {

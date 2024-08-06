@@ -2143,6 +2143,16 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/portfolio\/lanefinder-logo.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/images\/portfolio\/lanefinder-logo.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/images\/portfolio\/lanefinder-palette.png" : {
       "ft" : 32768,
       "iS" : 64218,
@@ -2458,6 +2468,16 @@
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
+    },
+    "\/images\/portfolio\/youcruit-logo.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/images\/portfolio\/youcruit-logo.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
     },
     "\/images\/portfolio\/youcruit-public.jpg" : {
       "ft" : 16384,
