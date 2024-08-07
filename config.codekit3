@@ -1762,6 +1762,16 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/portfolio\/betcreative-logo.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/images\/portfolio\/betcreative-logo.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/images\/portfolio\/betcreative-office.jpg" : {
       "ft" : 16384,
       "iS" : 153049,
@@ -1800,6 +1810,16 @@
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
+    },
+    "\/images\/portfolio\/brainteam-logo.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/images\/portfolio\/brainteam-logo.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
     },
     "\/images\/portfolio\/brainteam-palette.png" : {
       "ft" : 32768,
@@ -2316,6 +2336,16 @@
       "ou" : "lpckwebp-none",
       "rq" : 75
     },
+    "\/images\/portfolio\/pod-logo.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/images\/portfolio\/pod-logo.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/images\/portfolio\/portfolio-logo.png" : {
       "ft" : 32768,
       "iS" : 91799,
@@ -2381,6 +2411,16 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/portfolio\/svt-logo.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/images\/portfolio\/svt-logo.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/images\/portfolio\/trialbee-synargus-logo.jpg" : {
       "ft" : 16384,
       "iS" : 33207,
@@ -2403,6 +2443,16 @@
       "opt" : 0,
       "ou" : "lpckwebp-none",
       "rq" : 75
+    },
+    "\/images\/portfolio\/yobify-logo.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/images\/portfolio\/yobify-logo.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
     },
     "\/images\/portfolio\/youcruit-geophrey-favorites-2.png" : {
       "ft" : 32768,
