@@ -571,6 +571,11 @@ main section .section-header img {
   min-width: 0;
 }
 @media (max-width: 640px) {
+  main section .section-header {
+    flex-flow: column nowrap;
+  }
+}
+@media (max-width: 640px) {
   main section {
     margin-bottom: 2rem;
   }

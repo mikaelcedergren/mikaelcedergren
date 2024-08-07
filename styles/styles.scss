@@ -435,6 +435,10 @@ main {
         max-width: 120px;
         min-width: 0;
       }
+
+      @media (max-width: $breakpoint-small) {
+        flex-flow: column nowrap;
+      }
     }
 
     @media (max-width: $breakpoint-small) {
