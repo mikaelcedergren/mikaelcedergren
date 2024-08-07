@@ -436,6 +436,8 @@ main {
       img {
         max-width: 140px;
         min-width: 140px;
+        width: 140px;
+        display: block;
       }
 
       @media (max-width: $breakpoint-small) {

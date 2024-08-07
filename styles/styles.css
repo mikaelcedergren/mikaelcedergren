@@ -572,6 +572,8 @@ main section .section-header p {
 main section .section-header img {
   max-width: 140px;
   min-width: 140px;
+  width: 140px;
+  display: block;
 }
 @media (max-width: 640px) {
   main section .section-header {
