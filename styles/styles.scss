@@ -435,7 +435,7 @@ main {
 
       img {
         max-width: 140px;
-        min-width: 0;
+        min-width: 140px;
       }
 
       @media (max-width: $breakpoint-small) {
