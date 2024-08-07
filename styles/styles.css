@@ -567,7 +567,7 @@ main section .section-header p {
   margin-top: -0.5rem;
 }
 main section .section-header img {
-  max-width: 120px;
+  max-width: 140px;
   min-width: 0;
 }
 @media (max-width: 640px) {

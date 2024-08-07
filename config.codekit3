@@ -1938,6 +1938,16 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/portfolio\/csg-logo.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/images\/portfolio\/csg-logo.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/images\/portfolio\/csg-post-1.jpg" : {
       "ft" : 16384,
       "iS" : 363449,
@@ -2505,6 +2515,16 @@
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
+    },
+    "\/images\/portfolio\/youcruit-group-logo.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/images\/portfolio\/youcruit-group-logo.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
     },
     "\/images\/portfolio\/youcruit-group-public.jpg" : {
       "ft" : 16384,
