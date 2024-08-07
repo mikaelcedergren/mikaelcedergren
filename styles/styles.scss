@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 // @import 'variables';
 @import '_variables.scss';
@@ -26,11 +26,14 @@ h3 {
   margin-top: 0;
   font-family: $font-family-headings;
   font-weight: $font-light;
-  // font-style: italic;
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-weight: $font-bold;
 }
 
 h4 {
@@ -383,12 +386,7 @@ header {
     font-size: 4.5rem;
     line-height: 1.2;
     margin-bottom: 4rem;
-
-    span {
-      background: -webkit-linear-gradient(#{$accent}, #{$primary});
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+    font-weight: $font-light;
 
     @media (max-width: $breakpoint-small) {
       font-size: 2.2rem;
@@ -409,6 +407,10 @@ main {
   margin-top: calc(#{$navigation-height} + 1rem);
 
   section {
+    &:first-of-type {
+      border-top: none;
+    }
+
     position: relative;
     padding: 4rem 0 0 1rem;
     margin-bottom: 4rem;
@@ -599,6 +601,12 @@ pre {
 
 h1 {
   margin: 0 0 1rem 0;
+
+  span {
+    background: -webkit-linear-gradient(#{$accent}, #{$primary});
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 .date {
