@@ -18,6 +18,10 @@ body {
   margin: 0;
   font-size: $font-size;
   color: $black;
+  
+  @media (max-width: $breakpoint-small) {
+    font-size: $font-size-responsive;
+  }
 }
 
 h1,
@@ -383,13 +387,14 @@ header {
   line-height: 1.5;
 
   h1 {
-    font-size: 4.5rem;
+    font-size: 4rem;
     line-height: 1.2;
     margin-bottom: 4rem;
     font-weight: $font-light;
 
     @media (max-width: $breakpoint-small) {
       font-size: 2.2rem;
+      margin-bottom: 0;
     }
   }
 
@@ -407,10 +412,6 @@ main {
   margin-top: calc(#{$navigation-height} + 1rem);
 
   section {
-    &:first-of-type {
-      border-top: none;
-    }
-
     position: relative;
     padding: 4rem 0 0 1rem;
     margin-bottom: 4rem;
@@ -442,11 +443,16 @@ main {
 
       @media (max-width: $breakpoint-small) {
         flex-flow: column nowrap;
+
+        img {
+          margin-left: 0;
+        }
       }
     }
 
     @media (max-width: $breakpoint-small) {
-      margin-bottom: 2rem;
+      padding: 1rem;
+      margin: 1rem;
     }
 
     img {
@@ -488,7 +494,7 @@ main {
 
       @media (max-width: $breakpoint-medium) {
         padding: 1rem;
-        margin-left: 0;
+        margin: 0;
         margin-top: -3rem;
       }
     }
@@ -517,12 +523,16 @@ pre {
   justify-content: flex-start;
   flex-flow: row nowrap;
   gap: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
   padding-top: 2rem;
 
   @media (max-width: $breakpoint-small) {
     text-align: center;
     flex-flow: column nowrap;
+  }
+
+  h1 {
+    font-weight: $font-light;
   }
 
   p {

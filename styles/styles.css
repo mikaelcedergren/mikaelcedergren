@@ -193,8 +193,14 @@ body {
   overflow-x: hidden;
   padding: 0;
   margin: 0;
-  font-size: 17px;
+  font-size: 18px;
   color: #000000;
+}
+@media (max-width: 640px) {
+  html,
+  body {
+    font-size: 16px;
+  }
 }
 
 h1,
@@ -523,7 +529,7 @@ header {
   line-height: 1.5;
 }
 header h1 {
-  font-size: 4.5rem;
+  font-size: 4rem;
   line-height: 1.2;
   margin-bottom: 4rem;
   font-weight: 200;
@@ -531,6 +537,7 @@ header h1 {
 @media (max-width: 640px) {
   header h1 {
     font-size: 2.2rem;
+    margin-bottom: 0;
   }
 }
 header p {
@@ -550,9 +557,6 @@ main section {
   padding: 4rem 0 0 1rem;
   margin-bottom: 4rem;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
-}
-main section:first-of-type {
-  border-top: none;
 }
 main section > h2 {
   margin-top: 5rem;
@@ -579,10 +583,14 @@ main section .section-header img {
   main section .section-header {
     flex-flow: column nowrap;
   }
+  main section .section-header img {
+    margin-left: 0;
+  }
 }
 @media (max-width: 640px) {
   main section {
-    margin-bottom: 2rem;
+    padding: 1rem;
+    margin: 1rem;
   }
 }
 main section img {
@@ -623,7 +631,7 @@ main section article h4 {
 @media (max-width: 1024px) {
   main section article {
     padding: 1rem;
-    margin-left: 0;
+    margin: 0;
     margin-top: -3rem;
   }
 }
@@ -650,7 +658,7 @@ pre {
   justify-content: flex-start;
   flex-flow: row nowrap;
   gap: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
   padding-top: 2rem;
 }
 @media (max-width: 640px) {
@@ -658,6 +666,9 @@ pre {
     text-align: center;
     flex-flow: column nowrap;
   }
+}
+.resume-header h1 {
+  font-weight: 200;
 }
 .resume-header p {
   font-weight: 200;
