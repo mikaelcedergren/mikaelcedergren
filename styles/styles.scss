@@ -43,9 +43,9 @@ h1 {
 h4 {
   text-transform: uppercase;
   font-weight: $font-bold;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   color: $black;
-  font-size: 0.65rem;
+  font-size: 0.6rem;
 }
 
 h5 {
@@ -387,7 +387,7 @@ header {
   line-height: 1.5;
 
   h1 {
-    font-size: 4rem;
+    font-size: 3.2rem;
     line-height: 1.2;
     margin-bottom: 4rem;
     font-weight: $font-light;
@@ -430,7 +430,7 @@ main {
       margin-bottom: 4rem;
 
       p {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         margin-top: -0.5rem;
       }
 
@@ -569,7 +569,7 @@ pre {
     span {
       &:first-child {
         display: inline-block;
-        min-width: 80px;
+        min-width: 100px;
         color: $gray5;
       }
     }
