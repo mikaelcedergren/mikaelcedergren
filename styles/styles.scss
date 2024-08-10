@@ -242,6 +242,13 @@ nav {
     }
   }
 
+  .text {
+    display: block;
+    color: $black;
+    font-size: 1rem;
+    width:auto;
+  }
+
   .logo {
     transition: opacity 0.3s ease;
     font-size: 0;
@@ -385,6 +392,7 @@ header {
   flex-flow: column nowrap;
   padding: 2rem 1rem;
   line-height: 1.5;
+  border-bottom: $line;
 
   h1 {
     font-size: 3.2rem;
@@ -395,6 +403,7 @@ header {
     @media (max-width: $breakpoint-small) {
       font-size: 2.2rem;
       margin-bottom: 0;
+      font-weight: $font-regular;
     }
   }
 
@@ -416,6 +425,10 @@ main {
     padding: 4rem 0 0 1rem;
     margin-bottom: 4rem;
     border-top: $line;
+
+    &:first-of-type {
+      border-top: none;
+    }
 
     & > h2 {
       margin-top: 5rem;
@@ -443,6 +456,7 @@ main {
 
       @media (max-width: $breakpoint-small) {
         flex-flow: column nowrap;
+        padding-top: 1rem;
 
         img {
           margin-left: 0;
@@ -452,7 +466,7 @@ main {
 
     @media (max-width: $breakpoint-small) {
       padding: 1rem;
-      margin: 1rem;
+      margin: 0;
     }
 
     img {
@@ -523,12 +537,15 @@ pre {
   justify-content: flex-start;
   flex-flow: row nowrap;
   gap: 2rem;
-  margin-bottom: 4rem;
+  padding-bottom: 4rem;
   padding-top: 2rem;
+  border-bottom: $line;
 
   @media (max-width: $breakpoint-small) {
     text-align: center;
     flex-flow: column nowrap;
+    padding: 0 2rem;
+    margin: 1rem 0;
   }
 
   h1 {

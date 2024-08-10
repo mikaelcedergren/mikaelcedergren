@@ -402,6 +402,12 @@ nav a.hidden-link::after {
     width: 100%;
   }
 }
+nav .text {
+  display: block;
+  color: #000000;
+  font-size: 1rem;
+  width: auto;
+}
 nav .logo {
   transition: opacity 0.3s ease;
   font-size: 0;
@@ -527,6 +533,7 @@ header {
   flex-flow: column nowrap;
   padding: 2rem 1rem;
   line-height: 1.5;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 header h1 {
   font-size: 3.2rem;
@@ -538,6 +545,7 @@ header h1 {
   header h1 {
     font-size: 2.2rem;
     margin-bottom: 0;
+    font-weight: 400;
   }
 }
 header p {
@@ -557,6 +565,9 @@ main section {
   padding: 4rem 0 0 1rem;
   margin-bottom: 4rem;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+main section:first-of-type {
+  border-top: none;
 }
 main section > h2 {
   margin-top: 5rem;
@@ -582,6 +593,7 @@ main section .section-header img {
 @media (max-width: 640px) {
   main section .section-header {
     flex-flow: column nowrap;
+    padding-top: 1rem;
   }
   main section .section-header img {
     margin-left: 0;
@@ -590,7 +602,7 @@ main section .section-header img {
 @media (max-width: 640px) {
   main section {
     padding: 1rem;
-    margin: 1rem;
+    margin: 0;
   }
 }
 main section img {
@@ -658,13 +670,16 @@ pre {
   justify-content: flex-start;
   flex-flow: row nowrap;
   gap: 2rem;
-  margin-bottom: 4rem;
+  padding-bottom: 4rem;
   padding-top: 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 @media (max-width: 640px) {
   .resume-header {
     text-align: center;
     flex-flow: column nowrap;
+    padding: 0 2rem;
+    margin: 1rem 0;
   }
 }
 .resume-header h1 {
