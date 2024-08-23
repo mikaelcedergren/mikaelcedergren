@@ -537,15 +537,13 @@ header {
 }
 header h1 {
   font-size: 3.2rem;
-  line-height: 1.2;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   font-weight: 200;
 }
 @media (max-width: 640px) {
   header h1 {
     font-size: 2.2rem;
     margin-bottom: 0;
-    font-weight: 400;
   }
 }
 header p {
@@ -558,7 +556,7 @@ main {
   max-width: 960px;
   margin: 0 auto;
   padding: 0;
-  margin-top: calc(64px + 1rem);
+  margin-top: 64px;
 }
 main section {
   position: relative;
@@ -761,6 +759,7 @@ h1 {
 }
 h1 span {
   background: -webkit-linear-gradient(#ff0066, #00a1e4);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -805,5 +804,33 @@ blockquote span div {
 @media (max-width: 640px) {
   .signature {
     margin: 0;
+  }
+}
+
+.animate {
+  display: inline-block;
+  animation: slidein 1.5s cubic-bezier(0.17, 0.67, 0.23, 1) forwards;
+  opacity: 0;
+}
+.animate.delay-1 {
+  animation-delay: 0.5s;
+}
+.animate.delay-2 {
+  animation-delay: 1.5s;
+}
+.animate.delay-3 {
+  animation-delay: 1.75s;
+}
+.animate.delay-4 {
+  animation-delay: 2s;
+}
+@keyframes slidein {
+  from {
+    opacity: 0;
+    transform: translateY(1rem) translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translate3d(0, 0, 0);
   }
 }
