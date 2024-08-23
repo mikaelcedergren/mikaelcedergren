@@ -763,7 +763,7 @@ h1 {
   margin: 0 0 1rem 0;
 }
 h1 span {
-  background: -webkit-linear-gradient(#00a1e4, #ff0066);
+  background: linear-gradient(to bottom right, #00a1e4, #ff0066);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

@@ -636,7 +636,7 @@ h1 {
   margin: 0 0 1rem 0;
 
   span {
-    background: -webkit-linear-gradient(#{$primary}, #{$accent});
+    background: linear-gradient(to bottom right, #{$primary}, #{$accent});
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
