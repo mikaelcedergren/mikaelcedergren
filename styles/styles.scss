@@ -38,6 +38,7 @@ h3 {
 
 h1 {
   font-weight: $font-bold;
+  letter-spacing: -0.05rem;
 }
 
 h4 {
@@ -198,8 +199,11 @@ nav {
     justify-content: center;
     flex-flow: row nowrap;
     gap: 1rem;
-    font-size: 1rem;
-    font-weight: $font-semi;
+    font-size: 0.8rem;
+
+    @media (max-width: $breakpoint-small) {
+      font-size: 1rem;
+    }
   }
 
   a {
@@ -540,10 +544,14 @@ pre {
   padding-top: 2rem;
   border-bottom: $line;
 
+  h1 {
+    font-size: 1.6rem;
+  }
+
   @media (max-width: $breakpoint-small) {
     text-align: center;
     flex-flow: column nowrap;
-    padding: 0 2rem;
+    padding: 1rem 2rem;
     margin: 1rem 0;
   }
 

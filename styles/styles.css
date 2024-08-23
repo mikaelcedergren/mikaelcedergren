@@ -217,6 +217,7 @@ h3 {
 
 h1 {
   font-weight: 700;
+  letter-spacing: -0.05rem;
 }
 
 h4 {
@@ -366,8 +367,12 @@ nav .logo-container {
   justify-content: center;
   flex-flow: row nowrap;
   gap: 1rem;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 0.8rem;
+}
+@media (max-width: 640px) {
+  nav .logo-container {
+    font-size: 1rem;
+  }
 }
 nav a {
   position: relative;
@@ -672,11 +677,14 @@ pre {
   padding-top: 2rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
+.resume-header h1 {
+  font-size: 1.6rem;
+}
 @media (max-width: 640px) {
   .resume-header {
     text-align: center;
     flex-flow: column nowrap;
-    padding: 0 2rem;
+    padding: 1rem 2rem;
     margin: 1rem 0;
   }
 }
