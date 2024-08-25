@@ -89,78 +89,6 @@
       "oAP" : "\/contact\/index.html",
       "oF" : 0
     },
-    "\/fonts\/WargrSans-Bold.otf" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/fonts\/WargrSans-Bold.otf",
-      "oF" : 0
-    },
-    "\/fonts\/WargrSans-Bold.woff" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/fonts\/WargrSans-Bold.woff",
-      "oF" : 0
-    },
-    "\/fonts\/WargrSans-Bold.woff2" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/fonts\/WargrSans-Bold.woff2",
-      "oF" : 0
-    },
-    "\/fonts\/WargrSans-Italic.otf" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/fonts\/WargrSans-Italic.otf",
-      "oF" : 0
-    },
-    "\/fonts\/WargrSans-Italic.woff" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/fonts\/WargrSans-Italic.woff",
-      "oF" : 0
-    },
-    "\/fonts\/WargrSans-Italic.woff2" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/fonts\/WargrSans-Italic.woff2",
-      "oF" : 0
-    },
-    "\/fonts\/WargrSans-Regular.otf" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/fonts\/WargrSans-Regular.otf",
-      "oF" : 0
-    },
-    "\/fonts\/WargrSans-Regular.woff" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/fonts\/WargrSans-Regular.woff",
-      "oF" : 0
-    },
-    "\/fonts\/WargrSans-Regular.woff2" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/fonts\/WargrSans-Regular.woff2",
-      "oF" : 0
-    },
     "\/images\/artworks\/brutus.jpg" : {
       "ft" : 16384,
       "iS" : 342981,
@@ -2430,6 +2358,19 @@
       "opt" : 0,
       "plM" : 52780316221407,
       "prP" : 0
+    },
+    "\/images\/portfolio\/test-image.jpg" : {
+      "ft" : 16384,
+      "iS" : 206011,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/portfolio\/test-image.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
     },
     "\/images\/portfolio\/trialbee-synargus-logo.jpg" : {
       "ft" : 16384,

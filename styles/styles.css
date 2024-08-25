@@ -193,8 +193,8 @@ body {
   overflow-x: hidden;
   padding: 0;
   margin: 0;
-  font-size: 20px;
-  color: #000000;
+  font-size: 18px;
+  color: #4d5b73;
 }
 @media (max-width: 640px) {
   html,
@@ -216,11 +216,9 @@ h3 {
 }
 
 h4 {
-  text-transform: uppercase;
   font-weight: 700;
-  letter-spacing: 0.1rem;
   color: #000000;
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 
 h5 {
@@ -629,9 +627,9 @@ main section article {
   max-width: 100%;
   background-color: #ffffff;
   line-height: 1.75;
-  margin: 0 0 4rem 6rem;
+  margin: 0 0 4rem 8rem;
   padding: 1rem;
-  margin-top: -4rem;
+  margin-top: -8rem;
 }
 main section article h4 {
   position: relative;

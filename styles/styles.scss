@@ -17,7 +17,7 @@ body {
   padding: 0;
   margin: 0;
   font-size: $font-size;
-  color: $black;
+  color: $gray6;
 
   @media (max-width: $breakpoint-small) {
     font-size: $font-size-responsive;
@@ -37,11 +37,11 @@ h3 {
 }
 
 h4 {
-  text-transform: uppercase;
+  // text-transform: uppercase;
   font-weight: $font-bold;
-  letter-spacing: 0.1rem;
+  // letter-spacing: 0.1rem;
   color: $black;
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 
 h5 {
@@ -494,9 +494,9 @@ main {
       max-width: 100%;
       background-color: $white;
       line-height: 1.75;
-      margin: 0 0 4rem 6rem;
+      margin: 0 0 4rem 8rem;
       padding: 1rem;
-      margin-top: -4rem;
+      margin-top: -8rem;
 
       h4 {
         position: relative;
