@@ -89,13 +89,23 @@
       "oAP" : "\/contact\/index.html",
       "oF" : 0
     },
-    "\/images\/animated-logo.gif" : {
+    "\/images\/animated-logo-loop.gif" : {
       "ft" : 4194304,
       "iS" : 313283,
       "oA" : 0,
-      "oAP" : "\/images\/animated-logo.gif",
+      "oAP" : "\/images\/animated-logo-loop.gif",
       "oF" : 0,
       "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "rq" : 75
+    },
+    "\/images\/animated-logo.gif" : {
+      "ft" : 4194304,
+      "iS" : 268787,
+      "oA" : 0,
+      "oAP" : "\/images\/animated-logo.gif",
+      "oF" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "rq" : 75
     },
@@ -324,6 +334,16 @@
       "opt" : 0,
       "plM" : 52780316221407,
       "prP" : 0
+    },
+    "\/images\/intro-logo.gif" : {
+      "ft" : 4194304,
+      "iS" : 453762,
+      "oA" : 0,
+      "oAP" : "\/images\/intro-logo.gif",
+      "oF" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "rq" : 75
     },
     "\/images\/logo.png" : {
       "ft" : 32768,

@@ -17,7 +17,7 @@ body {
   padding: 0;
   margin: 0;
   font-size: $font-size;
-  color: $gray6;
+  color: $black;
 
   @media (max-width: $breakpoint-small) {
     font-size: $font-size-responsive;
@@ -27,6 +27,7 @@ body {
 h1,
 h2,
 h3 {
+  color: $black;
   margin-top: 0;
   font-family: $font-family-headings;
   font-weight: $font-light;
@@ -37,9 +38,7 @@ h3 {
 }
 
 h4 {
-  // text-transform: uppercase;
   font-weight: $font-bold;
-  // letter-spacing: 0.1rem;
   color: $black;
   font-size: 1rem;
 }
@@ -61,6 +60,7 @@ h5 {
 }
 
 strong {
+  color: $black;
   display: block;
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
@@ -503,6 +503,10 @@ main {
         position: relative;
         padding: 0;
         margin: 0;
+      }
+
+      p {
+        color: $gray6;
       }
 
       @media (max-width: $breakpoint-medium) {
