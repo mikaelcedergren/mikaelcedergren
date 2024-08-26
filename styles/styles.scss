@@ -494,7 +494,7 @@ main {
       max-width: 100%;
       background-color: $white;
       line-height: 1.75;
-      margin: 0 0 4rem 8rem;
+      margin: 0 0 4rem 9rem;
       padding: 1rem;
       margin-top: -8rem;
 
@@ -719,5 +719,15 @@ blockquote {
       opacity: 1;
       transform: translateY(0) translate3d(0, 0, 0);
     }
+  }
+}
+
+.simpleParallax {
+  margin-bottom: 0.5rem;
+}
+
+.parallax {
+  @media (max-width: $breakpoint-medium) {
+    transform: scale(1.2);
   }
 }

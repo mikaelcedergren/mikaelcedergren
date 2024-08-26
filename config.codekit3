@@ -1962,7 +1962,7 @@
       "oAP" : "\/images\/portfolio\/csg-social-media-posts.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -2088,6 +2088,19 @@
       "ou" : "lpckwebp-none",
       "rq" : 75
     },
+    "\/images\/portfolio\/lanefinder-logo.jpg" : {
+      "ft" : 16384,
+      "iS" : 48813,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/portfolio\/lanefinder-logo.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/images\/portfolio\/lanefinder-logo.png" : {
       "ft" : 32768,
       "iS" : 81739,
@@ -2159,6 +2172,19 @@
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/portfolio\/lanefinder-website.jpg" : {
+      "ft" : 16384,
+      "iS" : 242752,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/portfolio\/lanefinder-website.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -2452,7 +2478,7 @@
       "oAP" : "\/images\/portfolio\/youcruit-group-logo.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -2475,7 +2501,7 @@
       "oAP" : "\/images\/portfolio\/youcruit-group-public.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
