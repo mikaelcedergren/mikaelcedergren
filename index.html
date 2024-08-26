@@ -113,9 +113,9 @@
       like increased visibility of their applications to employers.</p
     >
   </article>
-  <img src="images/portfolio/lanefinder-app-screens.png" />
+  <img class="parallax" src="images/portfolio/lanefinder-app-screens.jpg" />
   <article>
-    <h4>Context</h4>
+    <h4>Problem</h4>
     <p
       >In the trucking industry, drivers need to find specific jobs due to
       strict regulations, making it challenging for job search platforms to
@@ -130,9 +130,9 @@
       and us.</p
     >
   </article>
-  <img src="images/portfolio/lanefinder-application-flow.png" />
+  <img class="parallax" src="images/portfolio/lanefinder-flow.jpg" />
   <article>
-    <h4>Context</h4>
+    <h4>Problem</h4>
     <p
       >Most communication with drivers occurred through the app, Lanefinder's
       main platform. The challenge was that the trucking industry requires a
@@ -162,6 +162,12 @@
       flow.</p
     >
   </article>
+  <img class="parallax" src="images/portfolio/lanefinder-app-store-screenshots.jpg" />
+  <img class="parallax" src="images/portfolio/lanefinder-social-media-posts.jpg" />
+  <div class="two-columns">
+    <div><img class="parallax" src="images/portfolio/lanefinder-sweatshirt.jpg" /></div>
+    <div><img class="parallax" src="/images/portfolio/lanefinder-case-1.jpg" alt="" /></div>
+  </div>
   <div class="video">
     <iframe
       src="https://player.vimeo.com/video/490739497"
@@ -169,14 +175,6 @@
       allow="autoplay; fullscreen"
       allowfullscreen></iframe>
   </div>
-  <img src="images/portfolio/lanefinder-app-store-screenshots.jpg" />
-  <img src="images/portfolio/lanefinder-social-media-posts.jpg" />
-  <img src="images/portfolio/lanefinder-sweatshirt.jpg" />
-  <div class="two-columns">
-    <div><img src="/images/portfolio/lanefinder-case-1.jpg" alt="" /></div>
-    <div><img src="/images/portfolio/lanefinder-case-2.jpg" alt="" /></div>
-  </div>
-  <img src="images/portfolio/lanefinder-truck.jpg" />
   <article>
     <h4>Context</h4>
     <p
@@ -228,7 +226,7 @@
       </div>
     </div>
   </div>
-  <img src="images/portfolio/youcruit-public.jpg" />
+  <img class="parallax" src="images/portfolio/youcruit-public.jpg" />
   <article>
     <p
       >The original brand for YouCruit had a vintage look that didn't quite
@@ -242,7 +240,7 @@
       for our services.</p
     >
   </article>
-  <img src="images/portfolio/youcruit-geophrey-favorites-2.png" />
+  <img class="parallax" src="images/portfolio/youcruit-geophrey.jpg" />
   <article>
     Recognizing the need for an enhanced brand identity, I created and
     introduced Geophrey, a robot character that represents the underlying
@@ -328,9 +326,9 @@
     <div><img src="/images/portfolio/csg-post-1.jpg" alt="" /></div>
   </div>
   <article
-    >I've consulted in business strategy and created graphic promotional
-    material. Simply through the exposure of the graphics several players has
-    been signed with Connect Sports Group.</article
+    ><p>I've consulted in business strategy and created graphic promotional
+    material for social media advertisement. Simply through the exposure of the graphics several players has
+    been signed with Connect Sports Group.</p></article
   >
 </section>
 
@@ -351,21 +349,17 @@
     </div>
   </div>
 
-  <img src="images/portfolio/brainteam-logo.png" />
-  <img src="images/portfolio/brainteam-stationary-1.png" />
+  <img class="parallax" src="images/portfolio/brainteam-logo.jpg" />
+  <img class="parallax" src="images/portfolio/brainteam-stationary.jpg" />
   <article>
-    Brainteam is a tech consultancy firm with a strong emphasis on
+    <p>Brainteam is a tech consultancy firm with a strong emphasis on
     sustainability. Instead of fully committing to a green approach, I sought to
-    blend their technological expertise with their sustainability values.
-  </article>
-  <img src="images/portfolio/brainteam-stationary-2.png" />
-  <img src="images/portfolio/brainteam-stationary-3.png" />
-  <article>
-    A comprehensive branding package was delivered, encompassing presentation
-    materials, branding elements, website and print assets.
+    blend their technological expertise with their sustainability values.</p>
+    <p>A comprehensive branding package was delivered, encompassing presentation
+    materials, branding elements, website and print assets.</p>
   </article>
 </section>
-
+<!-- 
 <section>
   <div class="section-header">
     <img src="/images/portfolio/betcreative-logo.svg" alt="Bet Creative Logo" />
@@ -384,7 +378,7 @@
   </div>
   <img src="images/portfolio/betcreative-logo.png" />
   <img src="images/portfolio/betcreative-office.jpg" />
-</section>
+</section> -->
 
 <section>
   <div class="section-header">
@@ -502,7 +496,7 @@
 
 <nav role="navigation">
   <div class="logo-container">
-    <a href="/" class="logo"><img src="/images/logo.svg" /></a><span>Mikael Cedergren</span>
+    <a href="/" class="logo"><img src="/images/animated-logo.gif" /></a><span>Mikael Cedergren</span>
   </div>
   <div id="hamburger-button">
     <input type="checkbox" />
@@ -527,15 +521,15 @@
 <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
 <script>
 
-if (window.matchMedia('(min-width: 1024px)').matches) {
+// if (window.matchMedia('(min-width: 1024px)').matches) {
   var image = document.getElementsByClassName('parallax');
   new simpleParallax(image, {
     scale: 1.2
   });
   new simpleParallax(image);
-} else {
-  console.log('Ignoring Parallax Effect');
-}
+// } else {
+//   console.log('Ignoring Parallax Effect');
+// }
 
 </script>
 

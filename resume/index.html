@@ -531,7 +531,7 @@
 
 <nav role="navigation">
   <div class="logo-container">
-    <a href="/" class="logo"><img src="/images/logo.svg" /></a><span>Mikael Cedergren</span>
+    <a href="/" class="logo"><img src="/images/animated-logo.gif" /></a><span>Mikael Cedergren</span>
   </div>
   <div id="hamburger-button">
     <input type="checkbox" />
@@ -556,15 +556,15 @@
 <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
 <script>
 
-if (window.matchMedia('(min-width: 1024px)').matches) {
+// if (window.matchMedia('(min-width: 1024px)').matches) {
   var image = document.getElementsByClassName('parallax');
   new simpleParallax(image, {
     scale: 1.2
   });
   new simpleParallax(image);
-} else {
-  console.log('Ignoring Parallax Effect');
-}
+// } else {
+//   console.log('Ignoring Parallax Effect');
+// }
 
 </script>
 

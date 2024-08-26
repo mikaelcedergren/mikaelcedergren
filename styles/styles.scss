@@ -262,7 +262,7 @@ nav {
     }
 
     img {
-      max-height: 38px;
+      max-height: 24px;
     }
   }
 
@@ -394,6 +394,7 @@ header {
   border-bottom: $line;
 
   h1 {
+    color: $black;
     font-size: 3.2rem;
     margin-bottom: 2rem;
     font-weight: $font-light;
@@ -724,10 +725,11 @@ blockquote {
 
 .simpleParallax {
   margin-bottom: 0.5rem;
-}
 
-.parallax {
   @media (max-width: $breakpoint-medium) {
-    transform: scale(1.2);
+    margin: 0 -1rem;
+    img {
+      transform: scale(1.2) !important;
+    }
   }
 }

@@ -418,7 +418,7 @@ nav .logo:hover {
   opacity: 0.8;
 }
 nav .logo img {
-  max-height: 38px;
+  max-height: 24px;
 }
 nav #hamburger-button {
   width: 24px;
@@ -534,6 +534,7 @@ header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 header h1 {
+  color: #000000;
   font-size: 3.2rem;
   margin-bottom: 2rem;
   font-weight: 200;
@@ -841,9 +842,11 @@ blockquote span div {
 .simpleParallax {
   margin-bottom: 0.5rem;
 }
-
 @media (max-width: 1024px) {
-  .parallax {
-    transform: scale(1.2);
+  .simpleParallax {
+    margin: 0 -1rem;
+  }
+  .simpleParallax img {
+    transform: scale(1.2) !important;
   }
 }

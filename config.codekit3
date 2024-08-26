@@ -89,6 +89,16 @@
       "oAP" : "\/contact\/index.html",
       "oF" : 0
     },
+    "\/images\/animated-logo.gif" : {
+      "ft" : 4194304,
+      "iS" : 313283,
+      "oA" : 0,
+      "oAP" : "\/images\/animated-logo.gif",
+      "oF" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "rq" : 75
+    },
     "\/images\/artworks\/brutus.jpg" : {
       "ft" : 16384,
       "iS" : 342981,
@@ -1726,6 +1736,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/portfolio\/brainteam-logo.jpg" : {
+      "ft" : 16384,
+      "iS" : 46994,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/portfolio\/brainteam-logo.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/images\/portfolio\/brainteam-logo.png" : {
       "ft" : 32768,
       "iS" : 68929,
@@ -1797,6 +1820,19 @@
       "oIPL" : 0,
       "opt" : 0,
       "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/portfolio\/brainteam-stationary.jpg" : {
+      "ft" : 16384,
+      "iS" : 226679,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/portfolio\/brainteam-stationary.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -1980,6 +2016,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/portfolio\/lanefinder-app-screens.jpg" : {
+      "ft" : 16384,
+      "iS" : 266288,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/portfolio\/lanefinder-app-screens.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/images\/portfolio\/lanefinder-app-screens.png" : {
       "ft" : 32768,
       "iS" : 169383,
@@ -2001,7 +2050,7 @@
       "oAP" : "\/images\/portfolio\/lanefinder-app-store-screenshots.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -2037,7 +2086,7 @@
       "oAP" : "\/images\/portfolio\/lanefinder-case-1.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -2063,6 +2112,19 @@
       "oF" : 0,
       "opt" : 0,
       "ou" : "lpckwebp-none",
+      "rq" : 75
+    },
+    "\/images\/portfolio\/lanefinder-flow.jpg" : {
+      "ft" : 16384,
+      "iS" : 261621,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/portfolio\/lanefinder-flow.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
       "rq" : 75
     },
     "\/images\/portfolio\/lanefinder-iconography.jpg" : {
@@ -2145,7 +2207,7 @@
       "oAP" : "\/images\/portfolio\/lanefinder-social-media-posts.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -2158,7 +2220,7 @@
       "oAP" : "\/images\/portfolio\/lanefinder-sweatshirt.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -2457,6 +2519,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/portfolio\/youcruit-geophrey.jpg" : {
+      "ft" : 16384,
+      "iS" : 98904,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/portfolio\/youcruit-geophrey.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/images\/portfolio\/youcruit-geophrey.png" : {
       "ft" : 32768,
       "iS" : 85759,
@@ -2524,7 +2599,7 @@
       "oAP" : "\/images\/portfolio\/youcruit-public.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
