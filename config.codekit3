@@ -2611,6 +2611,16 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/portfolio\/youcruit-logo-animation.gif" : {
+      "ft" : 4194304,
+      "iS" : 298994,
+      "oA" : 0,
+      "oAP" : "\/images\/portfolio\/youcruit-logo-animation.gif",
+      "oF" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "rq" : 75
+    },
     "\/images\/portfolio\/youcruit-logo.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -2818,8 +2828,8 @@
   },
   "projectAttributes" : {
     "creationDate" : 555155234,
-    "displayValue" : "website",
-    "displayValueWasSetByUser" : 0,
+    "displayValue" : "MikaelCedergren.com",
+    "displayValueWasSetByUser" : 1,
     "iconImageName" : "logo-wordpress",
     "iconImageWasSetByUser" : 0
   },
