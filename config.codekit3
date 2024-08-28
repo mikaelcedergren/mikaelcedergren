@@ -2336,6 +2336,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/portfolio\/ola-hasselgren-book-cover.jpg" : {
+      "ft" : 16384,
+      "iS" : 149952,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/portfolio\/ola-hasselgren-book-cover.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/images\/portfolio\/personal-brand-logo-animation.gif" : {
       "ft" : 4194304,
       "iS" : 460377,

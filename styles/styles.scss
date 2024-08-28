@@ -464,7 +464,7 @@ main {
         min-width: 140px;
         width: 140px;
         display: block;
-        max-height: 100px;
+        max-height: 70px;
       }
 
       @media (max-width: $breakpoint-small) {
@@ -619,7 +619,7 @@ pre {
 .tag {
   font-size: 0.8rem;
   border: $line;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem 0.6rem 1rem;
   border-radius: 300px;
   margin-right: 0.25rem;
   margin-bottom: 0.5rem;
