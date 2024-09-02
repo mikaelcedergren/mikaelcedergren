@@ -862,7 +862,7 @@ blockquote span div {
 .simpleParallax {
   margin-bottom: 0.5rem;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .simpleParallax {
     margin: 0 -1rem;
   }

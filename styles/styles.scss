@@ -744,7 +744,7 @@ blockquote {
 .simpleParallax {
   margin-bottom: 0.5rem;
 
-  @media (max-width: $breakpoint-large) {
+  @media (max-width: $breakpoint-medium) {
     margin: 0 -1rem;
     img {
       transform: scale(1.2) !important;
