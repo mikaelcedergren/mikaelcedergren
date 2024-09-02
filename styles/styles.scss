@@ -19,7 +19,7 @@ body {
   font-size: $font-size;
   color: $black;
 
-  @media (max-width: $breakpoint-small) {
+  @media (max-width: $breakpoint-medium) {
     font-size: $font-size-responsive;
   }
 }
@@ -53,7 +53,7 @@ h5 {
   font-weight: $font-regular;
   letter-spacing: 0.2rem;
 
-  @media (max-width: $breakpoint-small) {
+  @media (max-width: $breakpoint-medium) {
     right: 0;
     padding: 0.5rem;
   }
@@ -196,7 +196,7 @@ nav {
     gap: 1rem;
     font-size: 0.8rem;
 
-    @media (max-width: $breakpoint-small) {
+    @media (max-width: $breakpoint-medium) {
       font-size: 1rem;
     }
   }
@@ -392,7 +392,7 @@ q {
   margin: 0 2rem 2rem 2rem;
   line-height: 1.4;
 
-  @media (max-width: $breakpoint-small) {
+  @media (max-width: $breakpoint-medium) {
     display: none;
   }
 }
@@ -412,7 +412,7 @@ header {
     margin-bottom: 2rem;
     font-weight: $font-light;
 
-    @media (max-width: $breakpoint-small) {
+    @media (max-width: $breakpoint-medium) {
       font-size: 2rem;
       margin-bottom: 0;
     }
@@ -467,7 +467,7 @@ main {
         max-height: 70px;
       }
 
-      @media (max-width: $breakpoint-small) {
+      @media (max-width: $breakpoint-medium) {
         flex-flow: column nowrap;
         padding-top: 1rem;
 
@@ -477,7 +477,7 @@ main {
       }
     }
 
-    @media (max-width: $breakpoint-small) {
+    @media (max-width: $breakpoint-medium) {
       padding: 1rem;
       margin: 0;
     }
@@ -490,7 +490,7 @@ main {
       overflow: hidden;
       margin: 0 0 0.5rem 0;
 
-      @media (max-width: $breakpoint-small) {
+      @media (max-width: $breakpoint-medium) {
         max-width: calc(100% + 2rem);
         margin: 0 -1rem;
       }
@@ -564,7 +564,7 @@ pre {
     margin-bottom: 0;
   }
 
-  @media (max-width: $breakpoint-small) {
+  @media (max-width: $breakpoint-medium) {
     text-align: center;
     flex-flow: column nowrap;
     padding: 1rem 2rem;
@@ -581,7 +581,7 @@ pre {
     margin-bottom: 0.5rem;
     line-height: 1.4;
 
-    @media (max-width: $breakpoint-small) {
+    @media (max-width: $breakpoint-medium) {
       font-size: 1.2rem;
     }
   }
@@ -634,7 +634,7 @@ pre {
   max-width: 100%;
   top: 0;
 
-  @media (max-width: $breakpoint-small) {
+  @media (max-width: $breakpoint-medium) {
     margin: 0 -1rem;
     max-width: calc(100% + 2rem);
     padding-bottom: 60.25%;
@@ -703,7 +703,7 @@ blockquote {
   margin-top: 1rem;
   min-width: 0;
 
-  @media (max-width: $breakpoint-small) {
+  @media (max-width: $breakpoint-medium) {
     margin: 0;
   }
 }
