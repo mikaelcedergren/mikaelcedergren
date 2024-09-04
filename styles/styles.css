@@ -356,6 +356,22 @@ nav {
   text-rendering: optimizeLegibility;
   text-decoration: none;
 }
+nav .menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+  gap: 1rem;
+}
+nav .menu a {
+  font-size: 0.8rem;
+  margin-left: 1rem;
+}
+@media (max-width: 1024px) {
+  nav #desktop-menu {
+    display: none;
+  }
+}
 nav .logo-container {
   display: flex;
   align-items: center;
@@ -367,39 +383,6 @@ nav .logo-container {
 @media (max-width: 1024px) {
   nav .logo-container {
     font-size: 1rem;
-  }
-}
-nav a {
-  position: relative;
-  display: inline-block;
-  font-size: 1.25rem;
-  color: #000000;
-  text-decoration: none;
-  font-weight: 700;
-  padding: 0.25rem 0;
-  width: min-content;
-}
-nav a::after {
-  transition: width 0.3s ease-out;
-  content: "";
-  position: absolute;
-  height: 2px;
-  bottom: 6px;
-  background-color: #000000;
-  width: 0;
-}
-nav a.hidden-link {
-  font-size: 1rem;
-  width: 100%;
-  padding: 0;
-  font-weight: 400;
-}
-nav a.hidden-link::after {
-  display: none;
-}
-@media (min-width: 1024px) {
-  nav a:hover::after {
-    width: 100%;
   }
 }
 nav .text {
@@ -427,6 +410,45 @@ nav #hamburger-button {
   height: 24px;
   position: relative;
   z-index: 3;
+  display: none;
+}
+@media (max-width: 1024px) {
+  nav #hamburger-button {
+    display: block;
+  }
+}
+nav #hamburger-button a {
+  position: relative;
+  display: inline-block;
+  font-size: 1.25rem;
+  color: #000000;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.25rem 0;
+  width: min-content;
+}
+nav #hamburger-button a::after {
+  transition: width 0.3s ease-out;
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 6px;
+  background-color: #000000;
+  width: 0;
+}
+nav #hamburger-button a.hidden-link {
+  font-size: 1rem;
+  width: 100%;
+  padding: 0;
+  font-weight: 400;
+}
+nav #hamburger-button a.hidden-link::after {
+  display: none;
+}
+@media (min-width: 1024px) {
+  nav #hamburger-button a:hover::after {
+    width: 100%;
+  }
 }
 nav #hamburger-button input {
   display: block;

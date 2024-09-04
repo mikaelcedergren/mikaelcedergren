@@ -188,6 +188,25 @@ nav {
   text-rendering: optimizeLegibility;
   text-decoration: none;
 
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row nowrap;
+    gap: 1rem;
+
+    a {
+      font-size: 0.8rem;
+      margin-left: 1rem;
+    }
+  }
+
+  #desktop-menu {
+    @media (max-width: $breakpoint-medium) {
+      display: none;
+    }
+  }
+
   .logo-container {
     display: flex;
     align-items: center;
@@ -201,7 +220,43 @@ nav {
     }
   }
 
-  a {
+  .text {
+    display: block;
+    color: $black;
+    font-size: 1rem;
+    width: auto;
+  }
+
+  .logo {
+    transition: opacity 0.3s ease;
+    font-size: 0;
+    min-width: 18px;
+
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    img {
+      max-height: 24px;
+    }
+  }
+
+  #hamburger-button {
+    width: $hamburger-size;
+    height: $hamburger-size;
+    position: relative;
+    z-index: 3;
+    display: none;
+
+    @media (max-width: $breakpoint-medium) {
+      display: block;
+    }
+
+    a {
     position: relative;
     display: inline-block;
     font-size: 1.25rem;
@@ -240,37 +295,6 @@ nav {
       }
     }
   }
-
-  .text {
-    display: block;
-    color: $black;
-    font-size: 1rem;
-    width: auto;
-  }
-
-  .logo {
-    transition: opacity 0.3s ease;
-    font-size: 0;
-    min-width: 18px;
-
-    &::after {
-      display: none;
-    }
-
-    &:hover {
-      opacity: 0.8;
-    }
-
-    img {
-      max-height: 24px;
-    }
-  }
-
-  #hamburger-button {
-    width: $hamburger-size;
-    height: $hamburger-size;
-    position: relative;
-    z-index: 3;
 
     input {
       display: block;
