@@ -426,19 +426,35 @@ header {
   align-items: flex-start;
   justify-content: center;
   flex-flow: column nowrap;
-  padding: 2rem 1rem;
+  padding: 2rem 0;
   line-height: 1.5;
   border-bottom: $line;
 
+  @media (max-width: $breakpoint-medium) {
+    padding: 1rem;
+  }
+
+  img {
+    max-width: 82px;
+    border-radius: 100%;
+    margin-bottom: 1rem;
+  }
+
   h1 {
     color: $black;
-    font-size: 3.2rem;
+    font-size: 6rem;
     margin-bottom: 2rem;
     font-weight: $font-light;
+    line-height: 1;
 
     @media (max-width: $breakpoint-medium) {
-      font-size: 2rem;
-      margin-bottom: 0;
+      font-size: 6rem;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: $breakpoint-small) {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
     }
   }
 
@@ -721,12 +737,12 @@ blockquote {
 }
 
 .animate {
-  display: inline-block;
+  display: inline;
   animation: slidein 1.5s $cubic-bezier-ease-out forwards;
   opacity: 0;
 
   &.delay-1 {
-    animation-delay: 0.5s;
+    animation-delay: 1.25s;
   }
 
   &.delay-2 {
@@ -744,11 +760,11 @@ blockquote {
   @keyframes slidein {
     from {
       opacity: 0;
-      transform: translateY(1rem) translate3d(0, 0, 0);
+      // transform: translateY(1rem) translate3d(0, 0, 0);
     }
     to {
       opacity: 1;
-      transform: translateY(0) translate3d(0, 0, 0);
+      // transform: translateY(0) translate3d(0, 0, 0);
     }
   }
 }

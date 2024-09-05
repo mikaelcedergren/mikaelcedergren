@@ -567,20 +567,37 @@ header {
   align-items: flex-start;
   justify-content: center;
   flex-flow: column nowrap;
-  padding: 2rem 1rem;
+  padding: 2rem 0;
   line-height: 1.5;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
+@media (max-width: 1024px) {
+  header {
+    padding: 1rem;
+  }
+}
+header img {
+  max-width: 82px;
+  border-radius: 100%;
+  margin-bottom: 1rem;
+}
 header h1 {
   color: #000000;
-  font-size: 3.2rem;
+  font-size: 6rem;
   margin-bottom: 2rem;
   font-weight: 200;
+  line-height: 1;
 }
 @media (max-width: 1024px) {
   header h1 {
-    font-size: 2rem;
-    margin-bottom: 0;
+    font-size: 6rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 640px) {
+  header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
   }
 }
 header p {
@@ -840,12 +857,12 @@ blockquote span div {
 }
 
 .animate {
-  display: inline-block;
+  display: inline;
   animation: slidein 1.5s cubic-bezier(0.17, 0.67, 0.23, 1) forwards;
   opacity: 0;
 }
 .animate.delay-1 {
-  animation-delay: 0.5s;
+  animation-delay: 1.25s;
 }
 .animate.delay-2 {
   animation-delay: 1.5s;
@@ -859,11 +876,9 @@ blockquote span div {
 @keyframes slidein {
   from {
     opacity: 0;
-    transform: translateY(1rem) translate3d(0, 0, 0);
   }
   to {
     opacity: 1;
-    transform: translateY(0) translate3d(0, 0, 0);
   }
 }
 
