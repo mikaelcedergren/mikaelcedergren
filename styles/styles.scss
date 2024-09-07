@@ -13,7 +13,7 @@ body {
   font-family: $font-family;
   line-height: 1.6;
   overscroll-behavior: contain;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   padding: 0;
   margin: 0;
   font-size: $font-size;
@@ -35,6 +35,18 @@ h3 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+h1 {
+  margin: 0 0 1rem 0;
+  font-size: 2.5rem;
+
+  span {
+    background: linear-gradient(to bottom right, #{$primary}, #{$accent});
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 h4 {
@@ -129,6 +141,7 @@ a {
   text-decoration: none;
   color: $black;
   font-weight: $font-bold;
+  cursor: pointer;
 
   &::after {
     transition: width 0.3s ease-out;
@@ -150,7 +163,7 @@ a {
 
 ul {
   padding: 0 0 0 1.3rem;
-  margin: 0 0 2rem 0;
+  margin: 0 0 3rem 0;
 
   li {
     margin-bottom: 0.5rem;
@@ -257,44 +270,44 @@ nav {
     }
 
     a {
-    position: relative;
-    display: inline-block;
-    font-size: 1.25rem;
-    color: $black;
-    text-decoration: none;
-    font-weight: $font-bold;
-    padding: 0.25rem 0;
-    width: min-content;
-
-    &::after {
-      transition: width 0.3s ease-out;
-      content: '';
-      position: absolute;
-      height: 2px;
-      bottom: 6px;
-      background-color: $black;
-      width: 0;
-    }
-
-    &.hidden-link {
-      font-size: 1rem;
-      width: 100%;
-      padding: 0;
-      font-weight: $font-regular;
+      position: relative;
+      display: inline-block;
+      font-size: 1.25rem;
+      color: $black;
+      text-decoration: none;
+      font-weight: $font-bold;
+      padding: 0.25rem 0;
+      width: min-content;
 
       &::after {
-        display: none;
+        transition: width 0.3s ease-out;
+        content: '';
+        position: absolute;
+        height: 2px;
+        bottom: 6px;
+        background-color: $black;
+        width: 0;
       }
-    }
 
-    @media (min-width: $breakpoint-medium) {
-      &:hover {
+      &.hidden-link {
+        font-size: 1rem;
+        width: 100%;
+        padding: 0;
+        font-weight: $font-regular;
+
         &::after {
-          width: 100%;
+          display: none;
+        }
+      }
+
+      @media (min-width: $breakpoint-medium) {
+        &:hover {
+          &::after {
+            width: 100%;
+          }
         }
       }
     }
-  }
 
     input {
       display: block;
@@ -413,7 +426,7 @@ q {
   float: right;
   font-size: 2.2rem;
   max-width: 45%;
-  margin: 0 2rem 2rem 2rem;
+  margin: 0 0rem 3rem 3rem;
   line-height: 1.4;
 
   @media (max-width: $breakpoint-medium) {
@@ -427,11 +440,12 @@ header {
   justify-content: center;
   flex-flow: column nowrap;
   padding: 2rem 0;
+  margin: 0 0 2rem 0;
   line-height: 1.5;
   border-bottom: $line;
 
   @media (max-width: $breakpoint-medium) {
-    padding: 1rem;
+    padding: 1rem 0;
   }
 
   img {
@@ -468,7 +482,7 @@ header {
 main {
   max-width: $page-max-width;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 1rem;
   // margin-top: calc(#{$navigation-height} + 1rem);
   margin-top: $navigation-height;
 
@@ -480,6 +494,7 @@ main {
 
     &:first-of-type {
       border-top: none;
+      padding-top: 0;
     }
 
     & > h2 {
@@ -517,10 +532,10 @@ main {
       }
     }
 
-    @media (max-width: $breakpoint-medium) {
-      padding: 1rem;
-      margin: 0;
-    }
+    // @media (max-width: $breakpoint-medium) {
+    //   padding: 1rem;
+    //   margin: 0;
+    // }
 
     img {
       min-width: 100%;
@@ -571,84 +586,87 @@ pre {
   white-space: normal;
   line-height: 1;
   display: inline-block;
-  margin: 0;
+  margin: 0 0 0.5rem 0;
   font-family: $font-family;
   font-weight: $font-bold;
   text-transform: uppercase;
   font-size: 0.75rem;
+  padding: 0;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
   color: $black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
-.resume-header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-flow: row nowrap;
-  gap: 2rem;
-  padding-bottom: 4rem;
-  padding-top: 2rem;
-  border-bottom: $line;
+// .resume-header {
+//   display: flex;
+//   align-items: center;
+//   justify-content: flex-start;
+//   flex-flow: row nowrap;
+//   gap: 2rem;
+//   padding-bottom: 4rem;
+//   padding-top: 2rem;
+//   border-bottom: $line;
 
-  h1 {
-    font-size: 1.6rem;
-    font-family: $font-family;
-    margin-bottom: 0;
-  }
+//   h1 {
+//     font-size: 1.6rem;
+//     font-family: $font-family;
+//     margin-bottom: 0;
+//   }
 
-  @media (max-width: $breakpoint-medium) {
-    text-align: center;
-    flex-flow: column nowrap;
-    padding: 1rem 2rem;
-    margin: 1rem 0;
-  }
+//   @media (max-width: $breakpoint-medium) {
+//     text-align: center;
+//     flex-flow: column nowrap;
+//     padding: 1rem 2rem;
+//     margin: 1rem 0;
+//   }
 
-  h1 {
-    font-weight: $font-light;
-  }
+//   h1 {
+//     font-weight: $font-light;
+//   }
 
-  p {
-    font-weight: $font-light;
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-    line-height: 1.4;
+//   p {
+//     font-weight: $font-light;
+//     font-size: 1.8rem;
+//     margin-bottom: 0.5rem;
+//     line-height: 1.4;
 
-    @media (max-width: $breakpoint-medium) {
-      font-size: 1.2rem;
-    }
-  }
+//     @media (max-width: $breakpoint-medium) {
+//       font-size: 1.2rem;
+//     }
+//   }
 
-  img {
-    max-height: 128px;
-    max-width: 128px;
-    border-radius: 100%;
-    overflow: hidden;
-    min-width: 128px;
-    min-height: 128px;
-  }
-}
+//   img {
+//     max-height: 128px;
+//     max-width: 128px;
+//     border-radius: 100%;
+//     overflow: hidden;
+//     min-width: 128px;
+//     min-height: 128px;
+//   }
+// }
 
-.contact-details {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-flow: column nowrap;
-  gap: 0.25rem;
+// .contact-details {
+//   display: flex;
+//   align-items: flex-start;
+//   justify-content: flex-start;
+//   flex-flow: column nowrap;
+//   gap: 0.25rem;
 
-  div {
-    width: 100%;
+//   div {
+//     width: 100%;
 
-    span {
-      &:first-child {
-        display: inline-block;
-        min-width: 100px;
-        color: $gray5;
-      }
-    }
-  }
-}
+//     span {
+//       &:first-child {
+//         display: inline-block;
+//         min-width: 100px;
+//         color: $gray5;
+//       }
+//     }
+//   }
+// }
 
 .tag {
   font-size: 0.8rem;
@@ -679,25 +697,13 @@ pre {
   }
 }
 
-h1 {
-  margin: 0 0 1rem 0;
-
-  span {
-    background: linear-gradient(to bottom right, #{$primary}, #{$accent});
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
-
 .date {
-  // position: relative;
   margin: 0;
   font-family: $font-family;
   font-weight: $font-semi;
   text-transform: uppercase;
-  font-size: 0.75rem;
-  color: $gray6;
+  font-size: $font-size-tiny;
+  color: $gray5;
   line-height: 1;
   margin-bottom: 1rem;
   padding-top: 0.5rem;
@@ -722,6 +728,13 @@ blockquote {
       font-size: 0.8rem;
       color: $gray5;
     }
+  }
+
+  q {
+    font-size: 1.3rem;
+    font-style: normal;
+    padding: 0;
+    margin: 0 0 1rem 1rem;
   }
 }
 
@@ -775,11 +788,60 @@ blockquote {
   img {
     margin-bottom: 0;
   }
+}
 
-  // @media (max-width: $breakpoint-medium) {
-  //   margin: 0 -1rem;
-  //   img {
-  //     transform: scale(1.2) !important;
-  //   }
-  // }
+.sidebar {
+  position: sticky;
+  top: calc(#{$navigation-height} + 2rem);
+  font-size: $font-size-small;
+  width: 260px;
+
+  .portrait {
+    max-width: 100px;
+    border-radius: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .social {
+    img {
+      transition: opacity 0.3s ease;
+      max-width: 24px;
+      opacity: 0.2;
+      border-radius: 3px;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  h5 {
+    position: static;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.grid-row {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+  gap: 2rem;
+
+  @media (max-width: $breakpoint-medium) {
+    flex-flow: column nowrap;
+  }
+
+  .grid-cell {
+    flex: 1 1 auto;
+  }
 }

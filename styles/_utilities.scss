@@ -25,6 +25,18 @@
   }
 }
 
+.mt-05 {
+  margin-top: 0.5rem;
+}
+
+.mb-05 {
+  margin-bottom: 0.5rem;
+}
+
+.text-discreet {
+  color: #a3afbf;
+}
+
 .text-small {
   font-size: 0.8rem;
 }
@@ -34,7 +46,7 @@
 }
 
 .hidden-responsive {
-  @media (max-width: $breakpoint-small) {
+  @media (max-width: $breakpoint-medium) {
     display: none;
   }
 }
