@@ -442,7 +442,6 @@ header {
   padding: 2rem 0;
   margin: 0 0 2rem 0;
   line-height: 1.5;
-  border-bottom: $line;
 
   @media (max-width: $breakpoint-medium) {
     padding: 1rem 0;
@@ -457,7 +456,6 @@ header {
   h1 {
     color: $black;
     font-size: 6rem;
-    margin-bottom: 2rem;
     font-weight: $font-light;
     line-height: 1;
 
@@ -598,6 +596,12 @@ pre {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+.pre-word {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin: 0;
 }
 
 // .resume-header {

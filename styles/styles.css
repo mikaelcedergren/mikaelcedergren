@@ -593,7 +593,6 @@ header {
   padding: 2rem 0;
   margin: 0 0 2rem 0;
   line-height: 1.5;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 @media (max-width: 1024px) {
   header {
@@ -608,7 +607,6 @@ header img {
 header h1 {
   color: #000000;
   font-size: 6rem;
-  margin-bottom: 2rem;
   font-weight: 200;
   line-height: 1;
 }
@@ -733,6 +731,12 @@ pre {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+.pre-word {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin: 0;
 }
 
 .tag {
