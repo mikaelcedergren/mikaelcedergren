@@ -530,11 +530,6 @@ main {
       }
     }
 
-    // @media (max-width: $breakpoint-medium) {
-    //   padding: 1rem;
-    //   margin: 0;
-    // }
-
     img {
       min-width: 100%;
       max-width: 100%;
@@ -604,71 +599,18 @@ pre {
   margin: 0;
 }
 
-// .resume-header {
+// .company-logos {
 //   display: flex;
 //   align-items: center;
-//   justify-content: flex-start;
+//   justify-content: space-between;
 //   flex-flow: row nowrap;
 //   gap: 2rem;
-//   padding-bottom: 4rem;
-//   padding-top: 2rem;
-//   border-bottom: $line;
-
-//   h1 {
-//     font-size: 1.6rem;
-//     font-family: $font-family;
-//     margin-bottom: 0;
-//   }
-
-//   @media (max-width: $breakpoint-medium) {
-//     text-align: center;
-//     flex-flow: column nowrap;
-//     padding: 1rem 2rem;
-//     margin: 1rem 0;
-//   }
-
-//   h1 {
-//     font-weight: $font-light;
-//   }
-
-//   p {
-//     font-weight: $font-light;
-//     font-size: 1.8rem;
-//     margin-bottom: 0.5rem;
-//     line-height: 1.4;
-
-//     @media (max-width: $breakpoint-medium) {
-//       font-size: 1.2rem;
-//     }
-//   }
-
+//   max-width: $page-max-width;
+  
 //   img {
-//     max-height: 128px;
-//     max-width: 128px;
-//     border-radius: 100%;
-//     overflow: hidden;
-//     min-width: 128px;
-//     min-height: 128px;
-//   }
-// }
-
-// .contact-details {
-//   display: flex;
-//   align-items: flex-start;
-//   justify-content: flex-start;
-//   flex-flow: column nowrap;
-//   gap: 0.25rem;
-
-//   div {
-//     width: 100%;
-
-//     span {
-//       &:first-child {
-//         display: inline-block;
-//         min-width: 100px;
-//         color: $gray5;
-//       }
-//     }
+//     width: 120px;
+//     min-width: 0;
+//     opacity: 0.15;
 //   }
 // }
 
