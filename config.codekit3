@@ -398,12 +398,77 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/images\/favicon.ico" : {
+    "\/images\/favicon\/android-chrome-192x192.png" : {
+      "ft" : 32768,
+      "iS" : 7407,
+      "oA" : 0,
+      "oAP" : "\/images\/favicon\/android-chrome-192x192.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/favicon\/android-chrome-512x512.png" : {
+      "ft" : 32768,
+      "iS" : 21333,
+      "oA" : 0,
+      "oAP" : "\/images\/favicon\/android-chrome-512x512.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/favicon\/apple-touch-icon.png" : {
+      "ft" : 32768,
+      "iS" : 6631,
+      "oA" : 0,
+      "oAP" : "\/images\/favicon\/apple-touch-icon.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/favicon\/favicon-16x16.png" : {
+      "ft" : 32768,
+      "iS" : 664,
+      "oA" : 0,
+      "oAP" : "\/images\/favicon\/favicon-16x16.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/favicon\/favicon-32x32.png" : {
+      "ft" : 32768,
+      "iS" : 1322,
+      "oA" : 0,
+      "oAP" : "\/images\/favicon\/favicon-32x32.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/favicon\/favicon.ico" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/images\/favicon.ico",
+      "oAP" : "\/images\/favicon\/favicon.ico",
       "oF" : 0
     },
     "\/images\/hamburger.svg" : {
@@ -2948,7 +3013,7 @@
     "creationDate" : 555155234,
     "displayValue" : "MikaelCedergren.com",
     "displayValueWasSetByUser" : 1,
-    "iconImageName" : "logo-wordpress",
+    "iconImageName" : "\/images\/favicon\/apple-touch-icon.png",
     "iconImageWasSetByUser" : 0
   },
   "projectSettings" : {
