@@ -1,6 +1,9 @@
+html,
 body {
-  font-size: 14px;
+  font-size: 10px;
+}
 
+body {
   .hidden-responsive {
     display: block !important;
   }
@@ -26,11 +29,27 @@ body {
     display: none;
   }
 
-  .sidebar {
-    width: 200px !important;
+  header {
+    display: none;
   }
 
-  @media (max-width: 1024px) {
+  .sidebar {
+    width: 200px !important;
+    position: static;
+    background: $gray1;
+    padding: 1rem;
+    height: 100%;
+
+    .portrait {
+      margin-bottom: 2rem;
+    }
+
+    h5 {
+      background-color: transparent;
+    }
+  }
+
+  @media (max-width: 1000px) {
     .grid-row {
       flex-flow: row nowrap;
     }
