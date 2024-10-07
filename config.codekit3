@@ -398,6 +398,16 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/download-pdf.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/images\/download-pdf.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/images\/favicon\/android-chrome-192x192.png" : {
       "ft" : 32768,
       "iS" : 7407,

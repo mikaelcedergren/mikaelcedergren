@@ -738,27 +738,35 @@ blockquote {
   font-size: $font-size-small;
   width: 260px;
 
+  .links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: row nowrap;
+    gap: 0.25rem;
+
+    a {
+      img {
+        transition: opacity 0.3s ease;
+        width: 24px;
+        opacity: 0.2;
+        border-radius: 3px;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
   .portrait {
     max-width: 100px;
     border-radius: 100%;
     margin-bottom: 1rem;
-  }
-
-  .social {
-    img {
-      transition: opacity 0.3s ease;
-      max-width: 24px;
-      opacity: 0.2;
-      border-radius: 3px;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-
-    &::after {
-      display: none;
-    }
   }
 
   p {

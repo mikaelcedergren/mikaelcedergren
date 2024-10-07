@@ -856,22 +856,29 @@ blockquote span div {
   font-size: 0.85rem;
   width: 260px;
 }
+.sidebar .links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+  gap: 0.25rem;
+}
+.sidebar .links a img {
+  transition: opacity 0.3s ease;
+  width: 24px;
+  opacity: 0.2;
+  border-radius: 3px;
+}
+.sidebar .links a img:hover {
+  opacity: 1;
+}
+.sidebar .links a::after {
+  display: none;
+}
 .sidebar .portrait {
   max-width: 100px;
   border-radius: 100%;
   margin-bottom: 1rem;
-}
-.sidebar .social img {
-  transition: opacity 0.3s ease;
-  max-width: 24px;
-  opacity: 0.2;
-  border-radius: 3px;
-}
-.sidebar .social img:hover {
-  opacity: 1;
-}
-.sidebar .social::after {
-  display: none;
 }
 .sidebar p {
   margin-bottom: 0;
