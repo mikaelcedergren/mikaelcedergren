@@ -76,7 +76,7 @@ strong {
   display: block;
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
-  line-height: 1.2;
+  line-height: 1.4;
   font-weight: $font-bold;
 }
 
@@ -321,11 +321,11 @@ nav {
       -webkit-touch-callout: none;
 
       &:checked {
-        & ~ #menu-cover {
+        &~#menu-cover {
           opacity: 1;
         }
 
-        & ~ .hamburger-icon > span {
+        &~.hamburger-icon>span {
           opacity: 0;
 
           &:first-child {
@@ -333,6 +333,7 @@ nav {
             opacity: 1;
             top: 0;
           }
+
           &:last-child {
             transform: rotate(45deg);
             opacity: 1;
@@ -340,7 +341,7 @@ nav {
           }
         }
 
-        & ~ #menu {
+        &~#menu {
           transform: translateX(0%);
           box-shadow: 3px 0 20px 10px rgba(black, 0.1);
         }
@@ -498,7 +499,7 @@ main {
       padding-top: 0;
     }
 
-    & > h2 {
+    &>h2 {
       margin-top: 5rem;
     }
 
@@ -717,6 +718,7 @@ blockquote {
       opacity: 0;
       // transform: translateY(1rem) translate3d(0, 0, 0);
     }
+
     to {
       opacity: 1;
       // transform: translateY(0) translate3d(0, 0, 0);
