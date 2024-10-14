@@ -153,6 +153,7 @@ a {
     bottom: -0.25rem;
     background-color: $black;
     width: 0;
+    pointer-events: none;
   }
 
   &:hover {
@@ -212,6 +213,7 @@ nav {
     a {
       font-size: 0.8rem;
       margin-left: 1rem;
+      display: inline-block;
     }
   }
 

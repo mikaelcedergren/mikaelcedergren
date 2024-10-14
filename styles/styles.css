@@ -342,6 +342,7 @@ a::after {
   bottom: -0.25rem;
   background-color: #000000;
   width: 0;
+  pointer-events: none;
 }
 a:hover::after {
   width: 100%;
@@ -394,6 +395,7 @@ nav .menu {
 nav .menu a {
   font-size: 0.8rem;
   margin-left: 1rem;
+  display: inline-block;
 }
 @media (max-width: 1024px) {
   nav #desktop-menu {
