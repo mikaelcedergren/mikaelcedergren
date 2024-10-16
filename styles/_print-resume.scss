@@ -16,6 +16,15 @@ body {
     display: none;
   }
 
+  @media (max-width: 1024px) {
+    q {
+      display: unset;
+      font-size: 1.4rem;
+      line-height: 1.5;
+      margin: 0 0 0 1rem;
+    }
+  }
+
   header {
     h1 {
       font-size: 4rem !important;
