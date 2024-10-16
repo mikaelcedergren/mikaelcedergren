@@ -855,7 +855,7 @@ blockquote span div {
 .sidebar {
   position: sticky;
   top: calc(64px + 2rem);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   width: 260px;
 }
 .sidebar .links {
