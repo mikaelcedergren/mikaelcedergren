@@ -1,12 +1,77 @@
-<!-- @include '/components/_header.kit' -->
-<header
-  ><h1>Conceptual <span>Works</span></h1></header
->
+<!-- @include '/assets/components/header.kit' -->
+
+<header>
+
+  <h1> Concepts </h1>
+</header>
+
 <section>
-  <div class="section-content">
-    <h1>Catalyst</h1>
-    hello
+
+  <h1>App Navigation <span>Reinvented</span></h1>
+  <p class="text-large">For years, I’ve been frustrated with conventional app navigation. As an iPhone user, one thing I appreciated about Android was the back button. That got me thinking—can I simplify it and combine it with other actions?</p>
+  <div class="grid-row mb-2">
+    <div class="grid-cell">
+
+      <h2 class="mt-1">Problem</h2>
+      <p>Phones have grown significantly, making the top-left back action inconvenient. Additionally, apps like Instagram and TikTok often overlay information on content, increasing cognitive load and reducing the impact of both content and ads.</p>
+    </div>
+    <div class="grid-cell">
+
+      <h2 class="mt-1">Solution</h2>
+      <p>A minimalistic navigation system built around gestures, featuring primary, secondary, and tertiary submenus. It brings navigation closer to the user’s fingers for a more comfortable touch experience. The icon is positioned in the bottom right by default but can be adjusted to the bottom left for left-handed users.</p>
+    </div>
   </div>
+  <div class="grid-row">
+    <div class="grid-cell">
+      <img src="/assets/images/portfolio/concepts/reinvented-app-nav-default-state.png" alt="">
+      <p class="text-small">An icon continuously hovers in the bottom-right corner. A quick flick up is ignored to ensure it doesn’t interfere with normal scrolling.</p>
+    </div>
+    <div class="grid-cell">
+      <img src="/assets/images/portfolio/concepts/reinvented-app-nav-history.png" alt="">
+      <p class="text-small">Slide left on the icon to trigger preparation for a back action, then flick right to return to the previous page. This eliminates the need for the top-left back button or flicking from the phone’s very edge.</p>
+    </div>
+    <div class="grid-cell">
+      <img src="/assets/images/portfolio/concepts/reinvented-app-nav-info.png" alt="">
+      <p class="text-small">Hold and flick up to reveal information, ideal for tertiary details or actions.</p>
+    </div>
+    <div class="grid-cell">
+      <img src="/assets/images/portfolio/concepts/reinvented-app-nav-long-press.png" alt="">
+      <p class="text-small">A long press opens a submenu with secondary options like “Like,” “Share,” and “Comment” etc. The user swipes to an icon, releases, and the action is instantly triggered.</p>
+    </div>
+  </div>
+  <p class="mt-2">This idea is entirely conceptual and has not yet been realized in any form. A prototype is in development, with further fine-tuning and implementation of ideas underway.</p>
 </section>
 
-<!-- @include '/components/_footer.kit' -->
+<section>
+
+  <h1><span>Catalyst</span> - A Simpler Framework</h1>
+  <p class="text-large">Every HTML/CSS framework I’ve seen over-specifies columns and utility classes, forcing developers to define details unnecessarily in cases where it shouldn’t be needed. My goal was to create a simpler framework that adjusts content automatically, both on desktop and responsive, reducing the need for extra thought, minimizing utility classes, and keeping the code clean.</p>
+  <div class="grid-row mb-2">
+    <div class="grid-cell">
+
+      <h2 class="mt-1">Problem</h2>
+      <p>Existing frameworks rely on a rigid 12-column grid, making them restrictive and requiring significant learning and effort for developers. Also, the more code they add, the higher the risk of bugs. While the frameworks aim to speed up development, they’re often not fast or stable enough.</p>
+    </div>
+    <div class="grid-cell">
+
+      <h2 class="mt-1">Solution</h2>
+      <p>A user-friendly framework with quick utility classes and an adaptive grid system that adjusts content automatically. Its lightweight design and efficient code structure minimize the need for custom CSS overrides.</p>
+    </div>
+  </div>
+  <div class="grid-row">
+    <div class="grid-cell">
+      <img src="/assets/images/portfolio/concepts/catalyst-grid.png" alt="">
+      <p class="text-small">A grid system where column widths are determined by the number of elements inside the container, eliminating the need to specify column counts. It adjusts automatically for responsiveness.</p>
+    </div>
+    <div class="grid-cell">
+      <img src="/assets/images/portfolio/concepts/catalyst-utility-classes.png" alt="">
+      <p class="text-small">Margins and paddings use the rem standard, aligning with the default font size to ensure perfectly symmetrical spacing.</p>
+    </div>
+    <div class="grid-cell">
+      <img src="/assets/images/portfolio/concepts/catalyst-naming-convention.png" alt="">
+      <p class="text-small">Naming conventions are based on Emmet for familiarity, ensuring developers can rely on a recognizable system without needing to learn something entirely new.</p>
+    </div>
+  </div>
+  <p class="mt-2">This site uses a customized version of this framework, which is already implemented on several company websites and is currently being tested and fine-tuned in real-world applications.</p>
+</section>
+<!-- @include '/assets/components/footer.kit' -->
