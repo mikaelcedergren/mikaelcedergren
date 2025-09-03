@@ -17,7 +17,13 @@
     <meta property=" og:image:height" content="630″/>
     <link rel=" shortcut icon" href="/assets/images/favicon/favicon.ico">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" type="text/css" href="https://mikaelcedergren.github.io/catalyst/catalyst.css" />
+  <link id="main-style" rel="stylesheet" href="https://mikaelcedergren.github.io/catalyst/catalyst.css">
+  <script>
+    const link = document.getElementById('main-style');
+    const url = new URL(link.href);
+    url.searchParams.set('v', Date.now()); // bust cache with timestamp
+    link.href = url.toString();
+  </script>
   <link rel="stylesheet" type="text/css" href="/assets/styles/styles.css" />
 </head>
 
