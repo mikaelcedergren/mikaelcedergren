@@ -641,7 +641,7 @@ header p {
 main {
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 2rem 0;
   margin-top: 64px;
 }
 main section {
