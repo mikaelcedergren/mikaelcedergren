@@ -208,12 +208,10 @@
 
 html,
 body {
-  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  line-height: 1.6;
+  font-family: var(--font-family-sans);
   overscroll-behavior: contain;
   padding: 0;
   margin: 0;
-  font-size: 17px;
   color: var(--ink);
 }
 @media (max-width: 960px) {
@@ -228,9 +226,7 @@ h2,
 h3 {
   color: #000000;
   margin-top: 0;
-  font-family: "DM Serif Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 200;
-  line-height: 1.4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -272,7 +268,6 @@ strong {
   display: block;
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
-  line-height: 1.4;
   font-weight: 700;
 }
 
@@ -295,7 +290,6 @@ q {
 
 p {
   margin: 0 0 1rem 0;
-  line-height: 1.8;
 }
 
 hr {
@@ -399,7 +393,7 @@ nav .menu {
   gap: 1rem;
 }
 nav .menu a {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   margin-left: 1rem;
   display: inline-block;
 }
@@ -585,10 +579,8 @@ nav #menu li {
 }
 
 q {
-  font-family: "DM Serif Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   float: right;
   max-width: 40%;
-  line-height: 1.4;
   font-size: 1.8rem;
   font-style: normal;
   padding: 0;
@@ -607,7 +599,6 @@ header {
   flex-flow: column nowrap;
   padding: 2rem 0;
   margin-bottom: 1rem;
-  line-height: 1.5;
 }
 @media (max-width: 960px) {
   header {
@@ -623,7 +614,6 @@ header h1 {
   color: #000000;
   font-size: 5.4rem;
   font-weight: 200;
-  line-height: 1;
 }
 @media (max-width: 960px) {
   header h1 {
@@ -639,7 +629,6 @@ header h1 {
 }
 header p {
   font-size: 1.5rem;
-  line-height: 1.5;
   margin-bottom: 3rem;
 }
 
@@ -709,7 +698,6 @@ main section article {
   position: relative;
   max-width: 100%;
   background-color: #ffffff;
-  line-height: 1.75;
   margin: 0 0 4rem 9rem;
   padding: 1rem;
   margin-top: -8rem;
@@ -733,10 +721,8 @@ main section article p {
 pre {
   position: relative;
   white-space: normal;
-  line-height: 1;
   display: inline-block;
   margin: 0 0 0.5rem 0;
-  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.75rem;
@@ -751,7 +737,6 @@ pre {
 
 .pre-word {
   font-size: 1.5rem;
-  line-height: 1.8;
   margin: 0;
 }
 
@@ -785,12 +770,10 @@ pre {
 
 .date {
   margin: 0;
-  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 0.6rem;
   color: #778396;
-  line-height: 1;
   margin-bottom: 1rem;
   padding-top: 0.5rem;
 }
@@ -864,7 +847,6 @@ blockquote span div {
   top: calc(64px + 2rem);
   font-size: 0.75rem;
   width: 260px;
-  line-height: 1;
 }
 .sidebar .links {
   display: flex;
@@ -957,7 +939,6 @@ blockquote span div {
   display: block;
   width: 100%;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
-  line-height: 1;
   padding: 2rem 2rem 0 2rem;
   margin: 0 -2rem;
   width: calc(100% + 4rem);
