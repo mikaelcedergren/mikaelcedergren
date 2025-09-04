@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mikael Cedergren | Art Director, Content Strategist & User Experience Designer</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Mikael Cedergren" />
+  <meta name="description" content="Explore the work of Mikael Cedergren, a designer focused on simple, effective, and meaningful creative solutions." />
+  <meta name="keywords" content="Art Director, Illustrator, Motion Graphic Artist, Branding Design, Creative Portfolio, Swedish Artist, Digital Illustration, Animation Design, Graphic Design, Visual Storytelling, Corporate Identity, UI/UX Design, Advertising Design, Creative Concept Development, Brand Strategy, freelance, freelance designer, marketeer" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta property="og:image" content="/images/og-image.jpg">
+  <meta property="og:title" content="Mikael Cedergren | Crafting impactful experiences that tell your story." />
+  <meta property="og:description" content="Discover the portfolio of Mikael Cedergren, an Art Director, Illustrator, and Motion Graphic Artist based in Malmö, Sweden, showcasing a range of creative projects." />
+  <meta property="og:image:width" content="1200″/>
+    <meta property=" og:image:height" content="630″/>
+    <link rel=" shortcut icon" href="/assets/images/favicon/favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link id="main-style" rel="stylesheet" href="https://mikaelcedergren.github.io/catalyst/catalyst.css">
+  <script>
+    const link = document.getElementById('main-style');
+    const url = new URL(link.href);
+    url.searchParams.set('v', Date.now()); // bust cache with timestamp
+    link.href = url.toString();
+  </script>
+  <link rel="stylesheet" type="text/css" href="/assets/styles/styles.css" />
+</head>
+
+<body>
+
+  <main>
+
+<header>
+
+    <h1><span>Relative</span> vs <span>absolute</span> time</h1>
+</header>
+
+<section id="blog-post">
+    <p>You’re scrolling through messages and see a small marker: 3h ago. Your mind doesn’t even pause. Yesterday has the same effect. These little labels glide past unnoticed, like a friend giving you a quick reminder. They’re not just timestamps, they’re part of the rhythm of how we read.</p>
+
+    <h2>When Relativity Breaks</h2>
+    <p>But then you come across something like 420d ago. The rhythm collapses. Instead of glancing and moving on, your brain stalls. You start converting days into months, maybe even years. What was supposed to be effortless turns into work. And in that pause, something else happens: trust takes a hit. If the system makes you stumble on something so small, what else might it mishandle?</p>
+    <p>Relative time is brilliant when events are close, when you’re talking about minutes, hours, or a handful of days. It matches the way people actually speak. But as soon as the distance grows, relativity begins to wobble. Twelve days ago already feels clunky. Four hundred and twenty days ago feels absurd. At that scale, what we want isn’t an estimate, but an anchor: May 28, 2024, 14:37.</p>
+
+    <h2>The Role of Absolute Dates</h2>
+    <p>This is where absolute dates earn their place. They give certainty. They erase doubt. And when written clearly—Aug 9, 2025, 14:37 instead of 09/08/2025—they avoid the global guessing game of numeric formats. Nobody mistakes Aug for Sep.</p>
+    <p>But this isn’t about absolute being better in every case. Context matters. Relative dates bring warmth and immediacy when the past is near. Absolute dates bring clarity and precision when the past stretches too far. Both have a role. The art of design is knowing when to hand the baton from one to the other.</p>
+    <p>Clarity also has an accessibility dimension. For some, relative time that forces mental math is more than a nuisance—it’s a barrier. A clear absolute date lowers cognitive load and makes the system more inclusive.</p>
+    <p>The same principle even applies when looking forward. Saying “in 5 minutes” or “tomorrow” feels natural when something is close. But if you’re scheduling a meeting six months from now, you’d never want “in 180 days.” You’d want the exact date. The symmetry matters. It shows this isn’t a hack, it’s how humans actually understand time.</p>
+
+    <h2>Drawing the Line</h2>
+    <p>Most systems have already discovered the balance. Less than a week feels natural in relative terms. Beyond that, people quietly expect a fixed reference. It’s become one of those unspoken conventions users carry from app to app without even realizing it.</p>
+    <p>And in detail-heavy contexts—logs, audit trails, security records—there’s no debate. Absolute is the rule. Relativity only clouds what people need to trust.</p>
+
+    <h2>Conclusion</h2>
+    <p>Relative time for anything under seven days. Absolute dates for anything older. Absolute dates always in logs and reports. And if there’s a setting, it should only be to make everything absolute. That’s the standard. No exceptions.</p>
+</section>
+</main>
+<nav role="navigation">
+  <div class="logo-container">
+    <a href="/" class="logo"><img src="/assets/images/animated-logo.gif" /></a><span>Mikael Cedergren</span>
+  </div>
+  <div class="menu">
+    <div id="desktop-menu">
+      <a href="/">Portfolio</a>
+      <a href="/resume/">Resume</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about/">About</a>
+    </div>
+    <div id="hamburger-button">
+      <input type="checkbox" />
+      <div id="menu-cover"></div>
+      <div class="hamburger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul id="menu">
+        <a href="/">
+          <li>Portfolio</li>
+        </a>
+        <a href="/resume/">
+          <li>Resume</li>
+        </a>
+        <a href="/concepts/">
+          <li>Concepts</li>
+        </a>
+        <a href="/blog/">
+          <li>Blog</li>
+        </a>
+        <a href="/about/">
+          <li>About</li>
+        </a>
+        <br />
+        <div class="text-small">&copy; Mikael Cedergren 2019 - 2024</div>
+        <div class="text-small">All rights reserved</div>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
+<script>
+  var images = document.querySelectorAll('.parallax');
+  new simpleParallax(images, {
+    scale: 1.3,
+  });
+</script>
+</body>
+</html>
