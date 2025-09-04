@@ -851,6 +851,12 @@ blockquote {
 
 #blog-post {
 
+  ingress {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin: 0;
+  }
+
   p {
     font-size: 1.2rem;
     font-weight: $font-regular;
@@ -861,6 +867,10 @@ blockquote {
       font-size: 1.2rem;
       font-weight: $font-regular;
     }
+  }
+
+  h1 {
+    margin-bottom: 0;
   }
 
   h2 {
