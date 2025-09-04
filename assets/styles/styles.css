@@ -963,14 +963,15 @@ blockquote span div {
   width: calc(100% + 4rem);
 }
 
-#blog-post ingress {
+ingress {
   display: block;
-  font-size: 1.75rem;
+  font-size: 1.6rem;
   line-height: 1.8;
   margin-bottom: 2rem;
 }
+
 #blog-post p {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 #blog-post ul li {
