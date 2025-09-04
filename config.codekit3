@@ -33,6 +33,14 @@
       "oAP" : "\/about\/index.html",
       "oF" : 0
     },
+    "\/assets\/components\/_blog-posts.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/components\/_blog-posts.html",
+      "oF" : 0
+    },
     "\/assets\/components\/_footer.kit" : {
       "cB" : 0,
       "ft" : 2048,
