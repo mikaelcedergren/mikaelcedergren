@@ -33,6 +33,14 @@
       "oAP" : "\/about\/index.html",
       "oF" : 0
     },
+    "\/assets\/components\/_blog-posts.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/components\/_blog-posts.html",
+      "oF" : 0
+    },
     "\/assets\/components\/_footer.kit" : {
       "cB" : 0,
       "ft" : 2048,
@@ -2994,6 +3002,22 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/blog\/posts\/creative-leadership.html",
+      "oF" : 0
+    },
+    "\/blog\/posts\/letter-from-a-user.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/blog\/posts\/letter-from-a-user.html",
+      "oF" : 0
+    },
+    "\/blog\/posts\/letter-from-a-user.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/blog\/posts\/letter-from-a-user.html",
       "oF" : 0
     },
     "\/blog\/posts\/relative-vs-absolute-time.html" : {
