@@ -1,51 +1,5 @@
 @use 'variables' as *;
 
-@for $i from 0 to 5 {
-  .mt-#{$i} {
-    margin-top: $i + rem !important;
-  }
-
-  .mr-#{$i} {
-    margin-right: $i + rem !important;
-  }
-
-  .mb-#{$i} {
-    margin-bottom: $i + rem !important;
-  }
-
-  .ml-#{$i} {
-    margin-left: $i + rem !important;
-  }
-
-  .pt-#{$i} {
-    padding-top: $i + rem !important;
-  }
-
-  .pr-#{$i} {
-    padding-right: $i + rem !important;
-  }
-
-  .pb-#{$i} {
-    padding-bottom: $i + rem !important;
-  }
-
-  .pl-#{$i} {
-    padding-left: $i + rem !important;
-  }
-}
-
-.p-0 {
-  padding: 0 !important;
-}
-
-.mt-05 {
-  margin-top: 0.5rem;
-}
-
-.mb-05 {
-  margin-bottom: 0.5rem;
-}
-
 .text-discreet {
   color: #a3afbf;
 }
