@@ -7,14 +7,9 @@ html,
 body {
   font-family: var(--font-family-sans);
   overscroll-behavior: contain;
-  // overflow-x: hidden;
   padding: 0;
   margin: 0;
   color: var(--ink);
-
-  @media (max-width: $breakpoint-medium) {
-    font-size: $font-size-responsive;
-  }
 }
 
 h1,
@@ -635,8 +630,8 @@ pre {
 .date {
   margin: 0;
   font-weight: $font-semi;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  font-size: $font-size-tiny;
   color: $gray5;
   margin-bottom: 1rem;
   padding-top: 0.5rem;
@@ -720,7 +715,6 @@ blockquote {
 .sidebar {
   position: sticky;
   top: calc(#{$navigation-height} + 2rem);
-  font-size: $font-size-small;
   width: 260px;
 
   .links {
@@ -810,6 +804,10 @@ blockquote {
     padding: 2rem;
     min-height: 100%;
     max-width: calc(50% - 2rem);
+    // display: -webkit-box;
+    // -webkit-line-clamp: 3;
+    // -webkit-box-orient: vertical;
+    // overflow: hidden;
 
     @media (max-width: $breakpoint-medium) {
       max-width: 100%;
@@ -830,17 +828,10 @@ blockquote {
   }
 }
 
-// ingress {
-//   display: block;
-//   font-size: 1.6rem;
-//   line-height: 1.8;
-//   margin-bottom: 2rem;
-// }
-
 #blog-post {
 
   p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: $font-regular;
   }
 
