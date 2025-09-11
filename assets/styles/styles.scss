@@ -197,7 +197,7 @@ nav {
     gap: 1rem;
 
     a {
-      font-size: 0.9rem;
+      font-size: var(--font-size-small);
       margin-left: 1rem;
       display: inline-block;
     }
@@ -601,7 +601,7 @@ pre {
 .tag {
   font-size: 0.8rem;
   border: var(--line);
-  padding: 0.5rem 1rem 0.6rem 1rem;
+  padding: 0.25rem 0.75rem;
   border-radius: 300px;
   margin-right: 0.25rem;
   margin-bottom: 0.5rem;
@@ -699,7 +699,6 @@ blockquote {
 
     to {
       opacity: 1;
-      // transform: translateY(0) translate3d(0, 0, 0);
     }
   }
 }
@@ -716,7 +715,7 @@ aside {
   position: sticky;
   top: calc(#{$navigation-height} + 2rem);
   width: 260px;
-  font-size: 0.75rem;
+  font-size: var(--font-size-small);
 
   .links {
     display: flex;

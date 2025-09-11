@@ -387,7 +387,7 @@ nav .menu {
   gap: 1rem;
 }
 nav .menu a {
-  font-size: 0.9rem;
+  font-size: var(--font-size-small);
   margin-left: 1rem;
   display: inline-block;
 }
@@ -737,7 +737,7 @@ pre {
 .tag {
   font-size: 0.8rem;
   border: var(--line);
-  padding: 0.5rem 1rem 0.6rem 1rem;
+  padding: 0.25rem 0.75rem;
   border-radius: 300px;
   margin-right: 0.25rem;
   margin-bottom: 0.5rem;
@@ -840,7 +840,7 @@ aside {
   position: sticky;
   top: calc(64px + 2rem);
   width: 260px;
-  font-size: 0.75rem;
+  font-size: var(--font-size-small);
 }
 aside .links {
   display: flex;
