@@ -742,7 +742,7 @@ pre {
   margin-right: 0.25rem;
   margin-bottom: 0.5rem;
   display: inline-block;
-  color: #4d5b73;
+  color: var(--opacity-high);
 }
 
 .video {
