@@ -836,39 +836,40 @@ blockquote span div {
   margin-bottom: 0;
 }
 
-.sidebar {
+aside {
   position: sticky;
   top: calc(64px + 2rem);
   width: 260px;
+  font-size: 0.75rem;
 }
-.sidebar .links {
+aside .links {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-flow: row nowrap;
   gap: 0.25rem;
 }
-.sidebar .links a img {
+aside .links a img {
   transition: opacity 0.3s ease;
   width: 24px;
   opacity: 0.2;
   border-radius: 3px;
 }
-.sidebar .links a img:hover {
+aside .links a img:hover {
   opacity: 1;
 }
-.sidebar .links a::after {
+aside .links a::after {
   display: none;
 }
-.sidebar .portrait {
+aside .portrait {
   max-width: 80px;
   border-radius: 100%;
   margin-bottom: 1rem;
 }
-.sidebar p {
+aside p {
   margin-bottom: 0;
 }
-.sidebar h5 {
+aside h5 {
   position: static;
   padding: 0;
   margin: 0;

@@ -712,10 +712,11 @@ blockquote {
   }
 }
 
-.sidebar {
+aside {
   position: sticky;
   top: calc(#{$navigation-height} + 2rem);
   width: 260px;
+  font-size: 0.75rem;
 
   .links {
     display: flex;
