@@ -15,9 +15,9 @@ body {
 h1,
 h2,
 h3 {
-  color: $black;
+  color: var(--ink);
   margin-top: 0;
-  font-weight: $font-light;
+  font-weight: var(--font-weight-light);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -41,30 +41,30 @@ h1 {
 }
 
 h4 {
-  font-weight: $font-bold;
-  color: $black;
+  font-weight: var(--font-weight-bold);
+  color: var(--ink);
   font-size: 1rem;
 }
 
 h5 {
   background-color: $white;
   text-transform: uppercase;
-  font-weight: $font-regular;
+  font-weight: var(--font-weight-regular);
   letter-spacing: 0.2rem;
   padding: 0;
   margin: 0;
 }
 
 strong {
-  color: $black;
+  color: var(--ink);
   display: block;
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
-  font-weight: $font-bold;
+  font-weight: var(--font-weight-bold);
 }
 
 b {
-  font-weight: $font-semi;
+  font-weight: var(--font-weight-semibold);
 }
 
 p,
@@ -126,8 +126,8 @@ hr {
 a {
   position: relative;
   text-decoration: none;
-  color: $black;
-  font-weight: $font-bold;
+  color: var(--ink);
+  font-weight: var(--font-weight-bold);
   cursor: pointer;
 
   &::after {
@@ -137,7 +137,7 @@ a {
     left: 0;
     height: 2px;
     bottom: -0.25rem;
-    background-color: $black;
+    background-color: var(--ink);
     width: 0;
     pointer-events: none;
   }
@@ -168,14 +168,14 @@ ul {
       border-radius: 300px;
       display: inline-block;
       font-size: 0.75rem;
-      border: $line;
+      border: var(--line);
     }
   }
 }
 
 nav {
   background-color: $white;
-  border-bottom: $line;
+  border-bottom: var(--line);
   position: fixed;
   top: 0;
   left: 0;
@@ -224,7 +224,7 @@ nav {
 
   .text {
     display: block;
-    color: $black;
+    color: var(--ink);
     font-size: 1rem;
     width: auto;
   }
@@ -262,9 +262,9 @@ nav {
       position: relative;
       display: inline-block;
       font-size: 1.25rem;
-      color: $black;
+      color: var(--ink);
       text-decoration: none;
-      font-weight: $font-bold;
+      font-weight: var(--font-weight-bold);
       padding: 0.25rem 0;
       width: min-content;
 
@@ -274,7 +274,7 @@ nav {
         position: absolute;
         height: 2px;
         bottom: 6px;
-        background-color: $black;
+        background-color: var(--ink);
         width: 0;
       }
 
@@ -282,7 +282,7 @@ nav {
         font-size: 1rem;
         width: 100%;
         padding: 0;
-        font-weight: $font-regular;
+        font-weight: var(--font-weight-regular);
 
         &::after {
           display: none;
@@ -344,20 +344,20 @@ nav {
         position: absolute;
         transform-origin: center center;
         transition: all 0.3s;
-        background-color: $black;
+        background-color: var(--ink);
         height: 2px;
         width: 100%;
         border-radius: 300px;
         top: calc(50% - 2px);
 
         &:first-child {
-          background: $black;
+          background: var(--ink);
           top: 3px;
           transform-origin: center right;
         }
 
         &:last-child {
-          background: $black;
+          background: var(--ink);
           top: auto;
           bottom: 5px;
           transform-origin: center right;
@@ -443,9 +443,9 @@ header {
   }
 
   h1 {
-    color: $black;
+    color: var(--ink);
     font-size: 5.4rem;
-    font-weight: $font-light;
+    font-weight: var(--font-weight-light);
 
     @media (max-width: $breakpoint-medium) {
       font-size: 6rem;
@@ -475,7 +475,7 @@ main {
     position: relative;
     padding: 4rem 0 0 0;
     margin-bottom: 4rem;
-    border-top: $line;
+    border-top: var(--line);
 
     &:first-of-type {
       border-top: none;
@@ -550,7 +550,7 @@ main {
       }
 
       p {
-        color: $black;
+        color: var(--ink);
       }
 
       @media (max-width: $breakpoint-medium) {
@@ -566,13 +566,13 @@ pre {
   white-space: normal;
   display: inline-block;
   margin: 0 0 0.5rem 0;
-  font-weight: $font-bold;
+  font-weight: var(--font-weight-bold);
   text-transform: uppercase;
   font-size: 0.75rem;
   padding: 0;
   font-weight: 900;
   letter-spacing: 0.1rem;
-  color: $black;
+  color: var(--ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -600,7 +600,7 @@ pre {
 
 .tag {
   font-size: 0.8rem;
-  border: $line;
+  border: var(--line);
   padding: 0.5rem 1rem 0.6rem 1rem;
   border-radius: 300px;
   margin-right: 0.25rem;
@@ -629,7 +629,7 @@ pre {
 
 .date {
   margin: 0;
-  font-weight: $font-semi;
+  font-weight: var(--font-weight-semibold);
   font-size: 0.75rem;
   text-transform: uppercase;
   color: $gray5;
@@ -649,10 +649,10 @@ blockquote {
   span {
     font-style: normal;
     display: block;
-    font-weight: $font-bold;
+    font-weight: var(--font-weight-bold);
 
     div {
-      font-weight: $font-regular;
+      font-weight: var(--font-weight-regular);
       font-size: 0.8rem;
       color: $gray5;
     }
@@ -801,7 +801,7 @@ aside {
     justify-content: space-between;
     flex-flow: column nowrap;
     gap: 1rem;
-    border: $line;
+    border: var(--line);
     padding: 2rem;
     min-height: 100%;
     max-width: calc(50% - 2rem);
@@ -815,13 +815,13 @@ aside {
     }
 
     p {
-      font-weight: $font-regular;
+      font-weight: var(--font-weight-regular);
     }
 
     .fake-button {
       display: block;
       width: 100%;
-      border-top: $line;
+      border-top: var(--line);
       padding: 2rem 2rem 0 2rem;
       margin: 0 -2rem;
       width: calc(100% + 4rem);
@@ -833,13 +833,13 @@ aside {
 
   p {
     font-size: 1.1rem;
-    font-weight: $font-regular;
+    font-weight: var(--font-weight-regular);
   }
 
   ul {
     li {
       font-size: 1.2rem;
-      font-weight: $font-regular;
+      font-weight: var(--font-weight-regular);
     }
   }
 

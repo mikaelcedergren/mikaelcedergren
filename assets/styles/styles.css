@@ -189,7 +189,7 @@
 }
 
 .text-bold {
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
 }
 
 @media (max-width: 960px) {
@@ -218,9 +218,9 @@ body {
 h1,
 h2,
 h3 {
-  color: #000000;
+  color: var(--ink);
   margin-top: 0;
-  font-weight: 200;
+  font-weight: var(--font-weight-light);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -243,30 +243,30 @@ h1 span {
 }
 
 h4 {
-  font-weight: 700;
-  color: #000000;
+  font-weight: var(--font-weight-bold);
+  color: var(--ink);
   font-size: 1rem;
 }
 
 h5 {
   background-color: #ffffff;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
   letter-spacing: 0.2rem;
   padding: 0;
   margin: 0;
 }
 
 strong {
-  color: #000000;
+  color: var(--ink);
   display: block;
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
 }
 
 b {
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 }
 
 p,
@@ -323,8 +323,8 @@ hr.spacer::after {
 a {
   position: relative;
   text-decoration: none;
-  color: #000000;
-  font-weight: 700;
+  color: var(--ink);
+  font-weight: var(--font-weight-bold);
   cursor: pointer;
 }
 a::after {
@@ -334,7 +334,7 @@ a::after {
   left: 0;
   height: 2px;
   bottom: -0.25rem;
-  background-color: #000000;
+  background-color: var(--ink);
   width: 0;
   pointer-events: none;
 }
@@ -360,12 +360,12 @@ ul.horizontal li {
   border-radius: 300px;
   display: inline-block;
   font-size: 0.75rem;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: var(--line);
 }
 
 nav {
   background-color: #ffffff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: var(--line);
   position: fixed;
   top: 0;
   left: 0;
@@ -411,7 +411,7 @@ nav .logo-container {
 }
 nav .text {
   display: block;
-  color: #000000;
+  color: var(--ink);
   font-size: 1rem;
   width: auto;
 }
@@ -445,9 +445,9 @@ nav #hamburger-button a {
   position: relative;
   display: inline-block;
   font-size: 1.25rem;
-  color: #000000;
+  color: var(--ink);
   text-decoration: none;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   padding: 0.25rem 0;
   width: min-content;
 }
@@ -457,14 +457,14 @@ nav #hamburger-button a::after {
   position: absolute;
   height: 2px;
   bottom: 6px;
-  background-color: #000000;
+  background-color: var(--ink);
   width: 0;
 }
 nav #hamburger-button a.hidden-link {
   font-size: 1rem;
   width: 100%;
   padding: 0;
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
 }
 nav #hamburger-button a.hidden-link::after {
   display: none;
@@ -512,19 +512,19 @@ nav #hamburger-button .hamburger-icon span {
   position: absolute;
   transform-origin: center center;
   transition: all 0.3s;
-  background-color: #000000;
+  background-color: var(--ink);
   height: 2px;
   width: 100%;
   border-radius: 300px;
   top: calc(50% - 2px);
 }
 nav #hamburger-button .hamburger-icon span:first-child {
-  background: #000000;
+  background: var(--ink);
   top: 3px;
   transform-origin: center right;
 }
 nav #hamburger-button .hamburger-icon span:last-child {
-  background: #000000;
+  background: var(--ink);
   top: auto;
   bottom: 5px;
   transform-origin: center right;
@@ -605,9 +605,9 @@ header img {
   margin-bottom: 1rem;
 }
 header h1 {
-  color: #000000;
+  color: var(--ink);
   font-size: 5.4rem;
-  font-weight: 200;
+  font-weight: var(--font-weight-light);
 }
 @media (max-width: 960px) {
   header h1 {
@@ -636,7 +636,7 @@ main section {
   position: relative;
   padding: 4rem 0 0 0;
   margin-bottom: 4rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: var(--line);
 }
 main section:first-of-type {
   border-top: none;
@@ -703,7 +703,7 @@ main section article h4 {
   margin: 0;
 }
 main section article p {
-  color: #000000;
+  color: var(--ink);
 }
 @media (max-width: 960px) {
   main section article {
@@ -717,13 +717,13 @@ pre {
   white-space: normal;
   display: inline-block;
   margin: 0 0 0.5rem 0;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   text-transform: uppercase;
   font-size: 0.75rem;
   padding: 0;
   font-weight: 900;
   letter-spacing: 0.1rem;
-  color: #000000;
+  color: var(--ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -736,7 +736,7 @@ pre {
 
 .tag {
   font-size: 0.8rem;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: var(--line);
   padding: 0.5rem 1rem 0.6rem 1rem;
   border-radius: 300px;
   margin-right: 0.25rem;
@@ -764,7 +764,7 @@ pre {
 
 .date {
   margin: 0;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   font-size: 0.75rem;
   text-transform: uppercase;
   color: #778396;
@@ -783,10 +783,10 @@ blockquote p {
 blockquote span {
   font-style: normal;
   display: block;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
 }
 blockquote span div {
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
   font-size: 0.8rem;
   color: #778396;
 }
@@ -916,7 +916,7 @@ aside h5 {
   justify-content: space-between;
   flex-flow: column nowrap;
   gap: 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: var(--line);
   padding: 2rem;
   min-height: 100%;
   max-width: calc(50% - 2rem);
@@ -927,12 +927,12 @@ aside h5 {
   }
 }
 #blog .blog-entry p {
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
 }
 #blog .blog-entry .fake-button {
   display: block;
   width: 100%;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: var(--line);
   padding: 2rem 2rem 0 2rem;
   margin: 0 -2rem;
   width: calc(100% + 4rem);
@@ -940,11 +940,11 @@ aside h5 {
 
 #blog-post p {
   font-size: 1.1rem;
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
 }
 #blog-post ul li {
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
 }
 #blog-post h1 {
   margin-bottom: 0;

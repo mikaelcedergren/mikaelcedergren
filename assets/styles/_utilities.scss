@@ -63,7 +63,7 @@
 }
 
 .text-bold {
-  font-weight: $font-bold;
+  font-weight: var(--font-weight-bold);
 }
 
 .hidden-responsive {
