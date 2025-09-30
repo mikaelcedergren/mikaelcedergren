@@ -459,6 +459,11 @@ main {
   padding: 2rem 0;
   margin-top: 64px;
 }
+@media (max-width: 960px) {
+  main {
+    padding: 1rem;
+  }
+}
 main section {
   position: relative;
   padding: 4rem 0 0 0;

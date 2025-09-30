@@ -1192,6 +1192,32 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/assets\/images\/portfolio\/design\/outpost24-dark-and-light-mode.jpg" : {
+      "ft" : 16384,
+      "iS" : 406247,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/images\/portfolio\/design\/outpost24-dark-and-light-mode.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/images\/portfolio\/design\/outpost24-wireframes.jpg" : {
+      "ft" : 16384,
+      "iS" : 368159,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/images\/portfolio\/design\/outpost24-wireframes.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/assets\/images\/portfolio\/design\/personal-brand-logo-animation.gif" : {
       "ft" : 4194304,
       "iS" : 460377,

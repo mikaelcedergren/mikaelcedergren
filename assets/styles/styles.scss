@@ -470,6 +470,10 @@ main {
   // margin-top: calc(#{$navigation-height} + 1rem);
   margin-top: $navigation-height;
 
+  @media (max-width: $breakpoint-medium) {
+    padding: 1rem;
+  }
+
   section {
     position: relative;
     padding: 4rem 0 0 0;
@@ -523,6 +527,7 @@ main {
       display: block;
       overflow: hidden;
       margin-bottom: 0.25rem;
+
     }
 
     .two-columns {
