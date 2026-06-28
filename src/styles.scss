@@ -1,0 +1,536 @@
+// mikaelcedergren.com — the original portfolio design, rebuilt on cx-framework.
+//
+// The framework provides the design language (tokens, reset, the responsive
+// embed). This stylesheet reproduces the existing site's editorial portfolio
+// layout — slim fixed nav, large gradient-accent hero, 960px column, full-width
+// work imagery with overlapping narrative cards, side-by-side project headers —
+// expressed entirely in cx-framework tokens (colour, type, spacing, lines,
+// radius, shadow), so it lives inside the framework instead of beside it.
+@use '@mikaelcedergren/cx-framework/tokens';
+@use '@mikaelcedergren/cx-framework/styles/base';
+@use '@mikaelcedergren/cx-framework/styles/embed';
+
+:root {
+  color-scheme: light;
+  --mc-nav-h: 64px;
+  --mc-measure: var(--measure-lg); // 960px content column
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--surface-mid);
+  color: var(--ink);
+  font-family: var(--font-family-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+mc-root {
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100dvh;
+}
+
+// Routed page components are custom elements — make them lay out as blocks.
+main > * {
+  display: block;
+}
+
+// ---------------------------------------------------------------------------
+// Fixed nav — logo left, menu right (the original's chrome)
+// ---------------------------------------------------------------------------
+.mc-nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  block-size: var(--mc-nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  padding-inline: var(--space-lg);
+  background: color-mix(in srgb, var(--surface-mid) 86%, transparent);
+  backdrop-filter: blur(10px);
+  border-block-end: var(--line);
+}
+.mc-nav__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--ink);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-body);
+  text-decoration: none;
+}
+.mc-nav__brand img {
+  block-size: 22px;
+  inline-size: auto;
+}
+.mc-nav__menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+.mc-nav__menu a {
+  color: var(--opacity-high);
+  font-size: var(--font-size-body);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.mc-nav__menu a:hover,
+.mc-nav__menu a.is-active {
+  color: var(--ink);
+}
+@media (max-width: 600px) {
+  .mc-nav__brand span {
+    display: none;
+  }
+  .mc-nav__menu {
+    gap: var(--space-md);
+    font-size: var(--font-size-body-sm);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Content column
+// ---------------------------------------------------------------------------
+main {
+  flex: 1;
+  inline-size: 100%;
+  max-inline-size: var(--mc-measure);
+  margin-inline: auto;
+  margin-block-start: var(--mc-nav-h);
+  padding: var(--space-2xl) var(--space-lg);
+}
+
+main h1,
+main h2,
+main h3 {
+  color: var(--ink);
+  margin-block-start: 0;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+}
+main h1 {
+  font-size: 2.5rem;
+  margin-block-end: var(--space-md);
+}
+main h2 {
+  font-size: 2rem;
+  margin-block: var(--space-2xl) var(--space-md);
+}
+main p {
+  margin: 0 0 var(--space-md);
+  line-height: 1.6;
+}
+
+// Content links: quiet, with an animated underline on hover (the original feel).
+main a {
+  position: relative;
+  color: var(--ink);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+}
+main a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  block-size: 2px;
+  inline-size: 0;
+  background: var(--ink);
+  transition: inline-size 0.3s ease-out;
+}
+main a:hover::after {
+  inline-size: 100%;
+}
+
+// ---------------------------------------------------------------------------
+// Hero (the page <header>)
+// ---------------------------------------------------------------------------
+main header {
+  padding-block: var(--space-2xl) var(--space-lg);
+}
+main header h1 {
+  font-size: clamp(2.6rem, 7vw, 5rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  margin: 0 0 var(--space-md);
+}
+// Accent words painted in the framework gradient (primary → accent).
+main header h1 span {
+  background: linear-gradient(115deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+main .pre-word {
+  max-inline-size: 46rem;
+  margin: 0 0 var(--space-2xl);
+  color: var(--opacity-high);
+  font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+  line-height: 1.5;
+}
+
+// Headline fade-in (kept subtle).
+.animate {
+  display: inline;
+  opacity: 0;
+  animation: mc-fade 0.9s var(--ease, cubic-bezier(0.17, 0.67, 0.23, 1)) forwards;
+}
+.animate.delay-1 {
+  animation-delay: 0.12s;
+}
+.animate.delay-2 {
+  animation-delay: 0.24s;
+}
+.animate.delay-3 {
+  animation-delay: 0.36s;
+}
+.animate.delay-4 {
+  animation-delay: 0.48s;
+}
+@keyframes mc-fade {
+  to {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate {
+    opacity: 1;
+    animation: none;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Case-study sections
+// ---------------------------------------------------------------------------
+main section {
+  position: relative;
+  padding-block-start: var(--space-2xl);
+  margin-block-end: var(--space-2xl);
+  border-block-start: var(--line);
+}
+main section:first-of-type {
+  border-block-start: 0;
+  padding-block-start: 0;
+}
+
+// Project header: logo left, blurb + tags right.
+main .section-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-xl);
+  margin-block-end: var(--space-2xl);
+}
+main .section-header > img {
+  flex: 0 0 auto;
+  inline-size: 132px;
+  max-block-size: 64px;
+  object-fit: contain;
+  object-position: left top;
+}
+main .section-header p {
+  margin: 0 0 var(--space-md);
+  font-size: var(--font-size-body-lg);
+  line-height: 1.5;
+}
+@media (max-width: 720px) {
+  main .section-header {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+}
+
+// Work imagery: full-width, tight stack, gently rounded.
+main section img {
+  display: block;
+  inline-size: 100%;
+  margin-block-end: var(--space-2xs);
+  border-radius: var(--radius-lg);
+}
+
+// Two-up images.
+main .two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xs);
+}
+main .two-columns img {
+  margin: 0;
+}
+@media (max-width: 640px) {
+  main .two-columns {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xs);
+  }
+}
+
+// Tags (skills).
+main .tag {
+  display: inline-block;
+  margin: 0 var(--space-2xs) var(--space-2xs) 0;
+  padding: 0.28em 0.8em;
+  border: var(--line);
+  border-radius: var(--radius-pill);
+  color: var(--opacity-high);
+  font-size: var(--font-size-body-sm);
+  line-height: 1.5;
+}
+
+// The signature move: the narrative card overlaps up onto the image above it.
+main section article {
+  position: relative;
+  max-inline-size: 80%;
+  margin: -7rem 0 var(--space-2xl) auto;
+  margin-inline-end: 0;
+  margin-inline-start: 7rem;
+  padding: var(--space-lg) var(--space-xl);
+  background: var(--surface-mid);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-raised);
+}
+main section article h4 {
+  margin: var(--space-md) 0 var(--space-2xs);
+  color: var(--primary);
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+main section article h4:first-child {
+  margin-block-start: 0;
+}
+main section article p:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 720px) {
+  main section article {
+    max-inline-size: 100%;
+    margin: var(--space-md) 0 var(--space-xl);
+    padding: var(--space-lg);
+  }
+}
+
+// Video → framework responsive embed.
+main .video {
+  position: relative;
+  inline-size: 100%;
+  aspect-ratio: 16 / 9;
+  margin-block: var(--space-md) var(--space-2xs);
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--opacity-low);
+}
+main .video iframe {
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  border: 0;
+}
+
+// ---------------------------------------------------------------------------
+// Concepts page (ingress + image grids)
+// ---------------------------------------------------------------------------
+main ingress {
+  display: block;
+  max-inline-size: 46rem;
+  margin-block: var(--space-sm) var(--space-xl);
+  color: var(--opacity-high);
+  font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+  line-height: 1.5;
+}
+main .grid-row {
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-xl);
+}
+main .grid-row .grid-cell {
+  flex: 1 1 auto;
+  inline-size: 100%;
+  min-inline-size: 0;
+}
+main .grid-row .grid-cell.grid-min {
+  flex: 0 0 auto;
+  inline-size: 16rem;
+}
+main .text-small {
+  color: var(--opacity-high);
+  font-size: var(--font-size-body-sm);
+}
+main .mt-1 {
+  margin-block-start: var(--space-md);
+}
+main .mt-2 {
+  margin-block-start: var(--space-xl);
+}
+main .mb-2 {
+  margin-block-end: var(--space-xl);
+}
+@media (max-width: 720px) {
+  main .grid-row {
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+  main .grid-row .grid-cell.grid-min {
+    inline-size: 100%;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Resume page (sidebar, role titles, lists, recommendations)
+// ---------------------------------------------------------------------------
+main aside {
+  position: sticky;
+  top: calc(var(--mc-nav-h) + var(--space-lg));
+  font-size: var(--font-size-body-sm);
+}
+main aside .portrait {
+  inline-size: 6rem;
+  border-radius: var(--radius-pill);
+  margin-block-end: var(--space-md);
+}
+main aside h5 {
+  margin: var(--space-md) 0 var(--space-2xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: var(--font-size-body-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--opacity-high);
+}
+main aside .links {
+  display: flex;
+  gap: var(--space-sm);
+  margin-block-start: var(--space-md);
+}
+main aside .links img {
+  inline-size: 22px;
+  opacity: 0.45;
+  transition: opacity 0.2s ease;
+}
+main aside .links a:hover img {
+  opacity: 1;
+}
+main .hidden-responsive {
+  @media (max-width: 720px) {
+    display: none;
+  }
+}
+
+// Resume role/section titles use legacy <pre> — render as eyebrow labels.
+main pre {
+  display: block;
+  margin: var(--space-lg) 0 var(--space-2xs);
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  white-space: normal;
+  overflow: visible;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+main strong {
+  display: block;
+  margin-block-end: var(--space-2xs);
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-bold);
+}
+main .date {
+  margin-block: 0 var(--space-md);
+  color: var(--opacity-high);
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+main ul {
+  margin: 0 0 var(--space-xl);
+  padding-inline-start: 1.3rem;
+}
+main ul li {
+  margin-block-end: var(--space-2xs);
+  line-height: 1.55;
+}
+main ul.horizontal {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs) var(--space-sm);
+  padding-inline-start: 0;
+}
+main ul.horizontal li {
+  margin: 0;
+  padding: 0.28em 0.8em;
+  border: var(--line);
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-body-sm);
+  color: var(--opacity-high);
+}
+
+// Quotes (about page <q>, resume recommendations <blockquote>).
+main q {
+  float: right;
+  max-inline-size: 40%;
+  margin: 0 0 var(--space-xl) var(--space-xl);
+  font-size: 1.6rem;
+  font-style: normal;
+  line-height: 1.35;
+  color: var(--opacity-high);
+}
+@media (max-width: 720px) {
+  main q {
+    display: none;
+  }
+}
+main blockquote {
+  margin: 0 0 var(--space-xl);
+  padding-inline-start: var(--space-lg);
+  border-inline-start: 3px solid var(--primary);
+  font-style: italic;
+}
+main blockquote span {
+  display: block;
+  margin-block-start: var(--space-sm);
+  font-style: normal;
+  font-weight: var(--font-weight-bold);
+}
+main blockquote span div {
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-body-sm);
+  color: var(--opacity-high);
+}
+
+// ---------------------------------------------------------------------------
+// Footer
+// ---------------------------------------------------------------------------
+.mc-footer {
+  max-inline-size: var(--mc-measure);
+  margin-inline: auto;
+  inline-size: 100%;
+  padding: var(--space-2xl) var(--space-lg);
+  border-block-start: var(--line);
+  color: var(--opacity-high);
+  font-size: var(--font-size-body-sm);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+@media (max-width: 600px) {
+  .mc-footer {
+    flex-direction: column;
+    gap: var(--space-2xs);
+    text-align: center;
+  }
+}

@@ -1,0 +1,22 @@
+<nav class="mc-nav" role="navigation" aria-label="Primary">
+  <a routerLink="/" class="mc-nav__brand">
+    <img src="/assets/images/animated-logo.gif" alt="Mikael Cedergren logo" />
+    <span>Mikael Cedergren</span>
+  </a>
+  <div class="mc-nav__menu">
+    <a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }">Portfolio</a>
+    <a routerLink="/resume" routerLinkActive="is-active">Resume</a>
+    <a routerLink="/concepts" routerLinkActive="is-active">Concepts</a>
+    <a href="https://mikaelcedergren.substack.com" target="_blank" rel="noopener">Blog</a>
+    <a routerLink="/about" routerLinkActive="is-active">About</a>
+  </div>
+</nav>
+
+<main>
+  <router-outlet />
+</main>
+
+<footer class="mc-footer">
+  <span>&copy; Mikael Cedergren 2019&ndash;{{ year }}</span>
+  <span>All rights reserved</span>
+</footer>

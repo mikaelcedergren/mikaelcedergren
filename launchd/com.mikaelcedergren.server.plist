@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>com.mikaelcedergren.server</string>
+
+    <key>UserName</key>
+    <string>cortex</string>
+    <key>GroupName</key>
+    <string>staff</string>
+
+    <key>ProgramArguments</key>
+    <array>
+      <string>/opt/homebrew/bin/node</string>
+      <string>index.mjs</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/cortex/Development/mikaelcedergren/server</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+      <key>PATH</key>
+      <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+      <key>HOST</key>
+      <string>127.0.0.1</string>
+      <key>PORT</key>
+      <string>3050</string>
+      <key>NODE_ENV</key>
+      <string>production</string>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <dict>
+      <key>SuccessfulExit</key>
+      <false/>
+    </dict>
+
+    <key>ThrottleInterval</key>
+    <integer>10</integer>
+
+    <key>SoftResourceLimits</key>
+    <dict>
+      <key>NumberOfFiles</key>
+      <integer>8192</integer>
+    </dict>
+    <key>HardResourceLimits</key>
+    <dict>
+      <key>NumberOfFiles</key>
+      <integer>16384</integer>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>/Users/cortex/Development/mikaelcedergren/.run/server.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/cortex/Development/mikaelcedergren/.run/server.err.log</string>
+  </dict>
+</plist>
