@@ -64,6 +64,13 @@ re-running the importer would require a separate legacy CodeKit checkout and wou
 the migrated portfolio keeps its legacy visual skin. Preserve that split: shared foundations from
 the framework, site-specific presentation only where the old public look needs it.
 
+This repo sits in the **Cortex -> cx-framework -> projects** loop. Cortex authors reusable
+components, tokens, AI skills, guidelines, and framework decisions; `cx-framework` packages them;
+this site consumes only `@mikaelcedergren/cx-framework`. Do not reference Cortex directly through
+imports, package deps, scripts, styles, local paths, or copied source. If the portfolio reveals a
+reusable framework gap, fix it in Cortex, package/push `cx-framework`, then update this repo from the
+package.
+
 ## Notes / follow-ups
 
 - The legacy site used `simple-parallax-js` (CDN) for scroll parallax; not re-added (no external
