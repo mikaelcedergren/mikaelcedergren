@@ -17,8 +17,8 @@
   },
   "scripts": {
     "dev": "ng serve --configuration local --host 127.0.0.1 --port 4250",
-    "build": "ng build --configuration prod && node scripts/flatten.mjs",
-    "build:local": "ng build --configuration local && node scripts/flatten.mjs",
+    "build": "node scripts/sitemap.mjs && ng build --configuration prod && node scripts/flatten.mjs",
+    "build:local": "node scripts/sitemap.mjs && ng build --configuration local && node scripts/flatten.mjs",
     "start": "node server/index.mjs",
     "serve": "node server/index.mjs",
     "format": "prettier --write .",
@@ -46,7 +46,6 @@
     "@angular/cli": "^22.0.3",
     "@angular/compiler-cli": "^22.0.2",
     "@playwright/test": "1.60.0",
-    "parse5": "^8.0.1",
     "prettier": "^3.8.1",
     "typescript": "~6.0.3"
   },
