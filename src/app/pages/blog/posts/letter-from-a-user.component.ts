@@ -6,7 +6,7 @@ const HTML = "<header>\n\n    <h1>Letter from a <span>user</span></h1>\n</header
 
 @Component({
   selector: 'mc-post-letter-from-a-user',
-  template: '<div [innerHTML]="body"></div>',
+  template: '<div class="cx-article" [innerHTML]="body"></div>',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LetterFromAUserComponent {

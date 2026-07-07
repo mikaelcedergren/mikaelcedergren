@@ -6,7 +6,7 @@ const HTML = "<header>\n\n    <h1>The Key to <span>Understanding Your Client</sp
 
 @Component({
   selector: 'mc-post-the-key-to-understanding-your-client',
-  template: '<div [innerHTML]="body"></div>',
+  template: '<div class="cx-article" [innerHTML]="body"></div>',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TheKeyToUnderstandingYourClientComponent {

@@ -6,7 +6,7 @@ const HTML = "<header>\n\n    <h1>Why <span>natural language</span> matters</h1>
 
 @Component({
   selector: 'mc-post-why-natural-language-matters',
-  template: '<div [innerHTML]="body"></div>',
+  template: '<div class="cx-article" [innerHTML]="body"></div>',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WhyNaturalLanguageMattersComponent {

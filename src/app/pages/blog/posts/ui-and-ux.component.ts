@@ -6,7 +6,7 @@ const HTML = "<header>\n\n    <h1> UI and UX - Two Sides of the <span>Same Coin<
 
 @Component({
   selector: 'mc-post-ui-and-ux',
-  template: '<div [innerHTML]="body"></div>',
+  template: '<div class="cx-article" [innerHTML]="body"></div>',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UiAndUxComponent {

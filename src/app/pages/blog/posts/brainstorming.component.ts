@@ -6,7 +6,7 @@ const HTML = "<header>\n\n    <h1><span>Unlocking Creativity</span> - A Simple G
 
 @Component({
   selector: 'mc-post-brainstorming',
-  template: '<div [innerHTML]="body"></div>',
+  template: '<div class="cx-article" [innerHTML]="body"></div>',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BrainstormingComponent {

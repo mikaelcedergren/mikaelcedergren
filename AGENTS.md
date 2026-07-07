@@ -62,9 +62,13 @@ re-running the importer would require a separate legacy CodeKit checkout and wou
 
 ## cx-framework
 
-`@mikaelcedergren/cx-framework` is imported for shared tokens, base styles, and embed styles while
-the migrated portfolio keeps its legacy visual skin. Preserve that split: shared foundations from
-the framework, site-specific presentation only where the old public look needs it.
+`@mikaelcedergren/cx-framework` is the single source of visual truth here. Per the development-root
+heartbeat doctrine (consumers compose framework tokens/utilities/components and never define local
+design values), the portfolio was converged onto the framework on 2026-07-07 — the earlier "keep the
+legacy visual skin" split is retired. All colour, type, spacing, radius, measure, and breakpoint
+values come from framework tokens; site styles arrange those tokens and define no design values of
+their own. (The vendored `public/assets/styles/catalyst.css` is a separate legacy artifact still
+pending removal — not authored site style.)
 
 This repo sits in the **Cortex -> cx-framework -> projects** loop. Cortex authors reusable
 components, tokens, AI skills, guidelines, and framework decisions; `cx-framework` packages them;

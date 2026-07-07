@@ -6,7 +6,7 @@ const HTML = "<header>\n\n    <h1>What’s a Designer, and <span>Why Do You Need
 
 @Component({
   selector: 'mc-post-whats-a-designer-and-why-do-you-need-one',
-  template: '<div [innerHTML]="body"></div>',
+  template: '<div class="cx-article" [innerHTML]="body"></div>',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WhatsADesignerAndWhyDoYouNeedOneComponent {

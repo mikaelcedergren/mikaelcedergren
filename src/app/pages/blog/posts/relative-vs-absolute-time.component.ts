@@ -6,7 +6,7 @@ const HTML = "<header>\n\n    <h1><span>Relative</span> vs <span>absolute</span>
 
 @Component({
   selector: 'mc-post-relative-vs-absolute-time',
-  template: '<div [innerHTML]="body"></div>',
+  template: '<div class="cx-article" [innerHTML]="body"></div>',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RelativeVsAbsoluteTimeComponent {

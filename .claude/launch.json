@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "mikaelcedergren",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["server/index.mjs"],
+      "port": 3050,
+      "env": { "PORT": "3050", "HOST": "127.0.0.1" }
+    }
+  ]
+}

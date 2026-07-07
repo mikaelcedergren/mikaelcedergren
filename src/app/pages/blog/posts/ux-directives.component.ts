@@ -6,7 +6,7 @@ const HTML = "<header>\n\n    <h1><span>UX Directives</span> - A Simple Guide to
 
 @Component({
   selector: 'mc-post-ux-directives',
-  template: '<div [innerHTML]="body"></div>',
+  template: '<div class="cx-article" [innerHTML]="body"></div>',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UxDirectivesComponent {

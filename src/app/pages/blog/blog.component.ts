@@ -6,7 +6,7 @@ const HTML = "<header>\r\n\r\n  <h1> Blog </h1>\r\n</header>\r\n<section id=\"bl
 
 @Component({
   selector: 'mc-blog',
-  template: '<div [innerHTML]="body"></div>',
+  template: '<div class="cx-article" [innerHTML]="body"></div>',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BlogIndexComponent {

@@ -6,7 +6,7 @@ const HTML = "<header>\n\n    <h1>How to Make Your Creative Team <span>Love the 
 
 @Component({
   selector: 'mc-post-creative-leadership',
-  template: '<div [innerHTML]="body"></div>',
+  template: '<div class="cx-article" [innerHTML]="body"></div>',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CreativeLeadershipComponent {

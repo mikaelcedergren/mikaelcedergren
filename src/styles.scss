@@ -9,10 +9,12 @@
 @use '@mikaelcedergren/cx-framework/tokens';
 @use '@mikaelcedergren/cx-framework/styles/base';
 @use '@mikaelcedergren/cx-framework/styles/embed';
+@use '@mikaelcedergren/cx-framework/styles/article';
+@use '@mikaelcedergren/cx-framework/styles/utilities';
 
 :root {
   color-scheme: light;
-  --mc-nav-h: 64px;
+  --mc-nav-h: var(--space-2xl); // 64px nav height
   --mc-measure: var(--measure-lg); // 960px content column
 }
 
@@ -80,13 +82,13 @@ main > * {
   color: var(--opacity-high);
   font-size: var(--font-size-body);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color var(--motion-base) var(--ease-out);
 }
 .mc-nav__menu a:hover,
 .mc-nav__menu a.is-active {
   color: var(--ink);
 }
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   .mc-nav__brand span {
     display: none;
   }
@@ -108,7 +110,10 @@ main {
   padding: var(--space-2xl) var(--space-lg);
 }
 
-main h1,
+// Editorial prose (about, blog index, blog posts) is wrapped in the framework's
+// `.cx-article`, which owns its headings, paragraphs, lists, quotes, and links.
+// The bespoke layout pages (portfolio, concepts, resume) keep the structural
+// heading/paragraph treatment below, expressed purely in framework tokens.
 main h2,
 main h3 {
   color: var(--ink);
@@ -116,20 +121,20 @@ main h3 {
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-heading);
 }
-main h1 {
-  font-size: 2.5rem;
-  margin-block-end: var(--space-md);
-}
 main h2 {
-  font-size: 2rem;
+  font-size: var(--font-size-title-1);
   margin-block: var(--space-2xl) var(--space-md);
+}
+main h3 {
+  font-size: var(--font-size-title-2);
 }
 main p {
   margin: 0 0 var(--space-md);
-  line-height: 1.6;
+  line-height: var(--line-height-body-lg);
 }
 
-// Content links: quiet, with an animated underline on hover (the original feel).
+// Content links: quiet, with an animated underline on hover (the original feel),
+// rebuilt from framework tokens only.
 main a {
   position: relative;
   color: var(--ink);
@@ -140,11 +145,11 @@ main a::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -2px;
-  block-size: 2px;
+  bottom: calc(var(--border-width) * -1);
+  block-size: var(--border-width);
   inline-size: 0;
   background: var(--ink);
-  transition: inline-size 0.3s ease-out;
+  transition: inline-size var(--motion-base) var(--ease-out);
 }
 main a:hover::after {
   inline-size: 100%;
@@ -157,9 +162,9 @@ main header {
   padding-block: var(--space-2xl) var(--space-lg);
 }
 main header h1 {
-  font-size: clamp(2.6rem, 7vw, 5rem);
+  font-size: var(--font-size-title-1);
   font-weight: var(--font-weight-bold);
-  line-height: 1.04;
+  line-height: var(--line-height-heading);
   letter-spacing: -0.03em;
   margin: 0 0 var(--space-md);
 }
@@ -172,18 +177,18 @@ main header h1 span {
   color: transparent;
 }
 main .pre-word {
-  max-inline-size: 46rem;
+  max-inline-size: var(--measure-md);
   margin: 0 0 var(--space-2xl);
   color: var(--opacity-high);
-  font-size: clamp(1.2rem, 2.4vw, 1.5rem);
-  line-height: 1.5;
+  font-size: var(--font-size-title-1);
+  line-height: var(--line-height-body);
 }
 
 // Headline fade-in (kept subtle).
 .animate {
   display: inline;
   opacity: 0;
-  animation: mc-fade 0.9s var(--ease, cubic-bezier(0.17, 0.67, 0.23, 1)) forwards;
+  animation: mc-fade var(--motion-slow) var(--ease-out) forwards;
 }
 .animate.delay-1 {
   animation-delay: 0.12s;
@@ -240,7 +245,7 @@ main .section-header > img {
 main .section-header p {
   margin: 0 0 var(--space-md);
   font-size: var(--font-size-body-lg);
-  line-height: 1.5;
+  line-height: var(--line-height-body);
 }
 @media (max-width: 720px) {
   main .section-header {
@@ -266,32 +271,33 @@ main .two-columns {
 main .two-columns img {
   margin: 0;
 }
-@media (max-width: 640px) {
+@media (max-width: 720px) {
   main .two-columns {
     grid-template-columns: 1fr;
     gap: var(--space-2xs);
   }
 }
 
-// Tags (skills).
+// Tags (skills). Plain [innerHTML] markup, so styled with framework tokens
+// rather than the CxTagComponent (which needs Angular compilation).
 main .tag {
   display: inline-block;
   margin: 0 var(--space-2xs) var(--space-2xs) 0;
-  padding: 0.28em 0.8em;
+  padding: var(--space-xs) var(--space-sm);
   border: var(--line);
   border-radius: var(--radius-pill);
   color: var(--opacity-high);
   font-size: var(--font-size-body-sm);
-  line-height: 1.5;
+  line-height: var(--line-height-small);
 }
 
 // The signature move: the narrative card overlaps up onto the image above it.
 main section article {
   position: relative;
   max-inline-size: 80%;
-  margin: -7rem 0 var(--space-2xl) auto;
+  margin: calc(var(--space-2xl) * -1) 0 var(--space-2xl) auto;
   margin-inline-end: 0;
-  margin-inline-start: 7rem;
+  margin-inline-start: var(--space-2xl);
   padding: var(--space-lg) var(--space-xl);
   background: var(--surface-mid);
   border-radius: var(--radius-lg);
@@ -319,34 +325,19 @@ main section article p:last-child {
   }
 }
 
-// Video → framework responsive embed.
-main .video {
-  position: relative;
-  inline-size: 100%;
-  aspect-ratio: 16 / 9;
-  margin-block: var(--space-md) var(--space-2xs);
-  overflow: hidden;
-  border-radius: var(--radius-lg);
-  background: var(--opacity-low);
-}
-main .video iframe {
-  position: absolute;
-  inset: 0;
-  inline-size: 100%;
-  block-size: 100%;
-  border: 0;
-}
+// Video embeds use the framework's `.cx-embed` (imported above) — the local
+// `.video` wrapper is gone; the markup carries `class="cx-embed"` instead.
 
 // ---------------------------------------------------------------------------
 // Concepts page (ingress + image grids)
 // ---------------------------------------------------------------------------
 main ingress {
   display: block;
-  max-inline-size: 46rem;
+  max-inline-size: var(--measure-md);
   margin-block: var(--space-sm) var(--space-xl);
   color: var(--opacity-high);
-  font-size: clamp(1.1rem, 2.2vw, 1.3rem);
-  line-height: 1.5;
+  font-size: var(--font-size-title-2);
+  line-height: var(--line-height-body);
 }
 main .grid-row {
   display: flex;
@@ -360,7 +351,7 @@ main .grid-row .grid-cell {
 }
 main .grid-row .grid-cell.grid-min {
   flex: 0 0 auto;
-  inline-size: 16rem;
+  inline-size: var(--measure-sm);
 }
 main .text-small {
   color: var(--opacity-high);
@@ -414,16 +405,14 @@ main aside .links {
 main aside .links img {
   inline-size: 22px;
   opacity: 0.45;
-  transition: opacity 0.2s ease;
+  transition: opacity var(--motion-base) var(--ease-out);
 }
 main aside .links a:hover img {
   opacity: 1;
 }
-main .hidden-responsive {
-  @media (max-width: 720px) {
-    display: none;
-  }
-}
+// Responsive hiding uses the framework `.cx-hide-mobile` utility (imported
+// above); the local `.hidden-responsive` rule is gone and the markup carries
+// `class="cx-hide-mobile"` instead.
 
 // Resume role/section titles use legacy <pre> — render as eyebrow labels.
 main pre {
@@ -444,7 +433,7 @@ main pre {
 main strong {
   display: block;
   margin-block-end: var(--space-2xs);
-  font-size: 1.1rem;
+  font-size: var(--font-size-title-2);
   font-weight: var(--font-weight-bold);
 }
 main .date {
@@ -457,11 +446,11 @@ main .date {
 }
 main ul {
   margin: 0 0 var(--space-xl);
-  padding-inline-start: 1.3rem;
+  padding-inline-start: var(--space-md);
 }
 main ul li {
   margin-block-end: var(--space-2xs);
-  line-height: 1.55;
+  line-height: var(--line-height-body-lg);
 }
 main ul.horizontal {
   list-style: none;
@@ -472,7 +461,7 @@ main ul.horizontal {
 }
 main ul.horizontal li {
   margin: 0;
-  padding: 0.28em 0.8em;
+  padding: var(--space-2xs) var(--space-sm);
   border: var(--line);
   border-radius: var(--radius-pill);
   font-size: var(--font-size-body-sm);
@@ -484,9 +473,9 @@ main q {
   float: right;
   max-inline-size: 40%;
   margin: 0 0 var(--space-xl) var(--space-xl);
-  font-size: 1.6rem;
+  font-size: var(--font-size-title-1);
   font-style: normal;
-  line-height: 1.35;
+  line-height: var(--line-height-body);
   color: var(--opacity-high);
 }
 @media (max-width: 720px) {
@@ -497,7 +486,7 @@ main q {
 main blockquote {
   margin: 0 0 var(--space-xl);
   padding-inline-start: var(--space-lg);
-  border-inline-start: 3px solid var(--primary);
+  border-inline-start: calc(var(--border-width) * 3) solid var(--primary);
   font-style: italic;
 }
 main blockquote span {
@@ -527,7 +516,7 @@ main blockquote span div {
   justify-content: space-between;
   gap: var(--space-md);
 }
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   .mc-footer {
     flex-direction: column;
     gap: var(--space-2xs);

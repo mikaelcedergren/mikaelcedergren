@@ -6,7 +6,7 @@ const HTML = "<header>\r\n\r\n  <h1> About <span>Me</span>\r\n  </h1>\r\n</heade
 
 @Component({
   selector: 'mc-about',
-  template: '<div [innerHTML]="body"></div>',
+  template: '<div class="cx-article" [innerHTML]="body"></div>',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AboutComponent {

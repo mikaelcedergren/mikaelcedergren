@@ -6,7 +6,7 @@ const HTML = "<header>\n\n    <h1> The Most Common <span>UX Mistakes</span></h1>
 
 @Component({
   selector: 'mc-post-the-most-common-ux-mistakes-and-how-to-avoid-them',
-  template: '<div [innerHTML]="body"></div>',
+  template: '<div class="cx-article" [innerHTML]="body"></div>',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TheMostCommonUxMistakesAndHowToAvoidThemComponent {
