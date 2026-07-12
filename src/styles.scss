@@ -14,8 +14,6 @@
 
 :root {
   color-scheme: light;
-  --mc-nav-h: var(--space-2xl); // 64px nav height
-  --mc-measure: var(--measure-lg); // 960px content column
 }
 
 * {
@@ -24,7 +22,7 @@
 
 body {
   margin: 0;
-  background: var(--surface-mid);
+  background: var(--surface);
   color: var(--ink);
   font-family: var(--font-family-base);
   -webkit-font-smoothing: antialiased;
@@ -50,13 +48,13 @@ main > * {
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 50;
-  block-size: var(--mc-nav-h);
+  block-size: var(--space-2xl);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-lg);
   padding-inline: var(--space-lg);
-  background: color-mix(in srgb, var(--surface-mid) 86%, transparent);
+  background: color-mix(in srgb, var(--surface) 86%, transparent);
   backdrop-filter: blur(10px);
   border-block-end: var(--line);
 }
@@ -104,9 +102,9 @@ main > * {
 main {
   flex: 1;
   inline-size: 100%;
-  max-inline-size: var(--mc-measure);
+  max-inline-size: var(--measure-lg);
   margin-inline: auto;
-  margin-block-start: var(--mc-nav-h);
+  margin-block-start: var(--space-2xl);
   padding: var(--space-2xl) var(--space-lg);
 }
 
@@ -299,9 +297,9 @@ main section article {
   margin-inline-end: 0;
   margin-inline-start: var(--space-2xl);
   padding: var(--space-lg) var(--space-xl);
-  background: var(--surface-mid);
+  background: var(--surface);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-raised);
+  box-shadow: var(--shadow-low);
 }
 main section article h4 {
   margin: var(--space-md) 0 var(--space-2xs);
@@ -381,7 +379,7 @@ main .mb-2 {
 // ---------------------------------------------------------------------------
 main aside {
   position: sticky;
-  top: calc(var(--mc-nav-h) + var(--space-lg));
+  top: calc(var(--space-2xl) + var(--space-lg));
   font-size: var(--font-size-body-sm);
 }
 main aside .portrait {
@@ -505,7 +503,7 @@ main blockquote span div {
 // Footer
 // ---------------------------------------------------------------------------
 .mc-footer {
-  max-inline-size: var(--mc-measure);
+  max-inline-size: var(--measure-lg);
   margin-inline: auto;
   inline-size: 100%;
   padding: var(--space-2xl) var(--space-lg);
