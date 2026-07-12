@@ -2,7 +2,7 @@
   "name": "mikaelcedergren.com",
   "version": "1.0.0",
   "private": true,
-  "description": "mikaelcedergren.com — Angular 22 SSG site (prerendered to dist/browser, served by Express on the Mac mini). Migrated off CodeKit.",
+  "description": "mikaelcedergren.com — Angular 22 SSG site, prerendered to static files and served by Express on the Mac mini.",
   "author": "Mikael Cedergren <michael@wargr.com>",
   "license": "UNLICENSED",
   "homepage": "https://mikaelcedergren.com",
@@ -20,7 +20,6 @@
     "build": "node scripts/sitemap.mjs && ng build --configuration prod && node scripts/flatten.mjs",
     "build:local": "node scripts/sitemap.mjs && ng build --configuration local && node scripts/flatten.mjs",
     "start": "node server/index.mjs",
-    "serve": "node server/index.mjs",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
@@ -45,7 +44,6 @@
     "@angular-devkit/build-angular": "^22.0.3",
     "@angular/cli": "^22.0.3",
     "@angular/compiler-cli": "^22.0.2",
-    "@playwright/test": "1.60.0",
     "prettier": "^3.8.1",
     "typescript": "~6.0.3"
   },

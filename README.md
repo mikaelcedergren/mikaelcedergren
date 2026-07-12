@@ -1,7 +1,7 @@
 # mikaelcedergren.com
 
 Mikael Cedergren's portfolio + blog — Angular 22 SSG, served by Express on the Mac mini (port 3050),
-fronted by nginx. Migrated off CodeKit. See [AGENTS.md](AGENTS.md) for architecture, and
+fronted by nginx. See [AGENTS.md](AGENTS.md) for architecture, and
 `/Users/cortex/Development/SERVER-STANDARD.md` for how every site here is served.
 
 ```bash
