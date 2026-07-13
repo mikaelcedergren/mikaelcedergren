@@ -13,7 +13,7 @@
   "type": "module",
   "packageManager": "pnpm@10.7.1",
   "engines": {
-    "node": "^20.19.0 || ^22.12.0 || >=24.0.0"
+    "node": ">=26 <27"
   },
   "scripts": {
     "dev": "ng serve --configuration local --host 127.0.0.1 --port 4250",

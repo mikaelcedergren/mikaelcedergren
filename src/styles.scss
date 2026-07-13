@@ -7,6 +7,7 @@
 // expressed entirely in cx-framework tokens (colour, type, spacing, lines,
 // radius, shadow), so it lives inside the framework instead of beside it.
 @use '@mikaelcedergren/cx-framework/tokens';
+@use '@mikaelcedergren/cx-framework/tokens/breakpoints-scale' as bp;
 @use '@mikaelcedergren/cx-framework/styles/base';
 @use '@mikaelcedergren/cx-framework/styles/embed';
 @use '@mikaelcedergren/cx-framework/styles/article';
@@ -86,7 +87,7 @@ main > * {
 .mc-nav__menu a.is-active {
   color: var(--ink);
 }
-@media (max-width: 720px) {
+@media (max-width: #{bp.$mobile - 1px}) {
   .mc-nav__brand span {
     display: none;
   }
@@ -245,7 +246,7 @@ main .section-header p {
   font-size: var(--font-size-body-lg);
   line-height: var(--line-height-body);
 }
-@media (max-width: 720px) {
+@media (max-width: #{bp.$mobile - 1px}) {
   main .section-header {
     flex-direction: column;
     gap: var(--space-md);
@@ -269,7 +270,7 @@ main .two-columns {
 main .two-columns img {
   margin: 0;
 }
-@media (max-width: 720px) {
+@media (max-width: #{bp.$mobile - 1px}) {
   main .two-columns {
     grid-template-columns: 1fr;
     gap: var(--space-2xs);
@@ -315,7 +316,7 @@ main section article h4:first-child {
 main section article p:last-child {
   margin-bottom: 0;
 }
-@media (max-width: 720px) {
+@media (max-width: #{bp.$mobile - 1px}) {
   main section article {
     max-inline-size: 100%;
     margin: var(--space-md) 0 var(--space-xl);
@@ -364,7 +365,7 @@ main .mt-2 {
 main .mb-2 {
   margin-block-end: var(--space-xl);
 }
-@media (max-width: 720px) {
+@media (max-width: #{bp.$mobile - 1px}) {
   main .grid-row {
     flex-direction: column;
     gap: var(--space-lg);
@@ -476,7 +477,7 @@ main q {
   line-height: var(--line-height-body);
   color: var(--opacity-high);
 }
-@media (max-width: 720px) {
+@media (max-width: #{bp.$mobile - 1px}) {
   main q {
     display: none;
   }
@@ -514,7 +515,7 @@ main blockquote span div {
   justify-content: space-between;
   gap: var(--space-md);
 }
-@media (max-width: 720px) {
+@media (max-width: #{bp.$mobile - 1px}) {
   .mc-footer {
     flex-direction: column;
     gap: var(--space-2xs);
