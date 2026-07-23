@@ -2,7 +2,7 @@
 //
 // The framework provides the design language (tokens, reset, the responsive
 // embed). This stylesheet reproduces the existing site's editorial portfolio
-// layout — slim fixed nav, large gradient-accent hero, 960px column, full-width
+// layout — shared masthead, large gradient-accent hero, 960px column, full-width
 // work imagery with overlapping narrative cards, side-by-side project headers —
 // expressed entirely in cx-framework tokens (colour, type, spacing, lines,
 // radius, shadow), so it lives inside the framework instead of beside it.
@@ -43,57 +43,24 @@ main > * {
 }
 
 // ---------------------------------------------------------------------------
-// Fixed nav — logo left, menu right (the original's chrome)
+// Masthead brand
 // ---------------------------------------------------------------------------
-.mc-nav {
-  position: fixed;
-  inset: 0 0 auto 0;
-  z-index: 50;
-  block-size: var(--space-2xl);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-lg);
-  padding-inline: var(--space-lg);
-  background: color-mix(in srgb, var(--surface) 86%, transparent);
-  backdrop-filter: blur(10px);
-  border-block-end: var(--line);
-}
-.mc-nav__brand {
+.mc-brand {
   display: inline-flex;
   align-items: center;
   gap: var(--space-sm);
   color: var(--ink);
-  font-weight: var(--font-weight-bold);
   font-size: var(--font-size-body);
+  font-weight: var(--font-weight-bold);
   text-decoration: none;
 }
-.mc-nav__brand img {
+.mc-brand img {
   block-size: 22px;
   inline-size: auto;
 }
-.mc-nav__menu {
-  display: flex;
-  align-items: center;
-  gap: var(--space-lg);
-}
-.mc-nav__menu a {
-  color: var(--opacity-high);
-  font-size: var(--font-size-body);
-  text-decoration: none;
-  transition: color var(--motion-base) var(--ease-out);
-}
-.mc-nav__menu a:hover,
-.mc-nav__menu a.is-active {
-  color: var(--ink);
-}
 @media (max-width: #{bp.$mobile - 1px}) {
-  .mc-nav__brand span {
+  .mc-brand span {
     display: none;
-  }
-  .mc-nav__menu {
-    gap: var(--space-md);
-    font-size: var(--font-size-body-sm);
   }
 }
 
@@ -105,14 +72,13 @@ main {
   inline-size: 100%;
   max-inline-size: var(--measure-lg);
   margin-inline: auto;
-  margin-block-start: var(--space-2xl);
   padding: var(--space-2xl) var(--space-lg);
 }
 
-// Editorial prose (about, blog index, blog posts) is wrapped in the framework's
-// `.cx-article`, which owns its headings, paragraphs, lists, quotes, and links.
-// The bespoke layout pages (portfolio, concepts, resume) keep the structural
-// heading/paragraph treatment below, expressed purely in framework tokens.
+// Editorial prose in About and individual blog posts is scoped to the
+// framework's `.cx-article`; blog navigation and related-entry lists remain UI.
+// The bespoke layout pages (portfolio, blog index, concepts, resume) keep the
+// structural treatment below, expressed purely in framework tokens.
 main h2,
 main h3 {
   color: var(--ink);
