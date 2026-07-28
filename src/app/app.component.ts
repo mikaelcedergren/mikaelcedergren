@@ -1,10 +1,14 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { CxMastheadComponent, type CxMastheadItem } from '@mikaelcedergren/cx-framework';
+import {
+  CxMastheadComponent,
+  CxNavigationRecoveryComponent,
+  type CxMastheadItem,
+} from '@mikaelcedergren/cx-framework';
 
 @Component({
   selector: 'mc-root',
-  imports: [RouterOutlet, RouterLink, CxMastheadComponent],
+  imports: [RouterOutlet, RouterLink, CxMastheadComponent, CxNavigationRecoveryComponent],
   templateUrl: './app.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

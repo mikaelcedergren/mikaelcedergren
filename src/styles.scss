@@ -8,6 +8,7 @@
 // radius, shadow), so it lives inside the framework instead of beside it.
 @use '@mikaelcedergren/cx-framework/tokens';
 @use '@mikaelcedergren/cx-framework/tokens/breakpoints-scale' as bp;
+@use '@mikaelcedergren/cx-framework/styles/fonts';
 @use '@mikaelcedergren/cx-framework/styles/base';
 @use '@mikaelcedergren/cx-framework/styles/embed';
 @use '@mikaelcedergren/cx-framework/styles/article';

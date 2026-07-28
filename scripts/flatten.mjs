@@ -10,7 +10,9 @@ import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = resolve(fileURLToPath(new URL('.', import.meta.url)), '..');
-const BROWSER = join(ROOT, 'dist', 'browser');
+const BROWSER = process.env.SITE_RELEASE_BROWSER_DIR
+  ? resolve(process.env.SITE_RELEASE_BROWSER_DIR)
+  : join(ROOT, 'dist', 'browser');
 
 if (!existsSync(BROWSER)) {
   console.error(`[flatten] ${BROWSER} not found — run the build first.`);
