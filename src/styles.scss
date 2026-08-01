@@ -134,6 +134,10 @@ main header h1 {
   letter-spacing: -0.03em;
   margin: 0 0 var(--space-md);
 }
+main .home-page header h1 {
+  font-size: var(--font-size-display);
+  line-height: var(--line-height-display);
+}
 // Accent words painted in the framework gradient (primary → accent).
 main header h1 span {
   background: linear-gradient(115deg, var(--primary), var(--accent));

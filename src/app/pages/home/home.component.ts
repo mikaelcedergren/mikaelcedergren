@@ -5,7 +5,7 @@ const HTML = "<header>\n\n  <h1>\n    <div class=\"animate\"> Crafting impactful
 
 @Component({
   selector: 'mc-home',
-  template: '<div [innerHTML]="body"></div>',
+  template: '<div class="home-page" [innerHTML]="body"></div>',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent {
