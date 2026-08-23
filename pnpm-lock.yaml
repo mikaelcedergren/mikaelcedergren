@@ -37,7 +37,7 @@ importers:
         version: 22.0.8(6c5876c8022b56f6168786f1fb21b877)
       '@mikaelcedergren/cx-framework':
         specifier: github:mikaelcedergren/cx-framework#main
-        version: https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/0c349c060fd577049eb87950965b5b8356891924(a8930ef807d2c024fe46d1742846dc9b)
+        version: https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/615d78d44bb98470ec8b726a8bd6bb61f1a7ec99(a8930ef807d2c024fe46d1742846dc9b)
       compression:
         specifier: ^1.7.5
         version: 1.8.1
@@ -745,9 +745,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@mikaelcedergren/cx-framework@https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/0c349c060fd577049eb87950965b5b8356891924':
-    resolution: {tarball: https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/0c349c060fd577049eb87950965b5b8356891924}
-    version: 0.8.5
+  '@mikaelcedergren/cx-framework@https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/615d78d44bb98470ec8b726a8bd6bb61f1a7ec99':
+    resolution: {tarball: https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/615d78d44bb98470ec8b726a8bd6bb61f1a7ec99}
+    version: 0.8.6
     hasBin: true
     peerDependencies:
       '@angular/cdk': ^22.0.0
@@ -3064,7 +3064,7 @@ snapshots:
   '@lmdb/lmdb-win32-x64@3.5.4':
     optional: true
 
-  '@mikaelcedergren/cx-framework@https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/0c349c060fd577049eb87950965b5b8356891924(a8930ef807d2c024fe46d1742846dc9b)':
+  '@mikaelcedergren/cx-framework@https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/615d78d44bb98470ec8b726a8bd6bb61f1a7ec99(a8930ef807d2c024fe46d1742846dc9b)':
     dependencies:
       '@angular/cdk': 22.0.6(@angular/common@22.0.8(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(@angular/platform-browser@22.0.8(@angular/common@22.0.8(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2)))(rxjs@7.8.2)
       '@angular/common': 22.0.8(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2)
