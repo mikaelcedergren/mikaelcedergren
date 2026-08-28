@@ -31,21 +31,15 @@ even when the operational checkout manifest changes, plus synthetic server-relea
 errors and security/cache headers, section and literal `.html` routing, missing responses, and
 graceful shutdown without touching the live service.
 
-The tracked LaunchDaemon template points to the future atomic `current-server` artifact and its
-matching identity. The package comes from GitHub `main`, while `pnpm-lock.yaml` records the exact
-immutable resolution and the root migration ledger owns mutable rollout evidence. The template
-remains inactive until the source-identical candidate pair is validated, the paired selection is
-recorded, and bootstrap is separately authorised; refreshing the package does not install or
-change the service.
+The installed LaunchDaemon and tracked template execute the selected atomic `current-server`
+artifact and its matching identity. The package comes from GitHub `main`, while `pnpm-lock.yaml`
+records the exact immutable resolution and the root migration ledger owns mutable rollout evidence.
 
 `bin/install-server-daemon` is the check-first definition installer. Its default/`--check` mode is
 non-mutating; after the authorised first selection, `--apply` validates the selected artifact and
 delegates the exact unloaded/target-state write to the shared
 [`server-ops` installer contract](../server-ops/README.md#install-service-definitions-after-a-first-selection).
 It never bootstraps or restarts the service.
-
-Until that cutover, the installed service still requires the exact baseline `server/index.mjs`
-wrapper. `pnpm test:selected-runtime` prevents its premature removal or modification.
 
 The dedicated `mikaelcedergren-server` workspace is the production dependency boundary. Server
 publication deploys only its declared compiled output and production closure beneath the staged
