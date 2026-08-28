@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "releaseId": "synthetic-mikaelcedergren-test",
+  "serverBuildId": "server-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "revision": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "sourceFingerprint": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "sourceDirty": false,
+  "artifactDigest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "createdAt": "2026-08-24T00:00:00.000Z",
+  "entrypoint": "server/dist/index.js",
+  "workers": [],
+  "nodeMajor": 26,
+  "artifactFiles": 3,
+  "artifactBytes": 1024
+}

@@ -4,9 +4,10 @@
     {
       "name": "mikaelcedergren",
       "runtimeExecutable": "node",
-      "runtimeArgs": ["server/index.mjs"],
+      "runtimeArgs": ["server/dist/index.js"],
       "port": 3050,
-      "env": { "PORT": "3050", "HOST": "127.0.0.1" }
+      "autoPort": true,
+      "env": { "HOST": "127.0.0.1", "SITE_BROWSER_DIR": "dist/browser" }
     }
   ]
 }

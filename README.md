@@ -1,21 +1,52 @@
 # mikaelcedergren.com
 
-Mikael Cedergren's portfolio + blog — Angular 22 SSG, served by Express on the Mac mini (port 3050),
-fronted by nginx. See [AGENTS.md](AGENTS.md) for architecture, and
+Mikael Cedergren's portfolio + blog — Angular 22 SSG, served by a strict compiled TypeScript
+composition of the shared Express runtime on the Mac mini (port 3050), fronted by nginx. See
+[AGENTS.md](AGENTS.md) for architecture, and
 `/Users/cortex/Development/SERVER-STANDARD.md` for how every site here is served.
 
 ```bash
 pnpm install
-pnpm build      # prerender -> dist/browser, then flatten blog-post URLs
-pnpm start      # serve at http://127.0.0.1:3050  (health: /healthz)
+pnpm build      # generate sitemap, prerender/flatten 15 routes, compile server/dist/index.js
+pnpm build:server:release # internal self-contained server-artifact build
+pnpm start      # serve at http://127.0.0.1:3050 (health: /healthz)
+pnpm check      # canonical platform, format, typecheck, test, and production-build gate
+pnpm e2e        # isolated Chromium journeys on a temporary build and port
 ```
 
 `pnpm build` is the local build. Production content is published atomically through the shared
 release command:
 
 ```bash
-node ../server-ops/bin/site-release.mjs --site mikaelcedergren --apply
+node ../server-ops/bin/site-release.mjs --site mikaelcedergren --browser-only --apply
 ```
 
-The shared release and rollback contract is documented in
+This command is only for a change proved browser-only; changes that can affect the server use the
+paired transaction. The shared release and rollback contract is documented in
 [`../SERVER-STANDARD.md`](../SERVER-STANDARD.md).
+
+The isolated server contract runs only compiled `server/dist/index.js` against a temporary browser
+tree. It verifies that manifest-derived health identity stays pinned to the sealed server artifact
+even when the operational checkout manifest changes, plus synthetic server-release identity, shared
+errors and security/cache headers, section and literal `.html` routing, missing responses, and
+graceful shutdown without touching the live service.
+
+The tracked LaunchDaemon template points to the future atomic `current-server` artifact and its
+matching identity. The lock and physical browser/server installations now resolve published
+cx-framework `0.9.5` at `ce40d80dd055ad5de53e5779393993b1fc82db42`. The template remains inactive
+until the source-identical candidate pair is validated, the paired selection is recorded, and
+bootstrap is separately authorised; refreshing the package did not install or change the service.
+
+`bin/install-server-daemon` is the check-first definition installer. Its default/`--check` mode is
+non-mutating; after the authorised first selection, `--apply` validates the selected artifact and
+delegates the exact unloaded/target-state write to the shared
+[`server-ops` installer contract](../server-ops/README.md#install-service-definitions-after-a-first-selection).
+It never bootstraps or restarts the service.
+
+Until that cutover, the installed service still requires the exact baseline `server/index.mjs`
+wrapper. `pnpm test:selected-runtime` prevents its premature removal or modification.
+
+The dedicated `mikaelcedergren-server` workspace is the production dependency boundary. Server
+publication deploys only its declared compiled output and production closure beneath the staged
+artifact's `server/` directory, then places the immutable root product manifest beside it. Browser
+dependencies, source TypeScript, tests, and mutable checkout files stay outside the artifact.

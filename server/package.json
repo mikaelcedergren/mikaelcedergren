@@ -1,0 +1,28 @@
+{
+  "name": "mikaelcedergren-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=26 <27"
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "node -e \"require('node:fs').rmSync('dist', { force: true, recursive: true })\" && tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@mikaelcedergren/cx-framework": "github:mikaelcedergren/cx-framework#main",
+    "compression": "^1.8.1",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/compression": "^1.8.1",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.0.0",
+    "typescript": "~6.0.3"
+  }
+}

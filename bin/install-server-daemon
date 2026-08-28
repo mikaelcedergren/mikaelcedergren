@@ -1,0 +1,124 @@
+#!/usr/bin/env bash
+# Validate or install the Mikael Cedergren system LaunchDaemon definition. Installation never
+# loads or restarts the service; activation remains a separate privileged production gate.
+set -euo pipefail
+
+SOURCE_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+readonly INSTALL_ROOT="/Users/cortex/Development/mikaelcedergren"
+readonly SHARED_INSTALLER="$SOURCE_ROOT/../server-ops/bin/install-launchdaemon-definitions.mjs"
+MODE="check"
+
+if [[ "$#" -gt 1 ]]; then
+  echo "Usage: bin/install-server-daemon [--check|--apply]" >&2
+  exit 2
+fi
+case "${1:-}" in
+  ""|--check)
+    ;;
+  --apply)
+    MODE="apply"
+    ;;
+  *)
+    echo "Usage: bin/install-server-daemon [--check|--apply]" >&2
+    exit 2
+    ;;
+esac
+
+readonly LABEL="com.mikaelcedergren.server"
+readonly TEMPLATE="$SOURCE_ROOT/launchd/$LABEL.plist"
+readonly RENDER_DIR="$(mktemp -d "/tmp/mikaelcedergren-server-daemon.XXXXXX")"
+trap 'rm -rf "$RENDER_DIR"' EXIT
+readonly RENDERED="$RENDER_DIR/$LABEL.plist"
+
+if [[ ! -f "$TEMPLATE" ]]; then
+  echo "FATAL: template missing: $TEMPLATE" >&2
+  exit 1
+fi
+cp "$TEMPLATE" "$RENDERED"
+/usr/bin/plutil -lint "$RENDERED" >/dev/null
+/usr/bin/python3 - "$RENDERED" "$LABEL" "$INSTALL_ROOT" <<'PY'
+import plistlib
+import sys
+
+path, expected_label, repo_root = sys.argv[1:]
+with open(path, "rb") as handle:
+    payload = plistlib.load(handle)
+
+expected_payload = {
+    "Label": expected_label,
+    "UserName": "cortex",
+    "GroupName": "staff",
+    "ProgramArguments": [
+        "/opt/homebrew/bin/node",
+        f"{repo_root}/.run/site-releases/server/current-server/artifact/server/dist/index.js",
+    ],
+    "WorkingDirectory": repo_root,
+    "EnvironmentVariables": {
+        "CX_SERVER_RELEASE_IDENTITY_FILE": (
+            f"{repo_root}/.run/site-releases/server/current-server/server-release.json"
+        ),
+        "HOST": "127.0.0.1",
+        "NODE_ENV": "production",
+        "PATH": "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin",
+        "PORT": "3050",
+    },
+    "RunAtLoad": True,
+    "KeepAlive": {"SuccessfulExit": False},
+    "ThrottleInterval": 10,
+    "SoftResourceLimits": {"NumberOfFiles": 8192},
+    "HardResourceLimits": {"NumberOfFiles": 16384},
+    "StandardOutPath": f"{repo_root}/.run/server.out.log",
+    "StandardErrorPath": f"{repo_root}/.run/server.err.log",
+}
+if not isinstance(payload, dict) or set(payload) != set(expected_payload):
+    raise SystemExit(f"FATAL: LaunchDaemon keys are not the exact allowlist in {path}")
+for key, expected_value in expected_payload.items():
+    if payload.get(key) != expected_value:
+        raise SystemExit(f"FATAL: wrong LaunchDaemon {key} contract in {path}")
+PY
+
+if [[ "$MODE" == "check" ]]; then
+  echo "VALID: Mikael Cedergren LaunchDaemon template"
+  echo "No service definition was installed and no service was loaded or restarted."
+  exit 0
+fi
+
+if [[ "$SOURCE_ROOT" != "$INSTALL_ROOT" ]]; then
+  echo "FATAL: --apply is allowed only from the canonical production checkout: $INSTALL_ROOT" >&2
+  exit 1
+fi
+
+readonly SELECTED_ROOT="$INSTALL_ROOT/.run/site-releases/server/current-server"
+/usr/bin/python3 - \
+  "$INSTALL_ROOT" \
+  "$SELECTED_ROOT/server-release.json" \
+  "$SELECTED_ROOT/artifact/server/dist/index.js" <<'PY'
+import os
+import stat
+import sys
+
+repo_root, identity, entrypoint = sys.argv[1:]
+release_root = os.path.realpath(os.path.join(repo_root, ".run", "site-releases", "server"))
+for path in (identity, entrypoint):
+    try:
+        metadata = os.stat(path)
+    except OSError as error:
+        raise SystemExit(f"FATAL: selected server release is incomplete: {path}: {error}")
+    resolved = os.path.realpath(path)
+    if (
+        os.path.commonpath((release_root, resolved)) != release_root
+        or not stat.S_ISREG(metadata.st_mode)
+    ):
+        raise SystemExit(f"FATAL: selected server release path is unsafe: {path}")
+PY
+
+if [[ ! -f "$SHARED_INSTALLER" ]]; then
+  echo "FATAL: shared LaunchDaemon definition installer is missing: $SHARED_INSTALLER" >&2
+  exit 1
+fi
+
+/opt/homebrew/bin/node "$SHARED_INSTALLER" \
+  --apply \
+  --definition "$LABEL=$RENDERED"
+echo "No service was loaded or restarted."
+echo "Activation requires separate administrator authorisation and full server-release verification."

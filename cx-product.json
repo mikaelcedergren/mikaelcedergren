@@ -1,0 +1,20 @@
+{
+  "$schema": "./node_modules/@mikaelcedergren/cx-framework/platform/cx-product.schema.json",
+  "schemaVersion": 1,
+  "id": "mikaelcedergren",
+  "family": "web",
+  "profile": "static-site",
+  "deployment": "mac-mini",
+  "frontend": {
+    "framework": "angular",
+    "rendering": "ssg",
+    "designSystem": "cx-framework",
+    "visualSystem": "framework"
+  },
+  "capabilities": {
+    "authentication": "none",
+    "persistentData": "none",
+    "backgroundWork": "build-time",
+    "externalEffects": []
+  }
+}

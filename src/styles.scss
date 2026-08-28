@@ -295,8 +295,37 @@ main section article p:last-child {
   }
 }
 
-// Video embeds use the framework's `.cx-embed` (imported above) — the local
-// `.video` wrapper is gone; the markup carries `class="cx-embed"` instead.
+// Video geometry remains framework-owned through `.cx-embed`. This product-owned
+// control defers its external Vimeo player until the visitor explicitly asks for it.
+main .mc-video-consent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--space-sm);
+  inline-size: 100%;
+  block-size: 100%;
+  padding: var(--space-lg);
+  border: 0;
+  border-radius: inherit;
+  background: linear-gradient(115deg, var(--primary), var(--accent));
+  color: var(--on-ink);
+  cursor: pointer;
+  text-align: center;
+}
+main .mc-video-consent__play {
+  font-size: var(--font-size-display);
+  line-height: var(--line-height-heading);
+}
+main .mc-video-consent__action {
+  font-size: var(--font-size-title-2);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+}
+main .mc-video-consent__privacy {
+  font-size: var(--font-size-body-sm);
+  line-height: var(--line-height-small);
+}
 
 // ---------------------------------------------------------------------------
 // Concepts page (ingress + image grids)

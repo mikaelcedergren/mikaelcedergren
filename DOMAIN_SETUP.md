@@ -10,5 +10,3 @@ The shared go-live procedure (DNS → static IP → router → nginx → certbot
 | Health       | `/healthz`                                       |
 | nginx        | shared proxy snippets + micro-cache              |
 | Status       | live HTTPS (HTTP redirects to HTTPS)             |
-
-Cloudflared is not used; public traffic uses the static-IP nginx path.

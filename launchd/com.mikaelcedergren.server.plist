@@ -13,11 +13,11 @@
     <key>ProgramArguments</key>
     <array>
       <string>/opt/homebrew/bin/node</string>
-      <string>index.mjs</string>
+      <string>/Users/cortex/Development/mikaelcedergren/.run/site-releases/server/current-server/artifact/server/dist/index.js</string>
     </array>
 
     <key>WorkingDirectory</key>
-    <string>/Users/cortex/Development/mikaelcedergren/server</string>
+    <string>/Users/cortex/Development/mikaelcedergren</string>
 
     <key>EnvironmentVariables</key>
     <dict>
@@ -29,6 +29,8 @@
       <string>3050</string>
       <key>NODE_ENV</key>
       <string>production</string>
+      <key>CX_SERVER_RELEASE_IDENTITY_FILE</key>
+      <string>/Users/cortex/Development/mikaelcedergren/.run/site-releases/server/current-server/server-release.json</string>
     </dict>
 
     <key>RunAtLoad</key>
