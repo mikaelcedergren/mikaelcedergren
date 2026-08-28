@@ -96,12 +96,11 @@ tokens; site styles only arrange them.
 
 ## Published framework and cutover state
 
-The source migration consumes `@mikaelcedergren/cx-framework/server/static-site`. This repository's
-lock and physical browser/server installations resolve published framework `0.9.5` at GitHub commit
-`ce40d80dd055ad5de53e5779393993b1fc82db42`; the clean install and complete source gates pass. Never
+The source migration consumes `@mikaelcedergren/cx-framework/server/static-site`. The package comes
+from GitHub `main`, and `pnpm-lock.yaml` records the repository's exact immutable resolution. Never
 replace the dependency with a local path, tarball, sibling import, or compatibility wrapper. The
-root [`WEB-ARCHITECTURE-MIGRATION.md`](../WEB-ARCHITECTURE-MIGRATION.md) owns rollout progress and
-exact operational evidence.
+root [`WEB-ARCHITECTURE-MIGRATION.md`](../WEB-ARCHITECTURE-MIGRATION.md) owns mutable rollout
+versions, commit identities, and exact operational evidence.
 
 The currently installed LaunchDaemon still starts the baseline `server/index.mjs` wrapper from this
 checkout. Keep that file byte-for-byte intact; `pnpm test:selected-runtime` pins it so a reboot

@@ -32,10 +32,11 @@ errors and security/cache headers, section and literal `.html` routing, missing 
 graceful shutdown without touching the live service.
 
 The tracked LaunchDaemon template points to the future atomic `current-server` artifact and its
-matching identity. The lock and physical browser/server installations now resolve published
-cx-framework `0.9.5` at `ce40d80dd055ad5de53e5779393993b1fc82db42`. The template remains inactive
-until the source-identical candidate pair is validated, the paired selection is recorded, and
-bootstrap is separately authorised; refreshing the package did not install or change the service.
+matching identity. The package comes from GitHub `main`, while `pnpm-lock.yaml` records the exact
+immutable resolution and the root migration ledger owns mutable rollout evidence. The template
+remains inactive until the source-identical candidate pair is validated, the paired selection is
+recorded, and bootstrap is separately authorised; refreshing the package does not install or
+change the service.
 
 `bin/install-server-daemon` is the check-first definition installer. Its default/`--check` mode is
 non-mutating; after the authorised first selection, `--apply` validates the selected artifact and
