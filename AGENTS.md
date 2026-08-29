@@ -28,8 +28,9 @@ fronted by nginx. Publish a change proved browser-only with:
 node ../server-ops/bin/site-release.mjs --site mikaelcedergren --browser-only --apply
 ```
 
-Changes that can affect the server use the paired transaction. The release and rollback behavior is
-owned by the root
+Publish a change proved server-only through the shared server-release flow. Any change that can
+affect both closures, or whose scope is uncertain, uses the paired transaction. Classification,
+release, and rollback behavior are owned by the root
 [`SERVER-STANDARD.md`](../SERVER-STANDARD.md).
 
 ## Architecture
@@ -100,9 +101,9 @@ replace the dependency with a local path, tarball, sibling import, or compatibil
 root [`WEB-ARCHITECTURE-MIGRATION.md`](../WEB-ARCHITECTURE-MIGRATION.md) owns mutable rollout
 versions, commit identities, and exact operational evidence.
 
-The first paired cutover is complete. The installed LaunchDaemon and tracked template execute the
-selected atomic `current-server` artifact and its matching identity. Exact operational evidence is
-owned by the root migration ledger and server standard.
+The tracked LaunchDaemon template executes only the selected atomic `current-server` artifact and
+its matching identity. Whether the definition is installed, which release is selected, and what is
+currently running are mutable facts owned only by the root migration ledger.
 `bin/install-server-daemon` is its check-first, definition-only installer; never copy the plist into
 `/Library/LaunchDaemons` by hand.
 
