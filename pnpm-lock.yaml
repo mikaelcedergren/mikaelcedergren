@@ -38,7 +38,7 @@ importers:
         version: 22.0.8(6c5876c8022b56f6168786f1fb21b877)
       '@mikaelcedergren/cx-framework':
         specifier: github:mikaelcedergren/cx-framework#main
-        version: https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/4fa75688067d01c52d6b3512532112cdfc423abe(b80f09860f4a54f238d55ac2baac7fff)
+        version: https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/38427ebab2887737527b5e994c0c4c8fec7950f3(b80f09860f4a54f238d55ac2baac7fff)
       ag-charts-community:
         specifier: ^13.3.1
         version: 13.3.1
@@ -111,7 +111,7 @@ importers:
     dependencies:
       '@mikaelcedergren/cx-framework':
         specifier: github:mikaelcedergren/cx-framework#main
-        version: https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/4fa75688067d01c52d6b3512532112cdfc423abe
+        version: https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/38427ebab2887737527b5e994c0c4c8fec7950f3
       compression:
         specifier: ^1.8.1
         version: 1.8.1
@@ -807,9 +807,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@mikaelcedergren/cx-framework@https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/4fa75688067d01c52d6b3512532112cdfc423abe':
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/4fa75688067d01c52d6b3512532112cdfc423abe}
-    version: 0.9.8
+  '@mikaelcedergren/cx-framework@https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/38427ebab2887737527b5e994c0c4c8fec7950f3':
+    resolution: {gitHosted: true, tarball: https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/38427ebab2887737527b5e994c0c4c8fec7950f3}
+    version: 0.9.9
     engines: {node: '>=26 <27'}
     hasBin: true
     peerDependencies:
@@ -3282,9 +3282,9 @@ snapshots:
   '@lmdb/lmdb-win32-x64@3.5.4':
     optional: true
 
-  '@mikaelcedergren/cx-framework@https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/4fa75688067d01c52d6b3512532112cdfc423abe': {}
+  '@mikaelcedergren/cx-framework@https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/38427ebab2887737527b5e994c0c4c8fec7950f3': {}
 
-  '@mikaelcedergren/cx-framework@https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/4fa75688067d01c52d6b3512532112cdfc423abe(b80f09860f4a54f238d55ac2baac7fff)':
+  '@mikaelcedergren/cx-framework@https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/38427ebab2887737527b5e994c0c4c8fec7950f3(b80f09860f4a54f238d55ac2baac7fff)':
     optionalDependencies:
       '@angular/cdk': 22.0.6(@angular/common@22.0.8(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(@angular/platform-browser@22.0.8(@angular/common@22.0.8(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2)))(rxjs@7.8.2)
       '@angular/common': 22.0.8(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2)
