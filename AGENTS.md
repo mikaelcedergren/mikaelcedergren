@@ -30,7 +30,7 @@ node ../server-ops/bin/site-release.mjs --site mikaelcedergren --browser-only --
 
 Publish a change proved server-only through the shared server-release flow. Any change that can
 affect both closures, or whose scope is uncertain, uses the paired transaction. Classification,
-release, and rollback behavior are owned by the root
+release, and current recovery behavior are owned by the root
 [`SERVER-STANDARD.md`](../SERVER-STANDARD.md).
 
 ## Architecture
@@ -63,7 +63,7 @@ server/tsconfig.json      strict NodeNext compiler -> ignored server/dist/index.
 tests/server-contract.test.mjs  isolated compiled-server contract with synthetic release identity
 ```
 
-### URLs (unchanged from the legacy site)
+### Public URL contract
 
 - **Sections** at `<dir>/index.html`: `/about/`, `/concepts/`, `/resume/`, `/blog/`.
 - **Blog posts** are literal `.html` files: `/blog/posts/<slug>.html` (Angular prerenders
@@ -93,17 +93,16 @@ tokens; site styles only arrange them.
 - Add a shared abstraction only when it clearly simplifies today's system. Optimise for five-year
   maintainability, not today's convenience.
 
-## Published framework and cutover state
+## Published framework and release contract
 
-The source migration consumes `@mikaelcedergren/cx-framework/server/static-site`. The package comes
+The server consumes `@mikaelcedergren/cx-framework/server/static-site`. The package comes
 from GitHub `main`, and `pnpm-lock.yaml` records the repository's exact immutable resolution. Never
 replace the dependency with a local path, tarball, sibling import, or compatibility wrapper. The
-root [`WEB-ARCHITECTURE-MIGRATION.md`](../WEB-ARCHITECTURE-MIGRATION.md) owns mutable rollout
-versions, commit identities, and exact operational evidence.
+root [`SERVER-STANDARD.md`](../SERVER-STANDARD.md) owns mutable release and operational evidence.
 
 The tracked LaunchDaemon template executes only the selected atomic `current-server` artifact and
-its matching identity. Whether the definition is installed, which release is selected, and what is
-currently running are mutable facts owned only by the root migration ledger.
+its matching identity. Installation, selection, and running state are operational facts, never
+source documentation.
 `bin/install-server-daemon` is its check-first, definition-only installer; never copy the plist into
 `/Library/LaunchDaemons` by hand.
 

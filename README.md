@@ -23,7 +23,7 @@ node ../server-ops/bin/site-release.mjs --site mikaelcedergren --browser-only --
 
 This command is only for a change proved browser-only. Publish a change proved server-only through
 the shared server-release flow; anything that can affect both closures, or whose scope is
-uncertain, uses the paired transaction. The shared classification, release, and rollback contract
+uncertain, uses the paired transaction. The shared classification, release, and current recovery contract
 is documented in
 [`../SERVER-STANDARD.md`](../SERVER-STANDARD.md).
 
@@ -35,8 +35,8 @@ graceful shutdown without touching the live service.
 
 The tracked LaunchDaemon template executes only the selected atomic `current-server` artifact and
 its matching identity. The package comes from GitHub `main`, while `pnpm-lock.yaml` records the
-exact immutable resolution and the root migration ledger alone owns mutable installation,
-selection, and running evidence.
+exact immutable resolution. Installation, selection, and running state are verified operationally,
+not recorded as source truth.
 
 `bin/install-server-daemon` is the check-first definition installer. Its default/`--check` mode is
 non-mutating; after the authorised first selection, `--apply` validates the selected artifact and

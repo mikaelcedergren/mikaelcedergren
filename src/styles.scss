@@ -413,8 +413,8 @@ main aside .links a:hover img {
 // above); the local `.hidden-responsive` rule is gone and the markup carries
 // `class="cx-hide-mobile"` instead.
 
-// Resume role/section titles use legacy <pre> — render as eyebrow labels.
-main pre {
+// Resume role and section subheadings use the shared eyebrow treatment.
+main .resume-eyebrow {
   display: block;
   margin: var(--space-lg) 0 var(--space-2xs);
   padding: 0;
