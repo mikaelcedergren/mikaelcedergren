@@ -1,0 +1,19 @@
+{
+  "mark": {
+    "source": "public/assets/images/favicon/favicon-32x32.png",
+    "mode": "dark",
+    "threshold": 80
+  },
+  "index": {
+    "production": "src/index.html",
+    "development": "src/index.development.html"
+  },
+  "favicon": {
+    "file": "public/assets/favicon-development.svg",
+    "href": "/assets/favicon-development.svg"
+  },
+  "maskIcon": {
+    "file": "public/assets/favicon-development-mask.svg",
+    "href": "/assets/favicon-development-mask.svg"
+  }
+}
