@@ -30,6 +30,7 @@
     "test": "pnpm run test:build && pnpm run test:server",
     "test:build": "node --test tests/e2e-environment.test.mjs tests/flatten.test.mjs tests/launchd-contract.test.mjs",
     "test:server": "pnpm run build:server && node --test tests/server-contract.test.mjs",
+    "test:verification": "node --test tests/change-verification.test.mjs",
     "e2e": "node scripts/run-e2e.mjs",
     "e2e:install": "playwright install chromium",
     "format": "prettier --write .",
@@ -37,7 +38,8 @@
     "favicon:generate": "cx-development-favicon --apply",
     "favicon:check": "cx-development-favicon",
     "platform:check": "cx-platform-check --root .",
-    "check": "pnpm format:check && pnpm favicon:check && pnpm platform:check && pnpm typecheck && pnpm test && pnpm build"
+    "verify:change": "node scripts/verify-change.mjs",
+    "check": "pnpm format:check && pnpm favicon:check && pnpm platform:check && pnpm typecheck && pnpm test:verification && pnpm test && pnpm build"
   },
   "dependencies": {
     "@angular/cdk": "^22.0.6",

@@ -18,6 +18,7 @@ pnpm test               # isolated Node tests for build and production-server co
 pnpm e2e                # Chromium smoke tests on a runner-owned loopback port
 pnpm format:check       # formatting verification
 pnpm platform:check     # shared manifest, dependency, script, and entrypoint validation
+pnpm verify:change      # change-aware local proof; see DEVELOPMENT-VERIFICATION.md
 pnpm check              # canonical platform, format, typecheck, test, and production-build gate
 ```
 
