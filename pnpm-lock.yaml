@@ -5,40 +5,43 @@ settings:
   excludeLinksFromLockfile: false
   injectWorkspacePackages: true
 
+patchedDependencies:
+  '@angular/build@22.0.8': 1e0d3320474d51e445f59cde06e019e83903002ef16d8591cfdf66f655d0bfbd
+
 importers:
 
   .:
     dependencies:
       '@angular/cdk':
-        specifier: ^22.0.6
+        specifier: 22.0.6
         version: 22.0.6(@angular/common@22.0.8(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(@angular/platform-browser@22.0.8(@angular/common@22.0.8(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2)))(rxjs@7.8.2)
       '@angular/common':
-        specifier: ^22.0.8
+        specifier: 22.0.8
         version: 22.0.8(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2)
       '@angular/compiler':
-        specifier: ^22.0.8
+        specifier: 22.0.8
         version: 22.0.8
       '@angular/core':
-        specifier: ^22.0.8
+        specifier: 22.0.8
         version: 22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2)
       '@angular/localize':
-        specifier: ^22.0.8
+        specifier: 22.0.8
         version: 22.0.8(@angular/compiler-cli@22.0.8(@angular/compiler@22.0.8)(typescript@6.0.3))(@angular/compiler@22.0.8)
       '@angular/platform-browser':
-        specifier: ^22.0.8
+        specifier: 22.0.8
         version: 22.0.8(@angular/common@22.0.8(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))
       '@angular/platform-server':
-        specifier: ^22.0.8
+        specifier: 22.0.8
         version: 22.0.8(@angular/common@22.0.8(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/compiler@22.0.8)(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(@angular/platform-browser@22.0.8(@angular/common@22.0.8(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2)))(rxjs@7.8.2)
       '@angular/router':
-        specifier: ^22.0.8
+        specifier: 22.0.8
         version: 22.0.8(@angular/common@22.0.8(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(@angular/platform-browser@22.0.8(@angular/common@22.0.8(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2)))(rxjs@7.8.2)
       '@angular/ssr':
-        specifier: ^22.0.8
+        specifier: 22.0.8
         version: 22.0.8(6c5876c8022b56f6168786f1fb21b877)
       '@mikaelcedergren/cx-framework':
         specifier: github:mikaelcedergren/cx-framework#main
-        version: https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/39e95c05ad50a7a0bcd264e1ac2f01bcfbd2465d(b80f09860f4a54f238d55ac2baac7fff)
+        version: https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/d39d38bcafbcbbd36ab42560e4eb76dcefd2db3b(b80f09860f4a54f238d55ac2baac7fff)
       ag-charts-community:
         specifier: ^13.3.1
         version: 13.3.1
@@ -86,13 +89,13 @@ importers:
         version: 0.16.2
     devDependencies:
       '@angular/build':
-        specifier: ^22.0.8
-        version: 22.0.8(fd7b8aa6fb88593445fbbc8ed0bbf60c)
+        specifier: 22.0.8
+        version: 22.0.8(patch_hash=1e0d3320474d51e445f59cde06e019e83903002ef16d8591cfdf66f655d0bfbd)(fd7b8aa6fb88593445fbbc8ed0bbf60c)
       '@angular/cli':
-        specifier: ^22.0.8
+        specifier: 22.0.8
         version: 22.0.8(@types/node@26.1.2)
       '@angular/compiler-cli':
-        specifier: ^22.0.8
+        specifier: 22.0.8
         version: 22.0.8(@angular/compiler@22.0.8)(typescript@6.0.3)
       '@playwright/test':
         specifier: 1.60.0
@@ -114,7 +117,7 @@ importers:
     dependencies:
       '@mikaelcedergren/cx-framework':
         specifier: github:mikaelcedergren/cx-framework#main
-        version: https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/39e95c05ad50a7a0bcd264e1ac2f01bcfbd2465d
+        version: https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/d39d38bcafbcbbd36ab42560e4eb76dcefd2db3b
       compression:
         specifier: ^1.8.1
         version: 1.8.1
@@ -810,9 +813,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@mikaelcedergren/cx-framework@https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/39e95c05ad50a7a0bcd264e1ac2f01bcfbd2465d':
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/39e95c05ad50a7a0bcd264e1ac2f01bcfbd2465d}
-    version: 0.9.26
+  '@mikaelcedergren/cx-framework@https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/d39d38bcafbcbbd36ab42560e4eb76dcefd2db3b':
+    resolution: {gitHosted: true, tarball: https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/d39d38bcafbcbbd36ab42560e4eb76dcefd2db3b}
+    version: 0.9.29
     engines: {node: '>=26 <27'}
     hasBin: true
     peerDependencies:
@@ -2753,7 +2756,7 @@ snapshots:
     transitivePeerDependencies:
       - chokidar
 
-  '@angular/build@22.0.8(fd7b8aa6fb88593445fbbc8ed0bbf60c)':
+  '@angular/build@22.0.8(patch_hash=1e0d3320474d51e445f59cde06e019e83903002ef16d8591cfdf66f655d0bfbd)(fd7b8aa6fb88593445fbbc8ed0bbf60c)':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@angular-devkit/architect': 0.2200.8
@@ -3290,9 +3293,9 @@ snapshots:
   '@lmdb/lmdb-win32-x64@3.5.4':
     optional: true
 
-  '@mikaelcedergren/cx-framework@https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/39e95c05ad50a7a0bcd264e1ac2f01bcfbd2465d': {}
+  '@mikaelcedergren/cx-framework@https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/d39d38bcafbcbbd36ab42560e4eb76dcefd2db3b': {}
 
-  '@mikaelcedergren/cx-framework@https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/39e95c05ad50a7a0bcd264e1ac2f01bcfbd2465d(b80f09860f4a54f238d55ac2baac7fff)':
+  '@mikaelcedergren/cx-framework@https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/d39d38bcafbcbbd36ab42560e4eb76dcefd2db3b(b80f09860f4a54f238d55ac2baac7fff)':
     optionalDependencies:
       '@angular/cdk': 22.0.6(@angular/common@22.0.8(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(@angular/platform-browser@22.0.8(@angular/common@22.0.8(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2)))(rxjs@7.8.2)
       '@angular/common': 22.0.8(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2)
@@ -3437,7 +3440,7 @@ snapshots:
 
   '@npmcli/fs@5.0.0':
     dependencies:
-      semver: 7.7.4
+      semver: 7.8.5
 
   '@npmcli/git@7.0.2':
     dependencies:
@@ -3447,7 +3450,7 @@ snapshots:
       lru-cache: 11.5.2
       npm-pick-manifest: 11.0.3
       proc-log: 6.1.0
-      semver: 7.7.4
+      semver: 7.8.5
       which: 6.0.1
 
   '@npmcli/installed-package-contents@4.0.0':
@@ -3464,7 +3467,7 @@ snapshots:
       hosted-git-info: 9.0.3
       json-parse-even-better-errors: 5.0.0
       proc-log: 6.1.0
-      semver: 7.7.4
+      semver: 7.8.5
       spdx-expression-parse: 4.0.0
 
   '@npmcli/promise-spawn@9.0.1':
@@ -4495,7 +4498,7 @@ snapshots:
       graceful-fs: 4.2.11
       nopt: 9.0.0
       proc-log: 6.1.0
-      semver: 7.7.4
+      semver: 7.8.5
       tar: 7.5.22
       tinyglobby: 0.2.17
       undici: 6.28.0
@@ -4513,7 +4516,7 @@ snapshots:
 
   npm-install-checks@8.0.0:
     dependencies:
-      semver: 7.7.4
+      semver: 7.8.5
 
   npm-normalize-package-bin@5.0.0: {}
 
@@ -4521,7 +4524,7 @@ snapshots:
     dependencies:
       hosted-git-info: 9.0.3
       proc-log: 6.1.0
-      semver: 7.7.4
+      semver: 7.8.5
       validate-npm-package-name: 7.0.2
 
   npm-packlist@10.0.4:
@@ -4534,7 +4537,7 @@ snapshots:
       npm-install-checks: 8.0.0
       npm-normalize-package-bin: 5.0.0
       npm-package-arg: 13.0.2
-      semver: 7.7.4
+      semver: 7.8.5
 
   npm-registry-fetch@19.1.1:
     dependencies:
@@ -5035,7 +5038,7 @@ snapshots:
       picomatch: 4.0.4
       postcss: 8.5.24
       rollup: 4.60.2
-      tinyglobby: 0.2.16
+      tinyglobby: 0.2.17
     optionalDependencies:
       '@types/node': 26.1.2
       fsevents: 2.3.3

@@ -1,0 +1,18 @@
+diff --git a/src/builders/dev-server/vite/index.js b/src/builders/dev-server/vite/index.js
+index 212589a40f8c9df77be6b92661a1bd0ef1c1d279..75539fcf4f29a602d90844ad110a800b3679f324 100755
+--- a/src/builders/dev-server/vite/index.js
++++ b/src/builders/dev-server/vite/index.js
+@@ -269,6 +269,13 @@ async function* serveWithVite(serverOptions, builderName, builderAction, context
+                     ...[...assetFiles.values()].map(({ source }) => source),
+                 ]),
+             ];
++            // A browser code rebuild already includes the latest component templates.
++            // Clear older metadata before yielding to requests for the rebuilt code.
++            // Keep template updates for background and CSS-only hot updates.
++            if (needClientUpdate && Array.from(generatedFiles).some(([file, record]) =>
++                record.updated && record.type === internal_1.BuildOutputFileType.Browser && /\.m?js$/.test(file))) {
++                templateUpdates.clear();
++            }
+             const updatedFiles = await (0, hmr_1.invalidateUpdatedFiles)(normalizePath, generatedFiles, assetFiles, server);
+             if (needClientUpdate) {
+                 (0, hmr_1.handleUpdate)(server, serverOptions, context.logger, componentStyles, updatedFiles);

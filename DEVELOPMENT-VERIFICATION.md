@@ -33,3 +33,15 @@ The authoritative option meanings, hashing, evidence, escalation, and release-se
 lives in the Development root's
 [`DEVELOPMENT-VERIFICATION.md`](https://github.com/mikaelcedergren/development-root/blob/main/DEVELOPMENT-VERIFICATION.md).
 This file owns only this site's checks, paths, and rendered routes.
+
+## Angular development cache regression
+
+`pnpm e2e:hmr` exercises this repository's installed Angular build package in a
+synthetic lazy-component fixture. It checks template hot updates, a disconnected
+client during a TypeScript rebuild, stylesheet hot updates, and reloads. The shared
+hermetic runner owns the temporary files, exact loopback port, and process cleanup.
+
+The canonical `pnpm check` includes this regression. The tracked pnpm patch fixes
+Angular's stale template metadata at its owning development-server layer and survives
+a frozen install. Keep it until an upstream version passes the regression without
+the patch; do not disable hot reload to hide a failure.
