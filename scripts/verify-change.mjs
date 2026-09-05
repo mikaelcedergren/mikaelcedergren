@@ -65,8 +65,8 @@ export function parseOptions(args) {
 }
 
 export function digestSourceEntry(absolutePath) {
-  if (!existsSync(absolutePath)) return null;
-  const details = lstatSync(absolutePath);
+  const details = lstatSync(absolutePath, { throwIfNoEntry: false });
+  if (!details) return null;
   const hash = createHash('sha256');
   if (details.isSymbolicLink()) {
     hash.update(`symlink\0${readlinkSync(absolutePath)}`);

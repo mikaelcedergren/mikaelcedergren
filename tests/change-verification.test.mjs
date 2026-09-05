@@ -27,6 +27,34 @@ import {
   writeReceipt,
 } from '../scripts/verify-change.mjs';
 
+test('source inventory retains dangling links and detects target changes without following them', (context) => {
+  const root = mkdtempSync(path.join(os.tmpdir(), 'change-verification-dangling-'));
+  context.after(() => rmSync(root, { force: true, recursive: true }));
+  const initialized = spawnSync('git', ['init', '--quiet'], { cwd: root, encoding: 'utf8' });
+  assert.equal(initialized.status, 0, initialized.stderr);
+  const link = path.join(root, 'source-link');
+  const target = path.join(root, 'target.txt');
+  symlinkSync('target.txt', link);
+
+  const dangling = createSourceSnapshot(root);
+  assert.equal(typeof dangling['source-link'], 'string');
+  assert.equal(digestSourceEntry(target), null);
+
+  writeFileSync(target, 'target content');
+  assert.equal(digestSourceEntry(link), dangling['source-link']);
+  rmSync(target);
+  assert.equal(digestSourceEntry(link), dangling['source-link']);
+
+  rmSync(link);
+  symlinkSync('another-missing-target.txt', link);
+  const retargeted = createSourceSnapshot(root);
+  assert.deepEqual(changedSnapshotPaths(dangling, retargeted), ['source-link']);
+
+  rmSync(link);
+  assert.equal(digestSourceEntry(link), null);
+  assert.deepEqual(changedSnapshotPaths(retargeted, createSourceSnapshot(root)), ['source-link']);
+});
+
 test('first use and explicit full select the complete proof', () => {
   assert.deepEqual(classifyChanges([], { hasVerifiedSnapshot: false }).checks, ['full']);
   assert.deepEqual(classifyChanges([], { forceFull: true }).checks, ['full']);
