@@ -1,5 +1,15 @@
 # mikaelcedergren.com
 
+## Everyday development
+
+Wolfie uses the product with real records, fixes problems in development as they appear, and
+publishes when satisfied. Follow the shared [development contract](../SERVER-STANDARD.md#local-development)
+and [dev-first delivery rule](../AGENTS.md#user-facing-delivery). Automated mutation checks and
+release validation remain isolated and synthetic.
+
+This static portfolio needs no database, durable queue, or execution scope settings. Work with
+the real source content at dev port `4250`; publish that content only when explicitly requested.
+
 Mikael Cedergren's personal portfolio + blog, rebuilt as an **Angular 22 SSG app** — prerendered to
 fully static HTML and served by a strict TypeScript composition of the published shared Express
 runtime, the **same static-site architecture as bitsize.me**. English only.
