@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { parseLogRecord } from '@mikaelcedergren/cx-framework/server/logging';
 import { spawn } from 'node:child_process';
 import { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { createServer } from 'node:net';
@@ -60,23 +61,46 @@ test(
       `${JSON.stringify({ ...artifactManifest, id: 'mutable-source-before' }, null, 2)}\n`,
     );
 
-    const child = spawn(process.execPath, [path.join(repoRoot, 'server', 'dist', 'index.js')], {
-      cwd: fixtureRoot,
-      env: {
-        CX_SERVER_RELEASE_IDENTITY_FILE: serverIdentityFile,
-        HOST: '127.0.0.1',
-        NODE_ENV: 'test',
-        PATH: process.env.PATH,
-        PORT: String(port),
-        SITE_BROWSER_DIR: browserDir,
+    const preload = path.join(fixtureRoot, 'synthetic-failure.mjs');
+    await writeFile(
+      preload,
+      `import { createRequire } from 'node:module';
+const express = createRequire(${JSON.stringify(path.join(repoRoot, 'server', 'dist', 'index.js'))})('express');
+const use = express.application.use;
+express.application.use = function (...args) {
+  const result = use.apply(this, args);
+  express.application.use = use;
+  use.call(this, (request, _response, next) => {
+    if (request.path === '/api/synthetic-failure') {
+      next(new Error('PRIVATE-REQUEST-PAYLOAD', { cause: new TypeError('PRIVATE-CAUSE') }));
+    } else next();
+  });
+  return result;
+};
+`,
+      { mode: 0o600 },
+    );
+    const child = spawn(
+      process.execPath,
+      ['--import', preload, path.join(repoRoot, 'server', 'dist', 'index.js')],
+      {
+        cwd: fixtureRoot,
+        env: {
+          CX_SERVER_RELEASE_IDENTITY_FILE: serverIdentityFile,
+          HOST: '127.0.0.1',
+          NODE_ENV: 'test',
+          PATH: process.env.PATH,
+          PORT: String(port),
+          SITE_BROWSER_DIR: browserDir,
+        },
+        stdio: ['ignore', 'pipe', 'pipe'],
       },
-      stdio: ['ignore', 'pipe', 'pipe'],
-    });
+    );
     let output = '';
     child.stdout.setEncoding('utf8');
     child.stderr.setEncoding('utf8');
-    child.stdout.on('data', (chunk) => (output += chunk));
-    child.stderr.on('data', (chunk) => (output += chunk));
+    child.stdout.on('data', (chunk) => (output = (output + chunk).slice(-64 * 1024)));
+    child.stderr.on('data', (chunk) => (output = (output + chunk).slice(-64 * 1024)));
 
     t.after(async () => {
       await stopChild(child);
@@ -173,7 +197,74 @@ test(
     assert.match(missingProductRoute.headers.get('content-type') ?? '', /^text\/html/);
     assert.match(await missingProductRoute.text(), /portfolio-product-404/);
 
+    const failure = await localFetch(`${origin}/api/synthetic-failure?private=PRIVATE-QUERY`, {
+      headers: { 'x-request-id': 'untrusted-client-id' },
+    });
+    assert.equal(failure.status, 500);
+    const failureId = failure.headers.get('x-request-id');
+    assert.notEqual(failureId, 'untrusted-client-id');
+    assert.equal((await failure.json()).error.requestId, failureId);
     assert.deepEqual(await stopChild(child), { code: 0, signal: null });
+    const records = output
+      .trim()
+      .split('\n')
+      .map((line) => {
+        const record = parseLogRecord(line);
+        assert.ok(record, `Expected structured runtime output: ${line}`);
+        return record;
+      });
+    assert.ok(
+      records.some((record) => record.event === 'service.listen' && record.outcome === 'success'),
+    );
+    assert.ok(
+      records.some((record) => record.event === 'service.shutdown' && record.outcome === 'success'),
+    );
+    assert.ok(records.every((record) => record.service === 'mikaelcedergren'));
+    const failures = records.filter((record) => record.event === 'http.internal_error');
+    assert.equal(failures.length, 1);
+    assert.equal(failures[0].requestId, failureId);
+    assert.equal(failures[0].error.causes[0].type, 'TypeError');
+    assert.ok(
+      failures[0].error.locations.some((location) => location.startsWith('synthetic-failure.mjs:')),
+    );
+    assert.doesNotMatch(output, /PRIVATE|synthetic-failure\.mjs.*\/|untrusted-client-id/);
+  },
+);
+
+test(
+  'startup failures emit one safe cause and retain a failing exit status',
+  { timeout: 15_000 },
+  async (t) => {
+    const fixtureRoot = await mkdtemp(path.join(os.tmpdir(), 'mikael-startup-'));
+    const child = spawn(process.execPath, [path.join(repoRoot, 'server', 'dist', 'index.js')], {
+      cwd: fixtureRoot,
+      env: {
+        NODE_ENV: 'test',
+        PATH: process.env.PATH,
+        SITE_BROWSER_DIR: path.join(fixtureRoot, 'PRIVATE-missing-browser'),
+      },
+      stdio: ['ignore', 'pipe', 'pipe'],
+    });
+    t.after(async () => {
+      if (child.exitCode === null) await stopChild(child);
+      await rm(fixtureRoot, { recursive: true, force: true });
+    });
+    let output = '';
+    const collect = (chunk) => {
+      output = (output + chunk).slice(-64 * 1024);
+    };
+    child.stdout.on('data', collect);
+    child.stderr.on('data', collect);
+    const result = await new Promise((resolve, reject) => {
+      child.once('error', reject);
+      child.once('exit', (code) => resolve(code));
+    });
+    assert.equal(result, 1);
+    const records = output.trim().split('\n').map(parseLogRecord);
+    assert.equal(records.length, 1);
+    assert.equal(records[0].event, 'process.start_failed');
+    assert.ok(records[0].error.locations.length > 0);
+    assert.doesNotMatch(output, /PRIVATE|\/private\//);
   },
 );
 
