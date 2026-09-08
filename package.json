@@ -39,7 +39,8 @@
     "favicon:check": "cx-development-favicon",
     "platform:check": "cx-platform-check --root .",
     "verify:change": "node scripts/verify-change.mjs",
-    "check": "pnpm format:check && pnpm favicon:check && pnpm platform:check && pnpm typecheck && pnpm test:verification && pnpm test && pnpm build && pnpm e2e:hmr",
+    "style:check": "cx-style-token-check --all",
+    "check": "pnpm format:check && pnpm favicon:check && pnpm platform:check && pnpm style:check && pnpm typecheck && pnpm test:verification && pnpm test && pnpm build && pnpm e2e:hmr",
     "e2e:hmr": "node scripts/run-hmr-e2e.mjs"
   },
   "dependencies": {

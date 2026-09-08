@@ -1,0 +1,4 @@
+{
+  "sourceRoots": ["src", "server", "scripts", "public"],
+  "globalTokenFiles": []
+}
