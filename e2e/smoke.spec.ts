@@ -267,6 +267,68 @@ test('portfolio images keep moving in covered frames and respect reduced motion'
   }
 });
 
+test('desktop portfolio images use the shared lightbox at natural size', async ({ page }) => {
+  await page.setViewportSize({ width: 2560, height: 1600 });
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/');
+  const triggers = page.locator('.mc-image-trigger');
+  await expect(triggers).toHaveCount(26);
+  await expect(
+    page.locator('.section-header .mc-image-trigger, .mc-video .mc-image-trigger'),
+  ).toHaveCount(0);
+  const first = triggers.first();
+  await first.click();
+  const dialog = page.getByRole('dialog', { name: 'Portfolio images', exact: true });
+  const image = dialog.locator('img');
+  await expect(dialog).toBeVisible();
+  await expect(image).toHaveAttribute('src', '/assets/images/portfolio/design/lanefinder-logo.jpg');
+  await image.evaluate((element: HTMLImageElement) => element.decode());
+  expect(await image.evaluate((element) => element.getBoundingClientRect().width)).toBe(1920);
+  await expect(dialog.getByRole('button', { name: 'Previous image', exact: true })).toBeDisabled();
+  await dialog.getByRole('button', { name: 'Next image', exact: true }).click();
+  await expect(image).toHaveAttribute(
+    'src',
+    '/assets/images/portfolio/design/lanefinder-intro-animation.gif',
+  );
+  await page.keyboard.press('ArrowRight');
+  await expect(image).toHaveAttribute(
+    'src',
+    '/assets/images/portfolio/design/lanefinder-website.jpg',
+  );
+  await page.keyboard.press('ArrowLeft');
+  await expect(dialog.getByRole('status')).toHaveText('2 / 26');
+  await page.keyboard.press('Escape');
+  await expect(dialog).toHaveCount(0);
+  await expect(first).toBeFocused();
+  await first.press('Enter');
+  await expect(dialog).toBeVisible();
+  await page.setViewportSize({ width: 390, height: 844 });
+  await expect(dialog).toHaveCount(0);
+  await expect(triggers).toHaveCount(0);
+});
+
+test.describe('phone gallery behavior', () => {
+  test.use({
+    viewport: { width: 390, height: 844 },
+    isMobile: true,
+    hasTouch: true,
+  });
+  test('portfolio images remain noninteractive in portrait and landscape', async ({ page }) => {
+    await page.goto('/');
+    for (const viewport of [
+      { width: 390, height: 844 },
+      { width: 844, height: 390 },
+    ]) {
+      await page.setViewportSize(viewport);
+      await expect(page.locator('.mc-image-trigger')).toHaveCount(0);
+      await page.locator('.mc-parallax img').first().tap();
+      await expect(page.getByRole('dialog', { name: 'Portfolio images', exact: true })).toHaveCount(
+        0,
+      );
+    }
+  });
+});
+
 test('a portfolio video loads only after the visitor chooses to play it', async ({ page }) => {
   await page.route('https://player.vimeo.com/**', async (route) => {
     await route.fulfill({

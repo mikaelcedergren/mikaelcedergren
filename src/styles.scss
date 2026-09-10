@@ -281,10 +281,23 @@ main .mc-parallax {
   overflow: clip;
   border-radius: var(--radius-media-lg);
 }
-main .mc-parallax > img {
+main .mc-parallax img {
   block-size: auto;
   margin: 0;
   border-radius: var(--radius-none);
+}
+main .mc-image-trigger {
+  display: block;
+  inline-size: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  cursor: pointer;
+}
+main .mc-image-trigger:focus-visible {
+  outline: calc(var(--border-width) * 2) solid var(--ink);
+  outline-offset: calc(var(--space-sm) * -1);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -294,7 +307,7 @@ main .mc-parallax > img {
       view-timeline-axis: block;
       view-timeline-inset: 0;
     }
-    main .mc-parallax > img {
+    main .mc-parallax img {
       // Keep a non-zero slope at both ends: entrance/exit easings make parallax
       // appear to park while the image is still visible.
       animation: mc-image-parallax var(--motion-slow) cubic-bezier(0.25, 0.2, 0.75, 0.8) both;
