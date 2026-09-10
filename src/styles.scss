@@ -46,7 +46,7 @@ main > * {
 // ---------------------------------------------------------------------------
 // Masthead brand
 // ---------------------------------------------------------------------------
-.mc-brand {
+a.mc-brand {
   display: inline-flex;
   align-items: center;
   gap: var(--space-sm);
@@ -73,18 +73,23 @@ main {
   inline-size: 100%;
   max-inline-size: var(--measure-lg);
   margin-inline: auto;
-  padding: var(--space-2xl) var(--space-lg);
+  padding: var(--space-xl) var(--space-lg);
 }
 
 // Editorial prose in About and individual blog posts is scoped to the
 // framework's `.cx-article`; blog navigation and related-entry lists remain UI.
 // The bespoke layout pages (portfolio, blog index, concepts, resume) keep the
 // structural treatment below, expressed purely in framework tokens.
+main h1,
+main h2,
+main h3 {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-regular);
+}
 main h2,
 main h3 {
   color: var(--ink);
   margin-block-start: 0;
-  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-heading);
 }
 main h2 {
@@ -99,26 +104,11 @@ main p {
   line-height: var(--line-height-body-lg);
 }
 
-// Content links: quiet, with an animated underline on hover (the original feel),
-// rebuilt from framework tokens only.
+// Content links.
 main a {
-  position: relative;
   color: var(--ink);
   font-weight: var(--font-weight-bold);
   text-decoration: none;
-}
-main a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: calc(var(--border-width) * -1);
-  block-size: var(--border-width);
-  inline-size: 0;
-  background: var(--ink);
-  transition: inline-size var(--motion-base) var(--ease-out);
-}
-main a:hover::after {
-  inline-size: 100%;
 }
 
 // ---------------------------------------------------------------------------
@@ -127,27 +117,33 @@ main a:hover::after {
 main header {
   padding-block: var(--space-2xl) var(--space-lg);
 }
+@media (max-width: #{bp.$mobile - 1px}) {
+  main,
+  main header {
+    padding-block-start: var(--space-md);
+  }
+}
 main header h1 {
   font-size: var(--font-size-title-1);
-  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-heading);
   letter-spacing: -0.03em;
   margin: 0 0 var(--space-md);
 }
-main .home-page header h1 {
+main .home-page header h1,
+main mc-resume header h1,
+main mc-about header h1 {
   font-size: var(--font-size-display);
   line-height: var(--line-height-display);
 }
-// Accent words painted in the framework gradient (primary → accent).
+// The portfolio's pink-to-purple heading accent uses the shared palette.
 main header h1 span {
-  background: linear-gradient(115deg, var(--primary), var(--accent));
+  background: linear-gradient(115deg, var(--pink), var(--purple));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
 main .pre-word {
-  max-inline-size: var(--measure-md);
   margin: 0 0 var(--space-2xl);
   color: var(--opacity-high);
   font-size: var(--font-size-title-1);
@@ -198,7 +194,7 @@ main section:first-of-type {
   padding-block-start: 0;
 }
 
-// Project header: logo left, blurb + tags right.
+// Project header: logo left, large editorial copy and compact tags right.
 main .section-header {
   display: flex;
   align-items: flex-start;
@@ -212,10 +208,10 @@ main .section-header > img {
   object-fit: contain;
   object-position: left top;
 }
-main .section-header p {
-  margin: 0 0 var(--space-md);
-  font-size: var(--font-size-body-lg);
-  line-height: var(--line-height-body);
+main .section-header > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
 }
 @media (max-width: #{bp.$mobile - 1px}) {
   main .section-header {
@@ -228,7 +224,7 @@ main .section-header p {
 main section img {
   display: block;
   inline-size: 100%;
-  margin-block-end: var(--space-2xs);
+  margin-block-end: var(--space-xs);
   border-radius: var(--radius-lg);
 }
 
@@ -236,7 +232,8 @@ main section img {
 main .two-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-2xs);
+  gap: var(--space-xs);
+  margin-block-end: var(--space-xs);
 }
 main .two-columns img {
   margin: 0;
@@ -244,7 +241,6 @@ main .two-columns img {
 @media (max-width: #{bp.$mobile - 1px}) {
   main .two-columns {
     grid-template-columns: 1fr;
-    gap: var(--space-2xs);
   }
 }
 
@@ -271,11 +267,10 @@ main section article {
   padding: var(--space-lg) var(--space-xl);
   background: var(--surface);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-low);
 }
 main section article h4 {
   margin: var(--space-md) 0 var(--space-2xs);
-  color: var(--primary);
+  color: var(--purple-alt);
   font-size: var(--font-size-body-sm);
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.08em;
@@ -427,7 +422,7 @@ main .resume-eyebrow {
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--primary);
+  color: var(--purple-alt);
 }
 main strong {
   display: block;
@@ -467,7 +462,7 @@ main ul.horizontal li {
   color: var(--opacity-high);
 }
 
-// Quotes (about page <q>, resume recommendations <blockquote>).
+// Resume recommendations and pull quotes.
 main q {
   float: right;
   max-inline-size: 40%;

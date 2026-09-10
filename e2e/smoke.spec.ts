@@ -108,6 +108,68 @@ test('the prerendered portfolio landing page renders its primary message', async
   await expect(page.getByRole('button', { name: 'Watch graphic showreel 2009' })).toHaveCount(1);
 });
 
+test('the shared masthead works with the portfolio brand and routed pages', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/');
+
+  const masthead = page.locator('cx-masthead');
+  const toggle = masthead.getByRole('button', { name: 'Open menu', exact: true });
+  const panel = masthead.locator('.cx-masthead__panel');
+  await expect(toggle).toBeVisible();
+  await expect(toggle).toHaveAttribute('aria-expanded', 'false');
+  await expect(panel).toHaveAttribute('inert', '');
+
+  for (const width of [320, 390]) {
+    await page.setViewportSize({ width, height: 844 });
+    const spacing = await masthead.evaluate((host) => {
+      const header = host.querySelector('.cx-masthead')!.getBoundingClientRect();
+      const brand = host.querySelector('.mc-brand')!.getBoundingClientRect();
+      const icon = host.querySelector('.cx-masthead__toggle-icon')!.getBoundingClientRect();
+      const button = host.querySelector('.cx-masthead__toggle')!.getBoundingClientRect();
+      return {
+        left: brand.left - header.left,
+        right: header.right - icon.right,
+        targetWidth: button.width,
+        targetHeight: button.height,
+        overflow: document.documentElement.scrollWidth > window.innerWidth,
+      };
+    });
+    expect(Math.abs(spacing.left - spacing.right)).toBeLessThanOrEqual(1);
+    expect(spacing.targetWidth).toBeGreaterThanOrEqual(44);
+    expect(spacing.targetHeight).toBeGreaterThanOrEqual(44);
+    expect(spacing.overflow).toBe(false);
+  }
+
+  await toggle.hover();
+  await expect(toggle).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
+  await toggle.click();
+  const close = masthead.getByRole('button', { name: 'Close menu', exact: true });
+  await expect(close).toHaveAttribute('aria-expanded', 'true');
+  await expect(panel.locator('.cx-masthead__panel-inner')).toHaveCSS('opacity', '1');
+  await close.press('Tab');
+  const portfolio = panel.getByRole('link', { name: 'Portfolio', exact: true });
+  await expect(portfolio).toBeFocused();
+  await portfolio.press('Escape');
+  await expect(toggle).toBeFocused();
+  await expect(panel).toHaveAttribute('inert', '');
+
+  await toggle.click();
+  await panel.getByRole('link', { name: 'Resume', exact: true }).click();
+  await expect(page).toHaveURL(/\/resume\/?$/);
+  await expect(toggle).toHaveAttribute('aria-expanded', 'false');
+  await expect(page.getByRole('heading', { level: 1, name: /^Art Director/ })).toBeVisible();
+
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await expect(toggle).toBeHidden();
+  await expect(masthead.getByRole('link', { name: 'Resume', exact: true })).toHaveAttribute(
+    'aria-current',
+    'page',
+  );
+  await expect(masthead.getByRole('link', { name: 'Concepts', exact: true })).toHaveCount(0);
+  const response = await page.goto('/concepts/');
+  expect(response?.ok()).toBeTruthy();
+});
+
 test('a portfolio video loads only after the visitor chooses to play it', async ({ page }) => {
   await page.goto('/');
   await page.route('https://player.vimeo.com/**', async (route) => {

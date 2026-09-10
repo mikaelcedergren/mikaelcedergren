@@ -21,7 +21,6 @@ export class AppComponent {
       routerLinkActiveOptions: { exact: true },
     },
     { id: 'resume', label: 'Resume', routerLink: '/resume' },
-    { id: 'concepts', label: 'Concepts', routerLink: '/concepts' },
     {
       id: 'blog',
       label: 'Blog',
