@@ -135,7 +135,7 @@ main mc-about header h1 {
   line-height: var(--line-height-display);
 }
 // The portfolio's pink-to-purple heading accent uses the shared palette.
-main header h1 span {
+main header h1 span:not(.hero-word) {
   background: linear-gradient(115deg, var(--pink), var(--purple));
   -webkit-background-clip: text;
   background-clip: text;
@@ -149,33 +149,76 @@ main .pre-word {
   line-height: var(--line-height-body);
 }
 
-// Headline fade-in (kept subtle).
-.animate {
-  display: inline;
-  opacity: 0;
-  animation: mc-fade var(--motion-slow) var(--ease-out) forwards;
+// Individual words follow a spoken rhythm, with pauses between phrases.
+// Reduced-motion visitors see the complete heading and introduction immediately.
+@media (prefers-reduced-motion: no-preference) {
+  main .home-page .hero-word {
+    animation: mc-hero-word calc(var(--motion-slow) * 4) var(--ease-out-in) both;
+  }
+
+  main .home-page .hero-word:nth-child(2) {
+    animation-delay: calc(var(--motion-fast) * 3);
+  }
+
+  main .home-page .hero-word:nth-child(3) {
+    animation-delay: calc(var(--motion-fast) * 5);
+  }
+
+  main .home-page .hero-word:nth-child(4) {
+    animation-delay: calc(var(--motion-fast) * 8 + var(--motion-slow) * 4 / 3);
+  }
+
+  main .home-page .hero-word:nth-child(5) {
+    animation-delay: calc(var(--motion-fast) * 10 + var(--motion-slow) * 4 / 3);
+  }
+
+  main .home-page .hero-word:nth-child(6) {
+    animation-delay: calc(var(--motion-fast) * 11 + var(--motion-slow) * 4 / 3);
+  }
+
+  main .home-page .hero-word:nth-child(7) {
+    animation-delay: calc(var(--motion-fast) * 13 + var(--motion-slow) * 4 / 3);
+  }
+
+  main .home-page .hero-accent {
+    background-image: linear-gradient(115deg, var(--pink), var(--purple), var(--pink));
+    background-size: 200% 100%;
+    animation: mc-hero-gradient calc(var(--motion-slow) * 6) var(--ease-out-in)
+      calc(var(--motion-fast) * 10 + var(--motion-slow) * 4 / 3) both;
+  }
+
+  main .home-page .pre-word {
+    animation: mc-hero-enter calc(var(--motion-slow) * 5) var(--ease-out-strong)
+      calc(var(--motion-fast) * 17 + var(--motion-slow) * 4 / 3) both;
+  }
 }
-.animate.delay-1 {
-  animation-delay: 0.12s;
-}
-.animate.delay-2 {
-  animation-delay: 0.24s;
-}
-.animate.delay-3 {
-  animation-delay: 0.36s;
-}
-.animate.delay-4 {
-  animation-delay: 0.48s;
-}
-@keyframes mc-fade {
+
+@keyframes mc-hero-word {
+  from {
+    opacity: 0;
+  }
   to {
     opacity: 1;
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  .animate {
+
+@keyframes mc-hero-enter {
+  from {
+    opacity: 0;
+    transform: translateY(var(--space-md));
+  }
+  to {
     opacity: 1;
-    animation: none;
+    transform: none;
+  }
+}
+
+@keyframes mc-hero-gradient {
+  from {
+    background-position: 100% 50%;
+  }
+  to {
+    background-position: 0% 50%;
   }
 }
 
@@ -224,7 +267,10 @@ main section img {
   display: block;
   inline-size: 100%;
   margin-block-end: var(--space-xs);
-  border-radius: var(--radius-lg);
+}
+main section img,
+main .mc-video {
+  border-radius: var(--radius-media-lg);
 }
 
 // Two-up images.
