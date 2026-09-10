@@ -170,6 +170,99 @@ test('the shared masthead works with the portfolio brand and routed pages', asyn
   expect(response?.ok()).toBeTruthy();
 });
 
+test('portfolio images keep moving in covered frames and respect reduced motion', async ({
+  page,
+}) => {
+  test.setTimeout(60_000);
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await page.goto('/');
+  const frames = page.locator('.mc-parallax');
+  await expect(frames).toHaveCount(26);
+  await expect(page.locator('.section-header .mc-parallax')).toHaveCount(0);
+  await expect(page.locator('.home-page section > img')).toHaveCount(0);
+  await expect(page.locator('.two-columns > .mc-parallax')).toHaveCount(6);
+  for (const logo of await page.locator('.section-header img').all()) {
+    await expect(logo).toHaveCSS('animation-name', 'none');
+    await expect(logo).toHaveCSS('transform', 'none');
+  }
+  await page.locator('.home-page').evaluate(async (element) => {
+    await document.fonts.ready;
+    await Promise.all([...element.querySelectorAll('img')].map((image) => image.decode()));
+  });
+
+  for (const width of [1280, 390]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.emulateMedia({ reducedMotion: 'no-preference' });
+    await page.evaluate(
+      () =>
+        new Promise<void>((resolve) =>
+          requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+        ),
+    );
+    for (const frame of await frames.all()) {
+      const image = frame.locator('img');
+      const layout = await frame.evaluate((element) => ({
+        top: element.getBoundingClientRect().top + window.scrollY,
+        height: element.getBoundingClientRect().height,
+        documentHeight: document.documentElement.scrollHeight,
+      }));
+      const transforms: string[] = [];
+      const offsets: number[] = [];
+      // Equal scroll steps from first appearance until almost completely gone.
+      // Sampling only the centre misses easing that stalls near either edge.
+      for (const progress of [0.05, 0.15, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 0.85, 0.95]) {
+        await page.evaluate(
+          ({ top, height, progress }) =>
+            window.scrollTo({
+              top: top - innerHeight + (innerHeight + height) * progress,
+              behavior: 'instant',
+            }),
+          { top: layout.top, height: layout.height, progress },
+        );
+        await page.evaluate(
+          () =>
+            new Promise<void>((resolve) =>
+              requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+            ),
+        );
+        await expect
+          .poll(() => image.evaluate((element) => getComputedStyle(element).transform))
+          .not.toBe(transforms.at(-1) ?? 'none');
+        const geometry = await frame.evaluate((element) => {
+          const frame = element.getBoundingClientRect();
+          const image = element.querySelector('img')!.getBoundingClientRect();
+          return {
+            covered:
+              image.top <= frame.top &&
+              image.bottom >= frame.bottom &&
+              image.left <= frame.left &&
+              image.right >= frame.right,
+            height: frame.height,
+            offset: (image.top + image.bottom - frame.top - frame.bottom) / 2,
+            documentHeight: document.documentElement.scrollHeight,
+            transform: getComputedStyle(element.querySelector('img')!).transform,
+          };
+        });
+        expect(geometry.covered).toBe(true);
+        expect(geometry.height).toBeCloseTo(layout.height, 1);
+        expect(geometry.documentHeight).toBe(layout.documentHeight);
+        transforms.push(geometry.transform);
+        offsets.push(geometry.offset);
+      }
+      const travel = offsets.slice(1).map((offset, index) => offset - offsets[index]);
+      expect(Math.min(...travel)).toBeGreaterThan(1);
+      // Movement near the edges must stay perceptible compared with the centre.
+      expect(Math.min(...travel) / Math.max(...travel)).toBeGreaterThan(0.65);
+    }
+
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+    for (const image of await frames.locator('img').all()) {
+      await expect(image).toHaveCSS('transform', 'none');
+      await expect(image).toHaveCSS('animation-name', 'none');
+    }
+  }
+});
+
 test('a portfolio video loads only after the visitor chooses to play it', async ({ page }) => {
   await page.goto('/');
   await page.route('https://player.vimeo.com/**', async (route) => {

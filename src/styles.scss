@@ -273,6 +273,45 @@ main .mc-video {
   border-radius: var(--radius-media-lg);
 }
 
+// Portfolio media frames stay still while image overscan covers the full
+// scroll-driven travel. Section logos deliberately sit outside these frames.
+main .mc-parallax {
+  margin: 0 0 var(--space-xs);
+  overflow: clip;
+  border-radius: var(--radius-media-lg);
+}
+main .mc-parallax > img {
+  block-size: auto;
+  margin: 0;
+  border-radius: var(--radius-none);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    main .mc-parallax {
+      view-timeline-name: --mc-media-scroll;
+      view-timeline-axis: block;
+      view-timeline-inset: 0;
+    }
+    main .mc-parallax > img {
+      // Keep a non-zero slope at both ends: entrance/exit easings make parallax
+      // appear to park while the image is still visible.
+      animation: mc-image-parallax var(--motion-slow) cubic-bezier(0.25, 0.2, 0.75, 0.8) both;
+      animation-timeline: --mc-media-scroll;
+      animation-range: cover 0% cover 100%;
+    }
+  }
+}
+
+@keyframes mc-image-parallax {
+  from {
+    transform: translateY(-6%) scale(1.14);
+  }
+  to {
+    transform: translateY(6%) scale(1.14);
+  }
+}
+
 // Two-up images.
 main .two-columns {
   display: grid;
@@ -280,7 +319,7 @@ main .two-columns {
   gap: var(--space-xs);
   margin-block-end: var(--space-xs);
 }
-main .two-columns img {
+main .two-columns .mc-parallax {
   margin: 0;
 }
 @media (max-width: #{bp.$mobile - 1px}) {
