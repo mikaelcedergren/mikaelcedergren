@@ -187,7 +187,11 @@ test('portfolio images keep moving in covered frames and respect reduced motion'
   }
   await page.locator('.home-page').evaluate(async (element) => {
     await document.fonts.ready;
-    await Promise.all([...element.querySelectorAll('img')].map((image) => image.decode()));
+    await Promise.all(
+      [...element.querySelectorAll<HTMLImageElement>('.mc-parallax img, .section-header img')].map(
+        (image) => image.decode(),
+      ),
+    );
   });
 
   for (const width of [1280, 390]) {
@@ -264,7 +268,6 @@ test('portfolio images keep moving in covered frames and respect reduced motion'
 });
 
 test('a portfolio video loads only after the visitor chooses to play it', async ({ page }) => {
-  await page.goto('/');
   await page.route('https://player.vimeo.com/**', async (route) => {
     await route.fulfill({
       contentType: 'text/html',
@@ -272,15 +275,44 @@ test('a portfolio video loads only after the visitor chooses to play it', async 
     });
   });
 
-  const trigger = page.getByRole('button', { name: 'Watch Lanefinder brand video' });
-  await trigger.click();
-
-  await expect(page.locator('iframe[title="Lanefinder brand video"]')).toHaveAttribute(
-    'src',
-    'https://player.vimeo.com/video/490739497?autoplay=1',
-  );
-  await expect(page.getByRole('button', { name: 'Watch Lanefinder brand video' })).toHaveCount(0);
-  await expect(page.getByRole('button', { name: 'Watch graphic showreel 2009' })).toHaveCount(1);
+  for (const width of [1280, 390]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto('/');
+    await expect(page.locator('.mc-video iframe')).toHaveCount(0);
+    const videos = [
+      { label: 'Watch Lanefinder brand video', title: 'Lanefinder brand video', id: '490739497' },
+      { label: 'Watch graphic showreel 2009', title: 'Graphic showreel 2009', id: '752191176' },
+    ];
+    for (const [index, video] of videos.entries()) {
+      const trigger = page.getByRole('button', { name: video.label });
+      await trigger.scrollIntoViewIfNeeded();
+      await expect(trigger).toHaveText('');
+      await expect
+        .poll(() =>
+          trigger.locator('img').evaluate((image: HTMLImageElement) => image.naturalWidth),
+        )
+        .toBe(1280);
+      const frame = page.locator('.mc-video').nth(index);
+      const height = await frame.evaluate((element) => element.getBoundingClientRect().height);
+      if (index === 0) {
+        // The cover itself must activate playback, away from the central icon.
+        await trigger.click({ position: { x: 30, y: 30 } });
+      } else {
+        await trigger.focus();
+        await trigger.press('Enter');
+      }
+      const player = page.locator(`iframe[title="${video.title}"]`);
+      await expect(player).toBeVisible();
+      const source = new URL((await player.getAttribute('src'))!);
+      expect(source.pathname).toBe(`/video/${video.id}`);
+      expect(source.searchParams.get('autoplay')).toBe('1');
+      if (index === 1) expect(source.searchParams.get('h')).toBe('67c73ed7e4');
+      expect(await frame.evaluate((element) => element.getBoundingClientRect().height)).toBe(
+        height,
+      );
+      await expect(trigger).toHaveCount(0);
+    }
+  }
 });
 
 test('writing links to Substack and the retired local blog is absent', async ({

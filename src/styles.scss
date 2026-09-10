@@ -245,6 +245,7 @@ main .section-header {
 }
 main .section-header > img {
   flex: 0 0 auto;
+  border-radius: var(--radius-none);
   inline-size: 132px;
   max-block-size: 64px;
   object-fit: contain;
@@ -377,33 +378,48 @@ main section article p:last-child {
 // Video geometry remains framework-owned through `.cx-embed`. This product-owned
 // control defers its external Vimeo player until the visitor explicitly asks for it.
 main .mc-video-consent {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: var(--space-sm);
+  position: relative;
+  display: grid;
+  place-items: center;
   inline-size: 100%;
   block-size: 100%;
-  padding: var(--space-lg);
+  padding: 0;
   border: 0;
   border-radius: inherit;
-  background: linear-gradient(115deg, var(--primary), var(--accent));
+  background: var(--ink);
   color: var(--on-ink);
   cursor: pointer;
-  text-align: center;
+}
+main .mc-video-consent > img {
+  position: absolute;
+  inset: 0;
+  block-size: 100%;
+  margin: 0;
+  border-radius: inherit;
+  object-fit: cover;
+  pointer-events: none;
 }
 main .mc-video-consent__play {
-  font-size: var(--font-size-display);
-  line-height: var(--line-height-heading);
+  pointer-events: none;
+  position: relative;
+  display: grid;
+  place-items: center;
+  inline-size: var(--space-2xl);
+  block-size: var(--space-2xl);
+  border-radius: var(--radius-pill);
+  background: var(--ink);
 }
-main .mc-video-consent__action {
-  font-size: var(--font-size-title-2);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-heading);
+main .mc-video-consent__play::before {
+  content: '';
+  inline-size: var(--icon-size-xl);
+  block-size: var(--icon-size-xl);
+  background: currentColor;
+  mask: url('@mikaelcedergren/cx-framework/icons/svg/play.svg') center / contain no-repeat;
+  transform: translateX(var(--space-2xs));
 }
-main .mc-video-consent__privacy {
-  font-size: var(--font-size-body-sm);
-  line-height: var(--line-height-small);
+main .mc-video-consent:focus-visible .mc-video-consent__play {
+  outline: calc(var(--border-width) * 2) solid var(--on-ink);
+  outline-offset: var(--space-xs);
 }
 
 // ---------------------------------------------------------------------------
@@ -549,12 +565,14 @@ main ul.horizontal li {
 // Resume recommendations and pull quotes.
 main q {
   float: right;
-  max-inline-size: 40%;
+  max-inline-size: 50%;
   margin: 0 0 var(--space-xl) var(--space-xl);
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-regular);
   font-size: var(--font-size-title-1);
   font-style: normal;
   line-height: var(--line-height-body);
-  color: var(--opacity-high);
+  color: var(--ink);
 }
 @media (max-width: #{bp.$mobile - 1px}) {
   main q {
@@ -563,8 +581,6 @@ main q {
 }
 main blockquote {
   margin: 0 0 var(--space-xl);
-  padding-inline-start: var(--space-lg);
-  border-inline-start: calc(var(--border-width) * 3) solid var(--primary);
   font-style: italic;
 }
 main blockquote span {

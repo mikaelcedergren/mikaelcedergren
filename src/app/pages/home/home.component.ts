@@ -9,6 +9,7 @@ const VIMEO_VIDEOS = {
     source: 'https://player.vimeo.com/video/490739497',
     title: 'Lanefinder brand video',
     buttonLabel: 'Watch Lanefinder brand video',
+    poster: '/assets/images/portfolio/design/lanefinder-video-cover.jpg',
   },
   'svt-showreel': {
     markupSource:
@@ -17,6 +18,7 @@ const VIMEO_VIDEOS = {
       'https://player.vimeo.com/video/752191176?h=67c73ed7e4&badge=0&autopause=0&player_id=0&app_id=58479',
     title: 'Graphic showreel 2009',
     buttonLabel: 'Watch graphic showreel 2009',
+    poster: '/assets/images/portfolio/design/svt-showreel-cover.jpg',
   },
 } as const;
 
@@ -42,7 +44,7 @@ function deferVimeoEmbeds(html: string): string {
 
     const [key, video] = match;
     deferred.add(key);
-    return `<button type="button" class="mc-video-consent" data-vimeo-video="${key}" aria-label="${video.buttonLabel}"><span class="mc-video-consent__play" aria-hidden="true">▶</span><span class="mc-video-consent__action">${video.buttonLabel}</span><span class="mc-video-consent__privacy">Vimeo loads only after you choose to play.</span></button>`;
+    return `<button type="button" class="mc-video-consent" data-vimeo-video="${key}" aria-label="${video.buttonLabel}"><img src="${video.poster}" alt="" width="1280" height="720" loading="lazy" decoding="async" /><span class="mc-video-consent__play" aria-hidden="true"></span></button>`;
   });
 
   if (deferred.size !== videos.length) {
