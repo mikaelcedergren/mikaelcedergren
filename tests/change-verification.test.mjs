@@ -116,13 +116,10 @@ test('explicit visual proof adds the default route without weakening selected ch
 });
 
 test('route mapping is bounded and product-owned', () => {
-  assert.equal(
-    routeForSourcePath('src/app/pages/blog/posts/brainstorming.component.ts'),
-    '/blog/posts/brainstorming.html',
-  );
+  assert.equal(routeForSourcePath('src/app/pages/resume/resume.component.ts'), '/resume/');
   assert.equal(routeForSourcePath('src/app/pages/concepts/concepts.component.ts'), '/concepts/');
   assert.equal(routeForSourcePath('src/styles.scss'), '/');
-  assert.equal(safeEvidenceName('/blog/posts/brainstorming.html'), 'blog-posts-brainstorming-html');
+  assert.equal(safeEvidenceName('/resume/'), 'resume');
 });
 
 test('snapshot comparison detects additions, changes, and removals', () => {

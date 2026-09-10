@@ -190,10 +190,22 @@ test('a portfolio video loads only after the visitor chooses to play it', async 
   await expect(page.getByRole('button', { name: 'Watch graphic showreel 2009' })).toHaveCount(1);
 });
 
-test('literal blog HTML routes survive the post-build flatten step', async ({ page }) => {
-  const response = await page.goto('/blog/posts/creative-leadership.html');
-  expect(response?.ok()).toBeTruthy();
-  await expect(page).toHaveTitle(/How to Make Your Creative Team Love the Work/);
+test('writing links to Substack and the retired local blog is absent', async ({
+  page,
+  request,
+}) => {
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto('/');
+  await expect(
+    page.locator('cx-masthead').getByRole('link', { name: 'Blog', exact: true }),
+  ).toHaveAttribute('href', 'https://mikaelcedergren.substack.com');
+  for (const route of ['/blog/', '/blog/posts/creative-leadership.html']) {
+    const response = await request.get(route);
+    expect(response.status()).toBe(404);
+  }
+  const sitemap = await request.get('/sitemap.xml');
+  expect(sitemap.ok()).toBeTruthy();
+  expect(await sitemap.text()).not.toContain('/blog');
 });
 
 test('a missing browser asset returns a real non-cacheable 404', async ({ request }) => {

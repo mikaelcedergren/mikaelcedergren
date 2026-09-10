@@ -18,10 +18,10 @@ pnpm verify:change --full
 
 - Documentation uses formatting only.
 - Interface and editorial-page changes use formatting, types, a production SSG browser build, and
-  the affected real page or post route in the already-running local product on port `4250`.
+  the affected real page route in the already-running local product on port `4250`.
 - E2E changes run the isolated repository-owned E2E command.
 - Dependencies, repository authority, server code, installers, service and release definitions,
-  sitemap and flattening machinery, product/build configuration, and this verifier's trust
+  sitemap generation, product/build configuration, and this verifier's trust
   implementation use the complete `pnpm check` gate.
 - Unclassified source changes fail conservatively into the complete gate.
 

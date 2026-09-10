@@ -5,7 +5,7 @@
 // `data.seo.path` — so this reads those paths (skipping `noindex` routes like the 404 catch-all)
 // and writes public/sitemap.xml and public/robots.txt. angular.json's assets glob
 // `{robots.txt,sitemap.xml}` copies both to the dist root. Runs before `ng build` in `pnpm build`,
-// so the sitemap never goes stale when a blog post is added to app.routes.ts.
+// so the sitemap never goes stale when pages are added to or removed from app.routes.ts.
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';

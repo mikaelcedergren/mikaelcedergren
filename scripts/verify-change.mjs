@@ -105,8 +105,6 @@ function uniqueRoutes(routes, fallback = '/') {
 }
 
 export function routeForSourcePath(file) {
-  const post = /^src\/app\/pages\/blog\/posts\/([^/]+)\.component\.ts$/u.exec(file)?.[1];
-  if (post) return `/blog/posts/${post}.html`;
   const page = /^src\/app\/pages\/([^/]+)\//u.exec(file)?.[1];
   if (!page || page === 'home' || page === 'not-found') return '/';
   return `/${page}/`;
@@ -132,7 +130,7 @@ export function classifyChanges(
   const e2ePattern =
     /^(?:e2e\/|playwright\.config\.ts$|scripts\/(?:run-e2e|e2e-server|e2e-environment)\.mjs$)/u;
   const highRiskPattern =
-    /^(?:AGENTS\.md|CLAUDE\.md|\.agents\/|\.codex\/|\.gitignore$|package\.json|pnpm-lock\.yaml|pnpm-workspace\.yaml|angular\.json|tsconfig(?:\.[^.]+)?\.json|cx-product\.json|\.github\/|server\/|launchd\/|bin\/|scripts\/(?:verify-change|sitemap|flatten)\.mjs$|tests\/change-verification\.test\.mjs$|DEVELOPMENT-VERIFICATION\.md$)/u;
+    /^(?:AGENTS\.md|CLAUDE\.md|\.agents\/|\.codex\/|\.gitignore$|package\.json|pnpm-lock\.yaml|pnpm-workspace\.yaml|angular\.json|tsconfig(?:\.[^.]+)?\.json|cx-product\.json|\.github\/|server\/|launchd\/|bin\/|scripts\/(?:verify-change|sitemap)\.mjs$|tests\/change-verification\.test\.mjs$|DEVELOPMENT-VERIFICATION\.md$)/u;
   const interfaceFiles = changedFiles.filter((file) => interfacePattern.test(file));
   const e2eChange = has(e2ePattern);
   const unknownChange = changedFiles.some(

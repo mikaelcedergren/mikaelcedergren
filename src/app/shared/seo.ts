@@ -8,7 +8,7 @@ const DEFAULT_OG_IMAGE = `${SITE_ORIGIN}/assets/images/og-image.jpg`;
 
 /** Per-page SEO, carried on each route's `data.seo`. */
 export interface PageSeo {
-  /** Canonical path, e.g. '/' or '/blog/posts/ui-and-ux.html'. */
+  /** Canonical path, e.g. '/' or '/resume/'. */
   path: string;
   description: string;
   keywords?: string;
@@ -16,10 +16,8 @@ export interface PageSeo {
   ogDescription?: string;
   /** Absolute image URL; defaults to the site og-image. */
   ogImage?: string;
-  /** og:type — 'website' (default) or 'article' for blog posts. */
-  ogType?: string;
   noindex?: boolean;
-  /** Extra JSON-LD @graph nodes (e.g. a BlogPosting) appended after Person/WebSite/WebPage. */
+  /** Extra JSON-LD @graph nodes appended after Person/WebSite/WebPage. */
   graph?: object[];
 }
 
@@ -61,7 +59,7 @@ export class SeoTitleStrategy extends TitleStrategy {
       this.meta.removeTag("name='robots'");
     }
 
-    this.meta.updateTag({ property: 'og:type', content: seo.ogType ?? 'website' });
+    this.meta.updateTag({ property: 'og:type', content: 'website' });
     this.meta.updateTag({ property: 'og:url', content: canonical });
     this.meta.updateTag({ property: 'og:site_name', content: 'Mikael Cedergren' });
     this.meta.updateTag({ property: 'og:locale', content: 'en_US' });

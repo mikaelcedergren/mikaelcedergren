@@ -76,10 +76,9 @@ main {
   padding: var(--space-xl) var(--space-lg);
 }
 
-// Editorial prose in About and individual blog posts is scoped to the
-// framework's `.cx-article`; blog navigation and related-entry lists remain UI.
-// The bespoke layout pages (portfolio, blog index, concepts, resume) keep the
-// structural treatment below, expressed purely in framework tokens.
+// Editorial prose in About is scoped to the framework's `.cx-article`.
+// The portfolio, concepts, and resume layouts keep the structural treatment
+// below, expressed purely in framework tokens.
 main h1,
 main h2,
 main h3 {

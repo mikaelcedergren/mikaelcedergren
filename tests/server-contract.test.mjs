@@ -40,12 +40,6 @@ test(
       path.join(sectionDir, 'index.html'),
       '<!doctype html><title>About fixture</title>',
     );
-    const articleDir = path.join(browserDir, 'blog', 'posts');
-    await mkdir(articleDir, { recursive: true });
-    await writeFile(
-      path.join(articleDir, 'example.html'),
-      '<!doctype html><title>Literal article fixture</title>',
-    );
     await writeFile(
       path.join(browserDir, 'main-0123456789abcdef.js'),
       'globalThis.portfolioFixture = true;',
@@ -185,11 +179,6 @@ express.application.use = function (...args) {
     assert.equal(sectionRoute.status, 200);
     assert.equal(sectionRoute.headers.get('cache-control'), 'no-cache');
     assert.match(await sectionRoute.text(), /About fixture/);
-
-    const literalArticleRoute = await localFetch(`${origin}/blog/posts/example.html`);
-    assert.equal(literalArticleRoute.status, 200);
-    assert.equal(literalArticleRoute.headers.get('cache-control'), 'no-cache');
-    assert.match(await literalArticleRoute.text(), /Literal article fixture/);
 
     const missingProductRoute = await localFetch(`${origin}/not-a-product-route`);
     assert.equal(missingProductRoute.status, 404);

@@ -1,13 +1,13 @@
 # mikaelcedergren.com
 
-Mikael Cedergren's portfolio + blog — Angular 22 SSG, served by a strict compiled TypeScript
+Mikael Cedergren's portfolio — Angular 22 SSG, served by a strict compiled TypeScript
 composition of the shared Express runtime on the Mac mini (port 3050), fronted by nginx. See
 [AGENTS.md](AGENTS.md) for architecture, and
 `/Users/cortex/Development/SERVER-STANDARD.md` for how every site here is served.
 
 ```bash
 pnpm install
-pnpm build      # generate sitemap, prerender/flatten 15 routes, compile server/dist/index.js
+pnpm build      # generate sitemap, prerender pages, compile server/dist/index.js
 pnpm build:server:release # internal self-contained server-artifact build
 pnpm start      # serve at http://127.0.0.1:3050 (health: /healthz)
 pnpm check      # canonical platform, format, typecheck, test, and production-build gate
@@ -30,7 +30,7 @@ is documented in
 The isolated server contract runs only compiled `server/dist/index.js` against a temporary browser
 tree. It verifies that manifest-derived health identity stays pinned to the sealed server artifact
 even when the operational checkout manifest changes, plus synthetic server-release identity, shared
-errors and security/cache headers, section and literal `.html` routing, missing responses, and
+errors and security/cache headers, section routing, missing responses, and
 graceful shutdown without touching the live service.
 
 The tracked LaunchDaemon template executes only the selected atomic `current-server` artifact and
