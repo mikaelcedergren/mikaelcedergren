@@ -4,6 +4,7 @@ import {
   createHermeticE2EChildEnvironment,
   validateOwnedE2ERuntime,
 } from '@mikaelcedergren/cx-framework/platform/e2e-runner';
+import { cp } from 'node:fs/promises';
 import { spawn } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -33,15 +34,19 @@ try {
     'build:server',
     createE2EBuildEnvironment({ pathValue, runtimeTemp: runtime.runtimeTemp }),
   );
-  await runPackageScript(
-    'build:release',
-    createE2EReleaseBuildEnvironment({
-      browserDirectory: browserDir,
-      pathValue,
-      releaseDirectory: releaseDir,
-      runtimeTemp: runtime.runtimeTemp,
-    }),
-  );
+  if (process.env.MC_PDF_BROWSER_DIR) {
+    await cp(process.env.MC_PDF_BROWSER_DIR, browserDir, { recursive: true });
+  } else {
+    await runPackageScript(
+      'build:html',
+      createE2EReleaseBuildEnvironment({
+        browserDirectory: browserDir,
+        pathValue,
+        releaseDirectory: releaseDir,
+        runtimeTemp: runtime.runtimeTemp,
+      }),
+    );
+  }
   const server = spawn(process.execPath, [path.join(repoRoot, 'server', 'dist', 'index.js')], {
     cwd: runtime.root,
     detached: false,

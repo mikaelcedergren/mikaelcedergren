@@ -41,7 +41,7 @@ importers:
         version: 22.0.8(6c5876c8022b56f6168786f1fb21b877)
       '@mikaelcedergren/cx-framework':
         specifier: github:mikaelcedergren/cx-framework#main
-        version: https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/ee7859b3fb00de175edb6e7322a4b81c82446c5b(b80f09860f4a54f238d55ac2baac7fff)
+        version: https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/473f08b52d44b24ae3367961ad218494e6d76614(b80f09860f4a54f238d55ac2baac7fff)
       ag-charts-community:
         specifier: ^13.3.1
         version: 13.3.1
@@ -98,8 +98,8 @@ importers:
         specifier: 22.0.8
         version: 22.0.8(@angular/compiler@22.0.8)(typescript@6.0.3)
       '@playwright/test':
-        specifier: 1.60.0
-        version: 1.60.0
+        specifier: 1.62.0
+        version: 1.62.0
       '@types/node':
         specifier: ^26.0.0
         version: 26.1.2
@@ -117,7 +117,7 @@ importers:
     dependencies:
       '@mikaelcedergren/cx-framework':
         specifier: github:mikaelcedergren/cx-framework#main
-        version: https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/2a5ae2de31384875214ea313e9ffbea6c0435ac8
+        version: https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/473f08b52d44b24ae3367961ad218494e6d76614
       compression:
         specifier: ^1.8.1
         version: 1.8.1
@@ -813,71 +813,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@mikaelcedergren/cx-framework@https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/2a5ae2de31384875214ea313e9ffbea6c0435ac8':
-    resolution: {gitHosted: true, integrity: sha512-RPyD7EBHJSsrmXJSDrkuYDZ11VL/NXAiulP+DUVHP9pu1dL9S+DNoLguVceOhOzDd4AemOD49081sU/wAcXbBA==, tarball: https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/2a5ae2de31384875214ea313e9ffbea6c0435ac8}
-    version: 0.12.0
-    engines: {node: '>=26 <27'}
-    hasBin: true
-    peerDependencies:
-      '@angular/cdk': ^22.0.0
-      '@angular/common': ^22.0.0
-      '@angular/core': ^22.0.0
-      '@angular/router': ^22.0.0
-      ag-charts-community: ^13.3.1
-      marked: ^18.0.7
-      prosemirror-commands: ^1.7.2
-      prosemirror-history: ^1.5.0
-      prosemirror-inputrules: ^1.5.1
-      prosemirror-keymap: ^1.2.3
-      prosemirror-markdown: ^1.13.5
-      prosemirror-model: ^1.25.11
-      prosemirror-schema-list: ^1.5.1
-      prosemirror-state: ^1.4.4
-      prosemirror-transform: ^1.12.0
-      prosemirror-view: ^1.42.2
-      rxjs: ^7.8.0
-      tslib: ^2.8.1
-    peerDependenciesMeta:
-      '@angular/cdk':
-        optional: true
-      '@angular/common':
-        optional: true
-      '@angular/core':
-        optional: true
-      '@angular/router':
-        optional: true
-      ag-charts-community:
-        optional: true
-      marked:
-        optional: true
-      prosemirror-commands:
-        optional: true
-      prosemirror-history:
-        optional: true
-      prosemirror-inputrules:
-        optional: true
-      prosemirror-keymap:
-        optional: true
-      prosemirror-markdown:
-        optional: true
-      prosemirror-model:
-        optional: true
-      prosemirror-schema-list:
-        optional: true
-      prosemirror-state:
-        optional: true
-      prosemirror-transform:
-        optional: true
-      prosemirror-view:
-        optional: true
-      rxjs:
-        optional: true
-      tslib:
-        optional: true
-
-  '@mikaelcedergren/cx-framework@https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/ee7859b3fb00de175edb6e7322a4b81c82446c5b':
-    resolution: {gitHosted: true, integrity: sha512-bQYmEOzPJO2jrinrGd96LxmPYmyuwpM6dLObZOl1kX/7YDF1uXNrzsfzDQAHQkoTEAO7/lavOWtc6nuI87894Q==, tarball: https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/ee7859b3fb00de175edb6e7322a4b81c82446c5b}
-    version: 0.12.1
+  '@mikaelcedergren/cx-framework@https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/473f08b52d44b24ae3367961ad218494e6d76614':
+    resolution: {gitHosted: true, tarball: https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/473f08b52d44b24ae3367961ad218494e6d76614}
+    version: 0.13.1
     engines: {node: '>=26 <27'}
     hasBin: true
     peerDependencies:
@@ -1208,9 +1146,9 @@ packages:
     resolution: {integrity: sha512-7FNeNl8NCE7aINx7WXiKQrPYZWC/hvrTsmk6zmxbI7LTXE7hVek/n8AfVgpe2y82zl3w0HvCHN0bVKMBoJcC0w==}
     engines: {node: '>= 10.0.0'}
 
-  '@playwright/test@1.60.0':
-    resolution: {integrity: sha512-O71yZIbAh/PxDMNGns37GHBIfrVkEVyn+AXyIa5dOTfb4/xNvRWV+Vv/NMbNCtODB/pO7vLlF2OTmMVLhmr7Ag==}
-    engines: {node: '>=18'}
+  '@playwright/test@1.62.0':
+    resolution: {integrity: sha512-9zOJ6ZQRAena31MpOH9VSzIz8Ou3YJ/wtY/eQm5T2uhfhG7/U3COrMS8xOtUrZrp9OgdmzEnIYODye3nY1VqzA==}
+    engines: {node: '>=20'}
     hasBin: true
 
   '@rollup/rollup-android-arm-eabi@4.60.2':
@@ -2265,14 +2203,14 @@ packages:
     resolution: {integrity: sha512-wQ0b/W4Fr01qtpHlqSqspcj3EhBvimsdh0KlHhH8HRZnMsEa0ea2fTULOXOS9ccQr3om+GcGRk4e+isrZWV8qQ==}
     engines: {node: '>=16.20.0'}
 
-  playwright-core@1.60.0:
-    resolution: {integrity: sha512-9bW6zvX/m0lEbgTKJ6YppOKx8H3VOPBMOCFh2irXFOT4BbHgrx5hPjwJYLT40Lu+4qtD36qKc/Hn56StUW57IA==}
-    engines: {node: '>=18'}
+  playwright-core@1.62.0:
+    resolution: {integrity: sha512-nsNRyq0r2zsG8AcRHWknc9QRA5XCueC7gWMrs+Gx2tlZn9hcl8zudfh00lhJPY1DE7NmZ6bDsT9g2yey8mXljA==}
+    engines: {node: '>=20'}
     hasBin: true
 
-  playwright@1.60.0:
-    resolution: {integrity: sha512-hheHdokM8cdqCb0lcE3s+zT4t4W+vvjpGxsZlDnikarzx8tSzMebh3UiFtgqwFwnTnjYQcsyMF8ei2mCO/tpeA==}
-    engines: {node: '>=18'}
+  playwright@1.62.0:
+    resolution: {integrity: sha512-Z14dG305dgaLu6foB1TXQagFiW8JfSUIUaUuPaKQ6NtBPKF1P/qXcqfh6c6K/icPqdy37JmjbiBXf6JNg6Sylw==}
+    engines: {node: '>=20'}
     hasBin: true
 
   pnpm@11.23.0:
@@ -3355,9 +3293,9 @@ snapshots:
   '@lmdb/lmdb-win32-x64@3.5.4':
     optional: true
 
-  '@mikaelcedergren/cx-framework@https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/2a5ae2de31384875214ea313e9ffbea6c0435ac8': {}
+  '@mikaelcedergren/cx-framework@https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/473f08b52d44b24ae3367961ad218494e6d76614': {}
 
-  '@mikaelcedergren/cx-framework@https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/ee7859b3fb00de175edb6e7322a4b81c82446c5b(b80f09860f4a54f238d55ac2baac7fff)':
+  '@mikaelcedergren/cx-framework@https://codeload.github.com/mikaelcedergren/cx-framework/tar.gz/473f08b52d44b24ae3367961ad218494e6d76614(b80f09860f4a54f238d55ac2baac7fff)':
     optionalDependencies:
       '@angular/cdk': 22.0.6(@angular/common@22.0.8(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(@angular/platform-browser@22.0.8(@angular/common@22.0.8(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2)))(rxjs@7.8.2)
       '@angular/common': 22.0.8(@angular/core@22.0.8(@angular/compiler@22.0.8)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2)
@@ -3603,9 +3541,9 @@ snapshots:
       '@parcel/watcher-win32-x64': 2.6.0
     optional: true
 
-  '@playwright/test@1.60.0':
+  '@playwright/test@1.62.0':
     dependencies:
-      playwright: 1.60.0
+      playwright: 1.62.0
 
   '@rollup/rollup-android-arm-eabi@4.60.2':
     optional: true
@@ -4713,11 +4651,11 @@ snapshots:
 
   pkce-challenge@5.0.1: {}
 
-  playwright-core@1.60.0: {}
+  playwright-core@1.62.0: {}
 
-  playwright@1.60.0:
+  playwright@1.62.0:
     dependencies:
-      playwright-core: 1.60.0
+      playwright-core: 1.62.0
     optionalDependencies:
       fsevents: 2.3.2
 

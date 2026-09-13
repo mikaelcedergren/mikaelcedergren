@@ -45,3 +45,21 @@ The canonical `pnpm check` includes this regression. The tracked pnpm patch fixe
 Angular's stale template metadata at its owning development-server layer and survives
 a frozen install. Keep it until an upstream version passes the regression without
 the patch; do not disable hot reload to hide a failure.
+
+## Résumé PDF
+
+`/resume/?pdf` downloads `Mikael-Cedergren-CV.pdf`; the ordinary résumé and other routes
+remain unchanged. A manual download link remains available if the browser suppresses the
+initial download.
+
+Production browser builds (including staged releases) generate the PDF from their own
+prerendered résumé before the artifact is sealed. `pnpm resume:pdf` rebuilds it and updates
+the ignored development asset. Local browser builds update that asset as well. Run
+`pnpm resume:pdf` after editing résumé content while development is running, or to create
+the download on a fresh checkout.
+
+The PDF renderer uses the shared hermetic Chromium runner against a copy of the built
+site. It preserves source text, removes repeated decorative pull quotes, applies
+`resume-print.css`, embeds fonts, and writes the finished PDF atomically. It never calls
+public services. `build:html` is the internal HTML-only build used by the ordinary E2E
+controller so browser tests do not recursively start another runner.

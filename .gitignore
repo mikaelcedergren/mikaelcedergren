@@ -168,3 +168,6 @@ out-tsc/
 # Generated validation artifacts
 migration-audit/playwright-validation-report.json
 migration-audit/playwright-screenshots/
+
+# Generated resume download (built from current content)
+/public/assets/documents/Mikael-Cedergren-CV.pdf

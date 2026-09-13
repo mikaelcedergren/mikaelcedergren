@@ -108,16 +108,18 @@ test('the prerendered portfolio landing page renders its primary message', async
   await expect(page.getByRole('button', { name: 'Watch graphic showreel 2009' })).toHaveCount(1);
 });
 
-test('the shared masthead works with the portfolio brand and routed pages', async ({ page }) => {
+test('the shared masthead works with the portfolio brand and routed pages', async ({
+  page,
+}, testInfo) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/');
 
   const masthead = page.locator('cx-masthead');
-  const toggle = masthead.getByRole('button', { name: 'Open menu', exact: true });
-  const panel = masthead.locator('.cx-masthead__panel');
+  const toggle = masthead.locator('button[aria-haspopup="dialog"]');
+  const panel = page.getByRole('dialog', { name: 'Menu', exact: true });
   await expect(toggle).toBeVisible();
   await expect(toggle).toHaveAttribute('aria-expanded', 'false');
-  await expect(panel).toHaveAttribute('inert', '');
+  await expect(panel).toBeHidden();
 
   for (const width of [320, 390]) {
     await page.setViewportSize({ width, height: 844 });
@@ -143,15 +145,17 @@ test('the shared masthead works with the portfolio brand and routed pages', asyn
   await toggle.hover();
   await expect(toggle).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
   await toggle.click();
-  const close = masthead.getByRole('button', { name: 'Close menu', exact: true });
-  await expect(close).toHaveAttribute('aria-expanded', 'true');
-  await expect(panel.locator('.cx-masthead__panel-inner')).toHaveCSS('opacity', '1');
+  const close = panel.getByRole('button', { name: 'Close menu', exact: true });
+  await expect(toggle).toHaveAttribute('aria-expanded', 'true');
+  await expect(panel).toBeVisible();
+  await expect(close).toBeFocused();
+  await page.screenshot({ path: testInfo.outputPath('mobile-navigation.png') });
   await close.press('Tab');
   const portfolio = panel.getByRole('link', { name: 'Portfolio', exact: true });
   await expect(portfolio).toBeFocused();
   await portfolio.press('Escape');
   await expect(toggle).toBeFocused();
-  await expect(panel).toHaveAttribute('inert', '');
+  await expect(panel).toBeHidden();
 
   await toggle.click();
   await panel.getByRole('link', { name: 'Resume', exact: true }).click();
@@ -415,3 +419,30 @@ function requiredEnvironment(name: string): string {
   if (!value) throw new Error(`${name} is required for isolated Mikael E2E.`);
   return value;
 }
+
+test('the resume PDF query downloads once and provides a manual download link', async ({
+  page,
+}) => {
+  const path = '/assets/documents/Mikael-Cedergren-CV.pdf';
+  await page.route(`**${path}`, (route) =>
+    route.fulfill({
+      contentType: 'application/pdf',
+      body: '%PDF-1.4\nSynthetic download fixture',
+    }),
+  );
+  let downloads = 0;
+  page.on('download', () => downloads++);
+  const automatic = page.waitForEvent('download');
+  await page.goto('/resume/?pdf');
+  expect((await automatic).suggestedFilename()).toBe('Mikael-Cedergren-CV.pdf');
+  await expect(page.getByRole('status')).toContainText('Your CV download is ready.');
+  const fallback = page.getByRole('link', { name: 'Download PDF', exact: true });
+  const manual = page.waitForEvent('download');
+  await fallback.click();
+  expect((await manual).suggestedFilename()).toBe('Mikael-Cedergren-CV.pdf');
+  await page.goto('/resume/');
+  await expect(fallback).toHaveCount(0);
+  await page.goto('/?pdf');
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+  expect(downloads).toBe(2);
+});

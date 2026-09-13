@@ -18,11 +18,11 @@
   "scripts": {
     "dev": "pnpm favicon:check && ng serve --configuration local --host 127.0.0.1 --port 4250",
     "build": "pnpm run build:browser && pnpm run build:server",
-    "build:browser": "node scripts/sitemap.mjs && ng build --configuration prod",
+    "build:browser": "node scripts/sitemap.mjs && ng build --configuration prod && node scripts/build-resume-pdf.mjs dist/browser && node scripts/copy-resume-pdf.mjs",
     "build:server": "pnpm --dir server build",
     "build:server:release": "cx-server-artifact --package mikaelcedergren-server",
-    "build:release": "ng build --configuration prod --output-path \"$SITE_RELEASE_DIR\"",
-    "build:local": "pnpm favicon:check && node scripts/sitemap.mjs && ng build --configuration local",
+    "build:release": "ng build --configuration prod --output-path \"$SITE_RELEASE_DIR\" && node scripts/build-resume-pdf.mjs \"$SITE_RELEASE_DIR/browser\"",
+    "build:local": "pnpm favicon:check && node scripts/sitemap.mjs && ng build --configuration local && node scripts/build-resume-pdf.mjs dist/browser && node scripts/copy-resume-pdf.mjs",
     "start": "node server/dist/index.js",
     "typecheck": "pnpm run typecheck:app && pnpm run typecheck:server",
     "typecheck:app": "tsc -p tsconfig.app.json --noEmit",
@@ -41,7 +41,9 @@
     "verify:change": "node scripts/verify-change.mjs",
     "style:check": "cx-style-token-check --all",
     "check": "pnpm format:check && pnpm favicon:check && pnpm platform:check && pnpm style:check && pnpm typecheck && pnpm test:verification && pnpm test && pnpm build && pnpm e2e:hmr",
-    "e2e:hmr": "node scripts/run-hmr-e2e.mjs"
+    "e2e:hmr": "node scripts/run-hmr-e2e.mjs",
+    "build:html": "ng build --configuration prod --output-path \"$SITE_RELEASE_DIR\"",
+    "resume:pdf": "pnpm build:browser"
   },
   "dependencies": {
     "@angular/cdk": "22.0.6",
@@ -74,7 +76,7 @@
     "@angular/build": "22.0.8",
     "@angular/cli": "22.0.8",
     "@angular/compiler-cli": "22.0.8",
-    "@playwright/test": "1.60.0",
+    "@playwright/test": "1.62.0",
     "@types/node": "^26.0.0",
     "pnpm": "11.23.0",
     "prettier": "^3.8.1",
