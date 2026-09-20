@@ -115,7 +115,8 @@ test('the shared masthead works with the portfolio brand and routed pages', asyn
   await page.goto('/');
 
   const masthead = page.locator('cx-masthead');
-  const toggle = masthead.locator('button[aria-haspopup="dialog"]');
+  // The framework portals its menu and original toggle to the document while open.
+  const toggle = page.locator('button.cx-masthead__toggle');
   const panel = page.getByRole('dialog', { name: 'Menu', exact: true });
   await expect(toggle).toBeVisible();
   await expect(toggle).toHaveAttribute('aria-expanded', 'false');
@@ -145,10 +146,11 @@ test('the shared masthead works with the portfolio brand and routed pages', asyn
   await toggle.hover();
   await expect(toggle).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
   await toggle.click();
-  const close = panel.getByRole('button', { name: 'Close menu', exact: true });
+  const close = page.getByRole('button', { name: 'Close menu', exact: true });
   await expect(toggle).toHaveAttribute('aria-expanded', 'true');
   await expect(panel).toBeVisible();
   await expect(close).toBeFocused();
+  await expect(close).toHaveClass(/cx-masthead__toggle/);
   await page.screenshot({ path: testInfo.outputPath('mobile-navigation.png') });
   await close.press('Tab');
   const portfolio = panel.getByRole('link', { name: 'Portfolio', exact: true });

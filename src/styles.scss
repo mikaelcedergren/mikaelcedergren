@@ -11,7 +11,7 @@
 @use '@mikaelcedergren/cx-framework/styles/fonts';
 @use '@mikaelcedergren/cx-framework/styles/base';
 @use '@mikaelcedergren/cx-framework/styles/embed';
-@use '@mikaelcedergren/cx-framework/styles/article';
+@use '@mikaelcedergren/cx-framework/styles/editorial';
 @use '@mikaelcedergren/cx-framework/styles/utilities';
 
 :root {
@@ -76,7 +76,7 @@ main {
   padding: var(--space-xl) var(--space-lg);
 }
 
-// Editorial prose in About is scoped to the framework's `.cx-article`.
+// Editorial prose in About is scoped to the framework's `.cx-editorial`.
 // The portfolio, concepts, and resume layouts keep the structural treatment
 // below, expressed purely in framework tokens.
 main h1,
