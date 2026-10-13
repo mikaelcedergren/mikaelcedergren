@@ -87,6 +87,11 @@ Angular compiler without a second content pipeline.
 
 ## Framework integrity
 
+Start framework-guided product work with the installed
+[`ai/design/00-start-here.md`](node_modules/@mikaelcedergren/cx-framework/ai/design/00-start-here.md).
+Use the packaged skills discovered through `.agents/skills/`; their implementation stays in the
+installed package.
+
 Cortex is the source of truth; `cx-framework` is its packaged contract; this portfolio is only a
 consumer. All colour, type, spacing, radius, measure, and breakpoint values come from framework
 tokens; site styles only arrange them.
