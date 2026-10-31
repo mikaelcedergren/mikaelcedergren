@@ -7,7 +7,7 @@
   color: var(--ink);
   font-family: var(--font-family-base);
   font-size: var(--font-size-body);
-  line-height: var(--line-height-body-relaxed);
+  line-height: var(--line-height-relaxed);
   font-variant-ligatures: none;
   print-color-adjust: exact;
   -webkit-print-color-adjust: exact;
@@ -16,10 +16,10 @@
 .cv-document h2 {
   font-family: var(--font-family-heading);
   font-weight: var(--font-weight-regular);
-  line-height: var(--line-height-heading);
+  line-height: var(--line-height-tight);
 }
 .cv-document h1 {
-  font-size: var(--font-size-display);
+  font-size: clamp(40px, 5vw, 72px);
   margin: 0 0 var(--space-sm);
 }
 .cv-document h2 {
@@ -29,7 +29,7 @@
 .cv-document h3 {
   font-size: var(--font-size-body);
   font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-heading);
+  line-height: var(--line-height-tight);
   color: var(--purple-alt);
   margin: 0 0 var(--space-xs);
 }
@@ -72,10 +72,10 @@
   flex: 1;
 }
 .cv-header img {
-  inline-size: calc(var(--space-2xl) * 1.5);
-  block-size: calc(var(--space-2xl) * 1.5);
+  inline-size: 96px;
+  block-size: 96px;
   object-fit: cover;
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-full);
 }
 .cv-label {
   color: var(--purple-alt);
@@ -85,7 +85,7 @@
 }
 .cv-role {
   font-size: var(--font-size-body-lg);
-  line-height: var(--line-height-body-relaxed);
+  line-height: var(--line-height-relaxed);
 }
 .cv-contact {
   display: flex;

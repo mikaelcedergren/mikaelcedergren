@@ -71,7 +71,7 @@ a.mc-brand {
 main {
   flex: 1;
   inline-size: 100%;
-  max-inline-size: var(--measure-lg);
+  max-inline-size: var(--content-width-lg);
   margin-inline: auto;
   padding: var(--space-xl) var(--space-lg);
 }
@@ -89,7 +89,7 @@ main h2,
 main h3 {
   color: var(--ink);
   margin-block-start: 0;
-  line-height: var(--line-height-heading);
+  line-height: var(--line-height-tight);
 }
 main h2 {
   font-size: var(--font-size-title-1);
@@ -100,7 +100,7 @@ main h3 {
 }
 main p {
   margin: 0 0 var(--space-md);
-  line-height: var(--line-height-body-lg);
+  line-height: var(--line-height-relaxed);
 }
 
 // Content links.
@@ -124,14 +124,14 @@ main header {
 }
 main header h1 {
   font-size: var(--font-size-title-1);
-  line-height: var(--line-height-heading);
+  line-height: var(--line-height-tight);
   letter-spacing: -0.03em;
   margin: 0 0 var(--space-md);
 }
 main .home-page header h1,
 main mc-resume header h1,
 main mc-about header h1 {
-  font-size: var(--font-size-display);
+  font-size: var(--font-size-hero);
   line-height: var(--line-height-display);
 }
 // The portfolio's pink-to-purple heading accent uses the shared palette.
@@ -349,10 +349,10 @@ main .tag {
   margin: 0 var(--space-2xs) var(--space-2xs) 0;
   padding: var(--space-xs) var(--space-sm);
   border: var(--line);
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-full);
   color: var(--opacity-high);
   font-size: var(--font-size-body-sm);
-  line-height: var(--line-height-small);
+  line-height: var(--line-height-tight);
 }
 
 // The signature move: the narrative card overlaps up onto the image above it.
@@ -417,15 +417,15 @@ main .mc-video-consent__play {
   position: relative;
   display: grid;
   place-items: center;
-  inline-size: var(--space-2xl);
-  block-size: var(--space-2xl);
-  border-radius: var(--radius-pill);
+  inline-size: 64px;
+  block-size: 64px;
+  border-radius: var(--radius-full);
   background: var(--ink);
 }
 main .mc-video-consent__play::before {
   content: '';
-  inline-size: var(--icon-size-xl);
-  block-size: var(--icon-size-xl);
+  inline-size: 32px;
+  block-size: 32px;
   background: currentColor;
   mask: url('@mikaelcedergren/cx-framework/icons/svg/play.svg') center / contain no-repeat;
   transform: translateX(var(--space-2xs));
@@ -440,7 +440,7 @@ main .mc-video-consent:focus-visible .mc-video-consent__play {
 // ---------------------------------------------------------------------------
 main ingress {
   display: block;
-  max-inline-size: var(--measure-md);
+  max-inline-size: var(--content-width-md);
   margin-block: var(--space-sm) var(--space-xl);
   color: var(--opacity-high);
   font-size: var(--font-size-title-2);
@@ -458,7 +458,7 @@ main .grid-row .grid-cell {
 }
 main .grid-row .grid-cell.grid-min {
   flex: 0 0 auto;
-  inline-size: var(--measure-sm);
+  inline-size: var(--content-width-sm);
 }
 main .text-small {
   color: var(--opacity-high);
@@ -493,7 +493,7 @@ main aside {
 }
 main aside .portrait {
   inline-size: 6rem;
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-full);
   margin-block-end: var(--space-md);
 }
 main aside h5 {
@@ -557,7 +557,7 @@ main ul {
 }
 main ul li {
   margin-block-end: var(--space-2xs);
-  line-height: var(--line-height-body-lg);
+  line-height: var(--line-height-relaxed);
 }
 main ul.horizontal {
   list-style: none;
@@ -570,7 +570,7 @@ main ul.horizontal li {
   margin: 0;
   padding: var(--space-2xs) var(--space-sm);
   border: var(--line);
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-full);
   font-size: var(--font-size-body-sm);
   color: var(--opacity-high);
 }
@@ -612,7 +612,7 @@ main blockquote span div {
 // Footer
 // ---------------------------------------------------------------------------
 .mc-footer {
-  max-inline-size: var(--measure-lg);
+  max-inline-size: var(--content-width-lg);
   margin-inline: auto;
   inline-size: 100%;
   padding: var(--space-2xl) var(--space-lg);
